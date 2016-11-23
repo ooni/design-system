@@ -42,14 +42,16 @@
 **Status OK (GREEN)**
 `HTML: #4FD156`
 
-![Status WARNING color](https://img.shields.io/badge/color-ffffff-ffffff.svg?maxAge=2592000)
+![Status WARNING color](https://img.shields.io/badge/color-FFA500-FFA500.svg?maxAge=2592000)
 **Status WARNING (ORANGE)**
 `HTML: #XXX`
+
 Note: we don't have this color yet codified. It should be some shade of Orange
 
-![Status WARNING color](https://img.shields.io/badge/color-ffffff-ffffff.svg?maxAge=2592000)
+![Status WARNING color](https://img.shields.io/badge/color-FFFF00-FFFF00.svg?maxAge=2592000)
 **Status NOTICE (YELLOW)**
 `HTML: #XXX`
+
 Note: we don't have this color yet codified. It should be some shade of Yellow
 
 ## Misc
