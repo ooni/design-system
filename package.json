@@ -1,0 +1,13 @@
+{
+  "name": "ooni-design",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/OpenObservatory/design.git",
+  "author": "Arturo Filastò <arturo@filasto.net>",
+  "license": "MIT",
+  "dependencies": {
+    "palx": "^1.0.2",
+    "react": "^15.6.1",
+    "rebass": "^1.0.4"
+  }
+}
