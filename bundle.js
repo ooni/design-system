@@ -16612,7 +16612,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var DEV = "production" !== 'production';
 var props = {
   options: {
-    isDev: DEV
+    isDev: DEV,
+    basename: DEV ? null : '/design'
   }
 };
 (0, _reactDom.render)(_react2.default.createElement(_App2.default, props), app);
