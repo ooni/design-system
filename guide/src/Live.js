@@ -51,6 +51,10 @@ const toggle = key => state => ({
 
 const Live = props => {
   const scope = Object.assign({ toggle }, _scope, props)
+  let wPreview = [1, null, 3/5]
+  if (!props.liveEditor) {
+    wPreview = [1, null, 1]
+  }
 
   return (
     <LiveProvider
@@ -59,7 +63,7 @@ const Live = props => {
       mountStylesheet={false}>
       <Flex wrap>
         <Border
-          w={[ 1, null, 3/5 ]}
+          w={wPreview}
           top right bottom left>
           <Relative>
             <XRay
@@ -77,9 +81,9 @@ const Live = props => {
             </Absolute>
           </Relative>
         </Border>
-        <Editor
+        {props.liveEditor && <Editor
           width={[ 1, null, 2/5 ]}
-        />
+        />}
       </Flex>
     </LiveProvider>
   )
@@ -87,6 +91,7 @@ const Live = props => {
 
 const map = state => ({
   xray: state.xray,
+  liveEditor: state.liveEditor,
   overlay: state.overlay,
   drawer: state.drawer,
   checked: state.checked,

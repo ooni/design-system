@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'refunk'
 import Live from './Live'
 import ReactMarkdown from 'react-markdown'
 import Rebass, {
@@ -7,11 +8,13 @@ import Rebass, {
   Heading,
   BlockLink,
   Link,
+  NavLink,
   Code,
   Pre,
   Image
 } from 'rebass'
 import PageTitle from './PageTitle'
+import { toggleXray, toggleLiveEditor } from './updaters'
 
 const MDCode = props => (
   <Code
@@ -39,7 +42,8 @@ const MDHeading = props => {
   )
 }
 
-const CodeBlock = ({ language, literal }) => {
+const CodeBlock = (props) => {
+  const { language, literal } = props
   if (!/\./.test(language)) {
     return (
       <Pre
@@ -62,6 +66,16 @@ const CodeBlock = ({ language, literal }) => {
         code={literal}
         noInline={noInline}
       />
+      <NavLink
+        f={0}
+        onClick={e => props.update(toggleXray)}
+        children='X-Ray'
+      />
+      <NavLink
+        f={0}
+        onClick={e => props.update(toggleLiveEditor)}
+        children='Code'
+      />
     </Box>
   )
 }
@@ -83,7 +97,7 @@ const MDImage = ({ src, title, alt}) => {
 }
 
 const renderers = {
-  CodeBlock,
+  CodeBlock: connect()(CodeBlock),
   Heading: MDHeading,
   Code: MDCode,
   Image: MDImage,

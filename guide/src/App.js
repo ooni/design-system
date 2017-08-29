@@ -68,6 +68,7 @@ const App = props => {
 
 const state = {
   xray: false,
+  liveEditor: true,
   overlay: false,
   drawer: false,
   checked: false,
