@@ -6,8 +6,14 @@
   "author": "Arturo Filastò <arturo@filasto.net>",
   "license": "MIT",
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "palx": "^1.0.2",
     "react": "^15.6.1",
     "rebass": "^1.0.4"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
   }
 }

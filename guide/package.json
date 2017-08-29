@@ -24,10 +24,12 @@
     "webpack": "^3.5.5"
   },
   "devDependencies": {
+    "gh-pages": "^1.0.0",
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "NODE_ENV=production webpack -p"
+    "build": "NODE_ENV=production webpack -p",
+    "gh-pages": "gh-pages -d dist"
   }
 }

@@ -4,7 +4,7 @@ const webpack = require('webpack')
 module.exports = {
   entry: './src/entry.js',
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   resolve: {
@@ -17,7 +17,10 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react']
+        }
       },
       {
         test: /\.jsx$/,

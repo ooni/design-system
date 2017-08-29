@@ -30,6 +30,15 @@ You can run in dev mode with:
 yarn run dev
 ```
 
+## Publishing to github pages
+
+You can do that by doing:
+
+```
+yarn run build
+yarn run gh-pages
+```
+
 ## Credits
 
 The layout and setup of this documentation is heavily inspired by the [documentation for rebass](https://github.com/jxnblk/rebass) by [jxnblk](http://jxnblk.com/)
