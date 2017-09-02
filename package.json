@@ -1,19 +1,21 @@
 {
-  "name": "ooni-design",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "ooni-components",
+  "version": "1.0.0-alpha1",
+  "main": "components/index.js",
   "repository": "https://github.com/OpenObservatory/design.git",
   "author": "Arturo Filastò <arturo@filasto.net>",
   "license": "MIT",
   "dependencies": {
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
     "palx": "^1.0.2",
     "react": "^15.6.1",
     "rebass": "^1.0.4"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1"
+  },
+  "scripts": {
+    "debug": "babel-node components/theme/rebassTheme.js"
   }
 }
