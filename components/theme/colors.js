@@ -1,4 +1,5 @@
 import palx from 'palx'
+import palette from './palette'
 
 let colors = {
   BLACK: '#000000',
@@ -12,22 +13,6 @@ let colors = {
   BLUE_GREY_LIGHT: '#62727B',
   BLUE_GREY_DARK: '#102027'
 }
-
-const palette = palx(colors.OONI_BLUE)
-
-const flattened = Object.keys(palette)
-  .reduce((a, key) => {
-    const value = palette[key]
-    if (Array.isArray(value)) {
-      a[key] = value[5]
-      value.forEach((val, i) => {
-        a[key + i] = val
-      })
-    } else {
-      a[key] = value
-    }
-    return a
-  }, {})
 
 /*
 { base: '#0588CB',
@@ -61,5 +46,5 @@ const flattened = Object.keys(palette)
 }
 */
 
-colors.palx = flattened
+colors.palette = palette(colors.OONI_BLUE).flattened
 export default colors

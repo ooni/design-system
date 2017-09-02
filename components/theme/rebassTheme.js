@@ -5,6 +5,6 @@ export const rebassTheme = {
   fontSizes: [
     12, 16, 18, 24, 36, 48, 72
   ],
-  colors: Object.assign({black: '#000', white: '#fff'}, colors.palx)
+  colors: Object.assign({black: '#000', white: '#fff'}, colors.palette)
 }
 export default rebassTheme
