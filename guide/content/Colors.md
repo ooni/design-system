@@ -55,7 +55,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -75,7 +75,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -96,7 +96,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -118,7 +118,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -138,7 +138,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -158,7 +158,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -178,7 +178,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -198,7 +198,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -218,7 +218,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -238,7 +238,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -258,7 +258,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -278,7 +278,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
@@ -298,7 +298,7 @@ The color is scheme is generated thanks to [palx](https://palx.jxnblk.com/).
     return (
       <Box w={1/2}>
       <ColorPalette
-        color={colors.palx[`${colorName}${n}`]}
+        color={colors.palette[`${colorName}${n}`]}
         name={`${colorName} ${n}`}
       />
       </Box>
