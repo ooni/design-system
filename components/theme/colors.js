@@ -46,5 +46,12 @@ let colors = {
 }
 */
 
-colors.palette = palette(colors.OONI_BLUE).flattened
+colors.palette = palette(colors.OONI_BLUE, {
+  // These magic numbers are used to generate the color palette
+  darkestGrey: 0.018,
+  lightestGrey: 0.94,
+  darkestColor: 0.07,
+  lightestColor: 0.89
+}).flattened
+
 export default colors

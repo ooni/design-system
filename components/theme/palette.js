@@ -50,23 +50,31 @@ const createHues = (length = 12) => {
   }
 }
 
-const spreadLum = hex => {
+const spreadLum = (hex, darkest, lightest) => {
+  // I want them to be something like
+  // [darkest, .., .., baselum]
+  // [baselum + step, .., .., .., lightest]
   const baselum = chroma(hex).luminance()
-  const upperstep = (1 - baselum) / 6
-  const lowerstep = baselum / 5
-  const lower = [
-    3, 2, 1, 0
-  ].map(step => {
-    return chroma(hex).luminance((step + 1) * lowerstep).hex()
+
+  const lightSteps = [0, 1, 2, 3, 4, 5]
+  const lightstep = (baselum - lightest) / (lightSteps.length - 1)
+
+  const darkSteps = [1, 2, 3, 4]
+  const darkbaselum = chroma(hex).luminance(lightest + lightstep * 6, 'hsl').luminance()
+  console.log(darkest, lightest, darkbaselum, lightstep, baselum)
+  const darkstep = (baselum - darkest) / darkSteps.length
+  const lights = lightSteps.map(step => {
+    if (step == 5) {
+      return hex
+    }
+    return chroma(hex).luminance(lightest + step * lightstep, 'hsl').hex()
   })
-  const upper = [
-    5, 4, 3, 2, 1, 0
-  ].map(step => {
-    return chroma(hex).luminance(baselum + step * upperstep).hex()
+  const darks = darkSteps.map(step => {
+    return chroma(hex).luminance(baselum - step * darkstep, 'hsl').hex()
   })
   return [
-    ...upper,
-    ...lower,
+    ...lights,
+    ...darks,
   ]
 }
 
@@ -75,9 +83,9 @@ const desat = n => hex => {
   return chroma.hsl(h, n, l).hex()
 }
 
-const createBlack = hex => {
+const createBlack = (hex, darkestGrey) => {
   const d = desat(1/8)(hex)
-  return chroma(d).luminance(.05).hex()
+  return chroma(d).luminance(darkestGrey).hex()
 }
 
 const createShades = hex => {
@@ -107,8 +115,10 @@ const toObj = (a = {}, color) => {
 
 const palette = (hex, options = {}) => {
   const {
-    // Need to figure out a better name for this option
-    luminance = 'split' // 'scale'
+    darkestGrey = 0.018,
+    lightestGrey = 0.94,
+    darkestColor = 0.09,
+    lightestColor = 0.89
   } = options
 
   const color = chroma(hex)
@@ -119,11 +129,10 @@ const palette = (hex, options = {}) => {
 
   colors.push({
     key: 'black',
-    value: createBlack('' + color.hex())
+    value: createBlack('' + color.hex(), darkestGrey)
   })
 
-  //let value = createShades(desat(1/8)('' + color.hex()))
-  let value = spreadLum(desat(1/8)('' + color.hex()))
+  let value = spreadLum(desat(1/8)('' + color.hex()), darkestGrey, lightestGrey)
   colors.push({
     key: 'gray',
     value
@@ -132,9 +141,7 @@ const palette = (hex, options = {}) => {
   hues.forEach(h => {
     const c = chroma.hsl(h, sat, lte)
     const key = keyword(c)
-    const value = luminance === 'scale'
-      ? createShades('' + c.hex())
-      : spreadLum('' + c.hex())
+    const value = spreadLum('' + c.hex(), darkestColor, lightestColor)
     colors.push({
       key,
       value
