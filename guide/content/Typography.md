@@ -4,8 +4,7 @@ This is how headings looks like
 
 ```.jsx
 <Container>
-<Heading f={6}>Primary</Heading>
-<Heading f={5}>Secondary</Heading>
-<Heading f={4}>Other</Heading>
+<Heading color={colors.OONI_BLUE} f={5}>Primary (48px/Bold)</Heading>
+<Heading color={colors.OONI_BLUE} f={3}>Secondary (24px/Bold)</Heading>
 </Container>
 ```

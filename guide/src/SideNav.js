@@ -39,6 +39,11 @@ const SideNav = props => {
           active={pathname === '/'}
         />
         <Link
+          href='/getting-started'
+          children='Getting Started'
+          active={pathname === '/getting-started'}
+        />
+        <Link
           href='/colors'
           children='Colors'
           active={pathname === '/colors'}
@@ -49,9 +54,9 @@ const SideNav = props => {
           active={pathname === '/typography'}
         />
         <Link
-          href='/logo'
-          children='Logo'
-          active={pathname === '/logo'}
+          href='/brand'
+          children='Brand'
+          active={pathname === '/brand'}
         />
       </Flex>
     </nav>

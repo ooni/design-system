@@ -14,12 +14,13 @@ import {
 } from 'rebass'
 
 import Home from './Home'
+import GettingStarted from './GettingStarted'
 import Colors from './Colors'
 import Typography from './Typography'
-import Logo from './Logo'
+import Brand from './Brand'
 import SideNav from './SideNav'
 
-import { rebassTheme } from 'ooni-components'
+import { theme } from 'ooni-components'
 
 const StickySide = styled(Box)`
   @media screen and (min-width: 32em) {
@@ -38,7 +39,7 @@ const StickySide = styled(Box)`
 const App = props => {
   const { pathname } = props.location
   return (
-    <Provider theme={rebassTheme}>
+    <Provider theme={theme}>
       <Flex wrap>
         <Box
           flex='0 1 auto'
@@ -50,9 +51,10 @@ const App = props => {
             pb={3}
             maxWidth={1024}>
             <Home pattern='/' />
+            <GettingStarted pattern='/getting-started' />
             <Colors pattern='/colors' />
             <Typography pattern='/typography' />
-            <Logo pattern='/logo' />
+            <Brand pattern='/brand' />
           </Container>
         </Box>
 				<StickySide w={[ 1, 192 ]}>

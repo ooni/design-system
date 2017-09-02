@@ -5,23 +5,18 @@ import {
   Circle,
   Flex,
   Box,
-  Text
+  Text,
+  Container
 } from 'rebass'
 
 export const ColorPalette = props => (
   <div>
-    <Flex mr={5} mb={5}>
-      <Box>
-        <Circle size={100} bg={props.color} />
+    <Box px={1} py={3}>
+      <Box px={3} py={3} bg={props.color}>
       </Box>
-      <Flex justify='center' align='center' ml={3}>
-        <Box>
-        <Text>{props.name}</Text>
-        <Text>{chroma(props.color).rgb()}</Text>
-        <Text>{chroma(props.color).hex()}</Text>
-        </Box>
-      </Flex>
-    </Flex>
+      <Text bold>{props.name}</Text>
+      <Text>{chroma(props.color).hex()}</Text>
+    </Box>
   </div>
 )
 export default ColorPalette
