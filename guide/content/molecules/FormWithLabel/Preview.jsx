@@ -1,3 +1,4 @@
+<div>
 <Label>
 Label name
 </Label>
@@ -5,3 +6,4 @@ Label name
 <Button>
   Do it
 </Button>
+</div>
