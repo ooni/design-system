@@ -17,8 +17,14 @@ import Home from './Home'
 import GettingStarted from './GettingStarted'
 import Colors from './Colors'
 import Typography from './Typography'
+import ModuleList from './ModuleList'
+import Module from './Module'
 import Brand from './Brand'
 import SideNav from './SideNav'
+
+import { atoms, atomList, atomDescription } from '../content/atoms'
+import { molecules, moleculeList, moleculeDescription } from '../content/molecules'
+import { organisms, organismList, organismDescription } from '../content/organisms'
 
 import { theme } from 'ooni-components'
 
@@ -54,6 +60,39 @@ const App = props => {
             <GettingStarted pattern='/getting-started' />
             <Colors pattern='/colors' />
             <Typography pattern='/typography' />
+            <ModuleList
+              pattern='/atoms'
+              baseHref='/atoms'
+              name='Atoms'
+              description={atomDescription}
+              componentList={atomList}
+              components={atoms}/>
+            <Module
+              pattern='/atoms/:name'
+              components={atoms} />
+
+            <ModuleList
+              pattern='/molecules'
+              baseHref='/molecules'
+              name='Molecules'
+              description={moleculeDescription}
+              componentList={moleculeList}
+              components={molecules}/>
+            <Module
+              pattern='/molecules/:name'
+              components={molecules} />
+
+            <ModuleList
+              pattern='/organisms'
+              baseHref='/organisms'
+              name='Organisms'
+              description={organismDescription}
+              componentList={organismList}
+              components={organisms}/>
+            <Module
+              pattern='/organisms/:name'
+              components={organisms} />
+
             <Brand pattern='/brand' />
           </Container>
         </Box>

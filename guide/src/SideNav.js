@@ -5,9 +5,14 @@ import {
   Box,
   Subhead,
   Divider,
-  NavLink
+  NavLink,
+  Text
 } from 'rebass'
 import { Link as RLink } from 'rrx'
+
+import { atomList } from '../content/atoms'
+import { moleculeList } from '../content/molecules'
+import { organismList } from '../content/organisms'
 
 const Link = styled(props => (
   <NavLink
@@ -27,6 +32,10 @@ const Link = styled(props => (
     backgroundColor: props.active ? props.theme.colors.blue : null,
   }
 }))
+
+const SectionTitle = props => (
+  <Text px={3} py={1}>{props.name}</Text>
+)
 
 const SideNav = props => {
   const { pathname } = props.location
@@ -53,6 +62,55 @@ const SideNav = props => {
           children='Typography'
           active={pathname === '/typography'}
         />
+        <Divider w={1} my={3} color='gray3' />
+        <SectionTitle name='Atoms' />
+        <Link
+          href='/atoms'
+          children='Overview'
+          active={pathname === '/atoms'}
+        />
+        {/* XXX nest this */}
+        {atomList.map(name => (
+          <Link
+            href={`/atoms/${name}`}
+            children={name}
+            active={pathname === `/atoms/${name}`}
+          />
+        ))}
+
+        <Divider w={1} my={3} color='gray3' />
+        <SectionTitle name='Molecules' />
+        <Link
+          href='/molecules'
+          children='Overview'
+          active={pathname === '/molecules'}
+        />
+        {/* XXX nest this */}
+        {moleculeList.map(name => (
+          <Link
+            href={`/molecules/${name}`}
+            children={name}
+            active={pathname === `/molecules/${name}`}
+          />
+        ))}
+
+        <Divider w={1} my={3} color='gray3' />
+        <SectionTitle name='Organisms' />
+        <Link
+          href='/organisms'
+          children='Overview'
+          active={pathname === '/organisms'}
+        />
+        {/* XXX nest this */}
+        {organismList.map(name => (
+          <Link
+            href={`/organisms/${name}`}
+            children={name}
+            active={pathname === `/organisms/${name}`}
+          />
+        ))}
+
+        <Divider w={1} my={3} color='gray3' />
         <Link
           href='/brand'
           children='Brand'

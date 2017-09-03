@@ -1,0 +1,3 @@
+<Button>
+  Primary button
+</Button>
