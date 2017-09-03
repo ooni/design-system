@@ -114,6 +114,7 @@ const state = {
   drawer: false,
   checked: false,
   fixed: false,
+  section: 'web'
 }
 
 export default createProvider(state)(createRouter(App))
