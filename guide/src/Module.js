@@ -20,24 +20,35 @@ const map = state => ({
 
 const ModuleContent = connect(map)(props => {
     const { component, section } = props
+    let shownSection = section
+    if (component.mobile === undefined && component.web === undefined) {
+      throw Error('Either mobile or web component must be defined')
+    }
+    if (component.mobile === undefined && shownSection == 'mobile') {
+      shownSection = 'web'
+    }
+    if (component.web === undefined && shownSection == 'web') {
+      shownSection = 'mobile'
+    }
+
     let markdown = <Markdown children={component.web} />
-    if (section === 'mobile' && component.mobile !== undefined) {
+    if (shownSection === 'mobile') {
       markdown = <Markdown children={component.mobile} />
     }
     return (
       <div>
-      {component.mobile !== undefined && <Tabs>
-        <TabItem
-          active={section === 'web'}
+      <Tabs>
+        {component.web !== undefined && <TabItem
+          active={shownSection === 'web'}
           onClick={e => props.update(setSection('web'))}>
         Web
-        </TabItem>
-        <TabItem
-          active={section === 'mobile'}
+        </TabItem>}
+        {component.mobile !== undefined && <TabItem
+          active={shownSection === 'mobile'}
           onClick={e => props.update(setSection('mobile'))}>
         Mobile
-        </TabItem>
-      </Tabs>}
+        </TabItem>}
+      </Tabs>
       {markdown}
       </div>
     )
