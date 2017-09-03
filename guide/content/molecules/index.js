@@ -1,8 +1,8 @@
-import Button from './Button'
+import FormWithLabel from './FormWithLabel'
 import description from 'raw-loader!./Description.md'
 
 export const molecules = {
-  Button
+  FormWithLabel
 }
 
 export const moleculeDescription = description
