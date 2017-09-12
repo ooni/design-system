@@ -1,6 +1,6 @@
 {
   "name": "ooni-components",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "main": "dist/index.js",
   "repository": "https://github.com/OpenObservatory/design.git",
   "author": "Arturo Filastò <arturo@filasto.net>",
@@ -17,6 +17,9 @@
     "babel-preset-react": "^6.24.1"
   },
   "scripts": {
-    "build": "babel components -d dist"
+    "build:clean": "rm -rf dist/*",
+    "build:js": "babel components -d dist",
+    "build:copy": "cp -R components/svgs dist/svgs && cp -R components/fonts dist/fonts",
+    "build": "npm run build:clean && npm run build:js && npm run build:copy"
   }
 }
