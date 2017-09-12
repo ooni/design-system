@@ -23,6 +23,10 @@ module.exports = {
         }
       },
       {
+        test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+        loader: 'file-loader',
+      },
+      {
         test: /\.jsx$/,
         exclude: /node_modules/,
         loader: 'raw-loader'
