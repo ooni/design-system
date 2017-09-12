@@ -1,5 +1,11 @@
 # ChangeLog
 
+## ooni-components 0.1.0-alpha.3 [2017-09-12]
+
+Fixes:
+
+* Include svgs via `babel-plugin-inline-react-svg`
+
 ## ooni-components 0.1.0-alpha.2 [2017-09-12]
 
 Fixes:
