@@ -26,6 +26,8 @@ import { atoms, atomList, atomDescription } from '../content/atoms'
 import { molecules, moleculeList, moleculeDescription } from '../content/molecules'
 import { organisms, organismList, organismDescription } from '../content/organisms'
 
+import fonts from './fonts'
+
 import { theme } from 'ooni-components'
 
 const StickySide = styled(Box)`

@@ -1,14 +1,14 @@
 import { injectGlobal } from 'styled-components'
 
-import CharterRegular from '../fonts/Charter-Regular.woff'
-import CharterBold from '../fonts/Charter-Bold.woff'
+import CharterRegular from 'ooni-components/fonts/Charter-Regular.woff'
+import CharterBold from 'ooni-components/fonts/Charter-Bold.woff'
 
-import FiraSansLight from '../fonts/FiraSans-Light.woff'
-import FiraSansRegular from '../fonts/FiraSans-Regular.woff
-import FiraSansBold from '../fonts/FiraSans-Bold.woff'
+import FiraSansLight from 'ooni-components/fonts/FiraSans-Light.woff'
+import FiraSansRegular from 'ooni-components/fonts/FiraSans-Regular.woff'
+import FiraSansBold from 'ooni-components/fonts/FiraSans-Bold.woff'
 
-import SourceCodeProBold from '../fonts/SourceCodePro-Bold.woff'
-import SourceCodeProRegular from '../fonts/SourceCodePro-Regular.woff'
+import SourceCodeProBold from 'ooni-components/fonts/SourceCodePro-Bold.woff'
+import SourceCodeProRegular from 'ooni-components/fonts/SourceCodePro-Regular.woff'
 
 
 injectGlobal`
@@ -28,7 +28,7 @@ injectGlobal`
 
   @font-face {
     font-family: "Fira Sans";
-    src: url('${FiraSansSemiBold}') format('woff');
+    src: url('${FiraSansBold}') format('woff');
     font-style: normal;
     font-weight: 700;
   }
