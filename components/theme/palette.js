@@ -43,7 +43,7 @@ const createHues = (length = 12) => {
   return base => {
     const hues = Array.from({ length: hueLength })
       .map((n, i) => {
-        return Math.floor((base + (i * hueStep)) % 360)
+        return (base + (i * hueStep)) % 360
       })
 
     return hues
@@ -61,7 +61,6 @@ const spreadLum = (hex, darkest, lightest) => {
 
   const darkSteps = [1, 2, 3, 4]
   const darkbaselum = chroma(hex).luminance(lightest + lightstep * 6, 'hsl').luminance()
-  console.log(darkest, lightest, darkbaselum, lightstep, baselum)
   const darkstep = (baselum - darkest) / darkSteps.length
   const lights = lightSteps.map(step => {
     if (step == 5) {
