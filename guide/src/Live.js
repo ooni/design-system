@@ -22,7 +22,7 @@ import Rebass, {
 import OONIComponents from 'ooni-components'
 import GuideComponents from './components'
 
-const _scope = Object.assign({}, OONIComponents, Rebass, GuideComponents, { styled })
+const _scope = Object.assign({}, Rebass, OONIComponents, GuideComponents, { styled })
 
 const Editor = hoc()(styled(LiveEditor)`
   font-family: 'SF Mono', Menlo, monospace;

@@ -1,5 +1,4 @@
 import {
-  createLibrary,
   Provider,
   Flex,
   Box
@@ -8,10 +7,10 @@ import {
 import colors from './theme/colors'
 import theme from './theme/rebassTheme'
 
-import rebassComponents from 'rebass/dist/components'
-
 export { default as colors } from './theme/colors'
 export { default as theme } from './theme/rebassTheme'
+
+import components from './components'
 
 // We export these from rebass directly
 export {
@@ -20,10 +19,7 @@ export {
   Box
 } from 'rebass'
 
-export const OONIComponents = Object.assign({}, library, { Provider, Box, Flex, colors, theme })
-
-// We build the library of components from rebass directly
-const library = createLibrary(rebassComponents)
+export const OONIComponents = Object.assign({}, components, { Provider, Box, Flex, colors, theme })
 
 export const {
   Button,
@@ -47,7 +43,6 @@ export const {
   Label,
   Input,
   Select,
-  Select2,
   Textarea,
   Checkbox,
   Radio,
@@ -91,6 +86,6 @@ export const {
   Donut,
   Row,
   Column,
-} = library
+} = components
 
 export default OONIComponents
