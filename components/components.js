@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 import rebass from 'rebass'
 
+import BarChart from './charts/BarChart'
+
 /* Example of more advanced button styling:
 export const Button = styled(rebass.Button)`
 	border: 1px solid red;
@@ -73,6 +75,8 @@ export const Toolbar = rebass.Toolbar
 export const Tooltip = rebass.Tooltip
 export const Truncate = rebass.Truncate
 
+export { default as BarChart } from './charts/BarChart'
+
 const components = {
   Button,
   ButtonOutline,
@@ -138,6 +142,7 @@ const components = {
   Donut,
   Row,
   Column,
+  BarChart,
 }
 
 export default components

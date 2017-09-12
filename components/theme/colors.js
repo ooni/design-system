@@ -53,5 +53,6 @@ colors.palette = palette(colors.OONI_BLUE, {
   darkestColor: 0.07,
   lightestColor: 0.89
 }).flattened
+colors.palette.white = '#ffffff'
 
 export default colors

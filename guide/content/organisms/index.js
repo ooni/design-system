@@ -1,8 +1,8 @@
-import Button from './Button'
+import BarChart from './BarChart'
 import description from 'raw-loader!./Description.md'
 
 export const organisms = {
-  Button
+  BarChart
 }
 
 export const organismDescription = description

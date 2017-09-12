@@ -8,7 +8,8 @@
   "dependencies": {
     "palx": "^1.0.2",
     "react": "^15.6.1",
-    "rebass": "^1.0.4"
+    "rebass": "^1.0.4",
+    "victory": "^0.22.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
