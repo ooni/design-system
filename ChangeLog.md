@@ -1,0 +1,11 @@
+# ChangeLog
+
+## ooni-components 0.1.0-alpha.1 [2017-09-12]
+
+Still work in progress
+
+Adds:
+
+* Basic color scheme
+* Rebass theme
+* Victory theme
