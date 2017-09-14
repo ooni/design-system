@@ -29,6 +29,7 @@ export const Input = styled.input`
 
   box-shadow: none;
   box-sizing: content-box;
+  transition: all .3s;
 
   &:focus:not([readonly]) {
     border-bottom: 1px solid ${props => props.theme.colors.base};

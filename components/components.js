@@ -3,8 +3,10 @@ import styled from 'styled-components'
 import rebass from 'rebass'
 
 import Input from './Input'
+import Button from './Button'
 
 export { default as Input } from './Input'
+export { default as Button } from './Button'
 
 import BarChart from './charts/BarChart'
 
@@ -23,7 +25,6 @@ export const Banner = rebass.Banner
 export const BlockLink = rebass.BlockLink
 export const Blockquote = rebass.Blockquote
 export const Border = rebass.Border
-export const Button = rebass.Button
 export const ButtonCircle = rebass.ButtonCircle
 export const ButtonOutline = rebass.ButtonOutline
 export const ButtonTransparent = rebass.ButtonTransparent
