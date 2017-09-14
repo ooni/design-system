@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 
 import { createProvider } from 'refunk'
 import { createRouter, Link } from 'rrx'

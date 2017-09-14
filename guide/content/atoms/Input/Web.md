@@ -1,0 +1,5 @@
+## Input text
+
+```.jsx
+<Input />
+```

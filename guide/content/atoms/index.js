@@ -1,8 +1,10 @@
 import Button from './Button'
+import Input from './Input'
 import description from 'raw-loader!./Description.md'
 
 export const atoms = {
-  Button
+  Button,
+  Input
 }
 
 export const atomDescription = description

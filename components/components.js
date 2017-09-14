@@ -2,6 +2,10 @@ import styled from 'styled-components'
 
 import rebass from 'rebass'
 
+import Input from './Input'
+
+export { default as Input } from './Input'
+
 import BarChart from './charts/BarChart'
 
 /* Example of more advanced button styling:
@@ -41,7 +45,6 @@ export const Fixed = rebass.Fixed
 export const Group = rebass.Group
 export const Heading = rebass.Heading
 export const Image = rebass.Image
-export const Input = rebass.Input
 export const Label = rebass.Label
 export const Lead = rebass.Lead
 export const Link = rebass.Link
