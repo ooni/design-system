@@ -7,7 +7,9 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "palx": "^1.0.2",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
+    "react-icons": "^2.2.5",
     "rebass": "^1.0.4",
     "styled-system": "^1.0.0-13",
     "victory": "^0.22.1"
