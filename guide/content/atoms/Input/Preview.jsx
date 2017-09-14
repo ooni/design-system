@@ -1,1 +1,1 @@
-<Input placeholder="Enter something" />
+<Input placeholder="Type me" />

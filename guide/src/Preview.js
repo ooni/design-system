@@ -12,7 +12,7 @@ import GuideComponents from './components'
 const update = () => {}
 const toggle = () => {}
 const checked = true
-const scope = Object.assign({}, OONIComponents, Rebass, GuideComponents, Rebass, {
+const scope = Object.assign({}, Rebass, OONIComponents, GuideComponents, {
   checked,
   update,
   toggle,

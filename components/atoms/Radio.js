@@ -8,9 +8,7 @@ import MdWarning from 'react-icons/lib/md/warning'
 import { space, width, fontSize, color } from 'styled-system'
 import styled, { css } from 'styled-components'
 
-const StyledErrorMessage = styled.p`
-  color: ${props => props.theme.colors.red7}
-`
+import { stylesToCss, styleMult } from '../util'
 
 export class RadioGroup extends React.Component {
 
@@ -60,6 +58,11 @@ const ErasedInputRadio = styled.input`
   width: 0;
 `
 const StyledRadioButton = styled.div`
+  ${stylesToCss(space)};
+  ${stylesToCss(width)};
+  ${stylesToCss(fontSize)};
+  ${stylesToCss(color)};
+
   padding-bottom: 10px;
 `
 
@@ -69,11 +72,11 @@ const StyledRadio = styled.div`
   border-radius: 50%;
   cursor: pointer;
   display: inline-block;
-  height: 20px;
-  margin: 0 5px;
+  height: ${styleMult(fontSize, 1)};
+  width: ${styleMult(fontSize, 1)};
+  margin: 0 10px;
   position: relative;
   vertical-align: top;
-  width: 20px;
 `
 
 const StyledRadioChecked = StyledRadio.extend`
@@ -109,14 +112,14 @@ export class RadioButton extends React.Component {
   render() {
     const { checked, label } = this.props
     return (
-      <StyledRadioButton>
-        <StyledLabel>
+      <StyledRadioButton {...this.props}>
+        <StyledLabel {...this.props}>
           <ErasedInputRadio
             onClick={this.handleClick}
             onChange={()  => {}}
             innerRef={c => {this.inputNode = c}}
             type='radio' />
-          <StyledRadio checked={checked} />
+          <StyledRadio checked={checked} {...this.props}/>
           {label}
         </StyledLabel>
       </StyledRadioButton>
@@ -131,6 +134,6 @@ RadioButton.propTypes = {
   checked: PropTypes.bool
 }
 
-RadioGroup.defaultProps = {
-  fontSize: 4
+RadioButton.defaultProps = {
+  fontSize: 3
 }
