@@ -1,28 +1,28 @@
 import React from 'react'
-
-import { space, width, fontSize, color } from 'styled-system'
 import styled from 'styled-components'
+import { space, width, fontSize, color } from 'styled-system'
+
+import { stylesToCss, styleMult } from '../util'
 
 export const Button = styled.button`
-  $space;
-  $width;
-  $fontSize;
-  $color;
+  ${stylesToCss(space)}
+  ${stylesToCss(width)}
+  ${stylesToCss(fontSize)}
+  ${stylesToCss(color)}
 
   // Common
 
   border: none; // maybe change
   border-radius: ${props => `${props.theme.radius}px`};
   display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 2rem;
+  height: ${styleMult(fontSize, 2)};
+  line-height: ${styleMult(fontSize, 2)};
+  padding: 0 ${styleMult(fontSize, 2)};
   text-transform: uppercase;
   vertical-align: middle;
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
 
-  font-size: 1em;
   outline: 0;
 
   // Specific
@@ -46,4 +46,7 @@ export const Button = styled.button`
     background-color: ${props => props.theme.colors.blue6};
   }
 `
+Button.defaultProps = {
+  fontSize: 2
+}
 export default Button

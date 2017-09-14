@@ -8,6 +8,8 @@ import BarChart from './charts/BarChart'
 
 export const Button = atoms.Button
 export const Input = atoms.Input
+export const RadioButton = atoms.RadioButton
+export const RadioGroup = atoms.RadioGroup
 
 /* Example of more advanced button styling:
 export const Button = styled(rebass.Button)`
@@ -146,6 +148,8 @@ const components = {
   Row,
   Column,
   BarChart,
+  RadioButton,
+  RadioGroup
 }
 
 export default components

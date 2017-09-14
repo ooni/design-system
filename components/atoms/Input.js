@@ -7,6 +7,8 @@ import MdWarning from 'react-icons/lib/md/warning'
 import { space, width, fontSize, color } from 'styled-system'
 import styled, { css } from 'styled-components'
 
+import { stylesToCss, styleMult } from '../util'
+
 const borderBottomMaybeError = (color, baseHeight) => (props) => {
   if (props.error) {
     return `2px solid ${props.theme.colors.red7};`
@@ -14,15 +16,13 @@ const borderBottomMaybeError = (color, baseHeight) => (props) => {
   return `${baseHeight} solid ${props.theme.colors[color]};`
 }
 
-
 const styles = css`
-  $space;
-  $width;
-  $fontSize;
-  $color;
+  ${stylesToCss(space)};
+  ${stylesToCss(width)};
+  ${stylesToCss(fontSize)};
+  ${stylesToCss(color)};
 
   font-family: inherit;
-  font-size: 1rem;
   display: 'block';
   vertical-align: 'middle';
 
@@ -36,7 +36,7 @@ const styles = css`
 
   outline: none;
   width: 100%;
-  height: 2rem;
+  height: ${styleMult(fontSize, 2)};
 
   box-shadow: none;
   box-sizing: content-box;
@@ -49,10 +49,15 @@ const styles = css`
 `
 
 const StyledErrorMessage = styled.p`
+  ${stylesToCss(fontSize)};
   color: ${props => props.theme.colors.red7}
 `
 
-const ErrorMessage = ({children}) => {
+StyledErrorMessage.defaultProps = {
+  fontSize: 1
+}
+
+const ErrorMessage = ({children, fontSize}) => {
   return (
     <Flex wrap>
       <Box>
@@ -66,7 +71,12 @@ const ErrorMessage = ({children}) => {
 }
 
 ErrorMessage.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
+  fontSize: PropTypes.number
+}
+
+ErrorMessage.defaultProps = {
+  fontSize: 2
 }
 
 const StyledInput = styled.input`${styles}`
@@ -88,11 +98,13 @@ const Input = (props) => {
 Input.propTypes = {
   type: PropTypes.string,
   error: PropTypes.string,
+  fontSize: PropTypes.number
 }
 
 Input.defaultProps = {
   type: 'text',
-  error: null
+  error: null,
+  fontSize: 3
 }
 
 export default Input
