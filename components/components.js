@@ -2,13 +2,12 @@ import styled from 'styled-components'
 
 import rebass from 'rebass'
 
-import Input from './Input'
-import Button from './Button'
-
-export { default as Input } from './Input'
-export { default as Button } from './Button'
+import atoms from './atoms'
 
 import BarChart from './charts/BarChart'
+
+export const Button = atoms.Button
+export const Input = atoms.Input
 
 /* Example of more advanced button styling:
 export const Button = styled(rebass.Button)`
