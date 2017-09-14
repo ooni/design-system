@@ -97,14 +97,14 @@ const Input = (props) => {
 
 Input.propTypes = {
   type: PropTypes.string,
-  error: PropTypes.string,
+  error: PropTypes.node,
   fontSize: PropTypes.number
 }
 
 Input.defaultProps = {
   type: 'text',
   error: null,
-  fontSize: 3
+  fontSize: 2
 }
 
 export default Input

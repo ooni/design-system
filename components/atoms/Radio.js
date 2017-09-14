@@ -76,7 +76,7 @@ const StyledRadio = styled.div`
   width: ${styleMult(fontSize, 1)};
   margin: 0 10px;
   position: relative;
-  vertical-align: top;
+  vertical-align: middle;
 `
 
 const StyledRadioChecked = StyledRadio.extend`
@@ -135,5 +135,5 @@ RadioButton.propTypes = {
 }
 
 RadioButton.defaultProps = {
-  fontSize: 3
+  fontSize: 2
 }

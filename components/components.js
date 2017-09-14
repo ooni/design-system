@@ -3,13 +3,19 @@ import styled from 'styled-components'
 import rebass from 'rebass'
 
 import atoms from './atoms'
+import molecules from './molecules'
 
 import BarChart from './charts/BarChart'
+
+/* OONI produced atoms */
 
 export const Button = atoms.Button
 export const Input = atoms.Input
 export const RadioButton = atoms.RadioButton
 export const RadioGroup = atoms.RadioGroup
+
+/* OONI produced molecules */
+export const InputWithIconButton = molecules.InputWithIconButton
 
 /* Example of more advanced button styling:
 export const Button = styled(rebass.Button)`
@@ -149,7 +155,8 @@ const components = {
   Column,
   BarChart,
   RadioButton,
-  RadioGroup
+  RadioGroup,
+  InputWithIconButton
 }
 
 export default components
