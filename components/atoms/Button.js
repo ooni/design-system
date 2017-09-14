@@ -9,7 +9,6 @@ export const Button = styled.button`
   $fontSize;
   $color;
 
-
   // Common
 
   border: none; // maybe change
@@ -40,8 +39,11 @@ export const Button = styled.button`
   cursor: pointer;
 
   &:hover {
+    background-color: ${props => props.theme.colors.blue4};
+  }
+  &:active {
+    transition: .2s ease-in;
     background-color: ${props => props.theme.colors.blue6};
-    @extend .z-depth-1-half;
   }
 `
 export default Button
