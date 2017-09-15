@@ -1,5 +1,17 @@
 # ChangeLog
 
+## ooni-components 0.1.0-alpha.9 [2017-09-15]
+
+Adds:
+
+* FormWithLabel
+* Button
+* IconButton
+* Radio
+* Input
+* InputWithIconButton
+* Hero
+
 ## ooni-components 0.1.0-alpha.3 [2017-09-12]
 
 Fixes:
