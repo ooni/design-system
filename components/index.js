@@ -91,7 +91,9 @@ export const {
   HeroLead,
   Hero,
   OONISubBrandRun,
-  InputWithIconButton
+  InputWithIconButton,
+  TwitterShareButton,
+  FacebookShareButton
 } = components
 
 export default OONIComponents

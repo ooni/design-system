@@ -14,6 +14,8 @@ export const Button = atoms.Button
 export const Input = atoms.Input
 export const RadioButton = atoms.RadioButton
 export const RadioGroup = atoms.RadioGroup
+export const TwitterShareButton = atoms.TwitterShareButton
+export const FacebookShareButton = atoms.FacebookShareButton
 
 /* OONI produced molecules */
 export const InputWithIconButton = molecules.InputWithIconButton
@@ -165,7 +167,9 @@ const components = {
   InputWithIconButton,
   HeroLead,
   Hero,
-  OONISubBrandRun
+  OONISubBrandRun,
+  TwitterShareButton,
+  FacebookShareButton
 }
 
 export default components
