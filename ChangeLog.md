@@ -1,5 +1,13 @@
 # ChangeLog
 
+## ooni-components 0.1.0-alpha.10 [2017-09-15]
+
+Adds:
+
+* Input[type='textarea']
+* TwitterShareButton
+* FacebookShareButton
+
 ## ooni-components 0.1.0-alpha.9 [2017-09-15]
 
 Adds:
