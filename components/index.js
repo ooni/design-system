@@ -86,6 +86,9 @@ export const {
   Donut,
   Row,
   Column,
+  HeroLead,
+  Hero,
+  OONISubBrandRun
 } = components
 
 export default OONIComponents

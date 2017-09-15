@@ -7,15 +7,18 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "palx": "^1.0.2",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
+    "react-icons": "^2.2.5",
     "rebass": "^1.0.4",
+    "styled-system": "^1.0.0-13",
     "victory": "^0.22.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-inline-react-svg": "^0.4.0",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-plugin-inline-react-svg": "^0.4.0"
+    "babel-preset-react": "^6.24.1"
   },
   "scripts": {
     "build:clean": "rm -rf dist/*",

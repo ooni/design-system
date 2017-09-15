@@ -1,8 +1,10 @@
 import FormWithLabel from './FormWithLabel'
+import InputWithIconButton from './InputWithIconButton'
 import description from 'raw-loader!./Description.md'
 
 export const molecules = {
-  FormWithLabel
+  FormWithLabel,
+  InputWithIconButton
 }
 
 export const moleculeDescription = description

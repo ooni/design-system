@@ -1,3 +1,3 @@
 <Button>
-  Primary button
+  Click me
 </Button>

@@ -2,7 +2,26 @@ import styled from 'styled-components'
 
 import rebass from 'rebass'
 
+import atoms from './atoms'
+import molecules from './molecules'
+import organisms from './organisms'
+
 import BarChart from './charts/BarChart'
+
+/* OONI produced atoms */
+
+export const Button = atoms.Button
+export const Input = atoms.Input
+export const RadioButton = atoms.RadioButton
+export const RadioGroup = atoms.RadioGroup
+
+/* OONI produced molecules */
+export const InputWithIconButton = molecules.InputWithIconButton
+export const OONISubBrandRun = molecules.OONISubBrandRun
+
+/* OONI produced organisms */
+export const Hero = organisms.Hero
+export const HeroLead = organisms.HeroLead
 
 /* Example of more advanced button styling:
 export const Button = styled(rebass.Button)`
@@ -19,7 +38,6 @@ export const Banner = rebass.Banner
 export const BlockLink = rebass.BlockLink
 export const Blockquote = rebass.Blockquote
 export const Border = rebass.Border
-export const Button = rebass.Button
 export const ButtonCircle = rebass.ButtonCircle
 export const ButtonOutline = rebass.ButtonOutline
 export const ButtonTransparent = rebass.ButtonTransparent
@@ -41,7 +59,6 @@ export const Fixed = rebass.Fixed
 export const Group = rebass.Group
 export const Heading = rebass.Heading
 export const Image = rebass.Image
-export const Input = rebass.Input
 export const Label = rebass.Label
 export const Lead = rebass.Lead
 export const Link = rebass.Link
@@ -143,6 +160,12 @@ const components = {
   Row,
   Column,
   BarChart,
+  RadioButton,
+  RadioGroup,
+  InputWithIconButton,
+  HeroLead,
+  Hero,
+  OONISubBrandRun
 }
 
 export default components
