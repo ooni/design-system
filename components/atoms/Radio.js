@@ -45,6 +45,7 @@ RadioGroup.defaultProps = {
 }
 
 const StyledLabel = styled.label`
+  cursor: pointer;
 `
 
 const ErasedInputRadio = styled.input`
@@ -67,21 +68,28 @@ const StyledRadioButton = styled.div`
   padding-bottom: 10px;
 `
 
-const StyledRadio = styled.div`
-  border: 2px solid ${ props => props.theme.colors.base };
-  background-color: ${ props => props.checked ? props.theme.colors.base : 'transparent' };
-  border-radius: 50%;
-  display: inline-block;
-  height: ${styleMult(fontSize, 1)};
-  width: ${styleMult(fontSize, 1)};
+const StyledRadioContainer = styled.div`
+  position: relative;
   margin: 0;
   margin-right: 10px;
-  position: relative;
   vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  height: ${styleMult(fontSize, 1)};
+  width: ${styleMult(fontSize, 1)};
 `
 
-const StyledRadioChecked = StyledRadio.extend`
-  background-color: ${props => props.theme.colors.base};
+const StyledRadio = StyledRadioContainer.extend`
+  border: 2px solid ${ props => props.theme.colors.base };
+  background-color: 'transparent';
+  position: absolute;
+  top: 0;
+`
+
+const StyledRadioInner = StyledRadio.extend`
+  background-color: ${ props => props.theme.colors.base};
+  transform: scale(0.5);
 `
 
 export class RadioButton extends React.Component {
@@ -120,7 +128,10 @@ export class RadioButton extends React.Component {
             onChange={()  => {}}
             innerRef={c => {this.inputNode = c}}
             type='radio' />
-          <StyledRadio checked={checked} {...this.props}/>
+          <StyledRadioContainer {...this.props}>
+            <StyledRadio checked={checked} {...this.props}/>
+            {checked && <StyledRadioInner {...this.props} />}
+          </StyledRadioContainer>
           {label}
         </StyledLabel>
       </StyledRadioButton>
