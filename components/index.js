@@ -90,7 +90,8 @@ export const {
   RadioButton,
   HeroLead,
   Hero,
-  OONISubBrandRun
+  OONISubBrandRun,
+  InputWithIconButton
 } = components
 
 export default OONIComponents

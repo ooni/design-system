@@ -5,11 +5,6 @@ import { space, width, fontSize, color } from 'styled-system'
 import { stylesToCss, styleMult } from '../util'
 
 export const Button = styled.button`
-  ${stylesToCss(space)}
-  ${stylesToCss(width)}
-  ${stylesToCss(fontSize)}
-  ${stylesToCss(color)}
-
   // Common
 
   border: none; // maybe change
@@ -45,6 +40,12 @@ export const Button = styled.button`
     transition: .2s ease-in;
     background-color: ${props => props.theme.colors.blue6};
   }
+`
+Button = Button.extend`
+  ${stylesToCss(space)}
+  ${stylesToCss(width)}
+  ${stylesToCss(fontSize)}
+  ${stylesToCss(color)}
 `
 Button.defaultProps = {
   fontSize: 2

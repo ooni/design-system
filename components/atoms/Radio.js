@@ -63,6 +63,7 @@ const StyledRadioButton = styled.div`
   ${stylesToCss(fontSize)};
   ${stylesToCss(color)};
 
+  cursor: pointer;
   padding-bottom: 10px;
 `
 
@@ -70,11 +71,11 @@ const StyledRadio = styled.div`
   border: 2px solid ${ props => props.theme.colors.base };
   background-color: ${ props => props.checked ? props.theme.colors.base : 'transparent' };
   border-radius: 50%;
-  cursor: pointer;
   display: inline-block;
   height: ${styleMult(fontSize, 1)};
   width: ${styleMult(fontSize, 1)};
-  margin: 0 10px;
+  margin: 0;
+  margin-right: 10px;
   position: relative;
   vertical-align: middle;
 `

@@ -15,7 +15,6 @@ const StyledHero = styled.div`
   ${stylesToCss(color)}
 
   width: 100%;
-  padding-bottom: 20px;
   background-color: ${props => props.theme.colors.base};
   color: ${props => props.theme.colors.white};
   text-align: center;
@@ -28,7 +27,7 @@ export const Hero = (props) => {
   return (
     <StyledHero {...props}>
       <Container>
-        {React.Children.map(props.children, child => React.cloneElement(child))}
+        {React.Children.map(props.children, child => React.cloneElement(child), props)}
       </Container>
     </StyledHero>
   )
