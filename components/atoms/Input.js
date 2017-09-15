@@ -42,9 +42,12 @@ const styles = css`
   box-sizing: content-box;
   transition: all .3s;
 
+  &:hover:not([readonly]) {
+    border-bottom: ${borderBottomMaybeError('gray3', '1px')}
+  }
+
   &:focus:not([readonly]) {
     border-bottom: ${borderBottomMaybeError('base', '2px')}
-    box-shadow: 0 1px 0 0 ${props => props.theme.colors.gray1};
   }
 `
 
