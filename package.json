@@ -24,7 +24,6 @@
     "build:clean": "rm -rf dist/*",
     "build:js": "babel components -d dist",
     "build:copy": "cp -R components/fonts dist/fonts",
-    "build": "npm run build:clean && npm run build:js && npm run build:copy",
-    "publish": "npm publish"
+    "build": "npm run build:clean && npm run build:js && npm run build:copy"
   }
 }
