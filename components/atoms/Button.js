@@ -4,7 +4,7 @@ import { space, width, fontSize, color } from 'styled-system'
 
 import { stylesToCss, styleMult } from '../util'
 
-export const Button = styled.button`
+const StyledButton = styled.button`
   // Common
 
   border: none; // maybe change
@@ -41,7 +41,8 @@ export const Button = styled.button`
     background-color: ${props => props.theme.colors.blue6};
   }
 `
-Button = Button.extend`
+
+export const Button = StyledButton.extend`
   ${stylesToCss(space)}
   ${stylesToCss(width)}
   ${stylesToCss(fontSize)}
