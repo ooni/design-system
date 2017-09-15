@@ -83,7 +83,10 @@ ErrorMessage.defaultProps = {
 }
 
 const StyledInput = styled.input`${styles}`
-const StyledTextarea = styled.textarea`${styles}`
+const StyledTextarea = styled.textarea`
+  ${styles}
+  height: ${props => styleMult(fontSize, props.rows+1)(props)};
+`
 
 const Input = (props) => {
   let StyledElement = StyledInput
@@ -101,13 +104,15 @@ const Input = (props) => {
 Input.propTypes = {
   type: PropTypes.string,
   error: PropTypes.node,
-  fontSize: PropTypes.number
+  fontSize: PropTypes.number,
+  rows: PropTypes.number
 }
 
 Input.defaultProps = {
   type: 'text',
   error: null,
-  fontSize: 2
+  fontSize: 2,
+  rows: 3
 }
 
 export default Input

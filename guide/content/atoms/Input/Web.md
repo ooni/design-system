@@ -16,4 +16,9 @@
 <Input error='Oops there is an error' />
 ```
 
+## Textarea
+
+```.jsx
+<Input type='textarea' h={20} />
+```
 
