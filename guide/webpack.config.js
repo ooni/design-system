@@ -23,7 +23,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+        test: /\.(eot|ttf|woff|woff2|otf)$/,
         loader: 'file-loader',
       },
       {
@@ -33,12 +33,12 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        exclude: /^\.\/images\//,
+        //exclude: /^\.\/images/,
         loaders: [
           {
             loader: 'babel-loader',
             query: {
-              presets: ['es2015']
+              presets: ['es2015', 'react']
             }
           },
           {
@@ -55,7 +55,6 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
-    new webpack.ContextReplacementPlugin(/^\.\/images/, path.resolve(__dirname, './content/images'))
   ],
   devServer: {
     historyApiFallback: true
