@@ -1,8 +1,10 @@
 import BarChart from './BarChart'
+import Hero from './Hero'
 import description from 'raw-loader!./Description.md'
 
 export const organisms = {
-  BarChart
+  BarChart,
+  Hero
 }
 
 export const organismDescription = description

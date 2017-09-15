@@ -84,6 +84,7 @@ const MDImage = ({ src, title, alt}) => {
   const nameRegexp = /^\.\/images\/(.+?)\.svg/g
   const match = nameRegexp.exec(src)
   if (match) {
+    const path = './images/' + match[1] + '.svg'
     const SVG = require('./images/' + match[1] + '.svg').default
     return (
       <SVG width="100%" />

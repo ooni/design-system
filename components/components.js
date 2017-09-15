@@ -4,6 +4,7 @@ import rebass from 'rebass'
 
 import atoms from './atoms'
 import molecules from './molecules'
+import organisms from './organisms'
 
 import BarChart from './charts/BarChart'
 
@@ -16,6 +17,11 @@ export const RadioGroup = atoms.RadioGroup
 
 /* OONI produced molecules */
 export const InputWithIconButton = molecules.InputWithIconButton
+export const OONISubBrandRun = molecules.OONISubBrandRun
+
+/* OONI produced organisms */
+export const Hero = organisms.Hero
+export const HeroLead = organisms.HeroLead
 
 /* Example of more advanced button styling:
 export const Button = styled(rebass.Button)`
@@ -156,7 +162,10 @@ const components = {
   BarChart,
   RadioButton,
   RadioGroup,
-  InputWithIconButton
+  InputWithIconButton,
+  HeroLead,
+  Hero,
+  OONISubBrandRun
 }
 
 export default components

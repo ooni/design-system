@@ -33,6 +33,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
+        exclude: /^\.\/images\//,
         loaders: [
           {
             loader: 'babel-loader',
