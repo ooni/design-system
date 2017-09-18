@@ -62,8 +62,8 @@ class RadioExample extends React.Component {
       return (
         <div>
           <Box>Line {props.value}</Box>
-          <Box>Line {props.name}</Box>
-          <Box>Line {props.customProp}</Box>
+          {props.checked && <Box>Line {props.name}</Box>}
+          {props.checked && <Box>Line {props.customProp}</Box>}
         </div>
       )
     }
