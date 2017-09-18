@@ -8,7 +8,7 @@ const StyledButton = styled.button`
   // Common
 
   border: none; // maybe change
-  border-radius: ${props => `${props.theme.radius}px`};
+  border-radius: ${styleMult(fontSize, 2)};
   display: inline-block;
   height: ${styleMult(fontSize, 2)};
   line-height: ${styleMult(fontSize, 2)};
@@ -22,7 +22,7 @@ const StyledButton = styled.button`
 
   // Specific
   font-family: inherit;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
   color: ${props => props.theme.colors.white};
   background-color: ${props => props.theme.colors.blue5};

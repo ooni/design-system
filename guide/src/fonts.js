@@ -6,6 +6,7 @@ import CharterBold from 'ooni-components/fonts/Charter-Bold.woff'
 import FiraSansLight from 'ooni-components/fonts/FiraSans-Light.woff'
 import FiraSansRegular from 'ooni-components/fonts/FiraSans-Regular.woff'
 import FiraSansBold from 'ooni-components/fonts/FiraSans-Bold.woff'
+import FiraSansSemiBold from 'ooni-components/fonts/FiraSans-SemiBold.woff'
 
 import SourceCodeProBold from 'ooni-components/fonts/SourceCodePro-Bold.woff'
 import SourceCodeProRegular from 'ooni-components/fonts/SourceCodePro-Regular.woff'
@@ -24,6 +25,13 @@ injectGlobal`
     src: url('${FiraSansRegular}') format('woff');
     font-style: normal;
     font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Fira Sans";
+    src: url('${FiraSansBold}') format('woff');
+    font-style: normal;
+    font-weight: 600;
   }
 
   @font-face {

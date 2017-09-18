@@ -21,7 +21,7 @@ export const rebassTheme = {
   fontSizes: [
     12, 16, 18, 24, 36, 48, 72
   ],
-  weigths: [400, 700],
+  weights: [400, 600],
   radius: 2,
   colors: Object.assign({}, colors.palette)
 }
