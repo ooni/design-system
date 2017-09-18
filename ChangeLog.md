@@ -1,5 +1,11 @@
 # ChangeLog
 
+## ooni-components 0.1.0-alpha.11 [2017-09-18]
+
+Adds:
+
+* Custom RadioButton label
+
 ## ooni-components 0.1.0-alpha.10 [2017-09-15]
 
 Adds:
