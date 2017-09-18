@@ -1,5 +1,13 @@
 # ChangeLog
 
+## ooni-components 0.1.0-alpha.12 [2017-09-18]
+
+Changed:
+
+* Use SemiBold in place of Bold
+* Use round buttons
+
+
 ## ooni-components 0.1.0-alpha.11 [2017-09-18]
 
 Adds:
