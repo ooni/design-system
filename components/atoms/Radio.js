@@ -118,21 +118,38 @@ export class RadioButton extends React.Component {
   }
 
 
+  renderLabel(props) {
+    if (React.isValidElement(props.label)) {
+      return React.cloneElement(props.label, props)
+    }
+    return (
+      <div>
+        {props.label}
+      </div>
+    )
+  }
+
   render() {
     const { checked, label } = this.props
     return (
       <StyledRadioButton {...this.props}>
         <StyledLabel {...this.props}>
-          <ErasedInputRadio
-            onClick={this.handleClick}
-            onChange={()  => {}}
-            innerRef={c => {this.inputNode = c}}
-            type='radio' />
-          <StyledRadioContainer {...this.props}>
-            <StyledRadio checked={checked} {...this.props}/>
-            {checked && <StyledRadioInner {...this.props} />}
-          </StyledRadioContainer>
-          {label}
+          <Flex>
+          <Box>
+            <ErasedInputRadio
+              onClick={this.handleClick}
+              onChange={()  => {}}
+              innerRef={c => {this.inputNode = c}}
+              type='radio' />
+            <StyledRadioContainer {...this.props}>
+              <StyledRadio checked={checked} {...this.props}/>
+              {checked && <StyledRadioInner {...this.props} />}
+            </StyledRadioContainer>
+          </Box>
+          <Box>
+            {this.renderLabel(this.props)}
+          </Box>
+          </Flex>
         </StyledLabel>
       </StyledRadioButton>
     )
@@ -140,7 +157,7 @@ export class RadioButton extends React.Component {
 }
 
 RadioButton.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.any,
   value: PropTypes.string,
   fontSize: PropTypes.number,
   checked: PropTypes.bool
