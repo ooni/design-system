@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { space, width, fontSize, color } from 'styled-system'
 
 import { stylesToCss, styleMult } from '../util'
+import { space, fontSize, color, width } from '../util'
 
 const StyledButton = styled.button`
   // Common
@@ -43,12 +43,12 @@ const StyledButton = styled.button`
 `
 
 export const Button = StyledButton.extend`
-  ${stylesToCss(space)}
-  ${stylesToCss(width)}
-  ${stylesToCss(fontSize)}
-  ${stylesToCss(color)}
+  ${space}
+  ${width}
+  ${fontSize}
+  ${color}
 `
 Button.defaultProps = {
-  fontSize: 2
+  fontSize: [3, 2]
 }
 export default Button

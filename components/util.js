@@ -26,9 +26,46 @@ const breaks = props => [
 ]
 
 
+const pxMult = (p, k) => {
+  const m = /(\d+)px/g.exec(p)
+  if (!m ||  m.length !== 2) {
+    throw Error('Invalid pixel definition')
+  }
+  return parseInt(m[1]) * k
+}
+
+const fxk = (scale, k) => n => {
+  let x = scale[n] || n
+  if (num(x)) {
+    return px(x * k)
+  }
+  return x.map(v => v*k)
+}
+export const fontSizeMult = (propName, k) => props => {
+  const n = is(props.fontSize) ? props.fontSize : props.fontSize || props.f
+  if (!is(n)) return null
+
+  const scale = idx([ 'theme', 'fontSizes' ], props) || defaultFontSizes
+
+  if (!Array.isArray(n)) {
+    return `${propName}: ${fxk(scale, k)(n)};\n`
+  }
+
+  const bp = breaks(props)
+
+  const styleObj = n
+    .map(fxk(scale, k))
+    .map(dec(propName))
+    .map(media(bp))
+    .reduce(merge, {})
+
+  return flatten([styleObj])
+
+}
+
 /* from: jxnblk/styled-system/src/font-size.js */
 const fx = scale => n => num(n) ? px(scale[n] || n) : n
-export const fontSize = props => {
+export const fontSize = (props, mult) => {
   const n = is(props.fontSize) ? props.fontSize : props.fontSize || props.f
   if (!is(n)) return null
 
@@ -46,7 +83,6 @@ export const fontSize = props => {
     .map(media(bp))
     .reduce(merge, {})
 
-  console.log('f func', flatten, styled)
   return flatten([styleObj])
 }
 
@@ -194,9 +230,4 @@ export const stylesToCss = stylesFunc => props => {
 export const styleMult = (stylesFunc, k) => props => {
   const styleObj = stylesFunc(props)
   const value = styleObj[Object.keys(styleObj)[0]]
-  const m = /(\d+)px/g.exec(value)
-  if (m.length !== 2) {
-    throw Error('Invalid pixel definition')
-  }
-  return `${parseInt(m[1])*k}px`
 }
