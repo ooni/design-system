@@ -3,15 +3,14 @@ import PropTypes from 'prop-types'
 
 import { Flex, Box } from 'grid-styled'
 
-import { space, width, fontSize, color } from 'styled-system'
 import styled, { css } from 'styled-components'
-import { stylesToCss, styleMult } from '../util'
+import { space, fontSize, fontSizeMult, color, width } from '../util'
 
 import Input from '../atoms/Input'
 import IconButton from '../atoms/IconButton'
 
 const ButtonContainer = styled.div`
-  ${stylesToCss(space)};
+  ${space}
 
   color: ${props => props.theme.colors.gray5};
   margin: auto;

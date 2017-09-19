@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { space, width, fontSize, color } from 'styled-system'
-import { stylesToCss, styleMult } from '../util'
+import { space, fontSize, fontSizeMult, color, width } from '../util'
 
 import FaTwitter from 'react-icons/lib/fa/twitter'
 import FaFacebook from 'react-icons/lib/fa/facebook'
@@ -11,24 +10,26 @@ import Button from './Button'
 
 export const StyledShareButton = Button.extend`
   text-transform: none;
-  padding: 0 ${styleMult(fontSize, 1)};
+
+  ${fontSizeMult('paddingRight', 1)};
+  ${fontSizeMult('paddingLeft', 1)};
 
   &:hover {
     filter: brightness(90%);
-    ${stylesToCss(color)}
+    ${color}
   }
   &:active {
     transition: .2s ease-in;
     filter: brightness(85%);
-    ${stylesToCss(color)}
+    ${color}
   }
 `
 
 export const StyledText = styled.span`
-  ${stylesToCss(space)}
-  ${stylesToCss(width)}
-  ${stylesToCss(fontSize)}
-  ${stylesToCss(color)}
+  ${space}
+  ${width}
+  ${fontSize}
+  ${color}
 `
 
 StyledText.defaultProps = {

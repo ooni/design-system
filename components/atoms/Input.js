@@ -4,10 +4,9 @@ import { Flex, Box } from 'grid-styled'
 
 import MdWarning from 'react-icons/lib/md/warning'
 
-import { space, width, fontSize, color } from 'styled-system'
 import styled, { css } from 'styled-components'
 
-import { stylesToCss, styleMult } from '../util'
+import { space, fontSize, fontSizeMult, color, width } from '../util'
 
 const borderBottomMaybeError = (color, baseHeight) => (props) => {
   if (props.error) {
@@ -17,10 +16,10 @@ const borderBottomMaybeError = (color, baseHeight) => (props) => {
 }
 
 const styles = css`
-  ${stylesToCss(space)};
-  ${stylesToCss(width)};
-  ${stylesToCss(fontSize)};
-  ${stylesToCss(color)};
+  ${space}
+  ${width}
+  ${fontSize}
+  ${color}
 
   font-family: inherit;
   display: 'block';
@@ -36,7 +35,7 @@ const styles = css`
 
   outline: none;
   width: 100%;
-  height: ${styleMult(fontSize, 2)};
+  ${fontSizeMult('height', 2)}
 
   box-shadow: none;
   box-sizing: content-box;
@@ -52,7 +51,8 @@ const styles = css`
 `
 
 const StyledErrorMessage = styled.p`
-  ${stylesToCss(fontSize)};
+  ${fontSize}
+
   color: ${props => props.theme.colors.red7}
 `
 
@@ -85,7 +85,7 @@ ErrorMessage.defaultProps = {
 const StyledInput = styled.input`${styles}`
 const StyledTextarea = styled.textarea`
   ${styles}
-  height: ${props => styleMult(fontSize, props.rows+1)(props)};
+  ${props => fontSizeMult('height', props.rows+1)(props)}
 `
 
 const Input = (props) => {

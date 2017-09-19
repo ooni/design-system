@@ -1,18 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { space, width, fontSize, color } from 'styled-system'
 import styled, { css } from 'styled-components'
-import { stylesToCss, styleMult } from '../util'
+import { space, fontSize, fontSizeMult, color, width } from '../util'
 
 import { Heading, Container } from 'rebass'
 import { Flex, Box } from 'grid-styled'
 
 const StyledHero = styled.div`
-  ${stylesToCss(space)}
-  ${stylesToCss(width)}
-  ${stylesToCss(fontSize)}
-  ${stylesToCss(color)}
+  ${space}
+  ${width}
+  ${fontSize}
+  ${color}
 
   width: 100%;
   background-color: ${props => props.theme.colors.base};

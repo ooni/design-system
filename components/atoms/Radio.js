@@ -5,10 +5,9 @@ import { Flex, Box } from 'grid-styled'
 
 import MdWarning from 'react-icons/lib/md/warning'
 
-import { space, width, fontSize, color } from 'styled-system'
 import styled, { css } from 'styled-components'
 
-import { stylesToCss, styleMult } from '../util'
+import { space, fontSize, fontSizeMult, color, width } from '../util'
 
 export class RadioGroup extends React.Component {
 
@@ -59,10 +58,10 @@ const ErasedInputRadio = styled.input`
   width: 0;
 `
 const StyledRadioButton = styled.div`
-  ${stylesToCss(space)};
-  ${stylesToCss(width)};
-  ${stylesToCss(fontSize)};
-  ${stylesToCss(color)};
+  ${space}
+  ${width}
+  ${fontSize}
+  ${color}
 
   cursor: pointer;
   padding-bottom: 10px;
@@ -76,8 +75,9 @@ const StyledRadioContainer = styled.div`
   cursor: pointer;
   display: inline-block;
   border-radius: 50%;
-  height: ${styleMult(fontSize, 1)};
-  width: ${styleMult(fontSize, 1)};
+
+  ${fontSizeMult('height', 1)}
+  ${fontSizeMult('width', 1)}
 `
 
 const StyledRadio = StyledRadioContainer.extend`

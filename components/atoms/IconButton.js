@@ -3,15 +3,14 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { space, width, fontSize, color } from 'styled-system'
 
-import { stylesToCss, styleMult } from '../util'
 import Button from './Button'
 
 /* XXX I think there is something weird with the position of this vertically */
 const StyledIconButton = Button.extend`
-  ${stylesToCss(space)}
-  ${stylesToCss(width)}
-  ${stylesToCss(fontSize)}
-  ${stylesToCss(color)}
+  ${space}
+  ${width}
+  ${fontSize}
+  ${color}
 
   border-radius: none;
 
@@ -37,7 +36,7 @@ export const IconButton = (props) => {
 }
 
 IconButton.defaultProps = {
-  fontSize: 2,
+  fontSize: [2, 3],
   icon: PropTypes.node,
   onClick: PropTypes.func
 }
