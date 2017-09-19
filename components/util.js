@@ -1,4 +1,11 @@
-const { breakpoints, fontSizes, space } = require('./constants')
+import flatten from 'styled-components/lib/utils/flatten'
+import styled from 'styled-components'
+
+const {
+  defaultBreakpoints,
+  defaultFontSizes,
+  defaultSpace
+} = require('./constants')
 
 /* Most of this is a carbon copy from jxnblk/styled-system, but it fixes it
  * adds support for styled-components */
@@ -15,7 +22,7 @@ const mq = n => `@media screen and (min-width: ${em(n)})`
 
 const breaks = props => [
   null,
-  ...(idx([ 'theme', 'breakpoints' ], props) || breakpoints).map(mq)
+  ...(idx([ 'theme', 'breakpoints' ], props) || defaultBreakpoints).map(mq)
 ]
 
 
@@ -25,21 +32,22 @@ export const fontSize = props => {
   const n = is(props.fontSize) ? props.fontSize : props.fontSize || props.f
   if (!is(n)) return null
 
-  const scale = idx([ 'theme', 'fontSizes' ], props) || fontSizes
+  const scale = idx([ 'theme', 'fontSizes' ], props) || defaultFontSizes
 
   if (!Array.isArray(n)) {
-    return {
-      fontSize: fx(scale)(n)
-    }
+    return `font-size: ${fx(scale)(n)};\n`
   }
 
   const bp = breaks(props)
 
-  return n
+  const styleObj = n
     .map(fx(scale))
     .map(dec('fontSize'))
     .map(media(bp))
     .reduce(merge, {})
+
+  console.log('f func', flatten, styled)
+  return flatten([styleObj])
 }
 
 /* from: jxnblk/styled-system/src/space.js */
@@ -94,14 +102,14 @@ const merge = (a, b) => Object.assign({}, a, b, Object.keys(b).reduce((obj, key)
 
 
 const MP_REG = /^[mp][trblxy]?$/
-export const marginPadding = props => {
+export const space = props => {
   const keys = Object.keys(props)
     .filter(key => MP_REG.test(key))
     .sort()
   const bp = breaks(props)
-  const sc = idx([ 'theme', 'space' ], props) || space
+  const sc = idx([ 'theme', 'space' ], props) || defaultSpace
 
-  return keys.map(key => {
+  return flatten([keys.map(key => {
     const val = props[key]
     const p = getProperties(key)
 
@@ -116,7 +124,8 @@ export const marginPadding = props => {
       .map(dec(p))
       .map(media(bp))
       .reduce(merge, {})
-  }).reduce(merge, {})
+    }).reduce(merge, {})
+  ])
 }
 
 /* from: jxnblk/styled-system/src/color.js */
@@ -132,7 +141,7 @@ export const color = props => {
   const bp = breaks(props)
   const palette = idx([ 'theme', 'colors' ], props) || {}
 
-  return keys.map(key => {
+  return flatten([keys.map(key => {
     const val = props[key]
     const prop = cProperties[key] || key
 
@@ -147,7 +156,8 @@ export const color = props => {
       .map(dec(prop))
       .map(media(bp))
       .reduce(merge, {})
-  }).reduce(merge, {})
+    }).reduce(merge, {})
+  ])
 }
 
 /* from: jxnblk/styled-system/src/width.js */
@@ -157,18 +167,18 @@ export const width = props => {
   if (!is(n)) return null
 
   if (!Array.isArray(n)) {
-    return {
-      width: wx(n)
-    }
+    return `width: ${wx(n)};`
   }
 
   const bp = breaks(props)
 
-  return n
+  return flatten([
+    n
     .map(wx)
     .map(dec('width'))
     .map(media(bp))
     .reduce(merge, {})
+  ])
 }
 
 export const camelToDashCase = s => s.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
@@ -176,14 +186,12 @@ export const camelToDashCase = s => s.replace(/([a-z])([A-Z])/g, '$1-$2').toLowe
 export const stylesToCss = stylesFunc => props => {
   const styleObj = stylesFunc(props)
   if (styleObj === null) return null
-  console.log(styleObj)
   return Object.keys(styleObj)
           .map(x => `${camelToDashCase(x)}: ${styleObj[x]};`)
           .join('\n')
 }
 
 export const styleMult = (stylesFunc, k) => props => {
-  console.log(k)
   const styleObj = stylesFunc(props)
   const value = styleObj[Object.keys(styleObj)[0]]
   const m = /(\d+)px/g.exec(value)
