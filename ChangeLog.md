@@ -1,5 +1,11 @@
 # ChangeLog
 
+## ooni-components 0.1.0-alpha.13 [2017-09-19]
+
+Changed:
+* Better support for responsiveness
+* Implement styled-system inside of ooni-components
+
 ## ooni-components 0.1.0-alpha.12 [2017-09-18]
 
 Changed:
