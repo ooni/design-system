@@ -40,7 +40,7 @@ RadioGroup.propTypes = {
 }
 
 RadioGroup.defaultProps = {
-  fontSize: 4
+  fontSize: 1
 }
 
 const StyledLabel = styled.label`
@@ -164,5 +164,5 @@ RadioButton.propTypes = {
 }
 
 RadioButton.defaultProps = {
-  fontSize: 2
+  fontSize: 1
 }

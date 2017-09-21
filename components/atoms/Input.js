@@ -79,7 +79,7 @@ ErrorMessage.propTypes = {
 }
 
 ErrorMessage.defaultProps = {
-  fontSize: 2
+  fontSize: 1
 }
 
 const StyledInput = styled.input`${styles}`
@@ -111,7 +111,7 @@ Input.propTypes = {
 Input.defaultProps = {
   type: 'text',
   error: null,
-  fontSize: 2,
+  fontSize: 1,
   rows: 3
 }
 
