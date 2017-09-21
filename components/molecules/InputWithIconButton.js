@@ -21,15 +21,11 @@ export const InputWithIconButton = (props) => {
   return (
     <div>
       <Flex>
-        <Box><Input {...props} /></Box>
-        <Box onClick={props.onAction}>
-          <Flex column style={{height: '100%'}}>
-            <ButtonContainer>
-              <IconButton
-                  onClick={props.onAction}
-                  icon={props.icon} />
-            </ButtonContainer>
-          </Flex>
+        <Box w={9/10} mt={2}><Input {...props} /></Box>
+        <Box onClick={props.onAction} w={1/10}>
+          <IconButton pl={3} pr={3}
+              onClick={props.onAction}
+              icon={props.icon} />
         </Box>
       </Flex>
     </div>
@@ -47,7 +43,7 @@ InputWithIconButton.propTypes = {
 InputWithIconButton.defaultProps = {
   type: 'text',
   error: null,
-  fontSize: 2
+  fontSize: 1
 }
 
 export default InputWithIconButton

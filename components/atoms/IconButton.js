@@ -36,7 +36,7 @@ export const IconButton = (props) => {
 }
 
 IconButton.defaultProps = {
-  fontSize: [2, 3],
+  fontSize: 3,
   icon: PropTypes.node,
   onClick: PropTypes.func
 }
