@@ -2,7 +2,8 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-import OONIRunHorizontalWhite from '../../svgs/logos/OONIRun-HorizontalWhite.svg'
+import RunHorizontalMonochrome from '../../svgs/logos/Run-HorizontalMonochrome.svg'
+import RunHorizontalMonochromeInverted from '../../svgs/logos/Run-HorizontalMonochromeInverted.svg'
 
 const StyledSubBrand = styled.div`
   padding: 20px;
@@ -14,10 +15,10 @@ const StyledBrandName = styled.span`
   display: inline;
 `
 
-export const OONISubBrandRun = (props) => {
+export const LogoOONIRun = (props) => {
   return (
     <StyledSubBrand>
-      <OONIRunHorizontalWhite style={{height: '70px', display: 'inline' }} />
+      <RunHorizontalMonochromeInverted style={{height: '70px', display: 'inline' }} />
     </StyledSubBrand>
   )
 }

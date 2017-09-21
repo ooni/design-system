@@ -1,9 +1,9 @@
 import InputWithIconButton from './InputWithIconButton'
-import { OONISubBrandRun } from './logos/OONISubBrand'
+import { LogoOONIRun } from './logos/OONISubBrand'
 
 const molecules = {
   InputWithIconButton,
-  OONISubBrandRun
+  LogoOONIRun
 }
 
 export default molecules

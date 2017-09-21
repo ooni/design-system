@@ -90,7 +90,7 @@ export const {
   RadioButton,
   HeroLead,
   Hero,
-  OONISubBrandRun,
+  LogoOONIRun,
   InputWithIconButton,
   TwitterShareButton,
   FacebookShareButton,

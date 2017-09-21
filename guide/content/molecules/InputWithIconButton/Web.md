@@ -5,5 +5,9 @@ tightly coupled to the input area.
 
 
 ```.jsx
+<div>
 <InputWithIconButton icon={<MdDelete />} />
+<InputWithIconButton icon={<MdDelete />} />
+<InputWithIconButton icon={<MdDelete />} />
+</div>
 ```

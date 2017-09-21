@@ -21,7 +21,7 @@ export const Text = atoms.Text
 
 /* OONI produced molecules */
 export const InputWithIconButton = molecules.InputWithIconButton
-export const OONISubBrandRun = molecules.OONISubBrandRun
+export const LogoOONIRun = molecules.LogoOONIRun
 
 /* OONI produced organisms */
 export const Hero = organisms.Hero
@@ -163,7 +163,7 @@ const components = {
   InputWithIconButton,
   HeroLead,
   Hero,
-  OONISubBrandRun,
+  LogoOONIRun,
   TwitterShareButton,
   FacebookShareButton,
   Modal
