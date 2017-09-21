@@ -1,6 +1,6 @@
 {
   "name": "ooni-components",
-  "version": "0.1.0-alpha.14",
+  "version": "0.1.0-alpha.15",
   "main": "dist/index.js",
   "repository": "https://github.com/OpenObservatory/design.git",
   "author": "Arturo Filastò <arturo@filasto.net>",

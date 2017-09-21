@@ -1,5 +1,10 @@
 # ChangeLog
 
+## ooni-components 0.1.0-alpha.15 [2017-09-20]
+
+Changed:
+* Sizes of Button, Input, Radio
+
 ## ooni-components 0.1.0-alpha.14 [2017-09-20]
 
 Changed:
