@@ -1,5 +1,10 @@
 # ChangeLog
 
+## ooni-components 0.1.0-beta.2 [2017-09-20]
+
+Changed:
+* Remove container from Modal
+
 ## ooni-components 0.1.0-beta.1 [2017-09-20]
 
 Added:
