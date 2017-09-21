@@ -13,7 +13,7 @@ const ButtonContainer = styled.div`
   ${space}
 
   color: ${props => props.theme.colors.gray5};
-  margin: auto;
+  margin: 0 auto;
   height: 16px;
 `
 
