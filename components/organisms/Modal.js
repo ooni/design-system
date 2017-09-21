@@ -69,9 +69,7 @@ export const Modal = (props) => {
     <StyledModal show={props.show}>
       <StyledModalContent {...props}>
       {props.closeButton && <StyledCloseButton onClick={props.onHideClick} icon={<MdClose/>} position={props.closeButton} />}
-        <Container>
-          {React.Children.map(props.children, child => React.cloneElement(child), props)}
-        </Container>
+        {React.Children.map(props.children, child => React.cloneElement(child), props)}
       </StyledModalContent>
       {props.show && <StyledModalBackdrop onClick={props.onHideClick} />}
     </StyledModal>
