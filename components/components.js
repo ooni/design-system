@@ -26,13 +26,9 @@ export const OONISubBrandRun = molecules.OONISubBrandRun
 /* OONI produced organisms */
 export const Hero = organisms.Hero
 export const HeroLead = organisms.HeroLead
+export const Modal = organisms.Modal
 
-/* Example of more advanced button styling:
-export const Button = styled(rebass.Button)`
-	border: 1px solid red;
-`
-*/
-
+/* Here we just export rebass until we implement all of these */
 export const Absolute = rebass.Absolute
 export const Arrow = rebass.Arrow
 export const Avatar = rebass.Avatar
@@ -169,7 +165,8 @@ const components = {
   Hero,
   OONISubBrandRun,
   TwitterShareButton,
-  FacebookShareButton
+  FacebookShareButton,
+  Modal
 }
 
 export default components

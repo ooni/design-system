@@ -93,7 +93,8 @@ export const {
   OONISubBrandRun,
   InputWithIconButton,
   TwitterShareButton,
-  FacebookShareButton
+  FacebookShareButton,
+  Modal
 } = components
 
 export default OONIComponents

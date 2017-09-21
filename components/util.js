@@ -8,12 +8,14 @@ const {
   defaultSpace
 } = require('./constants')
 
+export const darken = n => `rgba(0, 0, 0, ${n})`
+
 /* Most of this is a carbon copy from jxnblk/styled-system, but it fixes it
  * adds support for styled-components */
 
 const is = n => n !== undefined && n !== null
 const num = n => typeof n === 'number' && !isNaN(n)
-const px = n => num(n) ? n + 'px' : n
+export const px = n => num(n) ? n + 'px' : n
 const em = n => num(n) ? n + 'em' : n
 const neg = n => n < 0
 const arr = n => Array.isArray(n) ? n : [ n ]
@@ -219,7 +221,7 @@ export const width = props => {
 }
 
 export const height = props => {
-  const n = is(props.width) ? props.width : props.width
+  const n = is(props.height) ? props.height : props.height
   if (!is(n)) return null
 
   if (!Array.isArray(n)) {
