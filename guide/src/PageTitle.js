@@ -1,13 +1,12 @@
 import React from 'react'
 import {
   Heading
-} from 'rebass'
+} from '../../components'
 
 const PageTitle = props => (
   <Heading
     {...props}
-    is='h1'
-    f={6}
+    h='1'
     my={4}
   />
 )

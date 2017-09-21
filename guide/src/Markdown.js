@@ -12,7 +12,8 @@ import Rebass, {
   Code,
   Pre,
   Image
-} from 'rebass'
+} from '../../components/'
+
 import PageTitle from './PageTitle'
 import { toggleXray, toggleLiveEditor } from './updaters'
 
@@ -33,6 +34,7 @@ const MDHeading = props => {
   return (
     <BlockLink href={'#' + props.children}>
       <Heading
+        h={props.level}
         {...props}
         id={props.children}
         mt={5}
