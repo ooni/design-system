@@ -1,5 +1,11 @@
 # ChangeLog
 
+## ooni-components 0.1.0-alpha.14 [2017-09-20]
+
+Changed:
+* Improvements to typography
+* Improvements to buttons
+
 ## ooni-components 0.1.0-alpha.13 [2017-09-19]
 
 Changed:
