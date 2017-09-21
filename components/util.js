@@ -2,6 +2,7 @@ import flatten from 'styled-components/lib/utils/flatten'
 import styled from 'styled-components'
 
 const {
+  defaultWeights,
   defaultBreakpoints,
   defaultFontSizes,
   defaultSpace
@@ -215,6 +216,53 @@ export const width = props => {
     .map(media(bp))
     .reduce(merge, {})
   ])
+}
+
+export const height = props => {
+  const n = is(props.width) ? props.width : props.width
+  if (!is(n)) return null
+
+  if (!Array.isArray(n)) {
+    return `height: ${wx(n)};`
+  }
+
+  const bp = breaks(props)
+
+  return flatten([
+    n
+    .map(wx)
+    .map(dec('height'))
+    .map(media(bp))
+    .reduce(merge, {})
+  ])
+}
+
+export const textAlign = props => {
+  let align = 'inherit'
+  if (props.center == true) {
+    align = 'center'
+  } else if (props.left == true) {
+    align = 'left'
+  } else if (props.right == true) {
+    align = 'right'
+  }
+  return `text-align: ${align};`
+}
+
+export const textStyle = props => {
+  let textWeight,
+    fontStyle = 'inherit'
+
+  const weights = idx([ 'theme', 'weights' ], props) || defaultWeights
+  textWeight = weights[0]
+  if (props.bold == true) {
+    textWeight = weights[1]
+  }
+  if (props.italic == true) {
+    fontStyle = 'italic'
+  }
+  return `font-style: ${fontStyle};
+  font-weight: ${textWeight};`
 }
 
 export const camelToDashCase = s => s.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()

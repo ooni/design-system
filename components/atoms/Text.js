@@ -1,14 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { space, fontSize, fontSizeMult, color, width } from '../util'
+import {
+  space,
+  fontSize,
+  textStyle,
+  textAlign,
+  fontSizeMult,
+  color,
+  width
+} from '../util'
 
 const Text = styled.p`
   ${space}
   ${width}
   ${fontSize}
+
+  ${textStyle}
+  ${textAlign}
   ${color}
-  font-style: ${props => props.italic ? 'italic' : 'normal'};
   line-height: 1.25;
 `
 

@@ -1,12 +1,23 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-import { space, fontSize, fontSizeMult, color, width } from '../util'
+import {
+  space,
+  fontSize,
+  fontStyle,
+  textAlign,
+  fontSizeMult,
+  color,
+  width
+} from '../util'
+
 
 const styles = css`
   ${space}
   ${width}
   ${fontSize}
+  ${fontStyle}
+  ${textAlign}
   ${color}
   line-height: 1.5;
   font-weight: ${props => (props.h == 1 || props.h == 2) ? 300 : 600};

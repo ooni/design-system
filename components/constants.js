@@ -1,3 +1,8 @@
+const defaultWeights = [
+  400,
+  700
+]
+
 const defaultBreakpoints = [
   40,
   52,
