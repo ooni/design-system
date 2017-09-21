@@ -16,6 +16,8 @@ export const RadioButton = atoms.RadioButton
 export const RadioGroup = atoms.RadioGroup
 export const TwitterShareButton = atoms.TwitterShareButton
 export const FacebookShareButton = atoms.FacebookShareButton
+export const Heading = atoms.Heading
+export const Text = atoms.Text
 
 /* OONI produced molecules */
 export const InputWithIconButton = molecules.InputWithIconButton
@@ -59,7 +61,6 @@ export const Drawer = rebass.Drawer
 export const Embed = rebass.Embed
 export const Fixed = rebass.Fixed
 export const Group = rebass.Group
-export const Heading = rebass.Heading
 export const Image = rebass.Image
 export const Label = rebass.Label
 export const Lead = rebass.Lead
@@ -88,7 +89,6 @@ export const Subhead = rebass.Subhead
 export const Switch = rebass.Switch
 export const TabItem = rebass.TabItem
 export const Tabs = rebass.Tabs
-export const Text = rebass.Text
 export const Textarea = rebass.Textarea
 export const Toolbar = rebass.Toolbar
 export const Tooltip = rebass.Tooltip

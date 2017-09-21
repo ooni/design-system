@@ -10,7 +10,7 @@ const StyledButton = styled.button`
   ${fontSizeMult('borderRadius', 2)}
 
   display: inline-block;
-  ${fontSizeMult('height', 2)}
+  ${fontSizeMult('height', 3)}
   line-height: 1;
   ${fontSizeMult('paddingLeft', 2)}
   ${fontSizeMult('paddingRight', 2)}

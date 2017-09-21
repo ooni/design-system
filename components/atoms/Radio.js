@@ -64,7 +64,7 @@ const StyledRadioButton = styled.div`
   ${color}
 
   cursor: pointer;
-  padding-bottom: 10px;
+  ${fontSizeMult('padding-bottom', 1)};
 `
 
 const StyledRadioContainer = styled.div`
@@ -81,7 +81,7 @@ const StyledRadioContainer = styled.div`
 `
 
 const StyledRadio = StyledRadioContainer.extend`
-  border: 2px solid ${ props => props.theme.colors.base };
+  border: 2px solid ${ props => props.checked ? props.theme.colors.base : props.theme.colors.gray5 };
   background-color: 'transparent';
   position: absolute;
   top: 0;

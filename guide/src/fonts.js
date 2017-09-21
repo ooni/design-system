@@ -29,7 +29,7 @@ injectGlobal`
 
   @font-face {
     font-family: "Fira Sans";
-    src: url('${FiraSansBold}') format('woff');
+    src: url('${FiraSansSemiBold}') format('woff');
     font-style: normal;
     font-weight: 600;
   }
