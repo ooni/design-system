@@ -1,5 +1,10 @@
 # ChangeLog
 
+## ooni-components 0.1.0-beta.1 [2017-09-20]
+
+Added:
+* Modal organism
+
 ## ooni-components 0.1.0-alpha.15 [2017-09-20]
 
 Changed:
