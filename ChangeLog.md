@@ -1,5 +1,10 @@
 # ChangeLog
 
+## ooni-components 0.1.0-beta.5 [2017-09-21]
+
+Fixes:
+* Bug in Button and Input
+
 ## ooni-components 0.1.0-beta.4 [2017-09-21]
 
 Fixes:
