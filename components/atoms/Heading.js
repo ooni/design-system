@@ -12,6 +12,8 @@ import {
 } from '../util'
 
 
+const isLight = props => (props.h === 1 || props.h === 2)
+
 const styles = css`
   ${space}
   ${width}
@@ -20,7 +22,8 @@ const styles = css`
   ${textAlign}
   ${color}
   line-height: 1.5;
-  font-weight: ${props => (props.h == 1 || props.h == 2) ? 300 : 600};
+  letter-spacing: ${props => isLight(props) ? '-1px' : '0px' };
+  font-weight: ${props => isLight(props) ? 300 : 600};
 `
 
 export const Heading = props => {

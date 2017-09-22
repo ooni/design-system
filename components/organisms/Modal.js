@@ -62,6 +62,8 @@ const StyledCloseButton = styled(IconButton)`
   top: 0;
   ${props => props.position ? `${props.position}: 0;` : ''}
   height: 28px;
+  padding: 0;
+  margin: 0;
 `
 
 export const Modal = (props) => {
