@@ -7,13 +7,13 @@ const StyledButton = styled.button`
   // Common
 
   border: none; // maybe change
-  ${fontSizeMult('borderRadius', 2)}
+  ${fontSizeMult('border-radius', 2)}
 
   display: inline-block;
   ${fontSizeMult('height', 2.5)}
   line-height: 1;
-  ${fontSizeMult('paddingLeft', 2)}
-  ${fontSizeMult('paddingRight', 2)}
+  ${fontSizeMult('padding-left', 2)}
+  ${fontSizeMult('padding-right', 2)}
   text-transform: uppercase;
   vertical-align: middle;
   // Gets rid of tap active state
