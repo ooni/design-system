@@ -50,6 +50,6 @@ export const Button = StyledButton.extend`
   ${color}
 `
 Button.defaultProps = {
-  fontSize: [2, 1]
+  fontSize: 2
 }
 export default Button
