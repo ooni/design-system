@@ -1,5 +1,10 @@
 # ChangeLog
 
+## ooni-components 0.1.0-beta.3 [2017-09-21]
+
+Changed:
+* Remove responsiveness from Button
+
 ## ooni-components 0.1.0-beta.2 [2017-09-20]
 
 Changed:
