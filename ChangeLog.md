@@ -1,5 +1,10 @@
 # ChangeLog
 
+## ooni-components 0.1.0-beta.6 [2017-09-21]
+
+Changes:
+* Add -1px letter-spacing to Light headers
+
 ## ooni-components 0.1.0-beta.5 [2017-09-21]
 
 Fixes:
