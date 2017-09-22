@@ -112,7 +112,8 @@ Input.defaultProps = {
   type: 'text',
   error: null,
   fontSize: 1,
-  rows: 3
+  rows: 3,
+  onChange: () => {}
 }
 
 export default Input
