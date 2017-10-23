@@ -2,12 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { space, fontSize, fontSizeMult, color, width } from '../util'
+import { space, fontSize, fontSizeMult, color, width, px } from '../util'
 
 const StyledButton = styled.button`
   // Common
 
-  border: none; // maybe change
   ${fontSizeMult('border-radius', 2)}
 
   display: inline-block;
@@ -26,8 +25,26 @@ const StyledButton = styled.button`
   font-family: inherit;
   font-weight: 600;
   text-decoration: none;
-  color: ${props => props.inverted ? props.theme.colors.blue5 : props.theme.colors.white};
-  background-color: ${props => props.inverted ? props.theme.colors.white : props.theme.colors.blue5};
+  color: ${props => {
+    if (!props.hollow) {
+      return props.inverted ? props.theme.colors.blue5 : props.theme.colors.white
+    }
+    return props.inverted ? props.theme.colors.white : props.theme.colors.blue5
+  }};
+
+  background-color: ${props => {
+    if (!props.hollow) {
+      return props.inverted ? props.theme.colors.white : props.theme.colors.blue5
+    }
+    return 'transparent'
+  }};
+
+  border: ${props => {
+    if (!props.hollow) {
+      return 'none'
+    }
+    return `${px(props.border)} solid ${props.inverted ? props.theme.colors.white : props.theme.colors.blue5}`
+  }};
 
   text-align: center;
   letter-spacing: .5px;
@@ -36,11 +53,33 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: ${props => props.inverted ? props.theme.colors.gray1 : props.theme.colors.blue4};
+    border: ${props => {
+      if (props.hollow) {
+        return `${px(props.border)} solid ${props.inverted ? props.theme.colors.gray1 : props.theme.colors.blue4}`;
+      }
+      return 'none'
+    }};
+    background-color: ${props => {
+      if (!props.hollow) {
+        return props.inverted ? props.theme.colors.gray1 : props.theme.colors.blue4
+      }
+      return 'transparent'
+    }};
   }
   &:active {
     transition: .2s ease-in;
-    background-color: ${props => props.inverted ? props.theme.colors.gray2 : props.theme.colors.blue6};
+    border: ${props => {
+      if (props.hollow) {
+        return `${px(props.border)} solid ${props.inverted ? props.theme.colors.gray2 : props.theme.colors.blue6}`;
+      }
+      return 'none'
+    }};
+    background-color: ${props => {
+      if (!props.hollow) {
+        return props.inverted ? props.theme.colors.gray2 : props.theme.colors.blue6;
+      }
+      return 'transparent'
+    }};
   }
 `
 
@@ -52,6 +91,8 @@ export const Button = StyledButton.extend`
 `
 Button.defaultProps = {
   fontSize: 1,
-  inverted: false
+  inverted: false,
+  hollow: false,
+  border: 2
 }
 export default Button

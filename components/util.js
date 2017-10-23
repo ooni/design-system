@@ -47,7 +47,6 @@ const fxk = (scale, k) => n => {
 export const fontSizeMult = (propName, k) => props => {
   const n = is(props.fontSize) ? props.fontSize : props.fontSize || props.f
   if (!is(n)) return null
-
   const scale = idx([ 'theme', 'fontSizes' ], props) || defaultFontSizes
 
   if (!Array.isArray(n)) {
