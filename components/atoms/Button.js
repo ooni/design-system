@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import { space, fontSize, fontSizeMult, color, width } from '../util'
@@ -25,8 +26,8 @@ const StyledButton = styled.button`
   font-family: inherit;
   font-weight: 600;
   text-decoration: none;
-  color: ${props => props.theme.colors.white};
-  background-color: ${props => props.theme.colors.blue5};
+  color: ${props => props.inverted ? props.theme.colors.blue5 : props.theme.colors.white};
+  background-color: ${props => props.inverted ? props.theme.colors.white : props.theme.colors.blue5};
 
   text-align: center;
   letter-spacing: .5px;
@@ -35,11 +36,11 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: ${props => props.theme.colors.blue4};
+    background-color: ${props => props.inverted ? props.theme.colors.gray1 : props.theme.colors.blue4};
   }
   &:active {
     transition: .2s ease-in;
-    background-color: ${props => props.theme.colors.blue6};
+    background-color: ${props => props.inverted ? props.theme.colors.gray2 : props.theme.colors.blue6};
   }
 `
 
@@ -50,6 +51,7 @@ export const Button = StyledButton.extend`
   ${color}
 `
 Button.defaultProps = {
-  fontSize: 1
+  fontSize: 1,
+  inverted: false
 }
 export default Button

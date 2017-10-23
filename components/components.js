@@ -22,6 +22,7 @@ export const Text = atoms.Text
 /* OONI produced molecules */
 export const InputWithIconButton = molecules.InputWithIconButton
 export const LogoOONIRun = molecules.LogoOONIRun
+export const Card = molecules.Card
 
 /* OONI produced organisms */
 export const Hero = organisms.Hero
@@ -41,7 +42,6 @@ export const Border = rebass.Border
 export const ButtonCircle = rebass.ButtonCircle
 export const ButtonOutline = rebass.ButtonOutline
 export const ButtonTransparent = rebass.ButtonTransparent
-export const Card = rebass.Card
 export const Carousel = rebass.Carousel
 export const CarouselSlide = rebass.CarouselSlide
 export const Checkbox = rebass.Checkbox

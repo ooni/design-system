@@ -29,6 +29,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server",
+    "start": "webpack-dev-server",
     "build": "NODE_ENV=production webpack -p",
     "gh-pages": "gh-pages -d dist",
     "publish": "npm run build && npm run gh-pages"
