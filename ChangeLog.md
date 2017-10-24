@@ -1,5 +1,11 @@
 # ChangeLog
 
+## ooni-components 0.1.0-beta.7 [2017-10-24]
+
+Adds:
+* Card component
+* inverted and hollow Button component props
+
 ## ooni-components 0.1.0-beta.6 [2017-09-21]
 
 Changes:
