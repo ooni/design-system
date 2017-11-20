@@ -5,7 +5,7 @@ var fs = require('fs')
 // Create SVG render instance.
 var svg = new Rsvg()
 
-var name = 'OONI-HorizontalColor',
+var name,
     height,
     width,
     output
