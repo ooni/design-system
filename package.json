@@ -8,10 +8,11 @@
   "dependencies": {
     "palx": "^1.0.2",
     "prop-types": "^15.5.10",
-    "react": "^15.6.1",
+    "react": "^16.0.0",
     "react-icons": "^2.2.5",
     "rebass": "^1.0.4",
-    "styled-system": "^1.0.0-13",
+    "styled-components": "^2.2.0",
+    "styled-system": "^1.0.2",
     "victory": "^0.22.1"
   },
   "devDependencies": {
