@@ -24,7 +24,7 @@ colors.palette = palette(colors.OONI_BLUE, {
 
 colors.palette = {
   "base": "#0588CB",
-  "black: "#000000",
+  "black: "#f8f9fa",
   "gray0": "#f8f9fa",
   "gray1": "#f1f3f5",
   "gray2": "#e9ecef",
@@ -155,7 +155,7 @@ colors.palette = {
   "cyan7": "#1098ad",
   "cyan8": "#0c8599",
   "cyan9": "#0b7285",
-  "white": "#ffffff"
+  "white": "#212529"
 }
 colors.palette.white = '#ffffff'
 
