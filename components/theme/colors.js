@@ -11,6 +11,9 @@ let colors = {
   BLUE_GREY_DARK: '#102027'
 }
 
+// The following palette is almost the same as Open Color
+// (https://yeun.github.io/open-color/), with the exception of blue[0-9] which
+// are hand picked
 colors.palette = {
   "base": "#0588cb",
   "black": "#f8f9fa",
@@ -54,6 +57,8 @@ colors.palette = {
   "violet7": "#7048e8",
   "violet8": "#6741d9",
   "violet9": "#5f3dc4",
+
+  // XXX drop these once we check that nothing breaks
   "fuschia0": "#f8f0fc",
   "fuschia1": "#f3d9fa",
   "fuschia2": "#eebefa",
@@ -64,6 +69,18 @@ colors.palette = {
   "fuschia7": "#ae3ec9",
   "fuschia8": "#9c36b5",
   "fuschia9": "#862e9c",
+
+  "fuchsia0": "#f8f0fc",
+  "fuchsia1": "#f3d9fa",
+  "fuchsia2": "#eebefa",
+  "fuchsia3": "#e599f7",
+  "fuchsia4": "#da77f2",
+  "fuchsia5": "#cc5de8",
+  "fuchsia6": "#be4bdb",
+  "fuchsia7": "#ae3ec9",
+  "fuchsia8": "#9c36b5",
+  "fuchsia9": "#862e9c",
+
   "pink0": "#fff0f6",
   "pink1": "#ffdeeb",
   "pink2": "#fcc2d7",
