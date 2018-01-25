@@ -11,20 +11,9 @@ let colors = {
   BLUE_GREY_DARK: '#102027'
 }
 
-/*
- * The colors below are the result of running this:
-colors.palette = palette(colors.OONI_BLUE, {
-  // These magic numbers are used to generate the color palette
-  darkestGrey: 0.018,
-  lightestGrey: 0.94,
-  darkestColor: 0.07,
-  lightestColor: 0.89
-}).flattened
-*/
-
 colors.palette = {
-  "base": "#0588CB",
-  "black: "#f8f9fa",
+  "base": "#0588cb",
+  "black": "#f8f9fa",
   "gray0": "#f8f9fa",
   "gray1": "#f1f3f5",
   "gray2": "#e9ecef",
@@ -35,16 +24,16 @@ colors.palette = {
   "gray7": "#495057",
   "gray8": "#343a40",
   "gray9": "#212529",
-  "blue0": "#E7F5FF",
-  "blue1": "#C9E8FF",
-  "blue2": "#94D1FF",
-  "blue3": "#5DB8FE",
-  "blue4": "#37A6ED",
-  "blue5": "#0588CB",
-  "blue6": "#0F77B8",
-  "blue7": "#056AA6",
-  "blue8": "#005F9C",
-  "blue9": "#005A99",
+  "blue0": "#e7f5ff",
+  "blue1": "#c9e8ff",
+  "blue2": "#94d1ff",
+  "blue3": "#5db8fe",
+  "blue4": "#37a6ed",
+  "blue5": "#0588cb",
+  "blue6": "#0f77b8",
+  "blue7": "#056aa6",
+  "blue8": "#005f9c",
+  "blue9": "#005a99",
   "indigo0": "#edf2ff",
   "indigo1": "#dbe4ff",
   "indigo2": "#bac8ff",
@@ -157,6 +146,5 @@ colors.palette = {
   "cyan9": "#0b7285",
   "white": "#212529"
 }
-colors.palette.white = '#ffffff'
 
 export default colors
