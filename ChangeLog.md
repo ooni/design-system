@@ -1,5 +1,11 @@
 # ChangeLog
 
+## ooni-components 0.1.0-rc.2 [2018-01-25]
+
+Fixes:
+
+* Invert black with white
+
 ## ooni-components 0.1.0-rc.1 [2018-01-25]
 
 Changes:
