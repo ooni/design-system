@@ -29,6 +29,6 @@
     "build:js": "babel components -d dist",
     "build:copy": "cp -R components/fonts dist/fonts",
     "build": "npm run build:clean && npm run build:js && npm run build:copy",
-    "release": "yarn run build && yarn publish"
+    "release": "yarn run build && yarn publish --new-version $(jq -r .version package.json)"
   }
 }
