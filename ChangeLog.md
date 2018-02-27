@@ -1,5 +1,27 @@
 # ChangeLog
 
+## ooni-components 0.1.0-rc.2 [2018-01-25]
+
+Fixes:
+
+* Pin more versions and use babel-plugin-styled-components
+
+## ooni-components 0.1.0-rc.2 [2018-01-25]
+
+Fixes:
+
+* Invert black with white
+
+## ooni-components 0.1.0-rc.1 [2018-01-25]
+
+Changes:
+
+* New and improved color palette
+
+Fixes:
+
+* Pin styled-components version
+
 ## ooni-components 0.1.0-beta.7 [2017-10-24]
 
 Adds:
