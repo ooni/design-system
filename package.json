@@ -33,6 +33,7 @@
     "build:js": "babel components -d dist",
     "build:copy": "cp -R components/fonts dist/fonts",
     "build": "npm run build:clean && npm run build:js && npm run build:copy",
+    "tag": "git tag -s -a v$(jq -r .version package.json)  -m \"ooni-components $(jq -r .version package.json)\"",
     "release": "yarn run build && yarn publish --new-version $(jq -r .version package.json)"
   }
 }
