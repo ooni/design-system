@@ -2,9 +2,9 @@
   "name": "ooni-components",
   "version": "0.1.0-rc.3",
   "main": "dist/index.js",
-  "repository": "https://github.com/OpenObservatory/design.git",
+  "repository": "https://github.com/ooni/design.git",
   "author": "Arturo Filastò <arturo@filasto.net>",
-  "license": "BSD-2-Clause",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "palx": "^1.0.2",
     "prop-types": "^15.5.10",
