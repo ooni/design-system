@@ -1,3 +1,4 @@
 [build]
-  publish = "guide/dist"
+  base = "guide"
+  publish = "guide/dist/"
   command = "make guide"
