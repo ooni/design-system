@@ -6,7 +6,6 @@ import { createProvider } from 'refunk'
 import { createRouter, Link } from 'rrx'
 
 import {
-  Provider,
   Sticky,
   Container,
   Flex,
@@ -29,7 +28,7 @@ import { organisms, organismList, organismDescription } from '../content/organis
 
 import fonts from './fonts'
 
-import { theme } from 'ooni-components'
+import { theme, Provider } from 'ooni-components'
 
 const StickySide = styled(Box)`
   @media screen and (min-width: 32em) {

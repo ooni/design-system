@@ -33,4 +33,5 @@ module.exports = {
   defaultBreakpoints,
   defaultSpace,
   defaultFontSizes,
+  defaultWeights
 }
