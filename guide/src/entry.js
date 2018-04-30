@@ -5,7 +5,8 @@ import App from './App'
 const DEV = process.env.NODE_ENV !== 'production'
 const props = {
   options: {
-    isDev: DEV
+    isDev: DEV,
+    basename: null
   }
 }
 render(<App {...props} />, app)
