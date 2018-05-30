@@ -1,10 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="16506.563 -3413.174 56.443 56.444">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
-  <path id="Path_1047" data-name="Path 1047" class="cls-1" d="M45.86,8.819,17.639,22.93V33.513l-7.055-3.528V19.4L38.8,5.292,28.222,0,0,14.111V42.333L28.222,56.444,56.444,42.333V14.111Z" transform="translate(16506.563 -3413.174)"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 56.4 56.4" style="enable-background:new 0 0 56.4 56.4;" xml:space="preserve">
+<path id="Path_1047" style="fill:#FFFFFF;" d="M45.9,8.8L17.6,22.9v10.6L10.6,30V19.4L38.8,5.3L28.2,0L0,14.1v28.2l28.2,14.1
+	l28.2-14.1V14.1L45.9,8.8z"/>
 </svg>
