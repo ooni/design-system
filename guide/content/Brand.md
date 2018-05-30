@@ -46,7 +46,7 @@ Depending on the length of the sub-brand, the font size might differ slightly.
 We love it when people show the OONI logo, however we kindly ask you to not use
 it in the following ways.
 
-![OONI Logo don'ts](./images/XXX.svg)
+![OONI Logo don'ts](./images/Donts.svg)
 
 ## Questions
 
