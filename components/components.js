@@ -18,6 +18,7 @@ export const TwitterShareButton = atoms.TwitterShareButton
 export const FacebookShareButton = atoms.FacebookShareButton
 export const Heading = atoms.Heading
 export const Text = atoms.Text
+export const Select = atoms.Select
 
 /* OONI produced molecules */
 export const InputWithIconButton = molecules.InputWithIconButton
@@ -76,7 +77,6 @@ export const Relative = rebass.Relative
 export const Row = rebass.Row
 export const Samp = rebass.Samp
 export const ScrollCarousel = rebass.ScrollCarousel
-export const Select = rebass.Select
 export const Slider = rebass.Slider
 export const Small = rebass.Small
 export const Star = rebass.Star
