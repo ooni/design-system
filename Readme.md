@@ -1,9 +1,7 @@
-# OONI design
+# OONI Design System
 
-In here you will find all of OONIs design assets.
+This is the home of the `ooni-components` design system.
 
-* [Fonts](fonts/)
-
-* [Icons](icons/)
-
-* [Style (including our color scheme)](style/)
+```
+yarn add ooni-components
+```
