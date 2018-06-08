@@ -1,3 +1,8 @@
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+
+import { Select } from '../components'
+
 storiesOf('Components/Atoms/Select', module)
   .add('default', () =>
     <div>
