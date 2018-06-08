@@ -18,7 +18,7 @@ storiesOf('Components/Atoms/Input', module)
   .add('Font Size', () => <Input fontSize={30} />)
   .add('Text Area', () => <Input type='textarea' rows={10} />)
 
-storiesOf('Components/Atoms/Select (rebass)', module)
+storiesOf('Components/Atoms/Select', module)
   .add('default', () =>
     <div>
       <label>
