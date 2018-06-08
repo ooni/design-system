@@ -2,23 +2,38 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+const Arrow = styled.span`
+  pointer-events: none;
+  position: absolute;
+  top: 45%;
+  right: 15px;
+  width: 0;
+  height: 0;
+`
+
+const ArrowDown = styled(Arrow)`
+  /* Note under this article https://css-tricks.com/snippets/css/css-triangle */
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8.6px solid ${props => props.theme.colors.gray7};
+`
+
 const StyledSelectContainer = styled.div`
+  display: inline-block;
+  position: relative;
 `
 
 const StyledSelect = styled.select`
+  background-color: ${props => props.theme.colors.gray2};
+  border-radius: 2em;
   font-size: 16px;
   padding: 10px 40px 10px 15px;
-  border-radius: 2em;
   cursor: pointer;
-  background-color: ${props => props.theme.colors.gray1};
   border: none;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC');
-  background-repeat: no-repeat;
-  background-position: right 10px center;
   &:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #000;
@@ -33,6 +48,7 @@ export class Select extends React.Component {
         <StyledSelect {...this.props}>
           {children}
         </StyledSelect>
+        <ArrowDown />
       </StyledSelectContainer>
     )
   }
