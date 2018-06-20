@@ -1,6 +1,18 @@
 # ChangeLog
 
-## ooni-components 0.1.0-rc.2 [2018-01-25]
+## ooni-components 0.1.0 [2018-06-20]
+
+Adds:
+
+* Select component
+* Storybook interactive preview
+
+Changes:
+
+* Color palette
+* Migrate the source from ooni/design to ooni/design-system
+
+## ooni-components 0.1.0-rc.3 [2018-01-25]
 
 Fixes:
 
