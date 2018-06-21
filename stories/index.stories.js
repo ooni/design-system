@@ -6,6 +6,8 @@ import { linkTo } from '@storybook/addon-links'
 
 import { Button, Input, Select } from '../components'
 
+import { BarChart, PieChart } from '../components'
+
 storiesOf('Components/Atoms/Button', module)
   .add('Default', () => <Button>Run OONI</Button>)
   .add('Inverted', () => <Button inverted>Run OONI</Button>)
@@ -44,3 +46,37 @@ storiesOf('Components/Atoms/Select', module)
       <option value="2">Two</option>
     </Select>
   ))
+
+storiesOf('Components/Charts/BarChart', module)
+  .add('Default', () =>
+    <div style={{height: '500px'}}>
+      <BarChart
+        title='Example BarChart'
+        subtitle='Spam'
+        data={[
+          {x: 5, y: 80},
+          {x: 10, y: 100},
+          {x: 15, y: 90},
+          {x: 20, y: 150},
+          {x: 25, y: 88}
+        ]}
+      />
+    </div>
+  )
+
+storiesOf('Components/Charts/PieChart', module)
+  .add('Default', () =>
+    <div style={{height: '500px'}}>
+      <PieChart
+        title='Example PieChart'
+        subtitle='Spam'
+        data={[
+          { x: 'News', y: 111 },
+          { x: 'Circumvention', y: 43 },
+          { x: 'Human Rights', y: 11 },
+          { x: 'Political', y: 9 },
+          { x: 'Other', y: 4 }
+        ]}
+      />
+    </div>
+  )

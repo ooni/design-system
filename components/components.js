@@ -7,6 +7,7 @@ import molecules from './molecules'
 import organisms from './organisms'
 
 import BarChart from './charts/BarChart'
+import PieChart from './charts/PieChart'
 
 /* OONI produced atoms */
 
@@ -91,6 +92,7 @@ export const Tooltip = rebass.Tooltip
 export const Truncate = rebass.Truncate
 
 export { default as BarChart } from './charts/BarChart'
+export { default as PieChart } from './charts/PieChart'
 
 const components = {
   Button,
@@ -157,7 +159,6 @@ const components = {
   Donut,
   Row,
   Column,
-  BarChart,
   RadioButton,
   RadioGroup,
   InputWithIconButton,
@@ -166,7 +167,9 @@ const components = {
   LogoOONIRun,
   TwitterShareButton,
   FacebookShareButton,
-  Modal
+  Modal,
+  BarChart,
+  PieChart,
 }
 
 export default components

@@ -28,7 +28,9 @@
     "babel-plugin-styled-components": "^1.5.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0"
   },
   "resolutions": {
     "grid-styled": "2.0.0-11",
@@ -42,6 +44,7 @@
     "build:copy": "cp -R components/fonts dist/fonts",
     "build": "npm run build:clean && npm run build:js && npm run build:copy",
     "tag": "git tag -s -a v$(jq -r .version package.json)  -m \"ooni-components $(jq -r .version package.json)\"",
+    "lint": "eslint --ignore-path .gitignore .",
     "release": "yarn run build && yarn publish --new-version $(jq -r .version package.json)",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
