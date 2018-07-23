@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 
-import { Button, Input, Select } from '../components'
+import { Button, Input, Select, Card, Flex, Box } from '../components'
 
 import { BarChart, PieChart } from '../components'
 import { CategoryCodeANON, NettestGroupWebsites } from '../components/icons'
@@ -49,6 +49,24 @@ storiesOf('Components/Atoms/Select', module)
       <option value="2">Two</option>
     </Select>
   ))
+
+storiesOf('Components/Molecules/Card', module)
+  .add('Default', () => <Card />)
+  .add('Many cards', () => <Flex wrap>
+    <Box w={1/3}>
+      <Card />
+    </Box>
+    <Box w={1/3}>
+      <Card />
+    </Box>
+    <Box w={1/3}>
+      <Card />
+    </Box>
+    <Box w={1/3}>
+      <Card />
+    </Box>
+  </Flex>
+  )
 
 storiesOf('Components/Charts/BarChart', module)
   .add('Default', () =>

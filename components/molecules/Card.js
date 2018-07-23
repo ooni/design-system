@@ -1,14 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Flex, Box } from 'grid-styled'
-
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { space, fontSize, fontSizeMult, color, width } from '../util'
-
-import Button from '../atoms/Button'
-import Heading from '../atoms/Heading'
-import Text from '../atoms/Text'
 
 const CardStyled = styled.div`
   ${space}
@@ -18,11 +12,15 @@ const CardStyled = styled.div`
 
   border: none; // maybe change
   border-radius: 10px;
-  margin-top: 2px;
-  margin-bottom: 2px;
+
 
   ${fontSizeMult('padding', 2)}
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.38);
+`
+
+const CardClickable = styled(CardStyled)`
+  margin-top: 2px;
+  margin-bottom: 2px;
   &:hover {
     margin-top: 0px;
     margin-bottom: 4px;
@@ -36,6 +34,14 @@ const CardStyled = styled.div`
 `
 
 export const Card = (props) => {
+  if (props.onClick) {
+    return (
+      <CardClickable {...props} onClick={props.onClick}>
+        {props.children}
+      </CardClickable>
+    )
+  }
+
   return (
     <CardStyled {...props} onClick={props.onClick}>
       {props.children}
