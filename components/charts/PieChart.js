@@ -6,7 +6,7 @@ import {
 
 import { baseLabelStyles } from '../theme/victoryTheme'
 
-import OONILogoWordmarkHoriz from '../svgs/ooni-logo-wordmark-horiz.svg'
+import OONILogoWordmarkHoriz from '../svgs/logos/OONI-HorizontalColor.svg'
 import colors from '../theme/colors'
 
 import ChartTitle from './ChartTitle'
