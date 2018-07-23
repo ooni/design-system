@@ -8,7 +8,7 @@ import {
   VictoryLabel
 } from 'victory'
 
-import OONILogoWordmarkHoriz from '../svgs/ooni-logo-wordmark-horiz.svg'
+import OONILogoWordmarkHoriz from '../svgs/logos/OONI-HorizontalColor.svg'
 import victoryTheme from '../theme/victoryTheme'
 import { axisYStyle } from '../theme/victoryTheme'
 import colors from '../theme/colors'

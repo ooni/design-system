@@ -18,8 +18,11 @@ var cleanAtrributes = function($el, $) {
   // This is done to remove the clip-path from the svg
   var style = $el.attr('style')
   if (style) {
-    style = style.replace(/clip-path: \w+;?/g, '')
+    style = style.replace(/clip-path:\s+[^;]+/g, '')
     $el.attr('style', style)
+    if (style === '') {
+      $el.removeAttr('style')
+    }
   }
 
   if($el.children().length === 0) {
@@ -35,7 +38,7 @@ var cleanClipPath = function($el, $) {
   $('clipPath', $el).remove()
 }
 
-glob(rootDir + '/components/svgs/icons/*/*.svg', function(err, icons) {
+glob(rootDir + '/components/svgs/icons/*.svg', function(err, icons) {
   icons.forEach(function(iconPath) {
     var name = path.basename(iconPath, '.svg')
     var svg = fs.readFileSync(iconPath, 'utf-8')
@@ -66,7 +69,7 @@ export default ${name}
   const iconsModule = Object.keys(components).map(name => {
     const compPath = components[name]
     const loc = `./${path.basename(compPath).replace('.js', '')}`
-    return `export { default as ${name} } from ${loc}`
+    return `export { default as ${name} } from '${loc}'`
   }).join('\n') + '\n'
   const dstPath = path.join(rootDir, 'components', 'icons', 'index.js')
   fs.writeFileSync(dstPath, iconsModule, 'utf-8')

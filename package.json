@@ -10,6 +10,7 @@
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
     "react-dom": "^16.4.0",
+    "react-icon-base": "^2.1.2",
     "react-icons": "^2.2.5",
     "rebass": "^1.0.4",
     "styled-components": "^2.4.0",

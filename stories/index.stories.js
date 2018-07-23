@@ -7,6 +7,9 @@ import { linkTo } from '@storybook/addon-links'
 import { Button, Input, Select } from '../components'
 
 import { BarChart, PieChart } from '../components'
+import { CategoryCodeANON, NettestGroupWebsites } from '../components/icons'
+
+import MdVolumeMute from 'react-icons/lib/md/volume-mute'
 
 storiesOf('Components/Atoms/Button', module)
   .add('Default', () => <Button>Run OONI</Button>)
@@ -78,5 +81,14 @@ storiesOf('Components/Charts/PieChart', module)
           { x: 'Other', y: 4 }
         ]}
       />
+    </div>
+  )
+
+storiesOf('Components/Icons', module)
+  .add('Default', () =>
+    <div style={{height: '500px'}}>
+      <CategoryCodeANON size={30} />
+      <MdVolumeMute size={30} />
+      <NettestGroupWebsites size={30} />
     </div>
   )
