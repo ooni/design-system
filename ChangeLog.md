@@ -1,5 +1,16 @@
 # ChangeLog
 
+## ooni-components 0.1.3 [2018-07-23]
+
+Adds:
+
+* Custom icons
+* Bodymovin animations
+
+Changes:
+
+* Card now acts clickable only when it has onClick bound to it
+
 ## ooni-components 0.1.0 [2018-06-20]
 
 Adds:
