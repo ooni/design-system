@@ -1,5 +1,11 @@
 # ChangeLog
 
+## ooni-components 0.1.2 [2018-07-26]
+
+Adds:
+
+* Tick & Cross icons
+
 ## ooni-components 0.1.1 [2018-07-23]
 
 Adds:
