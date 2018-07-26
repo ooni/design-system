@@ -1,6 +1,6 @@
 # ChangeLog
 
-## ooni-components 0.1.3 [2018-07-23]
+## ooni-components 0.1.1 [2018-07-23]
 
 Adds:
 
