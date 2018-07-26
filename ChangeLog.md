@@ -1,5 +1,11 @@
 # ChangeLog
 
+## ooni-components 0.1.3 [2018-07-26]
+
+Fixes:
+
+* Broken svgs
+
 ## ooni-components 0.1.2 [2018-07-26]
 
 Adds:
