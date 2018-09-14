@@ -6,15 +6,16 @@
   "author": "Arturo Filastò <arturo@filasto.net>",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "grid-styled": "5.0.2",
     "palx": "^1.0.2",
     "prop-types": "^15.5.10",
-    "react": "^16.0.0",
+    "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-icon-base": "^2.1.2",
     "react-icons": "^2.2.5",
     "rebass": "^1.0.4",
-    "styled-components": "^2.4.0",
-    "styled-system": "^1.1.0",
+    "styled-components": "^4.0.0-beta.3",
+    "styled-system": "^3.1.1",
     "victory": "^0.22.1"
   },
   "devDependencies": {
@@ -35,10 +36,10 @@
     "eslint-plugin-react": "^7.7.0"
   },
   "resolutions": {
-    "grid-styled": "2.0.0-11",
+    "grid-styled": "5.0.2",
     "rebass": "1.0.4",
-    "styled-components": "2.4.0",
-    "styled-system": "1.1.0"
+    "styled-components": "4.0.0-beta.3",
+    "styled-system": "3.1.1"
   },
   "scripts": {
     "build:clean": "rm -rf dist/*",
