@@ -80,14 +80,14 @@ const StyledRadioContainer = styled.div`
   ${fontSizeMult('width', 1)}
 `
 
-const StyledRadio = StyledRadioContainer.extend`
+const StyledRadio = styled(StyledRadioContainer)`
   border: 2px solid ${ props => props.checked ? props.theme.colors.base : props.theme.colors.gray5 };
   background-color: 'transparent';
   position: absolute;
   top: 0;
 `
 
-const StyledRadioInner = StyledRadio.extend`
+const StyledRadioInner = styled(StyledRadio)`
   background-color: ${ props => props.theme.colors.base};
   transform: scale(0.5);
 `
@@ -107,13 +107,13 @@ export class RadioButton extends React.Component {
 
   blur() {
     if (this.inputNode) {
-      this.inputNode.blur();
+      this.inputNode.blur()
     }
   }
 
   focus() {
     if (this.inputNode) {
-      this.inputNode.focus();
+      this.inputNode.focus()
     }
   }
 
@@ -135,20 +135,20 @@ export class RadioButton extends React.Component {
       <StyledRadioButton {...this.props}>
         <StyledLabel {...this.props}>
           <Flex>
-          <Box>
-            <ErasedInputRadio
-              onClick={this.handleClick}
-              onChange={()  => {}}
-              innerRef={c => {this.inputNode = c}}
-              type='radio' />
-            <StyledRadioContainer {...this.props}>
-              <StyledRadio checked={checked} {...this.props}/>
-              {checked && <StyledRadioInner {...this.props} />}
-            </StyledRadioContainer>
-          </Box>
-          <Box>
-            {this.renderLabel(this.props)}
-          </Box>
+            <Box>
+              <ErasedInputRadio
+                onClick={this.handleClick}
+                onChange={()  => {}}
+                innerRef={c => {this.inputNode = c}}
+                type='radio' />
+              <StyledRadioContainer {...this.props}>
+                <StyledRadio checked={checked} {...this.props}/>
+                {checked && <StyledRadioInner {...this.props} />}
+              </StyledRadioContainer>
+            </Box>
+            <Box>
+              {this.renderLabel(this.props)}
+            </Box>
           </Flex>
         </StyledLabel>
       </StyledRadioButton>
