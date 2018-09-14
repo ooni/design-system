@@ -6,11 +6,9 @@ import {
   fontSize,
   fontStyle,
   textAlign,
-  fontSizeMult,
   color,
   width
 } from '../util'
-
 
 const isLight = props => (props.h === 1 || props.h === 2)
 
