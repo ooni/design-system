@@ -6,7 +6,7 @@ import { space, width, fontSize, color } from 'styled-system'
 import Button from './Button'
 
 /* XXX I think there is something weird with the position of this vertically */
-const StyledIconButton = Button.extend`
+const StyledIconButton = styled(Button)`
   ${space}
   ${width}
   ${fontSize}

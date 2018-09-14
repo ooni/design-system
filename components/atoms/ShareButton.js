@@ -8,7 +8,7 @@ import FaFacebook from 'react-icons/lib/fa/facebook'
 import { Link } from 'rebass'
 import Button from './Button'
 
-export const StyledShareButton = Button.extend`
+export const StyledShareButton = styled(Button)`
   text-transform: none;
 
   ${fontSizeMult('paddingRight', 1)};

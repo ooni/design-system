@@ -54,41 +54,42 @@ const StyledButton = styled.button`
 
   &:hover {
     border: ${props => {
-      if (props.hollow) {
-        return `${px(props.border)} solid ${props.inverted ? props.theme.colors.gray1 : props.theme.colors.blue4}`;
-      }
-      return 'none'
-    }};
+    if (props.hollow) {
+      return `${px(props.border)} solid ${props.inverted ? props.theme.colors.gray1 : props.theme.colors.blue4}`
+    }
+    return 'none'
+  }};
     background-color: ${props => {
-      if (!props.hollow) {
-        return props.inverted ? props.theme.colors.gray1 : props.theme.colors.blue4
-      }
-      return 'transparent'
-    }};
+    if (!props.hollow) {
+      return props.inverted ? props.theme.colors.gray1 : props.theme.colors.blue4
+    }
+    return 'transparent'
+  }};
   }
   &:active {
     transition: .2s ease-in;
     border: ${props => {
-      if (props.hollow) {
-        return `${px(props.border)} solid ${props.inverted ? props.theme.colors.gray2 : props.theme.colors.blue6}`;
-      }
-      return 'none'
-    }};
+    if (props.hollow) {
+      return `${px(props.border)} solid ${props.inverted ? props.theme.colors.gray2 : props.theme.colors.blue6}`
+    }
+    return 'none'
+  }};
     background-color: ${props => {
-      if (!props.hollow) {
-        return props.inverted ? props.theme.colors.gray2 : props.theme.colors.blue6;
-      }
-      return 'transparent'
-    }};
+    if (!props.hollow) {
+      return props.inverted ? props.theme.colors.gray2 : props.theme.colors.blue6
+    }
+    return 'transparent'
+  }};
   }
 `
 
-export const Button = StyledButton.extend`
+export const Button = styled(StyledButton)`
   ${space}
   ${width}
   ${fontSize}
   ${color}
 `
+
 Button.defaultProps = {
   fontSize: 1,
   inverted: false,
