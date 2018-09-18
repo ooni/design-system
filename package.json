@@ -37,7 +37,7 @@
   },
   "resolutions": {
     "rebass": "2.3.3",
-    "@rebass/grid": "6.0.0",
+    "@rebass/grid": "6.0.0-3",
     "styled-components": "4.0.0-beta.3",
     "styled-system": "3.1.3"
   },
