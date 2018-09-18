@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components'
 import { space, fontSize, fontSizeMult, color, width } from '../util'
 
 import { Heading, Container } from 'rebass'
-import { Flex, Box } from 'grid-styled'
+import { Flex, Box } from '@rebass/grid'
 
 const StyledHero = styled.div`
   ${space}

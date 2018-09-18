@@ -16,7 +16,7 @@ import {
 } from '../util'
 
 import { Fixed, Container } from 'rebass'
-import { Flex, Box } from 'grid-styled'
+import { Flex, Box } from '@rebass/grid'
 
 import Heading from '../atoms/Heading'
 import IconButton from '../atoms/IconButton'
