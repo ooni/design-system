@@ -33,7 +33,10 @@
     "babel-runtime": "^6.26.0",
     "cheerio": "^1.0.0-rc.2",
     "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^23.6.0",
+    "jest-styled-components": "^6.2.0",
+    "react-test-renderer": "^16.5.2"
   },
   "resolutions": {
     "rebass": "2.3.3",
@@ -48,9 +51,30 @@
     "build": "npm run build:clean && npm run build:js && npm run build:copy",
     "create-icons": "node bin/create-icons",
     "tag": "git tag -s -a v$(jq -r .version package.json)  -m \"ooni-components $(jq -r .version package.json)\"",
+    "test": "jest",
     "lint": "eslint --ignore-path .gitignore .",
     "release": "yarn run build && yarn publish --new-version $(jq -r .version package.json)",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/test/"
+    ],
+    "testMatch": [
+      "**/test/**/*.js"
+    ],
+    "coverageReporters": [
+      "html",
+      "lcov"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   }
 }
