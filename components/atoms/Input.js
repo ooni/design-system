@@ -62,7 +62,7 @@ StyledErrorMessage.defaultProps = {
 
 const ErrorMessage = ({children, fontSize}) => {
   return (
-    <Flex wrap>
+    <Flex flexWrap='wrap'>
       <Box>
         <StyledErrorMessage>{children}</StyledErrorMessage>
       </Box>
