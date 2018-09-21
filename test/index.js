@@ -4,11 +4,12 @@ import React from 'react'
 
 import toJson from 'enzyme-to-json'
 import Enzyme from 'enzyme'
-import { shallow } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
+import { ThemeProvider } from 'styled-components'
+
 import {
-  Provider,
   theme,
   Input,
   Button,
@@ -17,36 +18,46 @@ import {
 
 Enzyme.configure({ adapter: new Adapter() })
 
+const mountWithTheme = (el) => {
+  const context = shallow(<ThemeProvider theme={theme} />)
+    .instance()
+    .getChildContext()
+
+  return mount(el, {
+    context,
+    childContextTypes: ThemeProvider.childContextTypes,
+  })
+}
+
 const shallowWithTheme = (el) => {
-  // FIXME the following:
+  // FIXME for v4 the following:
   // https://github.com/styled-components/jest-styled-components#theming doesn't
   // work with styled-components v4, because getChildContext() is replaced with
   // childContext(), but calling that function leads to other odd errors
-
-
   //The following workaround also doesn't work due to:
   //https://github.com/airbnb/enzyme/issues/1647
-  const wrapper = shallow(
-    <Provider theme={theme}>
-      {el}
-    </Provider>
-  )
-  return wrapper.dive({context: { theme }})
+
+  const context = shallow(<ThemeProvider theme={theme} />)
+    .instance()
+    .getChildContext()
+  return shallow(el, { context })
 }
 
-const renderJSON = el => toJson(shallow(el))
+const renderJSON = el => toJson(mountWithTheme(el))
 
 describe('Button', () => {
   test('renders', () => {
     const json = renderJSON(
-      <Button theme={theme} />
+      <Button />
     )
-    expect(json.type).toBe('button')
+    expect(json).toMatchSnapshot()
   })
   test('render with width prop', () => {
-    const json = renderJSON(
-      <Button width={1} theme={theme} />
-    )
+    const json = toJson(shallowWithTheme(
+      <Button width={1} />
+    ))
+    expect(json).toMatchSnapshot()
+    // XXX for some reason only a shallow render makes this assertion true
     expect(json).toHaveStyleRule('width', '100%')
   })
 })
@@ -54,23 +65,23 @@ describe('Button', () => {
 describe('Input', () => {
   test('renders', () => {
     const json = renderJSON(
-      <Input error='Some error' theme={theme} />
+      <Input error='Some error' />
     )
-    expect(json.type).toBe('div')
+    expect(json).toMatchSnapshot()
   })
 })
 
 describe('InputWithIconButton', () => {
   test('renders', () => {
     const json = renderJSON(
-      <InputWithIconButton icon={<div />} theme={theme} />
+      <InputWithIconButton icon={<div />} />
     )
-    expect(json.type).toBe('div')
+    expect(json.type).toMatchSnapshot()
   })
   test('render with onAction prop', () => {
     const json = renderJSON(
-      <InputWithIconButton onAction={() => {}} icon={<div />} theme={theme} />
+      <InputWithIconButton onAction={() => {}} icon={<div />} />
     )
-    expect(json.type).toBe('div')
+    expect(json.type).toMatchSnapshot()
   })
 })
