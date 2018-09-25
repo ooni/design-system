@@ -65,7 +65,8 @@
       "<rootDir>/test/"
     ],
     "testMatch": [
-      "**/test/**/*.js"
+      "**/test/**/*.js",
+      "!**/test/config.js"
     ],
     "coverageReporters": [
       "html",
