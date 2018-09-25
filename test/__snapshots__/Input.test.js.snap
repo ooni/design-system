@@ -161,3 +161,51 @@ exports[`Input renders 1`] = `
   </div>
 </Input>
 `;
+
+exports[`Input renders with onChange handler 1`] = `
+<div>
+  <Input__StyledInput
+    error={null}
+    fontSize={1}
+    onChange={[MockFunction]}
+    rows={3}
+    type="text"
+  />
+</div>
+`;
+
+exports[`Input renders with prop fontSize 1`] = `
+<div>
+  <Input__StyledInput
+    error={null}
+    fontSize={4}
+    onChange={[Function]}
+    rows={3}
+    type="text"
+  />
+</div>
+`;
+
+exports[`Input renders with prop rows 1`] = `
+<div>
+  <Input__StyledTextarea
+    error={null}
+    fontSize={1}
+    onChange={[Function]}
+    rows={4}
+    type="textarea"
+  />
+</div>
+`;
+
+exports[`Input renders with prop type 1`] = `
+<div>
+  <Input__StyledInput
+    error={null}
+    fontSize={1}
+    onChange={[Function]}
+    rows={3}
+    type="number"
+  />
+</div>
+`;
