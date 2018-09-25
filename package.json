@@ -66,6 +66,7 @@
     ],
     "testMatch": [
       "**/test/**/*.js",
+      "!**/test/index.js",
       "!**/test/config.js"
     ],
     "coverageReporters": [
