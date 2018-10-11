@@ -21,10 +21,11 @@ describe('Modal', () => {
   test('close button click handler is called', () => {
     const onCloseClick = jest.fn()
     const wrapper = shallowWithTheme(
-      <Modal closeButton='right' onCloseClick={onCloseClick} />
+      <Modal show={true} closeButton='right' onCloseClick={onCloseClick} />
     )
     wrapper.find('Modal__StyledCloseButton').simulate('click')
-    expect(onCloseClick).toHaveBeenCalled()
+    wrapper.find('Modal__StyledModalBackdrop').simulate('click')
+    expect(onCloseClick).toHaveBeenCalledTimes(2)
   })
 
 })
