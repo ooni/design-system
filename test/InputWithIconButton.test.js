@@ -8,14 +8,14 @@ describe('InputWithIconButton', () => {
     const json = renderJSON(
       <InputWithIconButton icon={<div />} />
     )
-    expect(json.type).toMatchSnapshot()
+    expect(json).toMatchSnapshot()
   })
 
   test('render with onAction prop', () => {
     const json = renderJSON(
       <InputWithIconButton onAction={() => {}} icon={<div />} />
     )
-    expect(json.type).toMatchSnapshot()
+    expect(json).toMatchSnapshot()
   })
 
   test('onAction is called on click', () => {
