@@ -1,6 +1,6 @@
-/* global describe, test, expect */
+/* global describe, test, expect, jest */
 import React from 'react'
-import { renderJSON, renderShallowJSON } from './index'
+import { renderJSON, shallowWithTheme } from './index'
 import { InputWithIconButton } from '../components'
 
 describe('InputWithIconButton', () => {
@@ -10,10 +10,20 @@ describe('InputWithIconButton', () => {
     )
     expect(json.type).toMatchSnapshot()
   })
+
   test('render with onAction prop', () => {
     const json = renderJSON(
       <InputWithIconButton onAction={() => {}} icon={<div />} />
     )
     expect(json.type).toMatchSnapshot()
+  })
+
+  test('onAction is called on click', () => {
+    const onAction = jest.fn()
+    const wrapper = shallowWithTheme(
+      <InputWithIconButton onAction={onAction} />
+    )
+    wrapper.find('IconButton').simulate('click')
+    expect(onAction).toHaveBeenCalled()
   })
 })
