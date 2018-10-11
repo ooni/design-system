@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders 1`] = `
+.c1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: auto;
+  z-index: 1050;
+  background-color: #f8f9fa;
+  border-radius: 2px;
+}
+
+.c0 {
+  position: relative;
+  display: none;
+}
+
+<Modal
+  onCloseClick={[Function]}
+>
+  <Modal__StyledModal>
+    <div
+      className="c0"
+    >
+      <Modal__StyledModalContent
+        onCloseClick={[Function]}
+      >
+        <div
+          className="c1"
+        />
+      </Modal__StyledModalContent>
+    </div>
+  </Modal__StyledModal>
+</Modal>
+`;
+
+exports[`Modal renders with close button 1`] = `
+.c5 {
+  border-radius: 56px;
+  display: inline-block;
+  height: 70px;
+  line-height: 1;
+  padding-left: 56px;
+  padding-right: 56px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+  font-family: inherit;
+  font-weight: 600;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #f8f9fa;
+  background-color: #0588cb;
+  border: none;
+  text-align: center;
+  -webkit-letter-spacing: .5px;
+  -moz-letter-spacing: .5px;
+  -ms-letter-spacing: .5px;
+  letter-spacing: .5px;
+  z-index: 1;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+  cursor: pointer;
+}
+
+.c5:hover {
+  border: none;
+  background-color: #37a6ed;
+}
+
+.c5:active {
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  border: none;
+  background-color: #0f77b8;
+}
+
+.c4 {
+  font-size: 28px;
+}
+
+.c3 {
+  font-size: 28px;
+  border-radius: none;
+  color: #adb5bd;
+  background-color: transparent;
+}
+
+.c3:hover {
+  background-color: transparent;
+  color: #ced4da;
+}
+
+.c3:active {
+  background-color: transparent;
+  color: #868e96;
+}
+
+.c1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: auto;
+  z-index: 1050;
+  background-color: #f8f9fa;
+  border-radius: 2px;
+}
+
+.c0 {
+  position: relative;
+  display: none;
+}
+
+.c2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+}
+
+<Modal
+  closeButton="right"
+  onCloseClick={[Function]}
+>
+  <Modal__StyledModal>
+    <div
+      className="c0"
+    >
+      <Modal__StyledModalContent
+        closeButton="right"
+        onCloseClick={[Function]}
+      >
+        <div
+          className="c1"
+        >
+          <Modal__StyledCloseButton
+            icon={<MdClose />}
+            position="right"
+          >
+            <IconButton
+              className="c2"
+              fontSize={3}
+              icon={<MdClose />}
+              onClick={[Function]}
+              position="right"
+            >
+              <IconButton__StyledIconButton
+                className="c2"
+                fontSize={3}
+                icon={<MdClose />}
+                onClick={[Function]}
+                position="right"
+              >
+                <Button
+                  border={2}
+                  className="c2 c3"
+                  fontSize={3}
+                  hollow={false}
+                  icon={<MdClose />}
+                  inverted={false}
+                  onClick={[Function]}
+                  position="right"
+                >
+                  <Button__StyledButton
+                    border={2}
+                    className="c2 c3 c4"
+                    fontSize={3}
+                    hollow={false}
+                    icon={<MdClose />}
+                    inverted={false}
+                    onClick={[Function]}
+                    position="right"
+                  >
+                    <button
+                      className="c2 c3 c4 c5"
+                      fontSize={3}
+                      icon={<MdClose />}
+                      onClick={[Function]}
+                    >
+                      <MdClose>
+                        <IconBase
+                          viewBox="0 0 40 40"
+                        >
+                          <svg
+                            fill="currentColor"
+                            height="1em"
+                            preserveAspectRatio="xMidYMid meet"
+                            style={
+                              Object {
+                                "color": undefined,
+                                "verticalAlign": "middle",
+                              }
+                            }
+                            viewBox="0 0 40 40"
+                            width="1em"
+                          >
+                            <g>
+                              <path
+                                d="m31.6 10.7l-9.3 9.3 9.3 9.3-2.3 2.3-9.3-9.3-9.3 9.3-2.3-2.3 9.3-9.3-9.3-9.3 2.3-2.3 9.3 9.3 9.3-9.3z"
+                              />
+                            </g>
+                          </svg>
+                        </IconBase>
+                      </MdClose>
+                    </button>
+                  </Button__StyledButton>
+                </Button>
+              </IconButton__StyledIconButton>
+            </IconButton>
+          </Modal__StyledCloseButton>
+        </div>
+      </Modal__StyledModalContent>
+    </div>
+  </Modal__StyledModal>
+</Modal>
+`;
