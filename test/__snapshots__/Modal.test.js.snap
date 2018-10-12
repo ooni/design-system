@@ -149,7 +149,6 @@ exports[`Modal renders with close button 1`] = `
         >
           <Modal__StyledCloseButton
             icon={<MdClose />}
-            onClick={[Function]}
             position="right"
           >
             <IconButton
