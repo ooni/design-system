@@ -22,14 +22,14 @@ exports[`Modal renders 1`] = `
 }
 
 <Modal
-  onCloseClick={[Function]}
+  onHideClick={[Function]}
 >
   <Modal__StyledModal>
     <div
       className="c0"
     >
       <Modal__StyledModalContent
-        onCloseClick={[Function]}
+        onHideClick={[Function]}
       >
         <div
           className="c1"
@@ -134,7 +134,7 @@ exports[`Modal renders with close button 1`] = `
 
 <Modal
   closeButton="right"
-  onCloseClick={[Function]}
+  onHideClick={[Function]}
 >
   <Modal__StyledModal>
     <div
@@ -142,13 +142,14 @@ exports[`Modal renders with close button 1`] = `
     >
       <Modal__StyledModalContent
         closeButton="right"
-        onCloseClick={[Function]}
+        onHideClick={[Function]}
       >
         <div
           className="c1"
         >
           <Modal__StyledCloseButton
             icon={<MdClose />}
+            onClick={[Function]}
             position="right"
           >
             <IconButton

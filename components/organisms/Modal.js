@@ -80,12 +80,12 @@ export const Modal = (props) => {
 
 Modal.propTypes = {
   children: PropTypes.node,
-  onCloseClick: PropTypes.func,
+  onHideClick: PropTypes.func,
   closeButton: PropTypes.string
 }
 
 Modal.defaultProps = {
-  onCloseClick: () => {}
+  onHideClick: () => {}
 }
 
 export default Modal
