@@ -52,7 +52,7 @@ storiesOf('Components/Atoms/Select', module)
 
 storiesOf('Components/Molecules/Card', module)
   .add('Default', () => <Card />)
-  .add('Many cards', () => <Flex wrap>
+  .add('Many cards', () => <Flex flexWrap="wrap">
     <Box w={1/3}>
       <Card />
     </Box>
