@@ -124,7 +124,7 @@ storiesOf('Components/Molecules/InputWithIconButton', module)
   .add('With Clickable Icon', () =>
     <InputWithIconButton
       icon={<MdVolumeMute />}
-      onClick={action('Clicked')}
+      onAction={action('Clicked')}
       onChange={action('Changed')}
     />
   )

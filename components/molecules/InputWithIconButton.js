@@ -11,7 +11,7 @@ export const InputWithIconButton = (props) => {
     <div>
       <Flex>
         <Box w={9/10} mt={2}><Input {...props} /></Box>
-        <Box onClick={props.onAction} w={1/10}>
+        <Box w={1/10}>
           <IconButton pl={3} pr={3}
             onClick={props.onAction}
             icon={props.icon} />

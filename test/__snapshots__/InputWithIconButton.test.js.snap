@@ -166,12 +166,10 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
             </div>
           </Box>
           <Box
-            onClick={[Function]}
             w={0.1}
           >
             <div
               className="c1"
-              onClick={[Function]}
             >
               <IconButton
                 fontSize={3}
@@ -401,14 +399,12 @@ exports[`InputWithIconButton renders 1`] = `
               <IconButton
                 fontSize={3}
                 icon={<div />}
-                onClick={[Function]}
                 pl={3}
                 pr={3}
               >
                 <IconButton__StyledIconButton
                   fontSize={3}
                   icon={<div />}
-                  onClick={[Function]}
                   pl={3}
                   pr={3}
                 >
@@ -419,7 +415,6 @@ exports[`InputWithIconButton renders 1`] = `
                     hollow={false}
                     icon={<div />}
                     inverted={false}
-                    onClick={[Function]}
                     pl={3}
                     pr={3}
                   >
@@ -430,7 +425,6 @@ exports[`InputWithIconButton renders 1`] = `
                       hollow={false}
                       icon={<div />}
                       inverted={false}
-                      onClick={[Function]}
                       pl={3}
                       pr={3}
                     >
@@ -438,7 +432,6 @@ exports[`InputWithIconButton renders 1`] = `
                         className="c4 c5 c6"
                         fontSize={3}
                         icon={<div />}
-                        onClick={[Function]}
                       >
                         <div />
                       </button>
