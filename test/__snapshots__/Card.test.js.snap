@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders 1`] = `
+.c0 {
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.38);
+}
+
+<Card
+  fontSize={1}
+>
+  <Card__CardStyled
+    fontSize={1}
+  >
+    <div
+      className="c0"
+      fontSize={1}
+    />
+  </Card__CardStyled>
+</Card>
+`;
+
+exports[`Card renders with children 1`] = `
+.c0 {
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.38);
+}
+
+<Card
+  fontSize={1}
+>
+  <Card__CardStyled
+    fontSize={1}
+  >
+    <div
+      className="c0"
+      fontSize={1}
+    >
+      <div />
+    </div>
+  </Card__CardStyled>
+</Card>
+`;

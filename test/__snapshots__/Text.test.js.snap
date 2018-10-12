@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders 1`] = `
+.c0 {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.25;
+}
+
+<Text
+  f={1}
+  m={0}
+  p={0}
+>
+  <p
+    className="c0"
+  />
+</Text>
+`;

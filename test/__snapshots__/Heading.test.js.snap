@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders 1`] = `
+.c0 {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  -webkit-letter-spacing: 0px;
+  -moz-letter-spacing: 0px;
+  -ms-letter-spacing: 0px;
+  letter-spacing: 0px;
+  font-weight: 600;
+}
+
+<Heading
+  mb={2}
+  mt={2}
+>
+  <Heading__BaseEl
+    fontSize={0}
+    mb={2}
+    mt={2}
+  >
+    <h1
+      className="c0"
+      fontSize={0}
+    >
+       Hello OONI! 
+    </h1>
+  </Heading__BaseEl>
+</Heading>
+`;
