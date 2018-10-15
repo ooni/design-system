@@ -80,9 +80,7 @@ exports[`Input renders 1`] = `
         type="text"
       />
     </Input__StyledInput>
-    <ErrorMessage
-      fontSize={1}
-    >
+    <ErrorMessage>
       <Flex
         flexWrap="wrap"
       >
