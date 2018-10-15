@@ -60,7 +60,7 @@ StyledErrorMessage.defaultProps = {
   fontSize: 1
 }
 
-const ErrorMessage = ({children, fontSize}) => {
+const ErrorMessage = ({ children }) => {
   return (
     <Flex flexWrap='wrap'>
       <Box>
@@ -74,12 +74,7 @@ const ErrorMessage = ({children, fontSize}) => {
 }
 
 ErrorMessage.propTypes = {
-  children: PropTypes.any,
-  fontSize: PropTypes.number
-}
-
-ErrorMessage.defaultProps = {
-  fontSize: 1
+  children: PropTypes.any
 }
 
 const StyledInput = styled.input`${styles}`
