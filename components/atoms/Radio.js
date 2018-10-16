@@ -115,14 +115,13 @@ export class RadioButton extends React.Component {
     }
   }
 
-
-  renderLabel(props) {
-    if (React.isValidElement(props.label)) {
-      return React.cloneElement(props.label, props)
+  renderLabel(label, props) {
+    if (React.isValidElement(label)) {
+      return React.cloneElement(label, props)
     }
     return (
       <div>
-        {props.label}
+        {label}
       </div>
     )
   }
@@ -145,7 +144,7 @@ export class RadioButton extends React.Component {
               </StyledRadioContainer>
             </Box>
             <Box>
-              {this.renderLabel(this.props)}
+              {this.renderLabel(label, this.props)}
             </Box>
           </Flex>
         </StyledLabel>
