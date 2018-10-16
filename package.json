@@ -1,6 +1,6 @@
 {
   "name": "ooni-components",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "dist/index.js",
   "repository": "https://github.com/ooni/design-system.git",
   "author": "Arturo Filastò <arturo@filasto.net>",
@@ -60,6 +60,10 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
+  "files": [
+    "dist/",
+    "components/svgs/"
+  ],
   "jest": {
     "roots": [
       "<rootDir>/test/"
