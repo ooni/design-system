@@ -1,6 +1,6 @@
 {
   "name": "ooni-components",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "main": "dist/index.js",
   "repository": "https://github.com/ooni/design-system.git",
   "author": "Arturo Filastò <arturo@filasto.net>",
