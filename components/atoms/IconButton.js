@@ -6,7 +6,7 @@ import { space, width, fontSize, color } from 'styled-system'
 import Button from './Button'
 
 /* XXX I think there is something weird with the position of this vertically */
-const StyledIconButton = Button.extend`
+const StyledIconButton = styled(Button)`
   ${space}
   ${width}
   ${fontSize}
@@ -36,7 +36,11 @@ export const IconButton = (props) => {
 }
 
 IconButton.defaultProps = {
-  fontSize: 3,
+  fontSize: 3
+}
+
+IconButton.propTypes = {
+  fontSize: PropTypes.number,
   icon: PropTypes.node,
   onClick: PropTypes.func
 }

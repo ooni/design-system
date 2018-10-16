@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button render with border prop (and hollow) 1`] = `
+.c0 {
+  font-size: 16px;
+}
+
+<Button__StyledButton
+  border={4}
+  className="c0"
+  fontSize={1}
+  hollow={true}
+  inverted={false}
+/>
+`;
+
+exports[`Button render with fontSize prop 1`] = `
+.c0 {
+  font-size: 22px;
+}
+
+<Button__StyledButton
+  border={2}
+  className="c0"
+  fontSize={2}
+  hollow={false}
+  inverted={false}
+/>
+`;
+
+exports[`Button render with hollow prop 1`] = `
+.c0 {
+  font-size: 16px;
+}
+
+<Button__StyledButton
+  border={2}
+  className="c0"
+  fontSize={1}
+  hollow={true}
+  inverted={false}
+/>
+`;
+
+exports[`Button render with inverted prop 1`] = `
+.c0 {
+  font-size: 16px;
+}
+
+<Button__StyledButton
+  border={2}
+  className="c0"
+  fontSize={1}
+  hollow={false}
+  inverted={true}
+/>
+`;
+
+exports[`Button render with margin prop 1`] = `
+.c0 {
+  margin: 8px;
+  font-size: 16px;
+}
+
+<Button__StyledButton
+  border={2}
+  className="c0"
+  fontSize={1}
+  hollow={false}
+  inverted={false}
+  m={2}
+/>
+`;
+
+exports[`Button render with width prop 1`] = `
+.c0 {
+  width: 100%;
+  font-size: 16px;
+}
+
+<Button__StyledButton
+  border={2}
+  className="c0"
+  fontSize={1}
+  hollow={false}
+  inverted={false}
+  width={1}
+/>
+`;
+
+exports[`Button renders 1`] = `
+.c1 {
+  border-radius: 32px;
+  display: inline-block;
+  height: 40px;
+  line-height: 1;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+  font-family: inherit;
+  font-weight: 600;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #f8f9fa;
+  background-color: #0588cb;
+  border: none;
+  text-align: center;
+  -webkit-letter-spacing: .5px;
+  -moz-letter-spacing: .5px;
+  -ms-letter-spacing: .5px;
+  letter-spacing: .5px;
+  z-index: 1;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+  cursor: pointer;
+}
+
+.c1:hover {
+  border: none;
+  background-color: #37a6ed;
+}
+
+.c1:active {
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  border: none;
+  background-color: #0f77b8;
+}
+
+.c0 {
+  font-size: 16px;
+}
+
+<Button
+  border={2}
+  fontSize={1}
+  hollow={false}
+  inverted={false}
+>
+  <Button__StyledButton
+    border={2}
+    className="c0"
+    fontSize={1}
+    hollow={false}
+    inverted={false}
+  >
+    <button
+      className="c0 c1"
+      fontSize={1}
+    />
+  </Button__StyledButton>
+</Button>
+`;

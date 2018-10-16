@@ -1,5 +1,29 @@
 # ChangeLog
 
+## ooni-components 0.2.0 [2018-10-16]
+
+Changes:
+
+* Upgraded `styled-components`, `rebass`, `grid-styled` (now `@rebass/grid`) to latest stable versions
+* `fontSizeMult` is now deprecated
+* Uses `flexWrap` prop instead of `flex`
+
+Adds:
+
+* Unit tests for all components with Jest Snapshot Testing
+
+Fixes:
+
+* Click handler for `Modal`
+* Responsive breakpoints in rebass theme
+
+## ooni-components 0.1.4 [2018-09-11]
+
+Changes:
+
+* Update icons for URL categories HATE and MILX
+
+
 ## ooni-components 0.1.3 [2018-07-26]
 
 Fixes:

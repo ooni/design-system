@@ -3,22 +3,16 @@ import PropTypes from 'prop-types'
 
 import MdClose from 'react-icons/lib/md/close'
 
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import {
   space,
-  darken,
   px,
   fontSize,
-  fontSizeMult,
   color,
   width,
   height
 } from '../util'
 
-import { Fixed, Container } from 'rebass'
-import { Flex, Box } from 'grid-styled'
-
-import Heading from '../atoms/Heading'
 import IconButton from '../atoms/IconButton'
 
 const StyledModalContent = styled.div`
@@ -70,7 +64,7 @@ export const Modal = (props) => {
   return (
     <StyledModal show={props.show}>
       <StyledModalContent {...props}>
-      {props.closeButton && <StyledCloseButton onClick={props.onHideClick} icon={<MdClose/>} position={props.closeButton} />}
+        {props.closeButton && <StyledCloseButton onClick={props.onHideClick} icon={<MdClose/>} position={props.closeButton} />}
         {React.Children.map(props.children, child => React.cloneElement(child), props)}
       </StyledModalContent>
       {props.show && <StyledModalBackdrop onClick={props.onHideClick} />}
@@ -80,12 +74,12 @@ export const Modal = (props) => {
 
 Modal.propTypes = {
   children: PropTypes.node,
-  onCloseClick: PropTypes.func,
+  onHideClick: PropTypes.func,
   closeButton: PropTypes.string
 }
 
 Modal.defaultProps = {
-  onCloseClick: () => {}
+  onHideClick: () => {}
 }
 
 export default Modal
