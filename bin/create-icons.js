@@ -1,4 +1,5 @@
 /* global require, __dirname */
+/* eslint-disable no-console */
 // Inspired from: https://github.com/react-icons/react-icons and changed
 
 const fs = require('fs')

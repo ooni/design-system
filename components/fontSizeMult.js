@@ -1,3 +1,4 @@
+/* global require */
 import {
   style,
   px
@@ -8,7 +9,9 @@ const {
 } = require('./constants')
 
 export const fontSizeMult = (propName, k) => {
+  /* eslint-disable no-console */
   console.error('usage of fontSizeMult will be deprecated')
+  /* eslint-enable no-console */
 
   return style({
     prop: 'fontSize',

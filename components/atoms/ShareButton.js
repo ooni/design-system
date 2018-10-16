@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { space, fontSize, fontSizeMult, color, width } from '../util'
 
@@ -66,6 +67,15 @@ export const TwitterShareButton = (props) => {
   )
 }
 
+TwitterShareButton.propTypes = {
+  fontSize: PropTypes.number,
+  message: PropTypes.string,
+  url: PropTypes.string,
+  hashtags: PropTypes.string,
+  via: PropTypes.string,
+  inReplyTo: PropTypes.string
+}
+
 TwitterShareButton.defaultProps = {
   fontSize: 2,
   message: '',
@@ -89,6 +99,11 @@ export const FacebookShareButton = (props) => {
       </StyledShareButton>
     </Link>
   )
+}
+
+FacebookShareButton.propTypes = {
+  fontSize: PropTypes.number,
+  url: PropTypes.string
 }
 
 FacebookShareButton.defaultProps = {

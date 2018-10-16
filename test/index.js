@@ -1,4 +1,3 @@
-/* global describe, test, expect */
 import 'jest-styled-components'
 import React from 'react'
 
@@ -9,9 +8,6 @@ import { ThemeProvider } from 'styled-components'
 
 import {
   theme,
-  Input,
-  Button,
-  InputWithIconButton
 } from '../components'
 
 import './config.js'

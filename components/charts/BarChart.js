@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 import {
   VictoryChart,
   VictoryBar,
@@ -64,4 +64,10 @@ export default class BarChart extends React.Component {
       </VictoryChart>
     )
   }
+}
+
+BarChart.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string,
+  subtitle: PropTypes.string
 }

@@ -1,3 +1,4 @@
+/* global module */
 const defaultWeights = [
   400,
   700

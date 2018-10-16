@@ -6,7 +6,6 @@ import {
   fontSize,
   textStyle,
   textAlign,
-  fontSizeMult,
   color,
   width
 } from '../util'

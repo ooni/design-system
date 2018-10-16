@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Flex, Box } from '@rebass/grid'
 
-import MdWarning from 'react-icons/lib/md/warning'
-
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import { space, fontSize, fontSizeMult, color, width } from '../util'
 

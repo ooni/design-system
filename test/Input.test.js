@@ -1,7 +1,6 @@
 /* global describe, test, expect, jest */
 import React from 'react'
-import toJson from 'enzyme-to-json'
-import { renderJSON, renderShallowJSON, shallowWithTheme, mountWithTheme } from './index'
+import { renderJSON, renderShallowJSON } from './index'
 import { Input } from '../components'
 
 describe('Input', () => {

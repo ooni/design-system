@@ -89,6 +89,12 @@ export const Button = styled(StyledButton)`
   ${fontSize}
   ${color}
 `
+Button.propTypes = {
+  fontSize: PropTypes.number,
+  inverted: PropTypes.bool,
+  hollow: PropTypes.bool,
+  border: PropTypes.number
+}
 
 Button.defaultProps = {
   fontSize: 1,
