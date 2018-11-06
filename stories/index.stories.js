@@ -1,12 +1,12 @@
+/* global module */
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { linkTo } from '@storybook/addon-links'
 
-import { Button, Input, Select, Card, Flex, Box } from '../components'
+import { Button, Input, Select, Card, Flex, Box, InputWithIconButton } from '../components'
 
-import { BarChart, PieChart } from '../components'
+import { BarChart, PieChart, Modal } from '../components'
 import { CategoryCodeANON, NettestGroupWebsites } from '../components/icons'
 
 import MdVolumeMute from 'react-icons/lib/md/volume-mute'
@@ -52,7 +52,7 @@ storiesOf('Components/Atoms/Select', module)
 
 storiesOf('Components/Molecules/Card', module)
   .add('Default', () => <Card />)
-  .add('Many cards', () => <Flex wrap>
+  .add('Many cards', () => <Flex flexWrap="wrap">
     <Box w={1/3}>
       <Card />
     </Box>
@@ -109,4 +109,36 @@ storiesOf('Components/Icons', module)
       <MdVolumeMute size={30} />
       <NettestGroupWebsites size={30} />
     </div>
+  )
+
+storiesOf('Components/Molecules/InputWithIconButton', module)
+  .add('Default', () =>
+    <InputWithIconButton />
+  )
+  .add('Type Password', () =>
+    <InputWithIconButton type='password' />
+  )
+  .add('With Icon', () =>
+    <InputWithIconButton icon={<MdVolumeMute />} />
+  )
+  .add('With Clickable Icon', () =>
+    <InputWithIconButton
+      icon={<MdVolumeMute />}
+      onAction={action('Clicked')}
+      onChange={action('Changed')}
+    />
+  )
+
+storiesOf('Components/Organisms/Modal', module)
+  .add('Default', () =>
+    <Modal show={true}>
+      <div>Modal Content</div>
+    </Modal>
+  )
+  .add('With clickable Close Button', () =>
+    <Modal show={true} closeButton='right' onHideClick={action('clicked')}>
+      <Box p={3} bg='lightblue'>
+        Modal Content
+      </Box>
+    </Modal>
   )

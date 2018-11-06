@@ -1,3 +1,4 @@
+/* global require, module */
 const chroma = require('chroma-js')
 
 const hueNames = [
@@ -22,21 +23,6 @@ const hueName = h => {
   return name
 }
 
-const lums = [
-  9,
-  8,
-  7,
-  6,
-  5,
-  4,
-  3,
-  2,
-  1,
-  0
-]
-  .map(n => n + 0.5)
-  .map(n => n / 10)
-
 const createHues = (length = 12) => {
   const hueLength = length
   const hueStep = 360 / hueLength
@@ -60,7 +46,6 @@ const spreadLum = (hex, darkest, lightest) => {
   const lightstep = (baselum - lightest) / (lightSteps.length - 1)
 
   const darkSteps = [1, 2, 3, 4]
-  const darkbaselum = chroma(hex).luminance(lightest + lightstep * 6, 'hsl').luminance()
   const darkstep = (baselum - darkest) / darkSteps.length
   const lights = lightSteps.map(step => {
     if (step == 5) {
@@ -78,7 +63,9 @@ const spreadLum = (hex, darkest, lightest) => {
 }
 
 const desat = n => hex => {
+  /* eslint-disable no-unused-vars */
   const [ h, s, l ] = chroma(hex).hsl()
+  /* eslint-enable no-unused-vars */
   return chroma.hsl(h, n, l).hex()
 }
 
@@ -87,15 +74,7 @@ const createBlack = (hex, darkestGrey) => {
   return chroma(d).luminance(darkestGrey).hex()
 }
 
-const createShades = hex => {
-  return lums.map(lum => {
-    return chroma(hex).luminance(lum).hex()
-  })
-}
-
 // Mappers
-const toHex = ({ key, value }) => ({ key, value: value.hex() })
-
 const keyword = hex => {
   const [ hue, sat ] = chroma(hex).hsl()
   if (sat < .5) {

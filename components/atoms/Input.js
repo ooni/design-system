@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Flex, Box } from 'grid-styled'
+import { Flex, Box } from '@rebass/grid'
 
 import MdWarning from 'react-icons/lib/md/warning'
 
@@ -60,9 +60,9 @@ StyledErrorMessage.defaultProps = {
   fontSize: 1
 }
 
-const ErrorMessage = ({children, fontSize}) => {
+const ErrorMessage = ({ children }) => {
   return (
-    <Flex wrap>
+    <Flex flexWrap='wrap'>
       <Box>
         <StyledErrorMessage>{children}</StyledErrorMessage>
       </Box>
@@ -74,12 +74,7 @@ const ErrorMessage = ({children, fontSize}) => {
 }
 
 ErrorMessage.propTypes = {
-  children: PropTypes.any,
-  fontSize: PropTypes.number
-}
-
-ErrorMessage.defaultProps = {
-  fontSize: 1
+  children: PropTypes.any
 }
 
 const StyledInput = styled.input`${styles}`

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 import {
   VictoryPie,
 } from 'victory'
@@ -128,6 +128,17 @@ const PieLabelComponent = (props) => {
   </g>
 }
 
+PieLabelComponent.propTypes = {
+  x: PropTypes.number,
+  y: PropTypes.number,
+  slice: PropTypes.shape({
+    startAngle: PropTypes.number,
+    endAngle: PropTypes.number
+  }),
+  textAnchor: PropTypes.string,
+  text: PropTypes.string
+}
+
 class PieChart extends React.Component {
 
   render () {
@@ -161,6 +172,12 @@ class PieChart extends React.Component {
       </svg>
     )
   }
+}
+
+PieChart.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string,
+  subtitle: PropTypes.string
 }
 
 export default PieChart
