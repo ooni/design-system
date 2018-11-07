@@ -1,7 +1,7 @@
 let colors = {
   BLACK: '#000000',
   WHITE: '#ffffff',
-  LIGHT_BLUE: '#5DB8FE',
+  LIGHT_BLUE: '#8DD5F8',
   OONI_BLUE: '#0588CB',
   DARK_BLUE: '#005B9A',
   SUNFLOWER: '#F39C12',
@@ -29,7 +29,7 @@ colors.palette = {
   'gray9': '#212529',
   'blue0': '#e7f5ff',
   'blue1': '#c9e8ff',
-  'blue2': '#94d1ff',
+  'blue2': '#8dd5f8',
   'blue3': '#5db8fe',
   'blue4': '#37a6ed',
   'blue5': '#0588cb',
