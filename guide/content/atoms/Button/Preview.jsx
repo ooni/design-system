@@ -1,3 +1,0 @@
-<Button>
-  Click me
-</Button>

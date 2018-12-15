@@ -2,5 +2,6 @@ node_modules/
 .idea/
 .DS_Store
 package-lock.json
-dist
 tools/*.png
+/dist
+yarn-error.log

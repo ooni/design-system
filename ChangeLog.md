@@ -1,5 +1,86 @@
 # ChangeLog
 
+## ooni-components 0.2.0 [2018-10-16]
+
+Changes:
+
+* Upgraded `styled-components`, `rebass`, `grid-styled` (now `@rebass/grid`) to latest stable versions
+* `fontSizeMult` is now deprecated
+* Uses `flexWrap` prop instead of `flex`
+
+Adds:
+
+* Unit tests for all components with Jest Snapshot Testing
+
+Fixes:
+
+* Click handler for `Modal`
+* Responsive breakpoints in rebass theme
+
+## ooni-components 0.1.4 [2018-09-11]
+
+Changes:
+
+* Update icons for URL categories HATE and MILX
+
+
+## ooni-components 0.1.3 [2018-07-26]
+
+Fixes:
+
+* Broken svgs
+
+## ooni-components 0.1.2 [2018-07-26]
+
+Adds:
+
+* Tick & Cross icons
+
+## ooni-components 0.1.1 [2018-07-23]
+
+Adds:
+
+* Custom icons
+* Bodymovin animations
+
+Changes:
+
+* Card now acts clickable only when it has onClick bound to it
+
+## ooni-components 0.1.0 [2018-06-20]
+
+Adds:
+
+* Select component
+* Storybook interactive preview
+
+Changes:
+
+* Color palette
+* Migrate the source from ooni/design to ooni/design-system
+
+## ooni-components 0.1.0-rc.3 [2018-01-25]
+
+Fixes:
+
+* Pin more versions and use babel-plugin-styled-components
+
+## ooni-components 0.1.0-rc.2 [2018-01-25]
+
+Fixes:
+
+* Invert black with white
+
+## ooni-components 0.1.0-rc.1 [2018-01-25]
+
+Changes:
+
+* New and improved color palette
+
+Fixes:
+
+* Pin styled-components version
+
 ## ooni-components 0.1.0-beta.7 [2017-10-24]
 
 Adds:

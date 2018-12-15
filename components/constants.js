@@ -1,3 +1,4 @@
+/* global module */
 const defaultWeights = [
   400,
   700
@@ -33,4 +34,5 @@ module.exports = {
   defaultBreakpoints,
   defaultSpace,
   defaultFontSizes,
+  defaultWeights
 }

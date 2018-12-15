@@ -19,8 +19,6 @@ export {
   Box
 } from 'rebass'
 
-export const OONIComponents = Object.assign({}, components, { Provider, Box, Flex, colors, theme })
-
 export const {
   Button,
   ButtonOutline,
@@ -94,7 +92,11 @@ export const {
   InputWithIconButton,
   TwitterShareButton,
   FacebookShareButton,
-  Modal
+  Modal,
+  BarChart,
+  PieChart
 } = components
+
+export const OONIComponents = Object.assign({}, components, { Provider, Box, Flex, colors, theme })
 
 export default OONIComponents

@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styled, { css } from 'styled-components'
-import { space, fontSize, fontSizeMult, color, width } from '../util'
+import styled from 'styled-components'
+import { space, fontSize, color, width } from '../util'
 
-import { Heading, Container } from 'rebass'
-import { Flex, Box } from 'grid-styled'
+import { Container } from 'rebass'
 
 const StyledHero = styled.div`
   ${space}

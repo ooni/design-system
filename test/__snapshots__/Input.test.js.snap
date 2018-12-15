@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders 1`] = `
+.c2 {
+  box-sizing: border-box;
+}
+
+.c4 {
+  box-sizing: border-box;
+  margin-left: auto;
+  width: 16px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c3 {
+  font-size: 16px;
+  color: #f03e3e;
+}
+
+.c0 {
+  font-size: 16px;
+  font-family: inherit;
+  display: 'block';
+  vertical-align: 'middle';
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #f03e3e;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  width: 100%;
+  height: 32px;
+  box-shadow: none;
+  box-sizing: content-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.c0:hover:not([readonly]) {
+  border-bottom: 2px solid #f03e3e;
+}
+
+.c0:focus:not([readonly]) {
+  border-bottom: 2px solid #f03e3e;
+}
+
+<Input
+  error="Some error"
+  fontSize={1}
+  onChange={[Function]}
+  rows={3}
+  type="text"
+>
+  <div>
+    <Input__StyledInput
+      error="Some error"
+      fontSize={1}
+      onChange={[Function]}
+      rows={3}
+      type="text"
+    >
+      <input
+        className="c0"
+        fontSize={1}
+        onChange={[Function]}
+        rows={3}
+        type="text"
+      />
+    </Input__StyledInput>
+    <ErrorMessage>
+      <Flex
+        flexWrap="wrap"
+      >
+        <Box
+          className="c1"
+          flexWrap="wrap"
+        >
+          <div
+            className="c1 c2"
+          >
+            <Box>
+              <div
+                className="c2"
+              >
+                <Input__StyledErrorMessage
+                  fontSize={1}
+                >
+                  <p
+                    className="c3"
+                    fontSize={1}
+                  >
+                    Some error
+                  </p>
+                </Input__StyledErrorMessage>
+              </div>
+            </Box>
+            <Box
+              flex="none"
+              ml="auto"
+              width={16}
+            >
+              <div
+                className="c4"
+                width={16}
+              >
+                <Input__StyledErrorMessage
+                  fontSize={1}
+                >
+                  <p
+                    className="c3"
+                    fontSize={1}
+                  >
+                    <MdWarning>
+                      <IconBase
+                        viewBox="0 0 40 40"
+                      >
+                        <svg
+                          fill="currentColor"
+                          height="1em"
+                          preserveAspectRatio="xMidYMid meet"
+                          style={
+                            Object {
+                              "color": undefined,
+                              "verticalAlign": "middle",
+                            }
+                          }
+                          viewBox="0 0 40 40"
+                          width="1em"
+                        >
+                          <g>
+                            <path
+                              d="m21.6 23.4v-6.8h-3.2v6.8h3.2z m0 6.6v-3.4h-3.2v3.4h3.2z m-20 5l18.4-31.6 18.4 31.6h-36.8z"
+                            />
+                          </g>
+                        </svg>
+                      </IconBase>
+                    </MdWarning>
+                  </p>
+                </Input__StyledErrorMessage>
+              </div>
+            </Box>
+          </div>
+        </Box>
+      </Flex>
+    </ErrorMessage>
+  </div>
+</Input>
+`;
+
+exports[`Input renders with onChange handler 1`] = `
+<div>
+  <Input__StyledInput
+    error={null}
+    fontSize={1}
+    onChange={[MockFunction]}
+    rows={3}
+    type="text"
+  />
+</div>
+`;
+
+exports[`Input renders with prop fontSize 1`] = `
+<div>
+  <Input__StyledInput
+    error={null}
+    fontSize={4}
+    onChange={[Function]}
+    rows={3}
+    type="text"
+  />
+</div>
+`;
+
+exports[`Input renders with prop rows 1`] = `
+<div>
+  <Input__StyledTextarea
+    error={null}
+    fontSize={1}
+    onChange={[Function]}
+    rows={4}
+    type="textarea"
+  />
+</div>
+`;
+
+exports[`Input renders with prop type 1`] = `
+<div>
+  <Input__StyledInput
+    error={null}
+    fontSize={1}
+    onChange={[Function]}
+    rows={3}
+    type="number"
+  />
+</div>
+`;

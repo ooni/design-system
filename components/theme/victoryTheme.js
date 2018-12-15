@@ -36,16 +36,16 @@ export const baseLabelStyles = {
   letterSpacing,
   padding: 10,
   fill: colors.palette.black,
-  stroke: "transparent",
-  border: "1px solid black"
+  stroke: 'transparent',
+  border: '1px solid black'
 }
 
-const centeredLabelStyles = assign({ textAnchor: "middle" }, baseLabelStyles)
+const centeredLabelStyles = assign({ textAnchor: 'middle' }, baseLabelStyles)
 
 // Strokes
-const strokeDasharray = "1, 3"
-const strokeLinecap = "round"
-const strokeLinejoin = "round"
+const strokeDasharray = '1, 3'
+const strokeLinecap = 'round'
+const strokeLinejoin = 'round'
 
 export const axisYStyle = {
   grid: {
@@ -79,7 +79,7 @@ const victoryTheme = {
   axis: assign({}, baseProps, {
     style: {
       axis: {
-        fill: "transparent",
+        fill: 'transparent',
         stroke: colors.palette.black,
         strokeWidth: 1,
         strokeLinecap,
@@ -89,10 +89,10 @@ const victoryTheme = {
       grid: {
         fill: 'transparent',
         stroke: 'transparent',
-        pointerEvents: "none"
+        pointerEvents: 'none'
       },
       ticks: {
-        fill: "transparent",
+        fill: 'transparent',
         size: 5,
         stroke: colors.palette.black
       },
@@ -121,7 +121,7 @@ const victoryTheme = {
       labels: centeredLabelStyles
     },
     candleColors: {
-      positive: "#ffffff",
+      positive: '#ffffff',
       negative: primaryColor
     },
   }, baseProps),
@@ -131,7 +131,7 @@ const victoryTheme = {
   errorbar: assign({
     style: {
       data: {
-        fill: "transparent",
+        fill: 'transparent',
         stroke: primaryColor,
         strokeWidth: 2
       },
@@ -146,18 +146,18 @@ const victoryTheme = {
   line: assign({
     style: {
       data: {
-        fill: "transparent",
+        fill: 'transparent',
         stroke: primaryColor,
         strokeWidth: 2
       },
       labels: centeredLabelStyles}
-    }, baseProps),
+  }, baseProps),
 
   pie: {
     style: {
       data: {
         padding: 10,
-        stroke: "transparent",
+        stroke: 'transparent',
         strokeWidth: 1
       },
       labels: assign({padding: 20}, baseLabelStyles)
@@ -172,7 +172,7 @@ const victoryTheme = {
     style: {
       data: {
         fill: primaryColor,
-        stroke: "transparent",
+        stroke: 'transparent',
         strokeWidth: 0
       },
       labels: centeredLabelStyles
@@ -182,12 +182,12 @@ const victoryTheme = {
   stack: assign({colorScale: colorScale}, baseProps),
 
   tooltip: {
-    style: assign({padding: 5, pointerEvents: "none"}, centeredLabelStyles),
+    style: assign({padding: 5, pointerEvents: 'none'}, centeredLabelStyles),
     flyoutStyle: {
       stroke: primaryColor,
       strokeWidth: 1,
-      fill: "red",
-      pointerEvents: "none"
+      fill: 'red',
+      pointerEvents: 'none'
     },
     cornerRadius: 0,
     pointerLength: 0
@@ -196,16 +196,16 @@ const victoryTheme = {
   voronoi: {
     style: assign({
       data: {
-        fill: "transparent",
-        stroke: "transparent",
+        fill: 'transparent',
+        stroke: 'transparent',
         strokeWidth: 0
       },
-      labels: assign({padding: 5, pointerEvents: "none"}, centeredLabelStyles),
+      labels: assign({padding: 5, pointerEvents: 'none'}, centeredLabelStyles),
       flyout: {
         stroke: primaryColor,
         strokeWidth: 1,
-        fill: "#f0f0f0",
-        pointerEvents: "none"
+        fill: '#f0f0f0',
+        pointerEvents: 'none'
       }
     }, baseProps),
   },
@@ -213,10 +213,10 @@ const victoryTheme = {
   legend: {
     colorScale: colorScale,
     gutter: 10,
-    orientation: "vertical",
+    orientation: 'vertical',
     style: {
       data: {
-        type: "circle"
+        type: 'circle'
       },
       labels: baseLabelStyles
     },

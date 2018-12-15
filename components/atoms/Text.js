@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 import {
@@ -6,7 +5,6 @@ import {
   fontSize,
   textStyle,
   textAlign,
-  fontSizeMult,
   color,
   width
 } from '../util'
