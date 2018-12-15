@@ -1,8 +1,10 @@
 import colors from './colors'
 
 export const rebassTheme = {
-  font: '"Fira Sans", sans-serif',
-  monospace: '"Source Code Pro", monospace',
+  fonts: {
+    sans: '"Fira Sans", sans-serif',
+    mono: '"Source Code Pro", monospace',
+  },
   maxWidth: 1024,
   space: [
     0,
