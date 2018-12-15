@@ -1,5 +1,15 @@
 # ChangeLog
 
+## ooni-components 0.2.2 [2018-12-15]
+Changes:
+
+* Font definitions structure in Theme as per new rebass spec
+
+## ooni-components 0.2.1 [2018-10-16]
+Changes:
+
+* Publish only the necessary files to npm registry
+
 ## ooni-components 0.2.0 [2018-10-16]
 
 Changes:
