@@ -16,6 +16,7 @@ export const FacebookShareButton = atoms.FacebookShareButton
 export const Heading = atoms.Heading
 export const Text = atoms.Text
 export const Select = atoms.Select
+export const Container = atoms.Container
 
 /* OONI produced molecules */
 export const InputWithIconButton = molecules.InputWithIconButton
@@ -48,7 +49,6 @@ import {
   Close,
   Code,
   Column,
-  Container,
   Divider,
   Donut,
   DotButton,
