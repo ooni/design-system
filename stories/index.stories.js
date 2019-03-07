@@ -4,7 +4,19 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { Button, Input, Select, Card, Flex, Box, InputWithIconButton } from '../components'
+import {
+  Button,
+  Input,
+  Select,
+  Card,
+  Flex,
+  Box,
+  InputWithIconButton,
+  Provider,
+  theme,
+  Container,
+  Border
+} from '../components'
 
 import { BarChart, PieChart, Modal } from '../components'
 import { CategoryCodeANON, NettestGroupWebsites } from '../components/icons'
@@ -53,16 +65,16 @@ storiesOf('Components/Atoms/Select', module)
 storiesOf('Components/Molecules/Card', module)
   .add('Default', () => <Card />)
   .add('Many cards', () => <Flex flexWrap="wrap">
-    <Box w={1/3}>
+    <Box w={1 / 3}>
       <Card />
     </Box>
-    <Box w={1/3}>
+    <Box w={1 / 3}>
       <Card />
     </Box>
-    <Box w={1/3}>
+    <Box w={1 / 3}>
       <Card />
     </Box>
-    <Box w={1/3}>
+    <Box w={1 / 3}>
       <Card />
     </Box>
   </Flex>
@@ -70,16 +82,16 @@ storiesOf('Components/Molecules/Card', module)
 
 storiesOf('Components/Charts/BarChart', module)
   .add('Default', () =>
-    <div style={{height: '500px'}}>
+    <div style={{ height: '500px' }}>
       <BarChart
         title='Example BarChart'
         subtitle='Spam'
         data={[
-          {x: 5, y: 80},
-          {x: 10, y: 100},
-          {x: 15, y: 90},
-          {x: 20, y: 150},
-          {x: 25, y: 88}
+          { x: 5, y: 80 },
+          { x: 10, y: 100 },
+          { x: 15, y: 90 },
+          { x: 20, y: 150 },
+          { x: 25, y: 88 }
         ]}
       />
     </div>
@@ -87,7 +99,7 @@ storiesOf('Components/Charts/BarChart', module)
 
 storiesOf('Components/Charts/PieChart', module)
   .add('Default', () =>
-    <div style={{height: '500px'}}>
+    <div style={{ height: '500px' }}>
       <PieChart
         title='Example PieChart'
         subtitle='Spam'
@@ -104,7 +116,7 @@ storiesOf('Components/Charts/PieChart', module)
 
 storiesOf('Components/Icons', module)
   .add('Default', () =>
-    <div style={{height: '500px'}}>
+    <div style={{ height: '500px' }}>
       <CategoryCodeANON size={30} />
       <MdVolumeMute size={30} />
       <NettestGroupWebsites size={30} />
@@ -141,4 +153,15 @@ storiesOf('Components/Organisms/Modal', module)
         Modal Content
       </Box>
     </Modal>
+  )
+
+storiesOf('Layouts', module)
+  .add('Default', () =>
+    <Provider theme={theme}>
+      <Box bg={theme.colors.blue5}>
+        <Container bg={theme.colors.blue1}>
+          <Box> Container </Box>
+        </Container>
+      </Box>
+    </Provider>
   )
