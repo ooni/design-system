@@ -22,7 +22,6 @@ const StyledButton = styled.button`
 
   // Specific
   font-family: inherit;
-  font-weight: 600;
   text-decoration: none;
   color: ${props => {
     if (!props.hollow) {
