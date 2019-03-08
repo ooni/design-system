@@ -24,12 +24,11 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   line-height: 1;
   padding-left: 56px;
   padding-right: 56px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
   outline: 0;
   font-family: inherit;
-  font-weight: 600;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #f8f9fa;
@@ -89,7 +88,7 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
 }
 
 .c3:focus:not([readonly]) {
-  border-bottom: 2px solid #0588cb;
+  border-bottom: 1px solid #0588cb;
 }
 
 .c4 {
@@ -252,12 +251,11 @@ exports[`InputWithIconButton renders 1`] = `
   line-height: 1;
   padding-left: 56px;
   padding-right: 56px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
   outline: 0;
   font-family: inherit;
-  font-weight: 600;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #f8f9fa;
@@ -317,7 +315,7 @@ exports[`InputWithIconButton renders 1`] = `
 }
 
 .c3:focus:not([readonly]) {
-  border-bottom: 2px solid #0588cb;
+  border-bottom: 1px solid #0588cb;
 }
 
 .c4 {

@@ -36,7 +36,7 @@ exports[`Input renders 1`] = `
   vertical-align: 'middle';
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #f03e3e;
+  border-bottom: 1px solid #f03e3e;
   border-radius: 0;
   margin: 0;
   padding: 0;
@@ -50,11 +50,11 @@ exports[`Input renders 1`] = `
 }
 
 .c0:hover:not([readonly]) {
-  border-bottom: 2px solid #f03e3e;
+  border-bottom: 1px solid #f03e3e;
 }
 
 .c0:focus:not([readonly]) {
-  border-bottom: 2px solid #f03e3e;
+  border-bottom: 1px solid #f03e3e;
 }
 
 <Input
