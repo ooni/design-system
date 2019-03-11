@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container render with maxWidth prop 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.c0 {
+  max-width: 500px;
+}
+
+<Styled(Box)
+  maxWidth={500}
+  mx="auto"
+  px={3}
+>
+  <Box
+    className="c0"
+    maxWidth={500}
+    mx="auto"
+    px={3}
+  >
+    <div
+      className="c0 c1"
+    />
+  </Box>
+</Styled(Box)>
+`;
+
+exports[`Container renders 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.c0 {
+  max-width: 768px;
+}
+
+@media screen and (min-width:32em) {
+  .c0 {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c0 {
+    max-width: 1280px;
+  }
+}
+
+<Styled(Box)
+  maxWidth={
+    Array [
+      768,
+      1024,
+      1280,
+    ]
+  }
+  mx="auto"
+  px={3}
+>
+  <Box
+    className="c0"
+    maxWidth={
+      Array [
+        768,
+        1024,
+        1280,
+      ]
+    }
+    mx="auto"
+    px={3}
+  >
+    <div
+      className="c0 c1"
+    />
+  </Box>
+</Styled(Box)>
+`;

@@ -10,7 +10,7 @@ import { space, fontSize, fontSizeMult, color, width } from '../util'
 
 const borderBottomMaybeError = (color, baseHeight) => (props) => {
   if (props.error) {
-    return `2px solid ${props.theme.colors.red7};`
+    return `1px solid ${props.theme.colors.red7};`
   }
   return `${baseHeight} solid ${props.theme.colors[color]};`
 }
@@ -46,7 +46,7 @@ const styles = css`
   }
 
   &:focus:not([readonly]) {
-    border-bottom: ${borderBottomMaybeError('base', '2px')}
+    border-bottom: ${borderBottomMaybeError('base', '1px')}
   }
 `
 

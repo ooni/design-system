@@ -1,5 +1,18 @@
 # ChangeLog
 
+## ooni-components 0.2.4 [2019-03-11]
+Changes:
+
+* Use responsive maxWidths for `Container`
+* Change button fonts to 'Title Case'
+* Stop focus events on Input from affecting position of other elements
+* Upgrade babel, storybook, and testing tools dependencies
+
+## ooni-components 0.2.3 [2018-12-15]
+Adds:
+
+* Travis CI configuration to run tests
+
 ## ooni-components 0.2.2 [2018-12-15]
 Changes:
 

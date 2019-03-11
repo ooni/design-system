@@ -12,12 +12,11 @@ exports[`FacebookShareButton renders 1`] = `
   line-height: 1;
   padding-left: 32px;
   padding-right: 32px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
   outline: 0;
   font-family: inherit;
-  font-weight: 600;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #f8f9fa;
@@ -171,12 +170,11 @@ exports[`TwitterShareButton renders 1`] = `
   line-height: 1;
   padding-left: 32px;
   padding-right: 32px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
   outline: 0;
   font-family: inherit;
-  font-weight: 600;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #f8f9fa;

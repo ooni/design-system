@@ -13,7 +13,7 @@ const StyledButton = styled.button`
   line-height: 1;
   ${fontSizeMult('padding-left', 2)}
   ${fontSizeMult('padding-right', 2)}
-  text-transform: uppercase;
+  text-transform: capitalize;
   vertical-align: middle;
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
@@ -22,7 +22,6 @@ const StyledButton = styled.button`
 
   // Specific
   font-family: inherit;
-  font-weight: 600;
   text-decoration: none;
   color: ${props => {
     if (!props.hollow) {
