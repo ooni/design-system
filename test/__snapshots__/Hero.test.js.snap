@@ -10,7 +10,7 @@ exports[`Hero renders 1`] = `
 }
 
 .c1 {
-  max-width: 1024px;
+  max-width: 768px;
 }
 
 .c0 {
@@ -19,6 +19,18 @@ exports[`Hero renders 1`] = `
   background-color: #0588cb;
   color: #f8f9fa;
   text-align: center;
+}
+
+@media screen and (min-width:32em) {
+  .c1 {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c1 {
+    max-width: 1280px;
+  }
 }
 
 <Hero
@@ -31,31 +43,34 @@ exports[`Hero renders 1`] = `
       className="c0"
       fontSize={3}
     >
-      <ForwardRef
-        extend={[Function]}
-        maxWidth={1024}
+      <Styled(Box)
+        maxWidth={
+          Array [
+            768,
+            1024,
+            1280,
+          ]
+        }
         mx="auto"
         px={3}
       >
-        <ForwardRef
+        <Box
           className="c1"
-          extend={[Function]}
-          maxWidth={1024}
+          maxWidth={
+            Array [
+              768,
+              1024,
+              1280,
+            ]
+          }
           mx="auto"
           px={3}
         >
-          <Box
-            className="c1"
-            maxWidth={1024}
-            mx="auto"
-            px={3}
-          >
-            <div
-              className="c1 c2"
-            />
-          </Box>
-        </ForwardRef>
-      </ForwardRef>
+          <div
+            className="c1 c2"
+          />
+        </Box>
+      </Styled(Box)>
     </div>
   </Hero__StyledHero>
 </Hero>
@@ -71,7 +86,7 @@ exports[`Hero renders with children 1`] = `
 }
 
 .c1 {
-  max-width: 1024px;
+  max-width: 768px;
 }
 
 .c0 {
@@ -80,6 +95,18 @@ exports[`Hero renders with children 1`] = `
   background-color: #0588cb;
   color: #f8f9fa;
   text-align: center;
+}
+
+@media screen and (min-width:32em) {
+  .c1 {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c1 {
+    max-width: 1280px;
+  }
 }
 
 <Hero
@@ -92,35 +119,38 @@ exports[`Hero renders with children 1`] = `
       className="c0"
       fontSize={3}
     >
-      <ForwardRef
-        extend={[Function]}
-        maxWidth={1024}
+      <Styled(Box)
+        maxWidth={
+          Array [
+            768,
+            1024,
+            1280,
+          ]
+        }
         mx="auto"
         px={3}
       >
-        <ForwardRef
+        <Box
           className="c1"
-          extend={[Function]}
-          maxWidth={1024}
+          maxWidth={
+            Array [
+              768,
+              1024,
+              1280,
+            ]
+          }
           mx="auto"
           px={3}
         >
-          <Box
-            className="c1"
-            maxWidth={1024}
-            mx="auto"
-            px={3}
+          <div
+            className="c1 c2"
           >
             <div
-              className="c1 c2"
-            >
-              <div
-                key=".0"
-              />
-            </div>
-          </Box>
-        </ForwardRef>
-      </ForwardRef>
+              key=".0"
+            />
+          </div>
+        </Box>
+      </Styled(Box)>
     </div>
   </Hero__StyledHero>
 </Hero>
