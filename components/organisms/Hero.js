@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { space, fontSize, color, width } from '../util'
 
-import { Container } from 'rebass'
+import { Container } from '../components'
 
 const StyledHero = styled.div`
   ${space}

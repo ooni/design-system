@@ -1,5 +1,10 @@
 # ChangeLog
 
+## ooni-components 0.2.5 [2019-03-22]
+Changes:
+
+* Use the custom `Container` in `Hero`
+
 ## ooni-components 0.2.4 [2019-03-11]
 Changes:
 
