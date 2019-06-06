@@ -18,7 +18,7 @@ export class RadioGroup extends React.Component {
     return (
       <div>
         {React.Children.map(children, child => (
-          !(child.type === RadioButton)
+          !(child.type.name === RadioButton.name)
             ? child
             : React.cloneElement(child, {
               checked: child.props.value === value,
