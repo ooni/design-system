@@ -1,6 +1,6 @@
 {
   "name": "ooni-components",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "main": "dist/index.js",
   "repository": "https://github.com/ooni/design-system.git",
   "author": "Arturo Filastò <arturo@filasto.net>",
@@ -42,6 +42,9 @@
     "jest-styled-components": "^6.3.1",
     "react-test-renderer": "^16.8.4"
   },
+  "optionalDependencies": {
+    "fsevents": "1.2.9"
+  },
   "resolutions": {
     "rebass": "2.3.3",
     "@rebass/grid": "6.0.0-3",
@@ -63,6 +66,7 @@
   },
   "files": [
     "dist/",
+    "components/animations/",
     "components/svgs/"
   ],
   "jest": {

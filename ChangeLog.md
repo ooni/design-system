@@ -1,5 +1,16 @@
 # ChangeLog
 
+## ooni-components 0.2.7 [2019-06-18]
+Adds:
+
+* Include animations in package builds
+* Add `fsevents` as optional dependency
+
+## ooni-components 0.2.6 [2019-05-29]
+Fixes:
+
+* Fix component type comparison in dev mode with HMR enabled
+
 ## ooni-components 0.2.5 [2019-03-22]
 Changes:
 
