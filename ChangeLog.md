@@ -1,5 +1,10 @@
 # ChangeLog
 
+## ooni-components 0.2.8 [2019-06-20]
+Adds:
+
+* Add disbaled state styles to `Button`
+
 ## ooni-components 0.2.7 [2019-06-18]
 Adds:
 
