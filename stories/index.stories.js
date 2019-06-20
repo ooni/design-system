@@ -28,6 +28,13 @@ storiesOf('Components/Atoms/Button', module)
   .add('Inverted', () => <Button inverted>Run OONI</Button>)
   .add('Hollow', () => <Button hollow>Run OONI</Button>)
   .add('With border', () => <Button hollow border={6}>Run OONI</Button>)
+  .add('Disabled', () =>
+    <div>
+      <Button disabled>Disabled Button</Button>
+      <Button disabled hollow>Disabled Hollow</Button>
+      <Button disabled inverted>Disabled Inverted</Button>
+    </div>
+  )
 
 storiesOf('Components/Atoms/Input', module)
   .add('Default', () => <Input />)
