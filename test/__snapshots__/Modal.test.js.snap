@@ -55,6 +55,7 @@ exports[`Modal renders with close button 1`] = `
   font-family: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  opacity: 1;
   color: #f8f9fa;
   background-color: #0588cb;
   border: none;
@@ -69,12 +70,12 @@ exports[`Modal renders with close button 1`] = `
   cursor: pointer;
 }
 
-.c5:hover {
+.c5:hover:enabled {
   border: none;
   background-color: #37a6ed;
 }
 
-.c5:active {
+.c5:active:enabled {
   -webkit-transition: .2s ease-in;
   transition: .2s ease-in;
   border: none;
