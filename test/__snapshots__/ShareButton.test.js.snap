@@ -19,6 +19,7 @@ exports[`FacebookShareButton renders 1`] = `
   font-family: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  opacity: 1;
   color: #f8f9fa;
   background-color: #0588cb;
   border: none;
@@ -33,12 +34,12 @@ exports[`FacebookShareButton renders 1`] = `
   cursor: pointer;
 }
 
-.c3:hover {
+.c3:hover:enabled {
   border: none;
   background-color: #37a6ed;
 }
 
-.c3:active {
+.c3:active:enabled {
   -webkit-transition: .2s ease-in;
   transition: .2s ease-in;
   border: none;
@@ -177,6 +178,7 @@ exports[`TwitterShareButton renders 1`] = `
   font-family: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+  opacity: 1;
   color: #f8f9fa;
   background-color: #0588cb;
   border: none;
@@ -191,12 +193,12 @@ exports[`TwitterShareButton renders 1`] = `
   cursor: pointer;
 }
 
-.c3:hover {
+.c3:hover:enabled {
   border: none;
   background-color: #37a6ed;
 }
 
-.c3:active {
+.c3:active:enabled {
   -webkit-transition: .2s ease-in;
   transition: .2s ease-in;
   border: none;

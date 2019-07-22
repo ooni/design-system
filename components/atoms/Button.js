@@ -23,6 +23,7 @@ const StyledButton = styled.button`
   // Specific
   font-family: inherit;
   text-decoration: none;
+  opacity: ${props => props.disabled ? 0.5 : 1};
   color: ${props => {
     if (!props.hollow) {
       return props.inverted ? props.theme.colors.blue5 : props.theme.colors.white
@@ -50,7 +51,7 @@ const StyledButton = styled.button`
   transition: .2s ease-out;
   cursor: pointer;
 
-  &:hover {
+  &:hover:enabled {
     border: ${props => {
     if (props.hollow) {
       return `${px(props.border)} solid ${props.inverted ? props.theme.colors.gray1 : props.theme.colors.blue4}`
@@ -64,7 +65,7 @@ const StyledButton = styled.button`
     return 'transparent'
   }};
   }
-  &:active {
+  &:active:enabled {
     transition: .2s ease-in;
     border: ${props => {
     if (props.hollow) {
