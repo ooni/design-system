@@ -8,6 +8,12 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
 .c2 {
   box-sizing: border-box;
   margin-top: 8px;
+  width: 90%;
+}
+
+.c4 {
+  box-sizing: border-box;
+  width: 10%;
 }
 
 .c0 {
@@ -17,7 +23,7 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   display: flex;
 }
 
-.c6 {
+.c7 {
   border-radius: 56px;
   display: inline-block;
   height: 70px;
@@ -46,19 +52,19 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   cursor: pointer;
 }
 
-.c6:hover:enabled {
+.c7:hover:enabled {
   border: none;
   background-color: #37a6ed;
 }
 
-.c6:active:enabled {
+.c7:active:enabled {
   -webkit-transition: .2s ease-in;
   transition: .2s ease-in;
   border: none;
   background-color: #0f77b8;
 }
 
-.c5 {
+.c6 {
   padding-left: 16px;
   padding-right: 16px;
   font-size: 28px;
@@ -92,7 +98,7 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   border-bottom: 1px solid #0588cb;
 }
 
-.c4 {
+.c5 {
   padding-left: 16px;
   padding-right: 16px;
   font-size: 28px;
@@ -101,12 +107,12 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   background-color: transparent;
 }
 
-.c4:hover {
+.c5:hover {
   background-color: transparent;
   color: #ced4da;
 }
 
-.c4:active {
+.c5:active {
   background-color: transparent;
   color: #868e96;
 }
@@ -128,10 +134,11 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
         >
           <Box
             mt={2}
-            w={0.9}
+            width={0.9}
           >
             <div
               className="c2"
+              width={0.9}
             >
               <Input
                 error={null}
@@ -166,10 +173,11 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
             </div>
           </Box>
           <Box
-            w={0.1}
+            width={0.1}
           >
             <div
-              className="c1"
+              className="c4"
+              width={0.1}
             >
               <IconButton
                 fontSize={3}
@@ -187,7 +195,7 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
                 >
                   <Button
                     border={2}
-                    className="c4"
+                    className="c5"
                     fontSize={3}
                     hollow={false}
                     icon={<div />}
@@ -198,7 +206,7 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
                   >
                     <Button__StyledButton
                       border={2}
-                      className="c4 c5"
+                      className="c5 c6"
                       fontSize={3}
                       hollow={false}
                       icon={<div />}
@@ -208,7 +216,7 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
                       pr={3}
                     >
                       <button
-                        className="c4 c5 c6"
+                        className="c5 c6 c7"
                         fontSize={3}
                         icon={<div />}
                         onClick={[Function]}
@@ -236,6 +244,12 @@ exports[`InputWithIconButton renders 1`] = `
 .c2 {
   box-sizing: border-box;
   margin-top: 8px;
+  width: 90%;
+}
+
+.c4 {
+  box-sizing: border-box;
+  width: 10%;
 }
 
 .c0 {
@@ -245,7 +259,7 @@ exports[`InputWithIconButton renders 1`] = `
   display: flex;
 }
 
-.c6 {
+.c7 {
   border-radius: 56px;
   display: inline-block;
   height: 70px;
@@ -274,19 +288,19 @@ exports[`InputWithIconButton renders 1`] = `
   cursor: pointer;
 }
 
-.c6:hover:enabled {
+.c7:hover:enabled {
   border: none;
   background-color: #37a6ed;
 }
 
-.c6:active:enabled {
+.c7:active:enabled {
   -webkit-transition: .2s ease-in;
   transition: .2s ease-in;
   border: none;
   background-color: #0f77b8;
 }
 
-.c5 {
+.c6 {
   padding-left: 16px;
   padding-right: 16px;
   font-size: 28px;
@@ -320,7 +334,7 @@ exports[`InputWithIconButton renders 1`] = `
   border-bottom: 1px solid #0588cb;
 }
 
-.c4 {
+.c5 {
   padding-left: 16px;
   padding-right: 16px;
   font-size: 28px;
@@ -329,12 +343,12 @@ exports[`InputWithIconButton renders 1`] = `
   background-color: transparent;
 }
 
-.c4:hover {
+.c5:hover {
   background-color: transparent;
   color: #ced4da;
 }
 
-.c4:active {
+.c5:active {
   background-color: transparent;
   color: #868e96;
 }
@@ -355,10 +369,11 @@ exports[`InputWithIconButton renders 1`] = `
         >
           <Box
             mt={2}
-            w={0.9}
+            width={0.9}
           >
             <div
               className="c2"
+              width={0.9}
             >
               <Input
                 error={null}
@@ -391,10 +406,11 @@ exports[`InputWithIconButton renders 1`] = `
             </div>
           </Box>
           <Box
-            w={0.1}
+            width={0.1}
           >
             <div
-              className="c1"
+              className="c4"
+              width={0.1}
             >
               <IconButton
                 fontSize={3}
@@ -410,7 +426,7 @@ exports[`InputWithIconButton renders 1`] = `
                 >
                   <Button
                     border={2}
-                    className="c4"
+                    className="c5"
                     fontSize={3}
                     hollow={false}
                     icon={<div />}
@@ -420,7 +436,7 @@ exports[`InputWithIconButton renders 1`] = `
                   >
                     <Button__StyledButton
                       border={2}
-                      className="c4 c5"
+                      className="c5 c6"
                       fontSize={3}
                       hollow={false}
                       icon={<div />}
@@ -429,7 +445,7 @@ exports[`InputWithIconButton renders 1`] = `
                       pr={3}
                     >
                       <button
-                        className="c4 c5 c6"
+                        className="c5 c6 c7"
                         fontSize={3}
                         icon={<div />}
                       >

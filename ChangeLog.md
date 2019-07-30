@@ -1,5 +1,10 @@
 # ChangeLog
 
+## ooni-components 0.2.9 [2019-07-25]
+Adds:
+
+* Add icon for Vanilla Tor circumvention test
+
 ## ooni-components 0.2.8 [2019-06-20]
 Adds:
 
