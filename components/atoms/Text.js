@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {
   space,
   fontSize,
+  fontWeight,
   textStyle,
   textAlign,
   color,
@@ -13,6 +14,7 @@ const Text = styled.p`
   ${space}
   ${width}
   ${fontSize}
+  ${fontWeight}
 
   ${textStyle}
   ${textAlign}

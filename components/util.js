@@ -5,6 +5,7 @@ export { fontSizeMult } from './fontSizeMult'
 export {
   px,
   fontSize,
+  fontWeight,
   space,
   color,
   width,
