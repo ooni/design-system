@@ -13,6 +13,7 @@ import {
   Box,
   InputWithIconButton,
   Provider,
+  Text,
   theme,
   Container,
   Border
@@ -35,6 +36,12 @@ storiesOf('Components/Atoms/Button', module)
       <Button disabled inverted>Disabled Inverted</Button>
     </div>
   )
+
+storiesOf('Components/Atoms/Text', module)
+  .add('Default', () => <Text >The quick brown fox jumps over the lazy dog</Text>)
+  .add('Font Weight', () => <Text fontWeight={800} >The quick brown fox jumps over the lazy dog</Text>)
+  .add('Font Size', () => <Text fontSize={30} >The quick brown fox jumps over the lazy dog</Text>)
+  .add('Text Align', () => <Text textAlign={'right'} >The quick brown fox jumps over the lazy dog</Text>)
 
 storiesOf('Components/Atoms/Input', module)
   .add('Default', () => <Input />)
