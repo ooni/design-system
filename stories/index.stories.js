@@ -77,6 +77,17 @@ storiesOf('Components/Atoms/Select', module)
     </Select>
   ))
 
+storiesOf('Components/Atoms/Link', module)
+  .add('Default', () => (
+    <Link href='https://ooni.org'>OONI</Link>
+  ))
+  .add('Custom Color', () => (
+    <Link href='https://ooni.org' color='pink5'>OONI</Link>
+  ))
+  .add('Attributes', () => (
+    <Link href='https://ooni.org' target='_blank'>OONI (new tab)</Link>
+  ))
+
 storiesOf('Components/Molecules/Card', module)
   .add('Default', () => <Card />)
   .add('Many cards', () => <Flex flexWrap="wrap">
