@@ -17,6 +17,7 @@ export const Heading = atoms.Heading
 export const Text = atoms.Text
 export const Select = atoms.Select
 export const Container = atoms.Container
+export const Link = atoms.Link
 
 /* OONI produced molecules */
 export const InputWithIconButton = molecules.InputWithIconButton
@@ -59,7 +60,6 @@ import {
   Image,
   Label,
   Lead,
-  Link,
   Measure,
   Media,
   Message,

@@ -16,7 +16,8 @@ import {
   Text,
   theme,
   Container,
-  Border
+  Border,
+  Link
 } from '../components'
 
 import { BarChart, PieChart, Modal } from '../components'
