@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="30" height="30" style="fill: none"/>
+    </clipPath>
+  </defs>
+  <title>Circumvention Test</title>
+  <g style="clip-path: url(#clip-path)">
+    <path d="M18.0076825,14.1283019 L14,14.1283019 L14,9.6 L18.0076825,9.6 L18.0076825,6.30943396 L24,11.7433962 L18.0076825,17.1773585 L18.0076825,14.1283019 Z M0,9.6 L4.60947503,9.6 L4.60947503,14.1283019 L0,14.1283019 L0,9.6 Z M7,-2.84217094e-14 L11.609475,-2.84217094e-14 L11.609475,24 L7,24 L7,-2.84217094e-14 Z" id="Triangle-2"></path>
+  </g>
+</svg>
