@@ -132,17 +132,17 @@ storiesOf('Components/Charts/PieChart', module)
 storiesOf('Components/Icons', module)
   .add('Default', () =>
     <Flex flexWrap='wrap'>
-      {Object.keys(icons).map(k => {
+      {Object.keys(icons).map((k, i) => {
         const Icon = icons[k]
         return (
-          <Box width={1/5} pb={3}>
+          <Box key={i} width={1/5} pb={3}>
             <Icon size={50} />
             <Text>{k}</Text>
           </Box>
         )
       })}
       <Box width={1/5} pb={3}>
-      <MdVolumeMute size={50} />
+        <MdVolumeMute size={50} />
       </Box>
     </Flex>
   )
