@@ -20,7 +20,7 @@ import {
 } from '../components'
 
 import { BarChart, PieChart, Modal } from '../components'
-import { CategoryCodeANON, NettestGroupWebsites } from '../components/icons'
+import * as icons from '../components/icons'
 
 import MdVolumeMute from 'react-icons/lib/md/volume-mute'
 
@@ -130,11 +130,20 @@ storiesOf('Components/Charts/PieChart', module)
 
 storiesOf('Components/Icons', module)
   .add('Default', () =>
-    <div style={{ height: '500px' }}>
-      <CategoryCodeANON size={30} />
-      <MdVolumeMute size={30} />
-      <NettestGroupWebsites size={30} />
-    </div>
+    <Flex flexWrap='wrap'>
+      {Object.keys(icons).map(k => {
+        const Icon = icons[k]
+        return (
+          <Box width={1/5} pb={3}>
+            <Icon size={50} />
+            <Text>{k}</Text>
+          </Box>
+        )
+      })}
+      <Box width={1/5} pb={3}>
+      <MdVolumeMute size={50} />
+      </Box>
+    </Flex>
   )
 
 storiesOf('Components/Molecules/InputWithIconButton', module)
