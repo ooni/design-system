@@ -6,7 +6,7 @@ import IconButton from './IconButton'
 import { RadioGroup, RadioButton } from './Radio'
 import { Select } from './Select'
 import Container from './Container'
-
+import Link from './Link'
 import { TwitterShareButton, FacebookShareButton } from './ShareButton'
 
 const atoms = {
@@ -20,7 +20,8 @@ const atoms = {
   Select,
   TwitterShareButton,
   FacebookShareButton,
-  Container
+  Container,
+  Link
 }
 
 export default atoms

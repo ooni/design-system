@@ -16,7 +16,8 @@ import {
   Text,
   theme,
   Container,
-  Border
+  Border,
+  Link
 } from '../components'
 
 import { BarChart, PieChart, Modal } from '../components'
@@ -76,6 +77,17 @@ storiesOf('Components/Atoms/Select', module)
     </Select>
   ))
 
+storiesOf('Components/Atoms/Link', module)
+  .add('Default', () => (
+    <Link href='https://ooni.org'>OONI</Link>
+  ))
+  .add('Custom Color', () => (
+    <Link href='https://ooni.org' color='pink5'>OONI</Link>
+  ))
+  .add('Attributes', () => (
+    <Link href='https://ooni.org' target='_blank'>OONI (new tab)</Link>
+  ))
+
 storiesOf('Components/Molecules/Card', module)
   .add('Default', () => <Card />)
   .add('Many cards', () => <Flex flexWrap="wrap">
@@ -131,17 +143,17 @@ storiesOf('Components/Charts/PieChart', module)
 storiesOf('Components/Icons', module)
   .add('Default', () =>
     <Flex flexWrap='wrap'>
-      {Object.keys(icons).map(k => {
+      {Object.keys(icons).map((k, i) => {
         const Icon = icons[k]
         return (
-          <Box width={1/5} pb={3}>
+          <Box key={i} width={1/5} pb={3}>
             <Icon size={50} />
             <Text>{k}</Text>
           </Box>
         )
       })}
       <Box width={1/5} pb={3}>
-      <MdVolumeMute size={50} />
+        <MdVolumeMute size={50} />
       </Box>
     </Flex>
   )
