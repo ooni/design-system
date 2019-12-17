@@ -1,5 +1,21 @@
 # ChangeLog
 
+## ooni-components 0.2.10 [2019-12-16]
+Adds:
+* Add `<Link>` component styled with OONI theme
+* Add icon for circumvention test group
+
+Changes:
+* dependency upgrades by dependabot #
+
+Fixes:
+* Security fixes in dependency versions suggested by Github security advisories
+
+## ooni-components 0.2.10 [2019-12-03]
+Adds:
+
+* Add `fontWeight` prop to `Text` component
+
 ## ooni-components 0.2.9 [2019-07-25]
 Adds:
 
