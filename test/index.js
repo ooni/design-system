@@ -7,8 +7,6 @@ import {
   theme
 } from '../components'
 
-import './config.js'
-
 export const renderWithTheme = (el, customTheme) => {
   const ProviderWrapper = ({ children }) => (
     <ThemeProvider theme={customTheme || theme}>
