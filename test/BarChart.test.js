@@ -1,13 +1,13 @@
 /* global describe, test, expect */
 import React from 'react'
-import { renderShallowJSON } from './index'
+import { renderWithTheme } from './index'
 import { BarChart } from '../components'
 
 describe('BarChart', () => {
   test('renders', () => {
-    const json = renderShallowJSON(
+    const { container } = renderWithTheme(
       <BarChart />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

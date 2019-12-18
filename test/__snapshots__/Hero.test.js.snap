@@ -1,15 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Hero renders 1`] = `
-.c2 {
+.c1 {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
-}
-
-.c1 {
   max-width: 768px;
 }
 
@@ -33,59 +30,23 @@ exports[`Hero renders 1`] = `
   }
 }
 
-<Hero
-  fontSize={3}
+<div
+  class="c0"
+  font-size="3"
 >
-  <Hero__StyledHero
-    fontSize={3}
-  >
-    <div
-      className="c0"
-      fontSize={3}
-    >
-      <Styled(Box)
-        maxWidth={
-          Array [
-            768,
-            1024,
-            1280,
-          ]
-        }
-        mx="auto"
-        px={3}
-      >
-        <Box
-          className="c1"
-          maxWidth={
-            Array [
-              768,
-              1024,
-              1280,
-            ]
-          }
-          mx="auto"
-          px={3}
-        >
-          <div
-            className="c1 c2"
-          />
-        </Box>
-      </Styled(Box)>
-    </div>
-  </Hero__StyledHero>
-</Hero>
+  <div
+    class="c1"
+  />
+</div>
 `;
 
 exports[`Hero renders with children 1`] = `
-.c2 {
+.c1 {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
-}
-
-.c1 {
   max-width: 768px;
 }
 
@@ -109,49 +70,14 @@ exports[`Hero renders with children 1`] = `
   }
 }
 
-<Hero
-  fontSize={3}
+<div
+  class="c0"
+  font-size="3"
 >
-  <Hero__StyledHero
-    fontSize={3}
+  <div
+    class="c1"
   >
-    <div
-      className="c0"
-      fontSize={3}
-    >
-      <Styled(Box)
-        maxWidth={
-          Array [
-            768,
-            1024,
-            1280,
-          ]
-        }
-        mx="auto"
-        px={3}
-      >
-        <Box
-          className="c1"
-          maxWidth={
-            Array [
-              768,
-              1024,
-              1280,
-            ]
-          }
-          mx="auto"
-          px={3}
-        >
-          <div
-            className="c1 c2"
-          >
-            <div
-              key=".0"
-            />
-          </div>
-        </Box>
-      </Styled(Box)>
-    </div>
-  </Hero__StyledHero>
-</Hero>
+    <div />
+  </div>
+</div>
 `;

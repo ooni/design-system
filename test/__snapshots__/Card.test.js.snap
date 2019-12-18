@@ -9,18 +9,10 @@ exports[`Card renders 1`] = `
   box-shadow: 0 2px 8px rgba(0,0,0,0.38);
 }
 
-<Card
-  fontSize={1}
->
-  <Card__CardStyled
-    fontSize={1}
-  >
-    <div
-      className="c0"
-      fontSize={1}
-    />
-  </Card__CardStyled>
-</Card>
+<div
+  class="c0"
+  font-size="1"
+/>
 `;
 
 exports[`Card renders with children 1`] = `
@@ -32,18 +24,10 @@ exports[`Card renders with children 1`] = `
   box-shadow: 0 2px 8px rgba(0,0,0,0.38);
 }
 
-<Card
-  fontSize={1}
+<div
+  class="c0"
+  font-size="1"
 >
-  <Card__CardStyled
-    fontSize={1}
-  >
-    <div
-      className="c0"
-      fontSize={1}
-    >
-      <div />
-    </div>
-  </Card__CardStyled>
-</Card>
+  <div />
+</div>
 `;

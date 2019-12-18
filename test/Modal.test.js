@@ -1,31 +1,40 @@
 /* global describe, test, expect, jest */
 import React from 'react'
-import { renderJSON, shallowWithTheme } from './index'
+import { fireEvent } from '@testing-library/react'
+
+import { renderWithTheme } from './index'
 import { Modal } from '../components'
 
 describe('Modal', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <Modal />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('renders with close button', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <Modal closeButton='right' />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('close button click handler is called', () => {
     const onCloseClick = jest.fn()
-    const wrapper = shallowWithTheme(
-      <Modal show={true} closeButton='right' onHideClick={onCloseClick} />
+    const { getByText, getByRole, debug } = renderWithTheme(
+      <Modal
+        show={true}
+        closeButton='right'
+        onHideClick={onCloseClick}
+      >
+        <div> Test </div>
+      </Modal>
     )
-    wrapper.find('Modal__StyledCloseButton').simulate('click')
-    wrapper.find('Modal__StyledModalBackdrop').simulate('click')
-    expect(onCloseClick).toHaveBeenCalledTimes(2)
+    expect(getByText('Test')).toBeTruthy()
+    const closeButton = getByRole('button')
+    fireEvent.click(closeButton)
+    expect(onCloseClick).toHaveBeenCalledTimes(1)
   })
 
 })

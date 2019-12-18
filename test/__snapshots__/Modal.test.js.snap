@@ -21,27 +21,17 @@ exports[`Modal renders 1`] = `
   display: none;
 }
 
-<Modal
-  onHideClick={[Function]}
+<div
+  class="c0"
 >
-  <Modal__StyledModal>
-    <div
-      className="c0"
-    >
-      <Modal__StyledModalContent
-        onHideClick={[Function]}
-      >
-        <div
-          className="c1"
-        />
-      </Modal__StyledModalContent>
-    </div>
-  </Modal__StyledModal>
-</Modal>
+  <div
+    class="c1"
+  />
+</div>
 `;
 
 exports[`Modal renders with close button 1`] = `
-.c5 {
+.c2 {
   border-radius: 56px;
   display: inline-block;
   height: 70px;
@@ -68,37 +58,31 @@ exports[`Modal renders with close button 1`] = `
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
   cursor: pointer;
-}
-
-.c5:hover:enabled {
-  border: none;
-  background-color: #37a6ed;
-}
-
-.c5:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: none;
-  background-color: #0f77b8;
-}
-
-.c4 {
   font-size: 28px;
-}
-
-.c3 {
   font-size: 28px;
   border-radius: none;
   color: #adb5bd;
   background-color: transparent;
 }
 
-.c3:hover {
+.c2:hover:enabled {
+  border: none;
+  background-color: #37a6ed;
+}
+
+.c2:active:enabled {
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  border: none;
+  background-color: #0f77b8;
+}
+
+.c2:hover {
   background-color: transparent;
   color: #ced4da;
 }
 
-.c3:active {
+.c2:active {
   background-color: transparent;
   color: #868e96;
 }
@@ -123,7 +107,7 @@ exports[`Modal renders with close button 1`] = `
   display: none;
 }
 
-.c2 {
+.c3 {
   position: absolute;
   top: 0;
   right: 0;
@@ -132,100 +116,31 @@ exports[`Modal renders with close button 1`] = `
   margin: 0;
 }
 
-<Modal
-  closeButton="right"
-  onHideClick={[Function]}
+<div
+  class="c0"
 >
-  <Modal__StyledModal>
-    <div
-      className="c0"
+  <div
+    class="c1"
+  >
+    <button
+      class="c2 c3"
+      font-size="3"
     >
-      <Modal__StyledModalContent
-        closeButton="right"
-        onHideClick={[Function]}
+      <svg
+        fill="currentColor"
+        height="1em"
+        preserveAspectRatio="xMidYMid meet"
+        style="vertical-align: middle;"
+        viewBox="0 0 40 40"
+        width="1em"
       >
-        <div
-          className="c1"
-        >
-          <Modal__StyledCloseButton
-            icon={<MdClose />}
-            onClick={[Function]}
-            position="right"
-          >
-            <IconButton
-              className="c2"
-              fontSize={3}
-              icon={<MdClose />}
-              onClick={[Function]}
-              position="right"
-            >
-              <IconButton__StyledIconButton
-                className="c2"
-                fontSize={3}
-                icon={<MdClose />}
-                onClick={[Function]}
-                position="right"
-              >
-                <Button
-                  border={2}
-                  className="c2 c3"
-                  fontSize={3}
-                  hollow={false}
-                  icon={<MdClose />}
-                  inverted={false}
-                  onClick={[Function]}
-                  position="right"
-                >
-                  <Button__StyledButton
-                    border={2}
-                    className="c2 c3 c4"
-                    fontSize={3}
-                    hollow={false}
-                    icon={<MdClose />}
-                    inverted={false}
-                    onClick={[Function]}
-                    position="right"
-                  >
-                    <button
-                      className="c2 c3 c4 c5"
-                      fontSize={3}
-                      icon={<MdClose />}
-                      onClick={[Function]}
-                    >
-                      <MdClose>
-                        <IconBase
-                          viewBox="0 0 40 40"
-                        >
-                          <svg
-                            fill="currentColor"
-                            height="1em"
-                            preserveAspectRatio="xMidYMid meet"
-                            style={
-                              Object {
-                                "color": undefined,
-                                "verticalAlign": "middle",
-                              }
-                            }
-                            viewBox="0 0 40 40"
-                            width="1em"
-                          >
-                            <g>
-                              <path
-                                d="m31.6 10.7l-9.3 9.3 9.3 9.3-2.3 2.3-9.3-9.3-9.3 9.3-2.3-2.3 9.3-9.3-9.3-9.3 2.3-2.3 9.3 9.3 9.3-9.3z"
-                              />
-                            </g>
-                          </svg>
-                        </IconBase>
-                      </MdClose>
-                    </button>
-                  </Button__StyledButton>
-                </Button>
-              </IconButton__StyledIconButton>
-            </IconButton>
-          </Modal__StyledCloseButton>
-        </div>
-      </Modal__StyledModalContent>
-    </div>
-  </Modal__StyledModal>
-</Modal>
+        <g>
+          <path
+            d="m31.6 10.7l-9.3 9.3 9.3 9.3-2.3 2.3-9.3-9.3-9.3 9.3-2.3-2.3 9.3-9.3-9.3-9.3 2.3-2.3 9.3 9.3 9.3-9.3z"
+          />
+        </g>
+      </svg>
+    </button>
+  </div>
+</div>
 `;

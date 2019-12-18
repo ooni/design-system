@@ -1,16 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select renders 1`] = `
-.c3 {
+.c2 {
   pointer-events: none;
   position: absolute;
   top: 45%;
   right: 15px;
   width: 0;
   height: 0;
-}
-
-.c2 {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 8.6px solid #495057;
@@ -41,41 +38,26 @@ exports[`Select renders 1`] = `
   text-shadow: 0 0 0 #000;
 }
 
-<Select>
-  <Select__StyledSelectContainer>
-    <div
-      className="c0"
-    >
-      <Select__StyledSelect>
-        <select
-          className="c1"
-        />
-      </Select__StyledSelect>
-      <Select__ArrowDown>
-        <Select__Arrow
-          className="c2"
-        >
-          <span
-            className="c2 c3"
-          />
-        </Select__Arrow>
-      </Select__ArrowDown>
-    </div>
-  </Select__StyledSelectContainer>
-</Select>
+<div
+  class="c0"
+>
+  <select
+    class="c1"
+  />
+  <span
+    class="c2"
+  />
+</div>
 `;
 
 exports[`Select renders with children 1`] = `
-.c3 {
+.c2 {
   pointer-events: none;
   position: absolute;
   top: 45%;
   right: 15px;
   width: 0;
   height: 0;
-}
-
-.c2 {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 8.6px solid #495057;
@@ -106,37 +88,25 @@ exports[`Select renders with children 1`] = `
   text-shadow: 0 0 0 #000;
 }
 
-<Select>
-  <Select__StyledSelectContainer>
-    <div
-      className="c0"
+<div
+  class="c0"
+>
+  <select
+    class="c1"
+  >
+    <option
+      value="1"
     >
-      <Select__StyledSelect>
-        <select
-          className="c1"
-        >
-          <option
-            value="1"
-          >
-            One
-          </option>
-          <option
-            value="2"
-          >
-            Two
-          </option>
-        </select>
-      </Select__StyledSelect>
-      <Select__ArrowDown>
-        <Select__Arrow
-          className="c2"
-        >
-          <span
-            className="c2 c3"
-          />
-        </Select__Arrow>
-      </Select__ArrowDown>
-    </div>
-  </Select__StyledSelectContainer>
-</Select>
+      One
+    </option>
+    <option
+      value="2"
+    >
+      Two
+    </option>
+  </select>
+  <span
+    class="c2"
+  />
+</div>
 `;

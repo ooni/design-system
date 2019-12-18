@@ -1,22 +1,22 @@
 /* global describe, test, expect */
 import React from 'react'
-import { renderJSON } from './index'
+import { renderWithTheme } from './index'
 import { Hero } from '../components'
 
 describe('Hero', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <Hero />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('renders with children', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <Hero>
         <div />
       </Hero>
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

@@ -1,32 +1,32 @@
 /* global describe, test, expect */
 import React from 'react'
-import { renderJSON } from './index'
+import { renderWithTheme } from './index'
 import { RadioButton, RadioGroup } from '../components'
 
 describe('RadioButton', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <RadioButton />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('renders with prop checked', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <RadioButton checked />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
 
 
 describe('RadioGroup', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <RadioGroup>
         <RadioButton />
       </RadioGroup>
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
