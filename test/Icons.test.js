@@ -1,20 +1,20 @@
 /* global describe, test, expect */
 import React from 'react'
-import { renderJSON } from './index'
+import { renderWithTheme } from './index'
 import { CategoryCodePOLR, NettestGroupWebsites } from '../components/icons'
 
 describe('Icons', () => {
   test('renders Category Code Icon', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <CategoryCodePOLR />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('renders icon for Test Group', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <NettestGroupWebsites />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

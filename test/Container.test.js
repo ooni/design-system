@@ -1,20 +1,20 @@
 /* global describe, test, expect */
 import React from 'react'
-import { renderJSON } from './index'
+import { renderWithTheme } from './index'
 import { Container } from '../components'
 
 describe('Container', () => {
   test('renders', () => {
-    const wrapper = renderJSON(
+    const { container } = renderWithTheme(
       <Container />
     )
-    expect(wrapper).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('render with maxWidth prop', () => {
-    const wrapper = renderJSON(
+    const { container } = renderWithTheme(
       <Container maxWidth={500} />
     )
-    expect(wrapper).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

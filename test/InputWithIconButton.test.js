@@ -1,29 +1,34 @@
 /* global describe, test, expect, jest */
 import React from 'react'
-import { renderJSON, shallowWithTheme } from './index'
+import { fireEvent } from '@testing-library/react'
+
+import { renderWithTheme } from './index'
 import { InputWithIconButton } from '../components'
 
 describe('InputWithIconButton', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <InputWithIconButton icon={<div />} />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('render with onAction prop', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <InputWithIconButton onAction={() => {}} icon={<div />} />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('onAction is called on click', () => {
     const onAction = jest.fn()
-    const wrapper = shallowWithTheme(
-      <InputWithIconButton onAction={onAction} />
+    const { container, getByRole } = renderWithTheme(
+      <InputWithIconButton onAction={onAction} data-testid='test-input' />
     )
-    wrapper.find('IconButton').simulate('click')
+    expect(container.firstChild).toMatchSnapshot()
+
+    const inputWithButton = getByRole('button')
+    fireEvent.click(inputWithButton)
     expect(onAction).toHaveBeenCalled()
   })
 })

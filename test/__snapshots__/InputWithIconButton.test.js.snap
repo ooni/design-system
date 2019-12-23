@@ -1,29 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InputWithIconButton render with onAction prop 1`] = `
+exports[`InputWithIconButton onAction is called on click 1`] = `
 .c1 {
-  box-sizing: border-box;
-}
-
-.c2 {
   box-sizing: border-box;
   margin-top: 8px;
   width: 90%;
 }
 
-.c4 {
+.c3 {
   box-sizing: border-box;
   width: 10%;
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c7 {
+.c2 {
+  font-size: 16px;
+  font-family: inherit;
+  display: 'block';
+  vertical-align: 'middle';
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #f1f3f5;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  width: 100%;
+  height: 32px;
+  box-shadow: none;
+  box-sizing: content-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.c2:hover:not([readonly]) {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.c2:focus:not([readonly]) {
+  border-bottom: 1px solid #0588cb;
+}
+
+.c4 {
   border-radius: 56px;
   display: inline-block;
   height: 70px;
@@ -50,27 +75,91 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
   cursor: pointer;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 28px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 28px;
+  border-radius: none;
+  color: #adb5bd;
+  background-color: transparent;
 }
 
-.c7:hover:enabled {
+.c4:hover:enabled {
   border: none;
   background-color: #37a6ed;
 }
 
-.c7:active:enabled {
+.c4:active:enabled {
   -webkit-transition: .2s ease-in;
   transition: .2s ease-in;
   border: none;
   background-color: #0f77b8;
 }
 
-.c6 {
-  padding-left: 16px;
-  padding-right: 16px;
-  font-size: 28px;
+.c4:hover {
+  background-color: transparent;
+  color: #ced4da;
+}
+
+.c4:active {
+  background-color: transparent;
+  color: #868e96;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+      width="0.9"
+    >
+      <div>
+        <input
+          class="c2"
+          data-testid="test-input"
+          font-size="1"
+          rows="3"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      class="c3"
+      width="0.1"
+    >
+      <button
+        class="c4"
+        font-size="3"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`InputWithIconButton render with onAction prop 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin-top: 8px;
+  width: 90%;
 }
 
 .c3 {
+  box-sizing: border-box;
+  width: 10%;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
   font-size: 16px;
   font-family: inherit;
   display: 'block';
@@ -90,15 +179,44 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   transition: all .3s;
 }
 
-.c3:hover:not([readonly]) {
+.c2:hover:not([readonly]) {
   border-bottom: 1px solid #dee2e6;
 }
 
-.c3:focus:not([readonly]) {
+.c2:focus:not([readonly]) {
   border-bottom: 1px solid #0588cb;
 }
 
-.c5 {
+.c4 {
+  border-radius: 56px;
+  display: inline-block;
+  height: 70px;
+  line-height: 1;
+  padding-left: 56px;
+  padding-right: 56px;
+  text-transform: capitalize;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+  font-family: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  opacity: 1;
+  color: #f8f9fa;
+  background-color: #0588cb;
+  border: none;
+  text-align: center;
+  -webkit-letter-spacing: .5px;
+  -moz-letter-spacing: .5px;
+  -ms-letter-spacing: .5px;
+  letter-spacing: .5px;
+  z-index: 1;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+  cursor: pointer;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 28px;
   padding-left: 16px;
   padding-right: 16px;
   font-size: 28px;
@@ -107,159 +225,109 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   background-color: transparent;
 }
 
-.c5:hover {
+.c4:hover:enabled {
+  border: none;
+  background-color: #37a6ed;
+}
+
+.c4:active:enabled {
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  border: none;
+  background-color: #0f77b8;
+}
+
+.c4:hover {
   background-color: transparent;
   color: #ced4da;
 }
 
-.c5:active {
+.c4:active {
   background-color: transparent;
   color: #868e96;
 }
 
-<InputWithIconButton
-  error={null}
-  fontSize={1}
-  icon={<div />}
-  onAction={[Function]}
-  type="text"
->
-  <div>
-    <Flex>
-      <Box
-        className="c0"
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+      width="0.9"
+    >
+      <div>
+        <input
+          class="c2"
+          font-size="1"
+          rows="3"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      class="c3"
+      width="0.1"
+    >
+      <button
+        class="c4"
+        font-size="3"
       >
-        <div
-          className="c0 c1"
-        >
-          <Box
-            mt={2}
-            width={0.9}
-          >
-            <div
-              className="c2"
-              width={0.9}
-            >
-              <Input
-                error={null}
-                fontSize={1}
-                icon={<div />}
-                onAction={[Function]}
-                onChange={[Function]}
-                rows={3}
-                type="text"
-              >
-                <div>
-                  <Input__StyledInput
-                    error={null}
-                    fontSize={1}
-                    icon={<div />}
-                    onAction={[Function]}
-                    onChange={[Function]}
-                    rows={3}
-                    type="text"
-                  >
-                    <input
-                      className="c3"
-                      fontSize={1}
-                      icon={<div />}
-                      onChange={[Function]}
-                      rows={3}
-                      type="text"
-                    />
-                  </Input__StyledInput>
-                </div>
-              </Input>
-            </div>
-          </Box>
-          <Box
-            width={0.1}
-          >
-            <div
-              className="c4"
-              width={0.1}
-            >
-              <IconButton
-                fontSize={3}
-                icon={<div />}
-                onClick={[Function]}
-                pl={3}
-                pr={3}
-              >
-                <IconButton__StyledIconButton
-                  fontSize={3}
-                  icon={<div />}
-                  onClick={[Function]}
-                  pl={3}
-                  pr={3}
-                >
-                  <Button
-                    border={2}
-                    className="c5"
-                    fontSize={3}
-                    hollow={false}
-                    icon={<div />}
-                    inverted={false}
-                    onClick={[Function]}
-                    pl={3}
-                    pr={3}
-                  >
-                    <Button__StyledButton
-                      border={2}
-                      className="c5 c6"
-                      fontSize={3}
-                      hollow={false}
-                      icon={<div />}
-                      inverted={false}
-                      onClick={[Function]}
-                      pl={3}
-                      pr={3}
-                    >
-                      <button
-                        className="c5 c6 c7"
-                        fontSize={3}
-                        icon={<div />}
-                        onClick={[Function]}
-                      >
-                        <div />
-                      </button>
-                    </Button__StyledButton>
-                  </Button>
-                </IconButton__StyledIconButton>
-              </IconButton>
-            </div>
-          </Box>
-        </div>
-      </Box>
-    </Flex>
+        <div />
+      </button>
+    </div>
   </div>
-</InputWithIconButton>
+</div>
 `;
 
 exports[`InputWithIconButton renders 1`] = `
 .c1 {
   box-sizing: border-box;
-}
-
-.c2 {
-  box-sizing: border-box;
   margin-top: 8px;
   width: 90%;
 }
 
-.c4 {
+.c3 {
   box-sizing: border-box;
   width: 10%;
 }
 
 .c0 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c7 {
+.c2 {
+  font-size: 16px;
+  font-family: inherit;
+  display: 'block';
+  vertical-align: 'middle';
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #f1f3f5;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  width: 100%;
+  height: 32px;
+  box-shadow: none;
+  box-sizing: content-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.c2:hover:not([readonly]) {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.c2:focus:not([readonly]) {
+  border-bottom: 1px solid #0588cb;
+}
+
+.c4 {
   border-radius: 56px;
   display: inline-block;
   height: 70px;
@@ -286,55 +354,9 @@ exports[`InputWithIconButton renders 1`] = `
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
   cursor: pointer;
-}
-
-.c7:hover:enabled {
-  border: none;
-  background-color: #37a6ed;
-}
-
-.c7:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: none;
-  background-color: #0f77b8;
-}
-
-.c6 {
   padding-left: 16px;
   padding-right: 16px;
   font-size: 28px;
-}
-
-.c3 {
-  font-size: 16px;
-  font-family: inherit;
-  display: 'block';
-  vertical-align: 'middle';
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid #f1f3f5;
-  border-radius: 0;
-  margin: 0;
-  padding: 0;
-  outline: none;
-  width: 100%;
-  height: 32px;
-  box-shadow: none;
-  box-sizing: content-box;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-.c3:hover:not([readonly]) {
-  border-bottom: 1px solid #dee2e6;
-}
-
-.c3:focus:not([readonly]) {
-  border-bottom: 1px solid #0588cb;
-}
-
-.c5 {
   padding-left: 16px;
   padding-right: 16px;
   font-size: 28px;
@@ -343,123 +365,56 @@ exports[`InputWithIconButton renders 1`] = `
   background-color: transparent;
 }
 
-.c5:hover {
+.c4:hover:enabled {
+  border: none;
+  background-color: #37a6ed;
+}
+
+.c4:active:enabled {
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  border: none;
+  background-color: #0f77b8;
+}
+
+.c4:hover {
   background-color: transparent;
   color: #ced4da;
 }
 
-.c5:active {
+.c4:active {
   background-color: transparent;
   color: #868e96;
 }
 
-<InputWithIconButton
-  error={null}
-  fontSize={1}
-  icon={<div />}
-  type="text"
->
-  <div>
-    <Flex>
-      <Box
-        className="c0"
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+      width="0.9"
+    >
+      <div>
+        <input
+          class="c2"
+          font-size="1"
+          rows="3"
+          type="text"
+        />
+      </div>
+    </div>
+    <div
+      class="c3"
+      width="0.1"
+    >
+      <button
+        class="c4"
+        font-size="3"
       >
-        <div
-          className="c0 c1"
-        >
-          <Box
-            mt={2}
-            width={0.9}
-          >
-            <div
-              className="c2"
-              width={0.9}
-            >
-              <Input
-                error={null}
-                fontSize={1}
-                icon={<div />}
-                onChange={[Function]}
-                rows={3}
-                type="text"
-              >
-                <div>
-                  <Input__StyledInput
-                    error={null}
-                    fontSize={1}
-                    icon={<div />}
-                    onChange={[Function]}
-                    rows={3}
-                    type="text"
-                  >
-                    <input
-                      className="c3"
-                      fontSize={1}
-                      icon={<div />}
-                      onChange={[Function]}
-                      rows={3}
-                      type="text"
-                    />
-                  </Input__StyledInput>
-                </div>
-              </Input>
-            </div>
-          </Box>
-          <Box
-            width={0.1}
-          >
-            <div
-              className="c4"
-              width={0.1}
-            >
-              <IconButton
-                fontSize={3}
-                icon={<div />}
-                pl={3}
-                pr={3}
-              >
-                <IconButton__StyledIconButton
-                  fontSize={3}
-                  icon={<div />}
-                  pl={3}
-                  pr={3}
-                >
-                  <Button
-                    border={2}
-                    className="c5"
-                    fontSize={3}
-                    hollow={false}
-                    icon={<div />}
-                    inverted={false}
-                    pl={3}
-                    pr={3}
-                  >
-                    <Button__StyledButton
-                      border={2}
-                      className="c5 c6"
-                      fontSize={3}
-                      hollow={false}
-                      icon={<div />}
-                      inverted={false}
-                      pl={3}
-                      pr={3}
-                    >
-                      <button
-                        className="c5 c6 c7"
-                        fontSize={3}
-                        icon={<div />}
-                      >
-                        <div />
-                      </button>
-                    </Button__StyledButton>
-                  </Button>
-                </IconButton__StyledIconButton>
-              </IconButton>
-            </div>
-          </Box>
-        </div>
-      </Box>
-    </Flex>
+        <div />
+      </button>
+    </div>
   </div>
-</InputWithIconButton>
+</div>
 `;

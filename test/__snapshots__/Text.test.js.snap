@@ -7,15 +7,9 @@ exports[`Text renders 1`] = `
   line-height: 1.25;
 }
 
-<Text
-  f={1}
-  m={0}
-  p={0}
->
-  <p
-    className="c0"
-  />
-</Text>
+<p
+  class="c0"
+/>
 `;
 
 exports[`Text renders with prop fontSize 1`] = `
@@ -27,8 +21,8 @@ exports[`Text renders with prop fontSize 1`] = `
 }
 
 <p
-  className="c0"
-  fontSize={18}
+  class="c0"
+  font-size="18"
 />
 `;
 
@@ -41,8 +35,8 @@ exports[`Text renders with prop fontWeight 1`] = `
 }
 
 <p
-  className="c0"
-  fontWeight={500}
+  class="c0"
+  font-weight="500"
 />
 `;
 
@@ -55,7 +49,7 @@ exports[`Text renders with prop textAlign 1`] = `
 }
 
 <p
-  className="c0"
+  class="c0"
 />
 `;
 
@@ -68,7 +62,7 @@ exports[`Text renders with prop width 1`] = `
 }
 
 <p
-  className="c0"
-  width={1}
+  class="c0"
+  width="1"
 />
 `;

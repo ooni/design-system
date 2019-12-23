@@ -1,22 +1,22 @@
 /* global describe, test, expect */
 import React from 'react'
-import { renderJSON } from './index'
+import { renderWithTheme } from './index'
 import { TwitterShareButton, FacebookShareButton } from '../components'
 
 describe('TwitterShareButton', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <TwitterShareButton />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })
 
 describe('FacebookShareButton', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <FacebookShareButton />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

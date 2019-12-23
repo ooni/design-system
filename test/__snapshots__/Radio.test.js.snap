@@ -6,6 +6,7 @@ exports[`RadioButton renders 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,92 +49,57 @@ exports[`RadioButton renders 1`] = `
 }
 
 .c6 {
+  position: relative;
+  margin: 0;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
   border: 2px solid #adb5bd;
   background-color: 'transparent';
   position: absolute;
   top: 0;
 }
 
-<RadioButton
-  fontSize={1}
+<div
+  class="c0"
+  font-size="1"
 >
-  <Radio__StyledRadioButton
-    fontSize={1}
+  <label
+    class="c1"
+    font-size="1"
   >
     <div
-      className="c0"
-      fontSize={1}
+      class="c2"
     >
-      <Radio__StyledLabel
-        fontSize={1}
+      <div
+        class="c3"
       >
-        <label
-          className="c1"
-          fontSize={1}
+        <input
+          class="c4"
+          type="radio"
+        />
+        <div
+          class="c5"
+          font-size="1"
         >
-          <Flex>
-            <Box
-              className="c2"
-            >
-              <div
-                className="c2 c3"
-              >
-                <Box>
-                  <div
-                    className="c3"
-                  >
-                    <Radio__ErasedInputRadio
-                      innerRef={[Function]}
-                      onChange={[Function]}
-                      onClick={[Function]}
-                      type="radio"
-                    >
-                      <input
-                        className="c4"
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        type="radio"
-                      />
-                    </Radio__ErasedInputRadio>
-                    <Radio__StyledRadioContainer
-                      fontSize={1}
-                    >
-                      <div
-                        className="c5"
-                        fontSize={1}
-                      >
-                        <Radio__StyledRadio
-                          fontSize={1}
-                        >
-                          <Radio__StyledRadioContainer
-                            className="c6"
-                            fontSize={1}
-                          >
-                            <div
-                              className="c6 c5"
-                              fontSize={1}
-                            />
-                          </Radio__StyledRadioContainer>
-                        </Radio__StyledRadio>
-                      </div>
-                    </Radio__StyledRadioContainer>
-                  </div>
-                </Box>
-                <Box>
-                  <div
-                    className="c3"
-                  >
-                    <div />
-                  </div>
-                </Box>
-              </div>
-            </Box>
-          </Flex>
-        </label>
-      </Radio__StyledLabel>
+          <div
+            class="c6"
+            font-size="1"
+          />
+        </div>
+      </div>
+      <div
+        class="c3"
+      >
+        <div />
+      </div>
     </div>
-  </Radio__StyledRadioButton>
-</RadioButton>
+  </label>
+</div>
 `;
 
 exports[`RadioButton renders with prop checked 1`] = `
@@ -142,6 +108,7 @@ exports[`RadioButton renders with prop checked 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -184,6 +151,15 @@ exports[`RadioButton renders with prop checked 1`] = `
 }
 
 .c6 {
+  position: relative;
+  margin: 0;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
   border: 2px solid #0588cb;
   background-color: 'transparent';
   position: absolute;
@@ -191,124 +167,65 @@ exports[`RadioButton renders with prop checked 1`] = `
 }
 
 .c7 {
+  position: relative;
+  margin: 0;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  border: 2px solid #0588cb;
+  background-color: 'transparent';
+  position: absolute;
+  top: 0;
   background-color: #0588cb;
   -webkit-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
 }
 
-<RadioButton
-  checked={true}
-  fontSize={1}
+<div
+  class="c0"
+  font-size="1"
 >
-  <Radio__StyledRadioButton
-    checked={true}
-    fontSize={1}
+  <label
+    class="c1"
+    font-size="1"
   >
     <div
-      checked={true}
-      className="c0"
-      fontSize={1}
+      class="c2"
     >
-      <Radio__StyledLabel
-        checked={true}
-        fontSize={1}
+      <div
+        class="c3"
       >
-        <label
-          checked={true}
-          className="c1"
-          fontSize={1}
+        <input
+          class="c4"
+          type="radio"
+        />
+        <div
+          class="c5"
+          font-size="1"
         >
-          <Flex>
-            <Box
-              className="c2"
-            >
-              <div
-                className="c2 c3"
-              >
-                <Box>
-                  <div
-                    className="c3"
-                  >
-                    <Radio__ErasedInputRadio
-                      innerRef={[Function]}
-                      onChange={[Function]}
-                      onClick={[Function]}
-                      type="radio"
-                    >
-                      <input
-                        className="c4"
-                        onChange={[Function]}
-                        onClick={[Function]}
-                        type="radio"
-                      />
-                    </Radio__ErasedInputRadio>
-                    <Radio__StyledRadioContainer
-                      checked={true}
-                      fontSize={1}
-                    >
-                      <div
-                        checked={true}
-                        className="c5"
-                        fontSize={1}
-                      >
-                        <Radio__StyledRadio
-                          checked={true}
-                          fontSize={1}
-                        >
-                          <Radio__StyledRadioContainer
-                            checked={true}
-                            className="c6"
-                            fontSize={1}
-                          >
-                            <div
-                              checked={true}
-                              className="c6 c5"
-                              fontSize={1}
-                            />
-                          </Radio__StyledRadioContainer>
-                        </Radio__StyledRadio>
-                        <Radio__StyledRadioInner
-                          checked={true}
-                          fontSize={1}
-                        >
-                          <Radio__StyledRadio
-                            checked={true}
-                            className="c7"
-                            fontSize={1}
-                          >
-                            <Radio__StyledRadioContainer
-                              checked={true}
-                              className="c7 c6"
-                              fontSize={1}
-                            >
-                              <div
-                                checked={true}
-                                className="c7 c6 c5"
-                                fontSize={1}
-                              />
-                            </Radio__StyledRadioContainer>
-                          </Radio__StyledRadio>
-                        </Radio__StyledRadioInner>
-                      </div>
-                    </Radio__StyledRadioContainer>
-                  </div>
-                </Box>
-                <Box>
-                  <div
-                    className="c3"
-                  >
-                    <div />
-                  </div>
-                </Box>
-              </div>
-            </Box>
-          </Flex>
-        </label>
-      </Radio__StyledLabel>
+          <div
+            class="c6"
+            font-size="1"
+          />
+          <div
+            class="c7"
+            font-size="1"
+          />
+        </div>
+      </div>
+      <div
+        class="c3"
+      >
+        <div />
+      </div>
     </div>
-  </Radio__StyledRadioButton>
-</RadioButton>
+  </label>
+</div>
 `;
 
 exports[`RadioGroup renders 1`] = `
@@ -317,6 +234,7 @@ exports[`RadioGroup renders 1`] = `
 }
 
 .c2 {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -359,6 +277,15 @@ exports[`RadioGroup renders 1`] = `
 }
 
 .c6 {
+  position: relative;
+  margin: 0;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
   border: 2px solid #0588cb;
   background-color: 'transparent';
   position: absolute;
@@ -366,143 +293,65 @@ exports[`RadioGroup renders 1`] = `
 }
 
 .c7 {
+  position: relative;
+  margin: 0;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  border: 2px solid #0588cb;
+  background-color: 'transparent';
+  position: absolute;
+  top: 0;
   background-color: #0588cb;
   -webkit-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
 }
 
-<RadioGroup
-  fontSize={1}
->
-  <div>
-    <RadioButton
-      checked={true}
-      fontSize={1}
-      key=".0"
-      onChange={[Function]}
+<div>
+  <div
+    class="c0"
+    font-size="1"
+  >
+    <label
+      class="c1"
+      font-size="1"
     >
-      <Radio__StyledRadioButton
-        checked={true}
-        fontSize={1}
-        onChange={[Function]}
+      <div
+        class="c2"
       >
         <div
-          checked={true}
-          className="c0"
-          fontSize={1}
-          onChange={[Function]}
+          class="c3"
         >
-          <Radio__StyledLabel
-            checked={true}
-            fontSize={1}
-            onChange={[Function]}
+          <input
+            class="c4"
+            type="radio"
+          />
+          <div
+            class="c5"
+            font-size="1"
           >
-            <label
-              checked={true}
-              className="c1"
-              fontSize={1}
-              onChange={[Function]}
-            >
-              <Flex>
-                <Box
-                  className="c2"
-                >
-                  <div
-                    className="c2 c3"
-                  >
-                    <Box>
-                      <div
-                        className="c3"
-                      >
-                        <Radio__ErasedInputRadio
-                          innerRef={[Function]}
-                          onChange={[Function]}
-                          onClick={[Function]}
-                          type="radio"
-                        >
-                          <input
-                            className="c4"
-                            onChange={[Function]}
-                            onClick={[Function]}
-                            type="radio"
-                          />
-                        </Radio__ErasedInputRadio>
-                        <Radio__StyledRadioContainer
-                          checked={true}
-                          fontSize={1}
-                          onChange={[Function]}
-                        >
-                          <div
-                            checked={true}
-                            className="c5"
-                            fontSize={1}
-                            onChange={[Function]}
-                          >
-                            <Radio__StyledRadio
-                              checked={true}
-                              fontSize={1}
-                              onChange={[Function]}
-                            >
-                              <Radio__StyledRadioContainer
-                                checked={true}
-                                className="c6"
-                                fontSize={1}
-                                onChange={[Function]}
-                              >
-                                <div
-                                  checked={true}
-                                  className="c6 c5"
-                                  fontSize={1}
-                                  onChange={[Function]}
-                                />
-                              </Radio__StyledRadioContainer>
-                            </Radio__StyledRadio>
-                            <Radio__StyledRadioInner
-                              checked={true}
-                              fontSize={1}
-                              onChange={[Function]}
-                            >
-                              <Radio__StyledRadio
-                                checked={true}
-                                className="c7"
-                                fontSize={1}
-                                onChange={[Function]}
-                              >
-                                <Radio__StyledRadioContainer
-                                  checked={true}
-                                  className="c7 c6"
-                                  fontSize={1}
-                                  onChange={[Function]}
-                                >
-                                  <div
-                                    checked={true}
-                                    className="c7 c6 c5"
-                                    fontSize={1}
-                                    onChange={[Function]}
-                                  />
-                                </Radio__StyledRadioContainer>
-                              </Radio__StyledRadio>
-                            </Radio__StyledRadioInner>
-                          </div>
-                        </Radio__StyledRadioContainer>
-                      </div>
-                    </Box>
-                    <Box>
-                      <div
-                        className="c3"
-                      >
-                        <div />
-                      </div>
-                    </Box>
-                  </div>
-                </Box>
-              </Flex>
-            </label>
-          </Radio__StyledLabel>
+            <div
+              class="c6"
+              font-size="1"
+            />
+            <div
+              class="c7"
+              font-size="1"
+            />
+          </div>
         </div>
-      </Radio__StyledRadioButton>
-    </RadioButton>
+        <div
+          class="c3"
+        >
+          <div />
+        </div>
+      </div>
+    </label>
   </div>
-</RadioGroup>
+</div>
 `;

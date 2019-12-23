@@ -1,45 +1,45 @@
 /* global describe, test, expect */
 import React from 'react'
-import { renderJSON, renderShallowJSON } from './index'
+import { renderWithTheme } from './index'
 import { Text } from '../components'
 
 describe('Text', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <Text />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('renders with prop fontWeight', () => {
-    const json = renderShallowJSON(
+    const { container } = renderWithTheme(
       <Text fontWeight={500} />
     )
 
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('renders with prop fontSize', () => {
-    const json = renderShallowJSON(
+    const { container } = renderWithTheme(
       <Text fontSize={18} />
     )
 
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('renders with prop textAlign', () => {
-    const json = renderShallowJSON(
+    const { container } = renderWithTheme(
       <Text textAlign={'center'} />
     )
 
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('renders with prop width', () => {
-    const json = renderShallowJSON(
+    const { container } = renderWithTheme(
       <Text width={1} />
     )
 
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

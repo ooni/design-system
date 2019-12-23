@@ -1,12 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Link renders 1`] = `
-.c1 {
-  color: blue;
-}
-
 .c0 {
-  color: #0588cb;
+  color: blue;
+  color: blue;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -16,38 +13,17 @@ exports[`Link renders 1`] = `
   filter: brightness(125%);
 }
 
-<ForwardRef
+<a
+  class="c0"
   href="https://ooni.org"
 >
-  <ForwardRef
-    className="c0"
-    color="blue"
-    href="https://ooni.org"
-    is="a"
-  >
-    <ForwardRef
-      className="c0 c1"
-      color="blue"
-      href="https://ooni.org"
-      is="a"
-    >
-      <a
-        className="c0 c1"
-        href="https://ooni.org"
-      >
-        OONI
-      </a>
-    </ForwardRef>
-  </ForwardRef>
-</ForwardRef>
+  OONI
+</a>
 `;
 
 exports[`Link renders with prop color 1`] = `
-.c1 {
-  color: #2f9e44;
-}
-
 .c0 {
+  color: #2f9e44;
   color: green8;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -58,25 +34,9 @@ exports[`Link renders with prop color 1`] = `
   filter: brightness(125%);
 }
 
-<ForwardRef
-  color="green8"
+<a
+  class="c0"
 >
-  <ForwardRef
-    className="c0"
-    color="green8"
-    is="a"
-  >
-    <ForwardRef
-      className="c0 c1"
-      color="green8"
-      is="a"
-    >
-      <a
-        className="c0 c1"
-      >
-        OONI Green
-      </a>
-    </ForwardRef>
-  </ForwardRef>
-</ForwardRef>
+  OONI Green
+</a>
 `;

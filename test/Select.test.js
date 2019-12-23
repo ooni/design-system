@@ -1,23 +1,23 @@
 /* global describe, test, expect */
 import React from 'react'
-import { renderJSON } from './index'
+import { renderWithTheme } from './index'
 import { Select } from '../components'
 
 describe('Select', () => {
   test('renders', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <Select />
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   test('renders with children', () => {
-    const json = renderJSON(
+    const { container } = renderWithTheme(
       <Select>
         <option value="1">One</option>
         <option value="2">Two</option>
       </Select>
     )
-    expect(json).toMatchSnapshot()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

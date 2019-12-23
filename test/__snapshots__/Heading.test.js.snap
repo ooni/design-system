@@ -13,21 +13,10 @@ exports[`Heading renders 1`] = `
   font-weight: 600;
 }
 
-<Heading
-  mb={2}
-  mt={2}
+<h1
+  class="c0"
+  font-size="0"
 >
-  <Heading__BaseEl
-    fontSize={0}
-    mb={2}
-    mt={2}
-  >
-    <h1
-      className="c0"
-      fontSize={0}
-    >
-       Hello OONI! 
-    </h1>
-  </Heading__BaseEl>
-</Heading>
+   Hello OONI! 
+</h1>
 `;
