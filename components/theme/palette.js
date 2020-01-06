@@ -12,7 +12,7 @@ const hueNames = [
   'blue',     // 210
   'indigo',   // 240
   'violet',   // 270
-  'fuschia',  // 300
+  'fuchsia',  // 300
   'pink',     // 330
   'red',      // 360
 ]
