@@ -5,7 +5,7 @@ import colors from './colors'
 const colorScale = [
   colors.palette.yellow2,
   colors.palette.lime3,
-  colors.palette.fuschia4,
+  colors.palette.fuchsia4,
   colors.palette.blue5,
   colors.palette.grey6,
   colors.palette.grey7,
