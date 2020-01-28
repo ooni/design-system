@@ -1,12 +1,23 @@
 # ChangeLog
 
-## ooni-components 0.2.10 [2019-12-16]
+## ooni-components 0.3.0 [2019-01-27]
+Adds:
+* Icon for `tor` test
+
+Changes:
+* **BREAKING** Supports styled-components@^4.0.0
+* Fixed `psiphon` test icon
+
+Removed:
+* Dropped misspelt color `fuschia`. Use `fuchsia`
+
+## ooni-components 0.2.11 [2019-12-16]
 Adds:
 * Add `<Link>` component styled with OONI theme
 * Add icon for circumvention test group
 
 Changes:
-* dependency upgrades by dependabot #
+* dependency upgrades by dependabot #65 #66 #69 #71
 
 Fixes:
 * Security fixes in dependency versions suggested by Github security advisories
