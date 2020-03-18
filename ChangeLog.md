@@ -1,6 +1,10 @@
 # ChangeLog
 
-## ooni-components 0.3.0 [2019-01-27]
+## ooni-components 0.3.1 [2020-03-18]
+Adds:
+* Animation for Circumvention test group
+
+## ooni-components 0.3.0 [2020-01-27]
 Adds:
 * Icon for `tor` test
 
