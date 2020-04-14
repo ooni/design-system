@@ -1,1 +1,6 @@
-<svg id="be23e1da-bbcd-4e5c-891c-3ae3c58ae133" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><defs><clipPath id="a8e1d31c-4ac1-4f63-bb3a-1bb9d810b9aa" transform="translate(-3 -3)"><rect width="30" height="30" style="fill:none"/></clipPath></defs><g style="clip-path:url(#a8e1d31c-4ac1-4f63-bb3a-1bb9d810b9aa)"><path id="ae8241bb-bb26-4257-82b2-c3a56ad9abe3" data-name="Triangle-2" d="M21,17.1H17V12.6h4V9.3l6,5.4-6,5.4ZM3,12.6H7.6v4.5H3ZM10,3h4.6V27H10Z" transform="translate(-3 -3)"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+<path id="circumvention" d="M21,17.1h-4v-4.5h4V9.3l6,5.4l-6,5.4V17.1z M3,12.6h4.6v4.5H3V12.6z M10,3h4.6v24H10V3z"/>
+</svg>
