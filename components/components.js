@@ -6,8 +6,8 @@ import BarChart from './charts/BarChart'
 import PieChart from './charts/PieChart'
 
 /* OONI produced atoms */
-
-export const Button = atoms.Button
+import Button from './Button'
+export { default as Button } from './Button'
 export const Input = atoms.Input
 export const RadioButton = atoms.RadioButton
 export const RadioGroup = atoms.RadioGroup

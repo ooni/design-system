@@ -1,7 +1,6 @@
 /* global require */
 import {
-  style,
-  px
+  system
 } from 'styled-system'
 
 const {
@@ -13,12 +12,13 @@ export const fontSizeMult = (propName, k) => {
   console.error('usage of fontSizeMult will be deprecated')
   /* eslint-enable no-console */
 
-  return style({
-    prop: 'fontSize',
-    cssProperty: propName,
-    key: 'fontSizes',
-    transformValue: n => px(n * k),
-    scale: defaultFontSizes
+  return system({
+    'fontSize': {
+      property: propName,
+      scale: 'fontSizes',
+      transform: n => n * k,
+      defaultScale: defaultFontSizes
+    }
   })
 }
 

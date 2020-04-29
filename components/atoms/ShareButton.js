@@ -7,7 +7,7 @@ import FaTwitter from 'react-icons/lib/fa/twitter'
 import FaFacebook from 'react-icons/lib/fa/facebook'
 
 import { Link } from 'rebass'
-import Button from './Button'
+import Button from '../Button'
 
 export const StyledShareButton = styled(Button)`
   text-transform: none;

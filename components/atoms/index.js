@@ -1,4 +1,3 @@
-import Button from './Button'
 import Input from './Input'
 import Heading from './Heading'
 import Text from './Text'
@@ -12,7 +11,6 @@ import { TwitterShareButton, FacebookShareButton } from './ShareButton'
 const atoms = {
   Text,
   Heading,
-  Button,
   IconButton,
   Input,
   RadioGroup,

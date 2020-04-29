@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { space, width, fontSize, color } from 'styled-system'
 
-import Button from './Button'
+import Button from '../Button'
 
 /* XXX I think there is something weird with the position of this vertically */
 const StyledIconButton = styled(Button)`

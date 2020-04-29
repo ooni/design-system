@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Flex, Box } from '@rebass/grid'
+import { Flex, Box } from 'rebass'
 
 import Input from '../atoms/Input'
 import IconButton from '../atoms/IconButton'

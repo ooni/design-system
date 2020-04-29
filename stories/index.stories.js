@@ -5,7 +5,6 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import {
-  Button,
   Input,
   Select,
   Card,
@@ -15,6 +14,7 @@ import {
   Provider,
   Text,
   theme,
+  Button,
   Container,
   Border,
   Link
@@ -25,7 +25,19 @@ import * as icons from '../components/icons'
 
 import MdVolumeMute from 'react-icons/lib/md/volume-mute'
 
+
 storiesOf('Components/Atoms/Button', module)
+  .add('All Buttons', () =>
+    <div>
+      <Button>Default</Button>
+      <Button inverted>Inverted</Button>
+      <Button hollow>Hollow</Button>
+      <Button hollow border={6}>Hollow border</Button>
+      <Button disabled>Disabled</Button>
+      <Button disabled hollow>Disabled hollow</Button>
+      <Button disabled inverted>Disabled inverted</Button>
+    </div>
+  )
   .add('Default', () => <Button>Run OONI</Button>)
   .add('Inverted', () => <Button inverted>Run OONI</Button>)
   .add('Hollow', () => <Button hollow>Run OONI</Button>)

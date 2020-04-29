@@ -31,6 +31,51 @@ export const rebassTheme = {
   ],
   weights: [400, 600],
   radius: 2,
-  colors: Object.assign({}, colors.palette)
+  colors: Object.assign({}, colors.palette),
+  variants: {
+  },
+  buttons: {
+    primary: {
+      fontSize: 2,
+      fontWeight: 'bold',
+      color: 'white',
+      bg: 'primary',
+      borderRadius: '20px',
+      ':hover': {
+        'color': 'primary',
+        'bg': 'white'
+      },
+      ':disabled': {
+        'opacity': '0.5'
+      }
+    },
+    inverted: {
+      variant: 'buttons.primary',
+      color: 'primary',
+      bg: 'white',
+      ':hover': {
+        'color': 'white',
+        'bg': 'primary'
+      }
+    },
+    hollow: {
+      variant: 'buttons.primary',
+      color: 'primary',
+      bg: 'transparent',
+      borderWidth: '1px',
+      borderStyle: 'solid',
+      borderColor: 'primary',
+      ':hover': {
+        'color': 'white',
+        'bg': 'primary'
+      }
+    },
+    secondary: {
+      variant: 'buttons.primary',
+      color: 'background',
+      bg: 'secondary',
+    },
+  }
 }
+
 export default rebassTheme

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Flex, Box } from '@rebass/grid'
+import { Flex, Box } from 'rebass'
 
 import styled from 'styled-components'
 
