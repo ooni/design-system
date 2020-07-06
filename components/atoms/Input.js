@@ -1,54 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Flex, Box } from 'rebass'
-
+import { Flex, Box } from 'rebass/styled-components'
+import { Input as RebassInput, Textarea as RebassTextarea } from '@rebass/forms/styled-components'
 import MdWarning from 'react-icons/lib/md/warning'
 
 import styled, { css } from 'styled-components'
 
-import { space, fontSize, fontSizeMult, color, width } from '../util'
-
-const borderBottomMaybeError = (color, baseHeight) => (props) => {
-  if (props.error) {
-    return `1px solid ${props.theme.colors.red7};`
-  }
-  return `${baseHeight} solid ${props.theme.colors[color]};`
-}
-
-const styles = css`
-  ${space}
-  ${width}
-  ${fontSize}
-  ${color}
-
-  font-family: inherit;
-  display: 'block';
-  vertical-align: 'middle';
-
-  background-color: transparent;
-
-  border: none;
-  border-bottom: ${borderBottomMaybeError('gray1', '1px')}
-  border-radius: 0;
-  margin: 0;
-  padding: 0;
-
-  outline: none;
-  width: 100%;
-  ${fontSizeMult('height', 2)}
-
-  box-shadow: none;
-  box-sizing: content-box;
-  transition: all .3s;
-
-  &:hover:not([readonly]) {
-    border-bottom: ${borderBottomMaybeError('gray3', '1px')}
-  }
-
-  &:focus:not([readonly]) {
-    border-bottom: ${borderBottomMaybeError('base', '1px')}
-  }
-`
+import Text from './Text'
+import { space, fontSize, color, width } from '../util'
 
 const StyledErrorMessage = styled.p`
   ${fontSize}
@@ -62,12 +21,12 @@ StyledErrorMessage.defaultProps = {
 
 const ErrorMessage = ({ children }) => {
   return (
-    <Flex flexWrap='wrap'>
+    <Flex flexWrap='wrap' color='red7' mt={3}>
       <Box>
-        <StyledErrorMessage>{children}</StyledErrorMessage>
+        <Text>{children}</Text>
       </Box>
       <Box ml='auto' width={16} flex='none'>
-        <StyledErrorMessage><MdWarning /></StyledErrorMessage>
+        <Text><MdWarning /></Text>
       </Box>
     </Flex>
   )
@@ -77,11 +36,37 @@ ErrorMessage.propTypes = {
   children: PropTypes.any
 }
 
-const StyledInput = styled.input`${styles}`
-const StyledTextarea = styled.textarea`
-  ${styles}
-  ${props => fontSizeMult('height', props.rows+1)(props)}
-`
+
+const StyledInput = props => <RebassInput
+  {...props}
+  sx={{
+    fontFamily: 'inherit',
+    display: 'block',
+    verticalAlign: 'middle',
+    bg: 'transparent',
+    border: 'none',
+    borderRadius: 0,
+    height: '32px',
+    borderBottomStyle: 'solid',
+    borderBottomWidth: '1px',
+    borderBottomColor: props.error ? 'red7' : 'gray1',
+    outline: 'none',
+    margin: 0,
+    padding: 0,
+    width: '100%',
+    boxShadow: 'none',
+    'box-sizing': 'content-box',
+    transition: 'all .3s',
+    ':hover': {
+      borderBottomColor: props.error === true ? 'red7' : 'gray3'
+    },
+    ':focus': {
+      borderBottomColor: props.error === true ? 'red7' : 'base'
+    }
+  }}
+/>
+
+const StyledTextarea = styled(RebassTextarea)``
 
 const Input = (props) => {
   let StyledElement = StyledInput
@@ -95,6 +80,7 @@ const Input = (props) => {
     </div>
   )
 }
+
 
 Input.propTypes = {
   type: PropTypes.string,

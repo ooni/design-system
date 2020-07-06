@@ -6,6 +6,7 @@
   "author": "Arturo Filastò <arturo@filasto.net>",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@rebass/forms": "^4.0.6",
     "@rebass/preset": "^4.0.5",
     "emotion-theming": "^10.0.27",
     "palx": "^1.0.2",
