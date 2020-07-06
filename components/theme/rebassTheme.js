@@ -31,12 +31,54 @@ export const rebassTheme = {
   ],
   fontWeights: {
     light: 200,
+    lightHeading: 300,
     body: 400,
+    heading: 600,
     bold: 700
+  },
+  lineHeights: {
+    body: 1.25,
+    heading: 1.5,
   },
   radius: 2,
   colors: Object.assign({}, colors.palette),
   text: {
+    heading: {
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      letterSpacing: '0px',
+      fontSize: [0],
+      my: 2
+    },
+    headingLight: {
+      variant: 'text.heading',
+      letterSpacing: '-1px',
+      fontWeight: 'lightHeading'
+    },
+    h1: {
+      variant: 'text.headingLight',
+      fontSize: 5
+    },
+    h2: {
+      variant: 'text.headingLight',
+      fontSize: 4
+    },
+    h3: {
+      variant: 'text.heading',
+      fontSize: 3
+    },
+    h4: {
+      variant: 'text.heading',
+      fontSize: 2
+    },
+    h5: {
+      variant: 'text.heading',
+      fontSize: 1
+    },
+    h6: {
+      variant: 'text.heading',
+      fontSize: 0
+    },
     error: {
       color: 'red7',
     }

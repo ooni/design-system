@@ -17,7 +17,8 @@ import {
   Button,
   Container,
   Border,
-  Link
+  Link,
+  Heading
 } from '../components'
 
 import { BarChart, PieChart, Modal } from '../components'
@@ -55,6 +56,12 @@ storiesOf('Components/Atoms/Text', module)
   .add('Font Weight', () => <Text fontWeight={800} >The quick brown fox jumps over the lazy dog</Text>)
   .add('Font Size', () => <Text fontSize={30} >The quick brown fox jumps over the lazy dog</Text>)
   .add('Text Align', () => <Text textAlign={'right'} >The quick brown fox jumps over the lazy dog</Text>)
+
+storiesOf('Components/Atoms/Heading', module)
+  .add('Heading', () => <Heading> Just a simple Heading </Heading>)
+  .add('Standard Headings', () => [1, 2, 3, 4, 5, 6].map(h => (
+    <Heading h={h} key={h}> Standard Heading {h} </Heading>
+  )))
 
 storiesOf('Components/Atoms/Input', module)
   .add('Default', () => <Input />)

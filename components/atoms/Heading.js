@@ -1,42 +1,11 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import Text from './Text'
 
-import {
-  space,
-  fontSize,
-  fontStyle,
-  textAlign,
-  color,
-  width
-} from '../util'
-
-const isLight = props => (props.h === 1 || props.h === 2)
-
-const styles = css`
-  ${space}
-  ${width}
-  ${fontSize}
-  ${fontStyle}
-  ${textAlign}
-  ${color}
-  line-height: 1.5;
-  letter-spacing: ${props => isLight(props) ? '-1px' : '0px' };
-  font-weight: ${props => isLight(props) ? 300 : 600};
-`
-
-export const Heading = props => {
-  const biggestFont = 5
-  let fontSize = 0
-  let BaseEl = styled.h1`${styles}`
-  if (props.h !== undefined) {
-    fontSize = biggestFont - props.h + 1
-    BaseEl = styled[`h${props.h}`]`${styles}`
-  }
-  return <BaseEl fontSize={fontSize} {...props} />
-}
+export const Heading = props => (
+  <Text {...props} variant={props.h ? `h${props.h}` : 'heading'} />
+)
 
 Heading.defaultProps = {
-  mt: 2,
-  mb: 2
+  h: 0
 }
 export default Heading
