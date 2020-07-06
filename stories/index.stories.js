@@ -61,6 +61,7 @@ storiesOf('Components/Atoms/Input', module)
   .add('With Error', () => <Input error="Error message" />)
   .add('Font Size', () => <Input fontSize={30} />)
   .add('Text Area', () => <Input type='textarea' rows={10} />)
+  .add('Text Area with Error', () => <Input type='textarea' rows={4} error='Error in text area' />)
 
 storiesOf('Components/Atoms/Select', module)
   .add('default', () =>

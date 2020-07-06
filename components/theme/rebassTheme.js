@@ -29,9 +29,18 @@ export const rebassTheme = {
     36,
     48
   ],
-  weights: [400, 600],
+  fontWeights: {
+    light: 200,
+    body: 400,
+    bold: 700
+  },
   radius: 2,
   colors: Object.assign({}, colors.palette),
+  text: {
+    error: {
+      color: 'red7',
+    }
+  },
   variants: {
   },
   buttons: {
@@ -75,6 +84,47 @@ export const rebassTheme = {
       color: 'background',
       bg: 'secondary',
     },
+  },
+  forms: {
+    input: {
+      fontFamily: 'inherit',
+      display: 'block',
+      verticalAlign: 'middle',
+      bg: 'transparent',
+      border: 'none',
+      borderRadius: 0,
+      borderBottomStyle: 'solid',
+      borderBottomWidth: '1px',
+      outline: 'none',
+      margin: 0,
+      padding: 0,
+      width: '100%',
+      py: 2,
+      boxShadow: 'none',
+      'box-sizing': 'content-box',
+      transition: 'all .3s',
+      borderBottomColor: 'gray1',
+      ':hover': {
+        borderBottomColor: 'gray1'
+      },
+      ':focus': {
+        borderBottomColor: 'base'
+      },
+    },
+    error: {
+      variant: 'forms.input',
+      borderBottomColor: 'red7',
+      ':hover': {
+        borderBottomColor: 'red7'
+      },
+      ':focus': {
+        borderBottomColor: 'red7'
+      },
+    },
+    textarea: {
+      variant: 'forms.input',
+      height: 'unset',
+    }
   }
 }
 
