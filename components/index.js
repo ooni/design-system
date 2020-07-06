@@ -1,8 +1,9 @@
 import {
-  Provider,
   Flex,
   Box
 } from 'rebass'
+
+import { ThemeProvider as Provider } from 'styled-components'
 
 import colors from './theme/colors'
 import theme from './theme/rebassTheme'
@@ -14,7 +15,6 @@ import components from './components'
 
 // We export these from rebass directly
 export {
-  Provider,
   Flex,
   Box
 } from 'rebass'
