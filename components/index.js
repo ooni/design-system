@@ -1,7 +1,7 @@
 import {
   Flex,
   Box
-} from 'rebass'
+} from 'rebass/styled-components'
 
 import { ThemeProvider as Provider } from 'styled-components'
 
@@ -17,7 +17,7 @@ import components from './components'
 export {
   Flex,
   Box
-} from 'rebass'
+} from 'rebass/styled-components'
 
 export const {
   Button,

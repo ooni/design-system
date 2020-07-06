@@ -84,6 +84,11 @@ export const rebassTheme = {
     }
   },
   variants: {
+    container: {
+      px: 3,
+      mx:'auto',
+      maxWidth: [768, 1024, 1280]
+    }
   },
   buttons: {
     primary: {

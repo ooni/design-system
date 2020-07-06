@@ -11,12 +11,9 @@ import {
   Flex,
   Box,
   InputWithIconButton,
-  Provider,
   Text,
-  theme,
   Button,
   Container,
-  Border,
   Link,
   Heading
 } from '../components'
@@ -212,11 +209,9 @@ storiesOf('Components/Organisms/Modal', module)
 
 storiesOf('Layouts', module)
   .add('Default', () =>
-    <Provider theme={theme}>
-      <Box bg={theme.colors.blue5}>
-        <Container bg={theme.colors.blue1}>
-          <Box> Container </Box>
-        </Container>
-      </Box>
-    </Provider>
+    <Box bg='blue9'>
+      <Container bg='blue1'>
+        <Box bg='blue5'> Container </Box>
+      </Container>
+    </Box>
   )
