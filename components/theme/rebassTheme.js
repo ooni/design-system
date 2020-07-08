@@ -175,6 +175,25 @@ export const rebassTheme = {
       ':active': {
         color: 'gray6',
       }
+    },
+    share: {
+      variant: 'buttons.primary',
+      textTransform: 'none',
+      ':hover': {
+        filter: 'brightness(90%)'
+      },
+      ':active': {
+        filter: 'brightness(85%)',
+        transition: '0.2s ease-in'
+      }
+    },
+    twitterShare: {
+      variant: 'buttons.share',
+      bg: 'twitterBlue'
+    },
+    facebookShare: {
+      variant: 'buttons.share',
+      bg: 'facebookBlue'
     }
   },
   forms: {

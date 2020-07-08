@@ -21,6 +21,8 @@ colors.palette = {
   'base': '#0588cb',
   'black': '#212529',
   'white': '#f8f9fa',
+  'twitterBlue': '#1da1f2',
+  'facebookBlue': '#3b5998',
 
   'gray0': '#f8f9fa',
   'gray1': '#f1f3f5',

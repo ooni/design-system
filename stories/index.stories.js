@@ -14,6 +14,8 @@ import {
   InputWithIconButton,
   Text,
   Button,
+  TwitterShareButton,
+  FacebookShareButton,
   Container,
   Link,
   Heading,
@@ -50,6 +52,8 @@ storiesOf('Components/Atoms/Button', module)
       <Button disabled inverted>Disabled Inverted</Button>
     </div>
   )
+  .add('Twitter Share Button', () => <TwitterShareButton msg='Message in Tweet' />)
+  .add('Facebook Share Button', () => <FacebookShareButton msg='Messsage on Facebook' />)
 
 storiesOf('Components/Atoms/Text', module)
   .add('Default', () => <Text >The quick brown fox jumps over the lazy dog</Text>)
