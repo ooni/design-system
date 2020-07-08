@@ -240,7 +240,7 @@ storiesOf('Components/Organisms/Modal', module)
     </Modal>
   )
   .add('With clickable Close Button', () =>
-    <Modal show={true} closeButton='right' onHideClick={action('clicked')}>
+    <Modal show={true} closeButton='left' onHideClick={action('clicked')}>
       <Box p={3} bg='lightblue'>
         Modal Content
       </Box>
