@@ -92,6 +92,8 @@ export const rebassTheme = {
     },
     error: {
       color: 'red7',
+    },
+    heroLead: {
     }
   },
   variants: {
@@ -121,6 +123,14 @@ export const rebassTheme = {
         marginTop: 1,
         marginBottom: 0
       }
+    },
+    hero: {
+      variant: 'variants.container',
+      fontSize: 3,
+      width: '100%',
+      bg: 'base',
+      color: 'white',
+      textAlign: 'center'
     }
   },
   buttons: {

@@ -19,6 +19,8 @@ import {
   Container,
   Link,
   Heading,
+  Hero,
+  HeroLead,
   RadioButton,
   RadioGroup
 } from '../components'
@@ -226,6 +228,10 @@ storiesOf('Components/Molecules/InputWithIconButton', module)
       onChange={action('Changed')}
     />
   )
+
+storiesOf('Components/Organisms/Hero', module)
+  .add('Default', () => <Hero> This is a hero </Hero>)
+  .add('Hero Lead', () => <HeroLead> This is a Hero Lead </HeroLead>)
 
 storiesOf('Components/Organisms/Modal', module)
   .add('Default', () =>
