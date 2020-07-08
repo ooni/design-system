@@ -10,6 +10,9 @@ export const Button = props => {
   if (props.inverted == true) {
     variant = 'inverted'
   }
+  if (props.variant !== undefined) {
+    variant = props.variant
+  }
   return <RButton
     {...props}
     variant={variant}
@@ -22,7 +25,8 @@ Button.propTypes = {
   fontSize: PropTypes.number,
   inverted: PropTypes.bool,
   hollow: PropTypes.bool,
-  border: PropTypes.number
+  border: PropTypes.number,
+  variant: PropTypes.string
 }
 
 Button.defaultProps = {

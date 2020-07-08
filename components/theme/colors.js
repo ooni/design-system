@@ -17,6 +17,7 @@ let colors = {
 colors.palette = {
   'primary': '#0588cb',
   'background': '#f8f9fa',
+  'highlight': '#0588cb20', // Added to fix @rebass/forms/Radio in focus mode
   'base': '#0588cb',
   'black': '#212529',
   'white': '#f8f9fa',

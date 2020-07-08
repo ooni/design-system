@@ -42,6 +42,10 @@ export const rebassTheme = {
   },
   radius: 2,
   colors: Object.assign({}, colors.palette),
+  shadows: {
+    card: '0 2px 8px rgba(0, 0, 0, .38)',
+    activeCard: '0 2px 8px rgba(0, 0, 0, 0.5)'
+  },
   text: {
     heading: {
       lineHeight: 'heading',
@@ -54,6 +58,13 @@ export const rebassTheme = {
       variant: 'text.heading',
       letterSpacing: '-1px',
       fontWeight: 'lightHeading'
+    },
+    h0: {
+      variant: 'text.heading',
+      color: 'red',
+      '::after': {
+        content: 'No heading number'
+      }
     },
     h1: {
       variant: 'text.headingLight',
@@ -88,6 +99,28 @@ export const rebassTheme = {
       px: 3,
       mx:'auto',
       maxWidth: [768, 1024, 1280]
+    },
+    link: {
+      color: 'blue7',
+      textDecoration: 'none',
+      ':hover': {
+        filter: 'brightness(125%)'
+      }
+    },
+    card: {
+      border: 'none',
+      borderRadius: '10px',
+      padding: [1, 4],
+      boxShadow: 'card',
+    },
+    clickableCard: {
+      my: 1,
+      variant: 'variants.card',
+      ':active': {
+        boxShadow: 'activeCard',
+        marginTop: 1,
+        marginBottom: 0
+      }
     }
   },
   buttons: {
@@ -131,6 +164,18 @@ export const rebassTheme = {
       color: 'background',
       bg: 'secondary',
     },
+    iconButton: {
+      variant: 'buttons.hollow',
+      border: 'none',
+      borderRadius: 'none',
+      color: 'gray5',
+      ':hover': {
+        color: 'gray4',
+      },
+      ':active': {
+        color: 'gray6',
+      }
+    }
   },
   forms: {
     input: {
@@ -171,7 +216,19 @@ export const rebassTheme = {
     textarea: {
       variant: 'forms.input',
       height: 'unset',
-    }
+    },
+    select: {
+      bg: 'gray2',
+      border: 'none',
+      borderRadius: '2em',
+      appearance: 'none',
+      outline: 'none',
+      cursor: 'pointer',
+      py: '10px',
+      pr: '40px',
+      pl: 3,
+      width: 'unset',
+    },
   }
 }
 

@@ -7,6 +7,7 @@ import { action } from '@storybook/addon-actions'
 import {
   Input,
   Select,
+  Label,
   Card,
   Flex,
   Box,
@@ -15,7 +16,9 @@ import {
   Button,
   Container,
   Link,
-  Heading
+  Heading,
+  RadioButton,
+  RadioGroup
 } from '../components'
 
 import { BarChart, PieChart, Modal } from '../components'
@@ -69,15 +72,13 @@ storiesOf('Components/Atoms/Input', module)
 
 storiesOf('Components/Atoms/Select', module)
   .add('default', () =>
-    <div>
-      <label>
-        <div> Choose An Option </div>
-        <Select>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-        </Select>
-      </label>
-    </div>
+    <Box>
+      <Label for='select1'> Choose your options </Label>
+      <Select>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+      </Select>
+    </Box>
   )
   .add('Really long options', () => (
     <Select>
@@ -105,11 +106,38 @@ storiesOf('Components/Atoms/Link', module)
     <Link href='https://ooni.org' target='_blank'>OONI (new tab)</Link>
   ))
 
+storiesOf('Components/Atoms/Radios', module)
+  .add('Radio Button', () => (
+    <RadioButton label='OONI' value='ooni' />
+  ))
+  .add('Radio Button onChange', () => (
+    <RadioButton label='OONI' value='ooni' name='project' id='ooni' onChange={action('RadioButton onChange')} />
+  ))
+  .add('Radio Group', () => (
+    <RadioGroup onChange={action('Radio Group onChange')} value='two'>
+      <RadioButton name='name' label='OONI' value='one' />
+      <RadioButton name='name' label='Ooni' value='two' />
+      <RadioButton name='name' label='ooni' value='three' />
+      <RadioButton name='name' label='O.O.N.I' value='four' />
+    </RadioGroup>
+  ))
+  .add('Radio Group Horizontal', () => (
+    <RadioGroup direction='row' onChange={action('Radio Group onChange')} value='three'>
+      <RadioButton name='name' label='OONI' value='one' />
+      <RadioButton name='name' label='Ooni' value='two' />
+      <RadioButton name='name' label='ooni' value='three' />
+      <RadioButton name='name' label='O.O.N.I' value='four' />
+    </RadioGroup>
+  ))
+
 storiesOf('Components/Molecules/Card', module)
   .add('Default', () => <Card />)
   .add('Many cards', () => <Flex flexWrap="wrap">
     <Box width={1 / 3}>
-      <Card />
+      <Card> Card 1 </Card>
+    </Box>
+    <Box width={1 / 3}>
+      <Card onClick={() => alert('click')}> Clickable Variant </Card>
     </Box>
     <Box width={1 / 3}>
       <Card />
@@ -117,11 +145,10 @@ storiesOf('Components/Molecules/Card', module)
     <Box width={1 / 3}>
       <Card />
     </Box>
-    <Box width={1 / 3}>
-      <Card />
-    </Box>
-  </Flex>
-  )
+  </Flex>)
+  .add('Clickable Card', () => (
+    <Card onClick={() => alert('clicked')}>Clickable Card</Card>
+  ))
 
 storiesOf('Components/Charts/BarChart', module)
   .add('Default', () =>
@@ -184,6 +211,9 @@ storiesOf('Components/Molecules/InputWithIconButton', module)
   )
   .add('With Icon', () =>
     <InputWithIconButton icon={<MdVolumeMute />} />
+  )
+  .add('With Icon upon error', () =>
+    <InputWithIconButton icon={<MdVolumeMute />} error={'Please enter the value'} />
   )
   .add('With Clickable Icon', () =>
     <InputWithIconButton

@@ -1,23 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Flex, Box } from 'rebass'
+import { Flex, Box } from 'rebass/styled-components'
 
 import Input from '../atoms/Input'
 import IconButton from '../atoms/IconButton'
 
 export const InputWithIconButton = (props) => {
   return (
-    <div>
-      <Flex>
-        <Box width={9/10} mt={2}><Input {...props} /></Box>
-        <Box width={1/10}>
-          <IconButton pl={3} pr={3}
-            onClick={props.onAction}
-            icon={props.icon} />
-        </Box>
-      </Flex>
-    </div>
+    <Flex alignItems='top'>
+      <Box width={9/10} mt={2}><Input {...props} /></Box>
+      <Box width={1/10}>
+        <IconButton pl={3} pr={3}
+          onClick={props.onAction}
+          icon={props.icon} />
+      </Box>
+    </Flex>
   )
 }
 

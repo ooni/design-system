@@ -15,9 +15,7 @@ export const TwitterShareButton = atoms.TwitterShareButton
 export const FacebookShareButton = atoms.FacebookShareButton
 export const Heading = atoms.Heading
 export const Text = atoms.Text
-export const Select = atoms.Select
 export const Container = atoms.Container
-export const Link = atoms.Link
 
 /* OONI produced molecules */
 export const InputWithIconButton = molecules.InputWithIconButton
@@ -58,7 +56,6 @@ import {
   Fixed,
   Group,
   Image,
-  Label,
   Lead,
   Measure,
   Media,
@@ -97,7 +94,6 @@ const components = {
   Heading,
   Text,
   Input,
-  Select,
   Card,
   RadioButton,
   RadioGroup,
@@ -138,9 +134,7 @@ const components = {
   Fixed,
   Group,
   Image,
-  Label,
   Lead,
-  Link,
   Measure,
   Media,
   Message,
