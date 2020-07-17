@@ -3,11 +3,26 @@
 exports[`Container render with maxWidth prop 1`] = `
 .c0 {
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
+  min-width: 0;
   padding-left: 16px;
   padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 768px;
   max-width: 500px;
+}
+
+@media screen and (min-width:32em) {
+  .c0 {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width:48em) {
+  .c0 {
+    max-width: 1280px;
+  }
 }
 
 <div
@@ -18,10 +33,12 @@ exports[`Container render with maxWidth prop 1`] = `
 exports[`Container renders 1`] = `
 .c0 {
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
+  min-width: 0;
   padding-left: 16px;
   padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 768px;
 }
 

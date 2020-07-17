@@ -2,8 +2,10 @@
 
 exports[`Link renders 1`] = `
 .c0 {
-  color: blue;
-  color: blue;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #056aa6;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -23,10 +25,13 @@ exports[`Link renders 1`] = `
 
 exports[`Link renders with prop color 1`] = `
 .c0 {
-  color: #2f9e44;
-  color: green8;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #056aa6;
   -webkit-text-decoration: none;
   text-decoration: none;
+  color: #2f9e44;
 }
 
 .c0:hover {
@@ -36,6 +41,7 @@ exports[`Link renders with prop color 1`] = `
 
 <a
   class="c0"
+  color="green8"
 >
   OONI Green
 </a>
