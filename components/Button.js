@@ -17,6 +17,7 @@ export const Button = props => {
     {...props}
     variant={variant}
     sx={{
+      borderWidth: props.border
     }}
   />
 }
@@ -31,8 +32,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   fontSize: 1,
-  inverted: false,
-  hollow: false,
   border: 2
 }
 

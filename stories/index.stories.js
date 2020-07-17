@@ -40,13 +40,14 @@ storiesOf('Components/Atoms/Button', module)
       <Button hollow border={6}>Hollow border</Button>
       <Button disabled>Disabled</Button>
       <Button disabled hollow>Disabled hollow</Button>
+      <Button disabled hollow border={6}>Disabled hollow border</Button>
       <Button disabled inverted>Disabled inverted</Button>
     </div>
   )
   .add('Default', () => <Button>Run OONI</Button>)
   .add('Inverted', () => <Button inverted>Run OONI</Button>)
   .add('Hollow', () => <Button hollow>Run OONI</Button>)
-  .add('With border', () => <Button hollow border={6}>Run OONI</Button>)
+  .add('Hollow with border', () => <Button hollow border={6}>Run OONI</Button>)
   .add('Disabled', () =>
     <div>
       <Button disabled>Disabled Button</Button>
