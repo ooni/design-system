@@ -30,6 +30,7 @@ exports[`Button render with border prop (and hollow) 1`] = `
   border-width: 1px;
   border-style: solid;
   border-color: #0588cb;
+  border-width: 4px;
   font-size: 16px;
 }
 
@@ -75,6 +76,7 @@ exports[`Button render with fontSize prop 1`] = `
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
+  border-width: 2px;
   font-size: 22px;
 }
 
@@ -123,6 +125,7 @@ exports[`Button render with hollow prop 1`] = `
   border-width: 1px;
   border-style: solid;
   border-color: #0588cb;
+  border-width: 2px;
   font-size: 16px;
 }
 
@@ -168,6 +171,7 @@ exports[`Button render with inverted prop 1`] = `
   color: #0588cb;
   background-color: #f8f9fa;
   border-radius: 20px;
+  border-width: 2px;
   font-size: 16px;
 }
 
@@ -213,6 +217,7 @@ exports[`Button render with margin prop 1`] = `
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
+  border-width: 2px;
   margin: 8px;
   font-size: 16px;
 }
@@ -259,6 +264,7 @@ exports[`Button render with width prop 1`] = `
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
+  border-width: 2px;
   width: 100%;
   font-size: 16px;
 }
@@ -306,6 +312,7 @@ exports[`Button renders 1`] = `
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
+  border-width: 2px;
   font-size: 16px;
 }
 

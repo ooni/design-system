@@ -92,6 +92,7 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
   border-style: solid;
   border-color: #0588cb;
   border: none;
+  border-width: 2px;
   padding-left: 16px;
   padding-right: 16px;
   font-size: 16px;
@@ -244,6 +245,7 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   border-style: solid;
   border-color: #0588cb;
   border: none;
+  border-width: 2px;
   padding-left: 16px;
   padding-right: 16px;
   font-size: 16px;
@@ -397,6 +399,7 @@ exports[`InputWithIconButton renders 1`] = `
   border-style: solid;
   border-color: #0588cb;
   border: none;
+  border-width: 2px;
   padding-left: 16px;
   padding-right: 16px;
   font-size: 16px;

@@ -13,7 +13,7 @@ describe('RadioButton', () => {
 
   test('renders with prop checked', () => {
     const { container } = renderWithTheme(
-      <RadioButton checked />
+      <RadioButton defaultChecked />
     )
     expect(container.firstChild).toMatchSnapshot()
   })

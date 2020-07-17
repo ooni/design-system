@@ -6,14 +6,14 @@ import { Flex, Box } from 'rebass/styled-components'
 import Input from '../atoms/Input'
 import IconButton from '../atoms/IconButton'
 
-export const InputWithIconButton = (props) => {
+export const InputWithIconButton = ({ onAction, icon, ...props}) => {
   return (
     <Flex alignItems='top'>
       <Box width={9/10} mt={2}><Input {...props} /></Box>
       <Box width={1/10}>
         <IconButton pl={3} pr={3}
-          onClick={props.onAction}
-          icon={props.icon} />
+          onClick={onAction}
+          icon={icon} />
       </Box>
     </Flex>
   )

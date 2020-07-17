@@ -49,6 +49,7 @@ exports[`FacebookShareButton renders 1`] = `
   background-color: #3b5998;
   border-radius: 20px;
   text-transform: none;
+  border-width: 2px;
   font-size: 16px;
 }
 
@@ -141,6 +142,7 @@ exports[`TwitterShareButton renders 1`] = `
   background-color: #1da1f2;
   border-radius: 20px;
   text-transform: none;
+  border-width: 2px;
   font-size: 16px;
 }
 

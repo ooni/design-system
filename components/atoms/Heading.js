@@ -9,7 +9,7 @@ export const Heading = props => {
 }
 
 Heading.defaultProps = {
-  h: 0
+  h: 1
 }
 
 export default Heading
