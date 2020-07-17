@@ -3,7 +3,7 @@ import React from 'react'
 import { renderWithTheme } from './index'
 import { PieChart } from '../components'
 
-describe('PieChart', () => {
+describe.skip('PieChart', () => {
   test('renders', () => {
     const { container } = renderWithTheme(
       <PieChart />
