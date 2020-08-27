@@ -2,45 +2,45 @@
 
 exports[`Button render with border prop (and hollow) 1`] = `
 .c0 {
-  border-radius: 32px;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
-  height: 40px;
-  line-height: 1;
-  padding-left: 32px;
-  padding-right: 32px;
-  text-transform: capitalize;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  outline: 0;
-  font-family: inherit;
+  text-align: center;
+  line-height: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  opacity: 1;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #f8f9fa;
+  background-color: #0588cb;
+  border: 0;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 700;
   color: #0588cb;
   background-color: transparent;
-  border: 4px solid #0588cb;
-  text-align: center;
-  -webkit-letter-spacing: .5px;
-  -moz-letter-spacing: .5px;
-  -ms-letter-spacing: .5px;
-  letter-spacing: .5px;
-  z-index: 1;
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
-  cursor: pointer;
+  border-radius: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #0588cb;
+  border-width: 4px;
   font-size: 16px;
 }
 
-.c0:hover:enabled {
-  border: 4px solid #37a6ed;
-  background-color: transparent;
+.c0:hover {
+  color: #f8f9fa;
+  background-color: #0588cb;
 }
 
-.c0:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: 4px solid #0f77b8;
-  background-color: transparent;
+.c0:disabled {
+  opacity: 0.5;
 }
 
 <button
@@ -51,45 +51,42 @@ exports[`Button render with border prop (and hollow) 1`] = `
 
 exports[`Button render with fontSize prop 1`] = `
 .c0 {
-  border-radius: 44px;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
-  height: 55px;
-  line-height: 1;
-  padding-left: 44px;
-  padding-right: 44px;
-  text-transform: capitalize;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  outline: 0;
-  font-family: inherit;
+  text-align: center;
+  line-height: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  opacity: 1;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   color: #f8f9fa;
   background-color: #0588cb;
-  border: none;
-  text-align: center;
-  -webkit-letter-spacing: .5px;
-  -moz-letter-spacing: .5px;
-  -ms-letter-spacing: .5px;
-  letter-spacing: .5px;
-  z-index: 1;
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
-  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #f8f9fa;
+  background-color: #0588cb;
+  border-radius: 20px;
+  border-width: 2px;
   font-size: 22px;
 }
 
-.c0:hover:enabled {
-  border: none;
-  background-color: #37a6ed;
+.c0:hover {
+  color: #0588cb;
+  background-color: #f8f9fa;
 }
 
-.c0:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: none;
-  background-color: #0f77b8;
+.c0:disabled {
+  opacity: 0.5;
 }
 
 <button
@@ -100,45 +97,45 @@ exports[`Button render with fontSize prop 1`] = `
 
 exports[`Button render with hollow prop 1`] = `
 .c0 {
-  border-radius: 32px;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
-  height: 40px;
-  line-height: 1;
-  padding-left: 32px;
-  padding-right: 32px;
-  text-transform: capitalize;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  outline: 0;
-  font-family: inherit;
+  text-align: center;
+  line-height: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  opacity: 1;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #f8f9fa;
+  background-color: #0588cb;
+  border: 0;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 700;
   color: #0588cb;
   background-color: transparent;
-  border: 2px solid #0588cb;
-  text-align: center;
-  -webkit-letter-spacing: .5px;
-  -moz-letter-spacing: .5px;
-  -ms-letter-spacing: .5px;
-  letter-spacing: .5px;
-  z-index: 1;
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
-  cursor: pointer;
+  border-radius: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #0588cb;
+  border-width: 2px;
   font-size: 16px;
 }
 
-.c0:hover:enabled {
-  border: 2px solid #37a6ed;
-  background-color: transparent;
+.c0:hover {
+  color: #f8f9fa;
+  background-color: #0588cb;
 }
 
-.c0:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: 2px solid #0f77b8;
-  background-color: transparent;
+.c0:disabled {
+  opacity: 0.5;
 }
 
 <button
@@ -149,45 +146,42 @@ exports[`Button render with hollow prop 1`] = `
 
 exports[`Button render with inverted prop 1`] = `
 .c0 {
-  border-radius: 32px;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
-  height: 40px;
-  line-height: 1;
-  padding-left: 32px;
-  padding-right: 32px;
-  text-transform: capitalize;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  outline: 0;
-  font-family: inherit;
+  text-align: center;
+  line-height: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  opacity: 1;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #f8f9fa;
+  background-color: #0588cb;
+  border: 0;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 700;
   color: #0588cb;
   background-color: #f8f9fa;
-  border: none;
-  text-align: center;
-  -webkit-letter-spacing: .5px;
-  -moz-letter-spacing: .5px;
-  -ms-letter-spacing: .5px;
-  letter-spacing: .5px;
-  z-index: 1;
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
-  cursor: pointer;
+  border-radius: 20px;
+  border-width: 2px;
   font-size: 16px;
 }
 
-.c0:hover:enabled {
-  border: none;
-  background-color: #f1f3f5;
+.c0:hover {
+  color: #f8f9fa;
+  background-color: #0588cb;
 }
 
-.c0:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: none;
-  background-color: #e9ecef;
+.c0:disabled {
+  opacity: 0.5;
 }
 
 <button
@@ -198,46 +192,43 @@ exports[`Button render with inverted prop 1`] = `
 
 exports[`Button render with margin prop 1`] = `
 .c0 {
-  border-radius: 32px;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
-  height: 40px;
-  line-height: 1;
-  padding-left: 32px;
-  padding-right: 32px;
-  text-transform: capitalize;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  outline: 0;
-  font-family: inherit;
+  text-align: center;
+  line-height: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  opacity: 1;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   color: #f8f9fa;
   background-color: #0588cb;
-  border: none;
-  text-align: center;
-  -webkit-letter-spacing: .5px;
-  -moz-letter-spacing: .5px;
-  -ms-letter-spacing: .5px;
-  letter-spacing: .5px;
-  z-index: 1;
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
-  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #f8f9fa;
+  background-color: #0588cb;
+  border-radius: 20px;
+  border-width: 2px;
   margin: 8px;
   font-size: 16px;
 }
 
-.c0:hover:enabled {
-  border: none;
-  background-color: #37a6ed;
+.c0:hover {
+  color: #0588cb;
+  background-color: #f8f9fa;
 }
 
-.c0:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: none;
-  background-color: #0f77b8;
+.c0:disabled {
+  opacity: 0.5;
 }
 
 <button
@@ -248,46 +239,43 @@ exports[`Button render with margin prop 1`] = `
 
 exports[`Button render with width prop 1`] = `
 .c0 {
-  border-radius: 32px;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
-  height: 40px;
-  line-height: 1;
-  padding-left: 32px;
-  padding-right: 32px;
-  text-transform: capitalize;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  outline: 0;
-  font-family: inherit;
+  text-align: center;
+  line-height: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  opacity: 1;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   color: #f8f9fa;
   background-color: #0588cb;
-  border: none;
-  text-align: center;
-  -webkit-letter-spacing: .5px;
-  -moz-letter-spacing: .5px;
-  -ms-letter-spacing: .5px;
-  letter-spacing: .5px;
-  z-index: 1;
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
-  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #f8f9fa;
+  background-color: #0588cb;
+  border-radius: 20px;
+  border-width: 2px;
   width: 100%;
   font-size: 16px;
 }
 
-.c0:hover:enabled {
-  border: none;
-  background-color: #37a6ed;
+.c0:hover {
+  color: #0588cb;
+  background-color: #f8f9fa;
 }
 
-.c0:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: none;
-  background-color: #0f77b8;
+.c0:disabled {
+  opacity: 0.5;
 }
 
 <button
@@ -299,45 +287,42 @@ exports[`Button render with width prop 1`] = `
 
 exports[`Button renders 1`] = `
 .c0 {
-  border-radius: 32px;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
-  height: 40px;
-  line-height: 1;
-  padding-left: 32px;
-  padding-right: 32px;
-  text-transform: capitalize;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  outline: 0;
-  font-family: inherit;
+  text-align: center;
+  line-height: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  opacity: 1;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   color: #f8f9fa;
   background-color: #0588cb;
-  border: none;
-  text-align: center;
-  -webkit-letter-spacing: .5px;
-  -moz-letter-spacing: .5px;
-  -ms-letter-spacing: .5px;
-  letter-spacing: .5px;
-  z-index: 1;
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
-  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #f8f9fa;
+  background-color: #0588cb;
+  border-radius: 20px;
+  border-width: 2px;
   font-size: 16px;
 }
 
-.c0:hover:enabled {
-  border: none;
-  background-color: #37a6ed;
+.c0:hover {
+  color: #0588cb;
+  background-color: #f8f9fa;
 }
 
-.c0:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: none;
-  background-color: #0f77b8;
+.c0:disabled {
+  opacity: 0.5;
 }
 
 <button

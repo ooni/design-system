@@ -15,8 +15,15 @@ let colors = {
 // (https://yeun.github.io/open-color/), with the exception of blue[0-9] which
 // are hand picked
 colors.palette = {
+  'primary': '#0588cb',
+  'background': '#f8f9fa',
+  'highlight': '#0588cb20', // Added to fix @rebass/forms/Radio in focus mode
   'base': '#0588cb',
   'black': '#212529',
+  'white': '#f8f9fa',
+  'twitterBlue': '#1da1f2',
+  'facebookBlue': '#3b5998',
+
   'gray0': '#f8f9fa',
   'gray1': '#f1f3f5',
   'gray2': '#e9ecef',
@@ -147,7 +154,6 @@ colors.palette = {
   'cyan7': '#1098ad',
   'cyan8': '#0c8599',
   'cyan9': '#0b7285',
-  'white': '#f8f9fa'
 }
 
 export default colors

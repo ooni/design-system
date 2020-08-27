@@ -2,20 +2,22 @@
 
 exports[`Heading renders 1`] = `
 .c0 {
-  margin-bottom: 8px;
-  margin-top: 8px;
-  font-size: 12px;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   line-height: 1.5;
-  -webkit-letter-spacing: 0px;
-  -moz-letter-spacing: 0px;
-  -ms-letter-spacing: 0px;
-  letter-spacing: 0px;
-  font-weight: 600;
+  font-weight: 300;
+  -webkit-letter-spacing: -1px;
+  -moz-letter-spacing: -1px;
+  -ms-letter-spacing: -1px;
+  letter-spacing: -1px;
+  font-size: 48px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 <h1
   class="c0"
-  font-size="0"
 >
    Hello OONI! 
 </h1>

@@ -2,76 +2,76 @@
 
 exports[`FacebookShareButton renders 1`] = `
 .c0 {
-  color: blue;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #056aa6;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover {
+  -webkit-filter: brightness(125%);
+  filter: brightness(125%);
+}
+
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  padding-left: 8px;
 }
 
 .c1 {
-  border-radius: 32px;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
-  height: 40px;
-  line-height: 1;
-  padding-left: 32px;
-  padding-right: 32px;
-  text-transform: capitalize;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  outline: 0;
-  font-family: inherit;
+  text-align: center;
+  line-height: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  opacity: 1;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   color: #f8f9fa;
   background-color: #0588cb;
-  border: none;
-  text-align: center;
-  -webkit-letter-spacing: .5px;
-  -moz-letter-spacing: .5px;
-  -ms-letter-spacing: .5px;
-  letter-spacing: .5px;
-  z-index: 1;
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
-  cursor: pointer;
-  font-size: 16px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #f8f9fa;
   background-color: #3b5998;
+  border-radius: 20px;
   text-transform: none;
-  padding-right: 16px;
-  padding-left: 16px;
-}
-
-.c1:hover:enabled {
-  border: none;
-  background-color: #37a6ed;
-}
-
-.c1:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: none;
-  background-color: #0f77b8;
+  border-width: 2px;
+  font-size: 16px;
 }
 
 .c1:hover {
   -webkit-filter: brightness(90%);
   filter: brightness(90%);
-  background-color: #3b5998;
+}
+
+.c1:disabled {
+  opacity: 0.5;
 }
 
 .c1:active {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
   -webkit-filter: brightness(85%);
   filter: brightness(85%);
-  background-color: #3b5998;
-}
-
-.c2 {
-  padding-left: 8px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 <a
   class="c0"
-  href="https://www.facebook.com/sharer/sharer.php?&u="
+  href="https://www.facebook.com/sharer/sharer.php?&u=undefined"
 >
   <button
     class="c1"
@@ -102,76 +102,76 @@ exports[`FacebookShareButton renders 1`] = `
 
 exports[`TwitterShareButton renders 1`] = `
 .c0 {
-  color: blue;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  color: #056aa6;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover {
+  -webkit-filter: brightness(125%);
+  filter: brightness(125%);
 }
 
 .c1 {
-  border-radius: 32px;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
-  height: 40px;
-  line-height: 1;
-  padding-left: 32px;
-  padding-right: 32px;
-  text-transform: capitalize;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  outline: 0;
-  font-family: inherit;
+  text-align: center;
+  line-height: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
-  opacity: 1;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   color: #f8f9fa;
   background-color: #0588cb;
-  border: none;
-  text-align: center;
-  -webkit-letter-spacing: .5px;
-  -moz-letter-spacing: .5px;
-  -ms-letter-spacing: .5px;
-  letter-spacing: .5px;
-  z-index: 1;
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
-  cursor: pointer;
-  font-size: 16px;
-  background-color: #1DA1F2;
+  border: 0;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #f8f9fa;
+  background-color: #1da1f2;
+  border-radius: 20px;
   text-transform: none;
-  padding-right: 16px;
-  padding-left: 16px;
-}
-
-.c1:hover:enabled {
-  border: none;
-  background-color: #37a6ed;
-}
-
-.c1:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: none;
-  background-color: #0f77b8;
+  border-width: 2px;
+  font-size: 16px;
 }
 
 .c1:hover {
   -webkit-filter: brightness(90%);
   filter: brightness(90%);
-  background-color: #1DA1F2;
+}
+
+.c1:disabled {
+  opacity: 0.5;
 }
 
 .c1:active {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
   -webkit-filter: brightness(85%);
   filter: brightness(85%);
-  background-color: #1DA1F2;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   padding-left: 8px;
 }
 
 <a
   class="c0"
-  href="https://twitter.com/intent/tweet?text="
+  href="https://twitter.com/intent/tweet?text=undefined&url=undefined&hashtags=undefined&hashtags=undefined&in-reply-to=undefined"
 >
   <button
     class="c1"

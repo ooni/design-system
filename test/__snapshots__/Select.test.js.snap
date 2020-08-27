@@ -1,41 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select renders 1`] = `
-.c2 {
-  pointer-events: none;
-  position: absolute;
-  top: 45%;
-  right: 15px;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 8.6px solid #495057;
-}
-
-.c0 {
-  display: inline-block;
-  position: relative;
-}
-
 .c1 {
-  background-color: #e9ecef;
-  border-radius: 2em;
-  font-size: 16px;
-  padding: 10px 40px 10px 15px;
-  cursor: pointer;
-  border: none;
-  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: default;
+  color: inherit;
+  background-color: transparent;
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 2em;
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 40px;
+  padding-left: 16px;
+  width: unset;
 }
 
-.c1:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
+  width: 24px;
+  height: 24px;
+}
+
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div
@@ -44,48 +61,74 @@ exports[`Select renders 1`] = `
   <select
     class="c1"
   />
-  <span
+  <svg
     class="c2"
-  />
+    fill="currentcolor"
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7 10l5 5 5-5z"
+    />
+  </svg>
 </div>
 `;
 
 exports[`Select renders with children 1`] = `
-.c2 {
-  pointer-events: none;
-  position: absolute;
-  top: 45%;
-  right: 15px;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 8.6px solid #495057;
-}
-
-.c0 {
-  display: inline-block;
-  position: relative;
-}
-
 .c1 {
-  background-color: #e9ecef;
-  border-radius: 2em;
-  font-size: 16px;
-  padding: 10px 40px 10px 15px;
-  cursor: pointer;
-  border: none;
-  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid;
+  border-radius: default;
+  color: inherit;
+  background-color: transparent;
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 2em;
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 40px;
+  padding-left: 16px;
+  width: unset;
 }
 
-.c1:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  margin-left: -28px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  pointer-events: none;
+  width: 24px;
+  height: 24px;
+}
+
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 <div
@@ -105,8 +148,17 @@ exports[`Select renders with children 1`] = `
       Two
     </option>
   </select>
-  <span
+  <svg
     class="c2"
-  />
+    fill="currentcolor"
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7 10l5 5 5-5z"
+    />
+  </svg>
 </div>
 `;

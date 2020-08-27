@@ -5,19 +5,24 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import {
-  Button,
   Input,
   Select,
+  Label,
   Card,
   Flex,
   Box,
   InputWithIconButton,
-  Provider,
   Text,
-  theme,
+  Button,
+  TwitterShareButton,
+  FacebookShareButton,
   Container,
-  Border,
-  Link
+  Link,
+  Heading,
+  Hero,
+  HeroLead,
+  RadioButton,
+  RadioGroup
 } from '../components'
 
 import { BarChart, PieChart, Modal } from '../components'
@@ -25,11 +30,24 @@ import * as icons from '../components/icons'
 
 import MdVolumeMute from 'react-icons/lib/md/volume-mute'
 
+
 storiesOf('Components/Atoms/Button', module)
+  .add('All Buttons', () =>
+    <div>
+      <Button>Default</Button>
+      <Button inverted>Inverted</Button>
+      <Button hollow>Hollow</Button>
+      <Button hollow border={6}>Hollow border</Button>
+      <Button disabled>Disabled</Button>
+      <Button disabled hollow>Disabled hollow</Button>
+      <Button disabled hollow border={6}>Disabled hollow border</Button>
+      <Button disabled inverted>Disabled inverted</Button>
+    </div>
+  )
   .add('Default', () => <Button>Run OONI</Button>)
   .add('Inverted', () => <Button inverted>Run OONI</Button>)
   .add('Hollow', () => <Button hollow>Run OONI</Button>)
-  .add('With border', () => <Button hollow border={6}>Run OONI</Button>)
+  .add('Hollow with border', () => <Button hollow border={6}>Run OONI</Button>)
   .add('Disabled', () =>
     <div>
       <Button disabled>Disabled Button</Button>
@@ -37,6 +55,8 @@ storiesOf('Components/Atoms/Button', module)
       <Button disabled inverted>Disabled Inverted</Button>
     </div>
   )
+  .add('Twitter Share Button', () => <TwitterShareButton msg='Message in Tweet' />)
+  .add('Facebook Share Button', () => <FacebookShareButton msg='Messsage on Facebook' />)
 
 storiesOf('Components/Atoms/Text', module)
   .add('Default', () => <Text >The quick brown fox jumps over the lazy dog</Text>)
@@ -44,23 +64,28 @@ storiesOf('Components/Atoms/Text', module)
   .add('Font Size', () => <Text fontSize={30} >The quick brown fox jumps over the lazy dog</Text>)
   .add('Text Align', () => <Text textAlign={'right'} >The quick brown fox jumps over the lazy dog</Text>)
 
+storiesOf('Components/Atoms/Heading', module)
+  .add('Heading', () => <Heading> Just a simple Heading </Heading>)
+  .add('Standard Headings', () => [1, 2, 3, 4, 5, 6].map(h => (
+    <Heading h={h} key={h}> Standard Heading {h} </Heading>
+  )))
+
 storiesOf('Components/Atoms/Input', module)
   .add('Default', () => <Input />)
   .add('With Error', () => <Input error="Error message" />)
   .add('Font Size', () => <Input fontSize={30} />)
   .add('Text Area', () => <Input type='textarea' rows={10} />)
+  .add('Text Area with Error', () => <Input type='textarea' rows={4} error='Error in text area' />)
 
 storiesOf('Components/Atoms/Select', module)
   .add('default', () =>
-    <div>
-      <label>
-        <div> Choose An Option </div>
-        <Select>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-        </Select>
-      </label>
-    </div>
+    <Box>
+      <Label for='select1'> Choose your options </Label>
+      <Select>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+      </Select>
+    </Box>
   )
   .add('Really long options', () => (
     <Select>
@@ -88,11 +113,38 @@ storiesOf('Components/Atoms/Link', module)
     <Link href='https://ooni.org' target='_blank'>OONI (new tab)</Link>
   ))
 
+storiesOf('Components/Atoms/Radios', module)
+  .add('Radio Button', () => (
+    <RadioButton label='OONI' value='ooni' />
+  ))
+  .add('Radio Button onChange', () => (
+    <RadioButton label='OONI' value='ooni' name='project' id='ooni' onChange={action('RadioButton onChange')} />
+  ))
+  .add('Radio Group', () => (
+    <RadioGroup onChange={action('Radio Group onChange')} value='two'>
+      <RadioButton name='name' label='OONI' value='one' />
+      <RadioButton name='name' label='Ooni' value='two' />
+      <RadioButton name='name' label='ooni' value='three' />
+      <RadioButton name='name' label='O.O.N.I' value='four' />
+    </RadioGroup>
+  ))
+  .add('Radio Group Horizontal', () => (
+    <RadioGroup direction='row' onChange={action('Radio Group onChange')} value='three'>
+      <RadioButton name='name' label='OONI' value='one' />
+      <RadioButton name='name' label='Ooni' value='two' />
+      <RadioButton name='name' label='ooni' value='three' />
+      <RadioButton name='name' label='O.O.N.I' value='four' />
+    </RadioGroup>
+  ))
+
 storiesOf('Components/Molecules/Card', module)
   .add('Default', () => <Card />)
   .add('Many cards', () => <Flex flexWrap="wrap">
     <Box width={1 / 3}>
-      <Card />
+      <Card> Card 1 </Card>
+    </Box>
+    <Box width={1 / 3}>
+      <Card onClick={() => alert('click')}> Clickable Variant </Card>
     </Box>
     <Box width={1 / 3}>
       <Card />
@@ -100,11 +152,10 @@ storiesOf('Components/Molecules/Card', module)
     <Box width={1 / 3}>
       <Card />
     </Box>
-    <Box width={1 / 3}>
-      <Card />
-    </Box>
-  </Flex>
-  )
+  </Flex>)
+  .add('Clickable Card', () => (
+    <Card onClick={() => alert('clicked')}>Clickable Card</Card>
+  ))
 
 storiesOf('Components/Charts/BarChart', module)
   .add('Default', () =>
@@ -168,6 +219,9 @@ storiesOf('Components/Molecules/InputWithIconButton', module)
   .add('With Icon', () =>
     <InputWithIconButton icon={<MdVolumeMute />} />
   )
+  .add('With Icon upon error', () =>
+    <InputWithIconButton icon={<MdVolumeMute />} error={'Please enter the value'} />
+  )
   .add('With Clickable Icon', () =>
     <InputWithIconButton
       icon={<MdVolumeMute />}
@@ -176,6 +230,10 @@ storiesOf('Components/Molecules/InputWithIconButton', module)
     />
   )
 
+storiesOf('Components/Organisms/Hero', module)
+  .add('Default', () => <Hero> This is a hero </Hero>)
+  .add('Hero Lead', () => <HeroLead> This is a Hero Lead </HeroLead>)
+
 storiesOf('Components/Organisms/Modal', module)
   .add('Default', () =>
     <Modal show={true}>
@@ -183,7 +241,7 @@ storiesOf('Components/Organisms/Modal', module)
     </Modal>
   )
   .add('With clickable Close Button', () =>
-    <Modal show={true} closeButton='right' onHideClick={action('clicked')}>
+    <Modal show={true} closeButton='left' onHideClick={action('clicked')}>
       <Box p={3} bg='lightblue'>
         Modal Content
       </Box>
@@ -192,11 +250,9 @@ storiesOf('Components/Organisms/Modal', module)
 
 storiesOf('Layouts', module)
   .add('Default', () =>
-    <Provider theme={theme}>
-      <Box bg={theme.colors.blue5}>
-        <Container bg={theme.colors.blue1}>
-          <Box> Container </Box>
-        </Container>
-      </Box>
-    </Provider>
+    <Box bg='blue9'>
+      <Container bg='blue1'>
+        <Box bg='blue5'> Container </Box>
+      </Container>
+    </Box>
   )

@@ -1,16 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Hero renders 1`] = `
-.c1 {
+.c0 {
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
+  min-width: 0;
   padding-left: 16px;
   padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 768px;
-}
-
-.c0 {
   font-size: 28px;
   width: 100%;
   background-color: #0588cb;
@@ -19,38 +18,32 @@ exports[`Hero renders 1`] = `
 }
 
 @media screen and (min-width:32em) {
-  .c1 {
+  .c0 {
     max-width: 1024px;
   }
 }
 
 @media screen and (min-width:48em) {
-  .c1 {
+  .c0 {
     max-width: 1280px;
   }
 }
 
 <div
   class="c0"
-  font-size="3"
->
-  <div
-    class="c1"
-  />
-</div>
+/>
 `;
 
 exports[`Hero renders with children 1`] = `
-.c1 {
+.c0 {
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
+  min-width: 0;
   padding-left: 16px;
   padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 768px;
-}
-
-.c0 {
   font-size: 28px;
   width: 100%;
   background-color: #0588cb;
@@ -59,25 +52,20 @@ exports[`Hero renders with children 1`] = `
 }
 
 @media screen and (min-width:32em) {
-  .c1 {
+  .c0 {
     max-width: 1024px;
   }
 }
 
 @media screen and (min-width:48em) {
-  .c1 {
+  .c0 {
     max-width: 1280px;
   }
 }
 
 <div
   class="c0"
-  font-size="3"
 >
-  <div
-    class="c1"
-  >
-    <div />
-  </div>
+  <div />
 </div>
 `;

@@ -58,7 +58,9 @@ describe('Button', () => {
       <Button hollow border={4} />
     )
     expect(container.firstChild).toMatchSnapshot()
-    expect(container.firstChild).toHaveStyleRule('border', '4px solid #0588cb')
+    expect(container.firstChild).toHaveStyleRule('border-width', '4px')
+    expect(container.firstChild).toHaveStyleRule('border-style', 'solid')
+    expect(container.firstChild).toHaveStyleRule('border-color', '#0588cb')
   })
 
 })

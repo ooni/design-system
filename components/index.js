@@ -1,8 +1,12 @@
 import {
-  Provider,
   Flex,
-  Box
-} from 'rebass'
+  Box,
+  Link,
+} from 'rebass/styled-components'
+
+import { Select, Label } from '@rebass/forms/styled-components'
+
+import { ThemeProvider as Provider } from 'styled-components'
 
 import colors from './theme/colors'
 import theme from './theme/rebassTheme'
@@ -14,17 +18,18 @@ import components from './components'
 
 // We export these from rebass directly
 export {
-  Provider,
   Flex,
-  Box
-} from 'rebass'
+  Box,
+  Link,
+} from 'rebass/styled-components'
+
+export { Select, Label } from '@rebass/forms/styled-components'
 
 export const {
   Button,
   ButtonOutline,
   ButtonCircle,
   ButtonTransparent,
-  Link,
   NavLink,
   BlockLink,
   Heading,
@@ -38,9 +43,7 @@ export const {
   Blockquote,
   Measure,
   Truncate,
-  Label,
   Input,
-  Select,
   Textarea,
   Checkbox,
   Radio,
@@ -97,6 +100,15 @@ export const {
   PieChart
 } = components
 
-export const OONIComponents = Object.assign({}, components, { Provider, Box, Flex, colors, theme })
+export const OONIComponents = Object.assign({}, components, {
+  Provider,
+  Box,
+  Flex,
+  Link,
+  Select,
+  Label,
+  colors,
+  theme
+})
 
 export default OONIComponents

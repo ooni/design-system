@@ -1,7 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Modal renders 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
 .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -13,12 +23,7 @@ exports[`Modal renders 1`] = `
   overflow: auto;
   z-index: 1050;
   background-color: #f8f9fa;
-  border-radius: 2px;
-}
-
-.c0 {
-  position: relative;
-  display: none;
+  border-radius: radius;
 }
 
 <div
@@ -31,63 +36,17 @@ exports[`Modal renders 1`] = `
 `;
 
 exports[`Modal renders with close button 1`] = `
-.c2 {
-  border-radius: 56px;
-  display: inline-block;
-  height: 70px;
-  line-height: 1;
-  padding-left: 56px;
-  padding-right: 56px;
-  text-transform: capitalize;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: transparent;
-  outline: 0;
-  font-family: inherit;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  opacity: 1;
-  color: #f8f9fa;
-  background-color: #0588cb;
-  border: none;
-  text-align: center;
-  -webkit-letter-spacing: .5px;
-  -moz-letter-spacing: .5px;
-  -ms-letter-spacing: .5px;
-  letter-spacing: .5px;
-  z-index: 1;
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
-  cursor: pointer;
-  font-size: 28px;
-  font-size: 28px;
-  border-radius: none;
-  color: #adb5bd;
-  background-color: transparent;
-}
-
-.c2:hover:enabled {
-  border: none;
-  background-color: #37a6ed;
-}
-
-.c2:active:enabled {
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
-  border: none;
-  background-color: #0f77b8;
-}
-
-.c2:hover {
-  background-color: transparent;
-  color: #ced4da;
-}
-
-.c2:active {
-  background-color: transparent;
-  color: #868e96;
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  position: relative;
 }
 
 .c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -99,21 +58,63 @@ exports[`Modal renders with close button 1`] = `
   overflow: auto;
   z-index: 1050;
   background-color: #f8f9fa;
-  border-radius: 2px;
+  border-radius: radius;
 }
 
-.c0 {
-  position: relative;
-  display: none;
+.c2 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #f8f9fa;
+  background-color: #0588cb;
+  border: 0;
+  border-radius: 4px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #adb5bd;
+  background-color: transparent;
+  border-radius: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #0588cb;
+  border: none;
+  border-width: 2px;
+  font-size: 16px;
+}
+
+.c2:hover {
+  color: #ced4da;
+}
+
+.c2:disabled {
+  opacity: 0.5;
+}
+
+.c2:active {
+  color: #868e96;
 }
 
 .c3 {
   position: absolute;
   top: 0;
-  right: 0;
   height: 28px;
   padding: 0;
   margin: 0;
+  left: initial;
+  right: 0;
 }
 
 <div
@@ -124,7 +125,7 @@ exports[`Modal renders with close button 1`] = `
   >
     <button
       class="c2 c3"
-      font-size="3"
+      font-size="1"
     >
       <svg
         fill="currentColor"
