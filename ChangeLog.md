@@ -1,5 +1,13 @@
 # ChangeLog
 
+## ooni-components 0.4.0 [2020-08-27]
+Changes
+* **BREAKING** Uses rebass@^4.0.0 and styled-system@^5.1.5
+* Most components have been refactored to use rebass' `variants` feature
+
+Security
+* Bumped versions for `websocket-extensions`, `lodash`, `elliptic` (@dependabot)
+
 ## ooni-components 0.3.2 [2020-04-20]
 Fixes:
 * Fixed circumvention test group icon spacing
