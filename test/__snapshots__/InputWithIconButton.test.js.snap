@@ -83,12 +83,23 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #adb5bd;
   background-color: transparent;
   border-radius: none;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   border-color: #0588cb;
   border: none;
@@ -98,12 +109,16 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
   font-size: 16px;
 }
 
-.c4:hover {
-  color: #ced4da;
+.c4:hover:enabled {
+  border-color: #37a6ed;
 }
 
-.c4:disabled {
-  opacity: 0.5;
+.c4:enabled {
+  cursor: pointer;
+}
+
+.c4:hover {
+  color: #ced4da;
 }
 
 .c4:active {
@@ -236,12 +251,23 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #adb5bd;
   background-color: transparent;
   border-radius: none;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   border-color: #0588cb;
   border: none;
@@ -251,12 +277,16 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   font-size: 16px;
 }
 
-.c4:hover {
-  color: #ced4da;
+.c4:hover:enabled {
+  border-color: #37a6ed;
 }
 
-.c4:disabled {
-  opacity: 0.5;
+.c4:enabled {
+  cursor: pointer;
+}
+
+.c4:hover {
+  color: #ced4da;
 }
 
 .c4:active {
@@ -390,12 +420,23 @@ exports[`InputWithIconButton renders 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #adb5bd;
   background-color: transparent;
   border-radius: none;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   border-color: #0588cb;
   border: none;
@@ -405,12 +446,16 @@ exports[`InputWithIconButton renders 1`] = `
   font-size: 16px;
 }
 
-.c4:hover {
-  color: #ced4da;
+.c4:hover:enabled {
+  border-color: #37a6ed;
 }
 
-.c4:disabled {
-  opacity: 0.5;
+.c4:enabled {
+  cursor: pointer;
+}
+
+.c4:hover {
+  color: #ced4da;
 }
 
 .c4:active {
