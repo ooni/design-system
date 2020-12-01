@@ -43,23 +43,37 @@ exports[`FacebookShareButton renders 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: none;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #f8f9fa;
   background-color: #3b5998;
   border-radius: 20px;
-  text-transform: none;
   border-width: 2px;
   font-size: 16px;
+}
+
+.c1:hover:enabled {
+  background-color: #37a6ed;
+}
+
+.c1:enabled {
+  cursor: pointer;
 }
 
 .c1:hover {
   -webkit-filter: brightness(90%);
   filter: brightness(90%);
-}
-
-.c1:disabled {
-  opacity: 0.5;
 }
 
 .c1:active {
@@ -136,23 +150,37 @@ exports[`TwitterShareButton renders 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: none;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #f8f9fa;
   background-color: #1da1f2;
   border-radius: 20px;
-  text-transform: none;
   border-width: 2px;
   font-size: 16px;
+}
+
+.c1:hover:enabled {
+  background-color: #37a6ed;
+}
+
+.c1:enabled {
+  cursor: pointer;
 }
 
 .c1:hover {
   -webkit-filter: brightness(90%);
   filter: brightness(90%);
-}
-
-.c1:disabled {
-  opacity: 0.5;
 }
 
 .c1:active {

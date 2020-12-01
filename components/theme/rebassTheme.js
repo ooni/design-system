@@ -135,44 +135,61 @@ export const rebassTheme = {
   },
   buttons: {
     primary: {
-      fontSize: 2,
-      fontWeight: 'bold',
+      display: 'inline-block',
+      px: 4,
+      textTransform: 'capitalize',
+      textAlign: 'center',
+      letterSpacing: '0.5px',
+      verticalAlign: 'middle',
+      // Gets rid of tap active state
+      '-webkit-tap-highlight-color': 'transparent',
+      transition: '.2s ease-out',
+
       color: 'white',
       bg: 'primary',
       borderRadius: '20px',
-      ':hover': {
-        'color': 'primary',
-        'bg': 'white'
+      ':hover:enabled': {
+        'bg': 'blue4'
       },
-      ':disabled': {
-        'opacity': '0.5'
-      }
+      ':enabled': {
+        cursor: 'pointer'
+      },
     },
     inverted: {
       variant: 'buttons.primary',
       color: 'primary',
       bg: 'white',
-      ':hover': {
-        'color': 'white',
-        'bg': 'primary'
+      ':hover:enabled': {
+        'bg': 'gray1'
       }
     },
     hollow: {
       variant: 'buttons.primary',
       color: 'primary',
       bg: 'transparent',
-      borderWidth: '1px',
+      borderWidth: '2px',
       borderStyle: 'solid',
       borderColor: 'primary',
-      ':hover': {
-        'color': 'white',
-        'bg': 'primary'
+      ':hover:enabled': {
+        borderColor: 'blue4'
       }
     },
     secondary: {
       variant: 'buttons.primary',
       color: 'background',
       bg: 'secondary',
+    },
+    'primary-disabled': {
+      variant: 'buttons.primary',
+      opacity: 0.5
+    },
+    'hollow-disabled': {
+      variant: 'buttons.hollow',
+      opacity: 0.5
+    },
+    'inverted-disabled': {
+      variant: 'buttons.inverted',
+      opacity: 0.5
     },
     iconButton: {
       variant: 'buttons.hollow',

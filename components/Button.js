@@ -10,6 +10,9 @@ export const Button = props => {
   if (props.inverted == true) {
     variant = 'inverted'
   }
+  if (props.disabled == true) {
+    variant += '-disabled'
+  }
   if (props.variant !== undefined) {
     variant = props.variant
   }

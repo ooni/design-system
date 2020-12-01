@@ -22,25 +22,35 @@ exports[`Button render with border prop (and hollow) 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #0588cb;
   background-color: transparent;
   border-radius: 20px;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   border-color: #0588cb;
   border-width: 4px;
   font-size: 16px;
 }
 
-.c0:hover {
-  color: #f8f9fa;
-  background-color: #0588cb;
+.c0:hover:enabled {
+  border-color: #37a6ed;
 }
 
-.c0:disabled {
-  opacity: 0.5;
+.c0:enabled {
+  cursor: pointer;
 }
 
 <button
@@ -71,8 +81,19 @@ exports[`Button render with fontSize prop 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
@@ -80,13 +101,12 @@ exports[`Button render with fontSize prop 1`] = `
   font-size: 22px;
 }
 
-.c0:hover {
-  color: #0588cb;
-  background-color: #f8f9fa;
+.c0:hover:enabled {
+  background-color: #37a6ed;
 }
 
-.c0:disabled {
-  opacity: 0.5;
+.c0:enabled {
+  cursor: pointer;
 }
 
 <button
@@ -117,25 +137,35 @@ exports[`Button render with hollow prop 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #0588cb;
   background-color: transparent;
   border-radius: 20px;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   border-color: #0588cb;
   border-width: 2px;
   font-size: 16px;
 }
 
-.c0:hover {
-  color: #f8f9fa;
-  background-color: #0588cb;
+.c0:hover:enabled {
+  border-color: #37a6ed;
 }
 
-.c0:disabled {
-  opacity: 0.5;
+.c0:enabled {
+  cursor: pointer;
 }
 
 <button
@@ -166,8 +196,19 @@ exports[`Button render with inverted prop 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #0588cb;
   background-color: #f8f9fa;
   border-radius: 20px;
@@ -175,13 +216,12 @@ exports[`Button render with inverted prop 1`] = `
   font-size: 16px;
 }
 
-.c0:hover {
-  color: #f8f9fa;
-  background-color: #0588cb;
+.c0:hover:enabled {
+  background-color: #f1f3f5;
 }
 
-.c0:disabled {
-  opacity: 0.5;
+.c0:enabled {
+  cursor: pointer;
 }
 
 <button
@@ -212,8 +252,19 @@ exports[`Button render with margin prop 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
@@ -222,13 +273,12 @@ exports[`Button render with margin prop 1`] = `
   font-size: 16px;
 }
 
-.c0:hover {
-  color: #0588cb;
-  background-color: #f8f9fa;
+.c0:hover:enabled {
+  background-color: #37a6ed;
 }
 
-.c0:disabled {
-  opacity: 0.5;
+.c0:enabled {
+  cursor: pointer;
 }
 
 <button
@@ -259,8 +309,19 @@ exports[`Button render with width prop 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
@@ -269,13 +330,12 @@ exports[`Button render with width prop 1`] = `
   font-size: 16px;
 }
 
-.c0:hover {
-  color: #0588cb;
-  background-color: #f8f9fa;
+.c0:hover:enabled {
+  background-color: #37a6ed;
 }
 
-.c0:disabled {
-  opacity: 0.5;
+.c0:enabled {
+  cursor: pointer;
 }
 
 <button
@@ -307,8 +367,19 @@ exports[`Button renders 1`] = `
   background-color: #0588cb;
   border: 0;
   border-radius: 4px;
-  font-size: 22px;
-  font-weight: 700;
+  display: inline-block;
+  padding-left: 32px;
+  padding-right: 32px;
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
@@ -316,13 +387,12 @@ exports[`Button renders 1`] = `
   font-size: 16px;
 }
 
-.c0:hover {
-  color: #0588cb;
-  background-color: #f8f9fa;
+.c0:hover:enabled {
+  background-color: #37a6ed;
 }
 
-.c0:disabled {
-  opacity: 0.5;
+.c0:enabled {
+  cursor: pointer;
 }
 
 <button
