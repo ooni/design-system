@@ -36,7 +36,6 @@ jobs:
           ${{ runner.os }}-yarn-
 
     - name: Install dependencies if no cache wasn't found
-      if: steps.yarn-cache.outputs.cache-hit != 'true'
       run: yarn --frozen-lockfile
 
     - name: Build
