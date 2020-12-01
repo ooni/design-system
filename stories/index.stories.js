@@ -53,6 +53,7 @@ storiesOf('Components/Atoms/Button', module)
       <Button disabled>Disabled Button</Button>
       <Button disabled hollow>Disabled Hollow</Button>
       <Button disabled inverted>Disabled Inverted</Button>
+      <Button disabled onClick={action('Clicked a disabled button')}>Disabled Button Click</Button>
     </div>
   )
   .add('Twitter Share Button', () => <TwitterShareButton msg='Message in Tweet' />)
