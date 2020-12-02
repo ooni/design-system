@@ -51,8 +51,12 @@
     "styled-system": "5.1.5",
     "acorn": "^6.4.1",
     "minimist": "^1.2.2",
-    "serialize-javascript": "^2.1.1",
-    "js-yaml": "^3.13.1"
+    "serialize-javascript": "^3.1.0",
+    "js-yaml": "^3.13.1",
+    "highlight.js": "^9.18.2",
+    "prismjs" : "^1.21.0",
+    "node-fetch": "^2.6.1",
+    "kind-of": "^6.0.3"
   },
   "scripts": {
     "build:clean": "rm -rf dist/*",
