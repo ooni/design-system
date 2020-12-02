@@ -1,5 +1,10 @@
 # ChangeLog
 
+## ooni-components 0.4.1 [2020-12-01]
+Fixes:
+* Restore disabled state sytling to buttons
+* Security fixes in dependency versions suggested by Github security advisories
+
 ## ooni-components 0.4.0 [2020-08-27]
 Changes
 * **BREAKING** Uses rebass@^4.0.0 and styled-system@^5.1.5
