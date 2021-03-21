@@ -5,7 +5,7 @@ exports[`FacebookShareButton renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  color: #056aa6;
+  color: #0f77b8;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -119,7 +119,7 @@ exports[`TwitterShareButton renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
-  color: #056aa6;
+  color: #0f77b8;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
