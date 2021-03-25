@@ -103,7 +103,7 @@ export const rebassTheme = {
       maxWidth: [768, 1024, 1280]
     },
     link: {
-      color: 'blue7',
+      color: 'blue6',
       textDecoration: 'none',
       ':hover': {
         filter: 'brightness(125%)'
