@@ -20,10 +20,11 @@ const ModalCloseButton = ({ position, ...props}) => (
   />
 )
 
-export const Modal = ({closeButton, onHideClick, ...props}) => {
+export const Modal = ({show, closeButton, onHideClick, ...props}) => {
   return (
-    <Box displayName='ModalContainer' {...props} sx={{
+    <Box sx={{
       position: 'relative',
+      display: show ? 'inherit' : 'none'
     }}>
       <Box sx={{
         position: 'fixed',
@@ -40,7 +41,7 @@ export const Modal = ({closeButton, onHideClick, ...props}) => {
         {closeButton && <ModalCloseButton onClick={onHideClick} icon={<MdClose/>} position={closeButton} />}
         {React.Children.map(props.children, child => React.cloneElement(child), props)}
       </Box>
-      {props.show && (
+      {show && (
         <Box
           onClick={onHideClick}
           sx={{

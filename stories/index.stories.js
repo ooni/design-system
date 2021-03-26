@@ -243,16 +243,30 @@ storiesOf('Components/Organisms/Hero', module)
 storiesOf('Components/Organisms/Modal', module)
   .add('Default', () =>
     <Modal show={true}>
-      <div>Modal Content</div>
+      <Box>Modal Content</Box>
     </Modal>
   )
-  .add('With clickable Close Button', () =>
-    <Modal show={true} closeButton='left' onHideClick={action('clicked')}>
-      <Box p={3} bg='lightblue'>
-        Modal Content
-      </Box>
-    </Modal>
-  )
+  .add('With clickable Close Button', () => {
+    const [show, setShow] = React.useState(true)
+    const onClose = React.useCallback(() => {
+      setShow(false)
+      action('Clicked')
+    })
+    return (
+      <Container>
+        <Flex alignItems='center'>
+          <Box mx={5}> Page content Page content Page content Page content Page content Page content Page content Page content </Box>
+          {!show && <Button onClick={() => setShow(true)}> Show Modal </Button>}
+          <Box mx={5}> Page content Page content Page content Page content Page content Page content Page content Page content </Box>
+        </Flex>
+        <Modal show={show} closeButton='right' onHideClick={onClose}>
+          <Box p={3}>
+            Modal Content
+          </Box>
+        </Modal>
+      </Container>
+    )
+  })
 
 storiesOf('Layouts', module)
   .add('Default', () =>
