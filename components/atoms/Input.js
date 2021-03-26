@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Flex, Box, Text } from 'rebass/styled-components'
 import { Input as RebassInput, Textarea } from '@rebass/forms/styled-components'
-import MdWarning from 'react-icons/lib/md/warning'
+import { MdWarning } from 'react-icons/md'
 
 const ErrorMessage = ({ children }) => {
   return (

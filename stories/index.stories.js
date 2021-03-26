@@ -28,7 +28,7 @@ import {
 import { BarChart, PieChart, Modal } from '../components'
 import * as icons from '../components/icons'
 
-import MdVolumeMute from 'react-icons/lib/md/volume-mute'
+import { MdVolumeMute } from 'react-icons/md'
 
 
 storiesOf('Components/Atoms/Button', module)
