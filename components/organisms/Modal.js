@@ -39,7 +39,7 @@ export const Modal = ({show, closeButton, onHideClick, ...props}) => {
         borderRadius: 'radius'
       }}>
         {closeButton && <ModalCloseButton onClick={onHideClick} icon={<MdClose/>} position={closeButton} />}
-        {React.Children.map(props.children, child => React.cloneElement(child), props)}
+        {props.children}
       </Box>
       {show && (
         <Box

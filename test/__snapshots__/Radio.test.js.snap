@@ -89,7 +89,7 @@ input:checked ~ .c5 {
     />
     <svg
       aria-hidden="true"
-      class="c3 sc-bdVaJa c4"
+      class="c3 sc-AxjAm c4"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -102,7 +102,7 @@ input:checked ~ .c5 {
     </svg>
     <svg
       aria-hidden="true"
-      class="c5 sc-bdVaJa c4"
+      class="c5 sc-AxjAm c4"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -207,7 +207,7 @@ input:checked ~ .c5 {
     />
     <svg
       aria-hidden="true"
-      class="c3 sc-bdVaJa c4"
+      class="c3 sc-AxjAm c4"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -220,7 +220,7 @@ input:checked ~ .c5 {
     </svg>
     <svg
       aria-hidden="true"
-      class="c5 sc-bdVaJa c4"
+      class="c5 sc-AxjAm c4"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -297,6 +297,19 @@ input:checked ~ .c6 {
   display: none;
 }
 
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .c1 {
   box-sizing: border-box;
   margin: 0;
@@ -306,19 +319,6 @@ input:checked ~ .c6 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -341,7 +341,7 @@ input:checked ~ .c6 {
       />
       <svg
         aria-hidden="true"
-        class="c4 sc-bdVaJa c5"
+        class="c4 sc-AxjAm c5"
         fill="currentcolor"
         height="24"
         viewBox="0 0 24 24"
@@ -354,7 +354,7 @@ input:checked ~ .c6 {
       </svg>
       <svg
         aria-hidden="true"
-        class="c6 sc-bdVaJa c5"
+        class="c6 sc-AxjAm c5"
         fill="currentcolor"
         height="24"
         viewBox="0 0 24 24"

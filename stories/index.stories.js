@@ -243,7 +243,7 @@ storiesOf('Components/Organisms/Hero', module)
 storiesOf('Components/Organisms/Modal', module)
   .add('Default', () =>
     <Modal show={true}>
-      <Box>Modal Content</Box>
+      Modal Content
     </Modal>
   )
   .add('With clickable Close Button', () => {
