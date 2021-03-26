@@ -63,10 +63,6 @@ jobs:
         id: check
         uses: EndBug/version-check@v1
 
-      - name: Exit if not on master or no version bump
-        if: ${{ github.ref != 'refs/heads/master' || steps.check.outputs.changed == 'true' }}
-        run: exit -1
-
       - name: Download dist artifact
         uses: actions/download-artifact@v2
         with:
