@@ -1,6 +1,9 @@
 # ChangeLog
 
-## ooni-components 0.4.1 [2020-12-01]
+## ooni-components 0.4.3 [2021-03-26]
+* No-op version bump to trigger CI
+
+## ooni-components 0.4.2 [2021-03-26]
 Adds:
 * Added icons for Signal and RiseupVPN tests
 * CI script publishes to npm registry directly when version number is changed
