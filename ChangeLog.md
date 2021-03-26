@@ -1,6 +1,20 @@
 # ChangeLog
 
 ## ooni-components 0.4.1 [2020-12-01]
+Adds:
+* Added icons for Signal and RiseupVPN tests
+* CI script publishes to npm registry directly when version number is changed
+
+Changes:
+* Upgraded to `styled-components` to v5
+* Upgraded `react-icons` to latest. More icons to choose from.
+* Default Link color to `blue6` (Thanks @Eddges!)
+
+Fixes:
+* Modal component is now usable again
+* Security fixes in dependency versions suggested by Github security advisories
+
+## ooni-components 0.4.1 [2020-12-01]
 Fixes:
 * Restore disabled state sytling to buttons
 * Security fixes in dependency versions suggested by Github security advisories

@@ -45,7 +45,7 @@ jobs:
     - name: Run Tests
       run: yarn test
 
-    - name: Publish to NPM registry
+    - name: Publish to NPM registry if version changed
       uses: pascalgn/npm-publish-action@1.3.7
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
