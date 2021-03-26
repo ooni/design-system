@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from 'rebass/styled-components'
-import MdClose from 'react-icons/lib/md/close'
+import { MdClose } from 'react-icons/md'
 
 import IconButton from '../atoms/IconButton'
 
@@ -20,10 +20,11 @@ const ModalCloseButton = ({ position, ...props}) => (
   />
 )
 
-export const Modal = ({closeButton, onHideClick, ...props}) => {
+export const Modal = ({show, closeButton, onHideClick, ...props}) => {
   return (
-    <Box displayName='ModalContainer' {...props} sx={{
+    <Box sx={{
       position: 'relative',
+      display: show ? 'inherit' : 'none'
     }}>
       <Box sx={{
         position: 'fixed',
@@ -38,9 +39,9 @@ export const Modal = ({closeButton, onHideClick, ...props}) => {
         borderRadius: 'radius'
       }}>
         {closeButton && <ModalCloseButton onClick={onHideClick} icon={<MdClose/>} position={closeButton} />}
-        {React.Children.map(props.children, child => React.cloneElement(child), props)}
+        {props.children}
       </Box>
-      {props.show && (
+      {show && (
         <Box
           onClick={onHideClick}
           sx={{

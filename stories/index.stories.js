@@ -22,13 +22,13 @@ import {
   Hero,
   HeroLead,
   RadioButton,
-  RadioGroup
+  RadioGroup,
+  Checkbox
 } from '../components'
-
 import { BarChart, PieChart, Modal } from '../components'
 import * as icons from '../components/icons'
 
-import MdVolumeMute from 'react-icons/lib/md/volume-mute'
+import { MdVolumeMute } from 'react-icons/md'
 
 
 storiesOf('Components/Atoms/Button', module)
@@ -138,6 +138,11 @@ storiesOf('Components/Atoms/Radios', module)
     </RadioGroup>
   ))
 
+storiesOf('Components/Atoms/Checkbox', module)
+  .add('Checkbox', () => (
+    <Label><Checkbox /> Checkbox </Label>
+  ))
+
 storiesOf('Components/Molecules/Card', module)
   .add('Default', () => <Card />)
   .add('Many cards', () => <Flex flexWrap="wrap">
@@ -238,16 +243,30 @@ storiesOf('Components/Organisms/Hero', module)
 storiesOf('Components/Organisms/Modal', module)
   .add('Default', () =>
     <Modal show={true}>
-      <div>Modal Content</div>
+      Modal Content
     </Modal>
   )
-  .add('With clickable Close Button', () =>
-    <Modal show={true} closeButton='left' onHideClick={action('clicked')}>
-      <Box p={3} bg='lightblue'>
-        Modal Content
-      </Box>
-    </Modal>
-  )
+  .add('With clickable Close Button', () => {
+    const [show, setShow] = React.useState(true)
+    const onClose = React.useCallback(() => {
+      setShow(false)
+      action('Clicked')
+    })
+    return (
+      <Container>
+        <Flex alignItems='center'>
+          <Box mx={5}> Page content Page content Page content Page content Page content Page content Page content Page content </Box>
+          {!show && <Button onClick={() => setShow(true)}> Show Modal </Button>}
+          <Box mx={5}> Page content Page content Page content Page content Page content Page content Page content Page content </Box>
+        </Flex>
+        <Modal show={show} closeButton='right' onHideClick={onClose}>
+          <Box p={3}>
+            Modal Content
+          </Box>
+        </Modal>
+      </Container>
+    )
+  })
 
 storiesOf('Layouts', module)
   .add('Default', () =>

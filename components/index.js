@@ -23,7 +23,15 @@ export {
   Link,
 } from 'rebass/styled-components'
 
-export { Select, Label } from '@rebass/forms/styled-components'
+export {
+  Label,
+  Select,
+  Textarea,
+  Radio,
+  Checkbox,
+  Slider,
+  Switch
+} from '@rebass/forms/styled-components'
 
 export const {
   Button,
@@ -44,10 +52,6 @@ export const {
   Measure,
   Truncate,
   Input,
-  Textarea,
-  Checkbox,
-  Radio,
-  Slider,
   Image,
   Avatar,
   BackgroundImage,
@@ -80,7 +84,6 @@ export const {
   ScrollCarousel,
   CarouselSlide,
   Tooltip,
-  Switch,
   Arrow,
   Star,
   Embed,
@@ -105,8 +108,6 @@ export const OONIComponents = Object.assign({}, components, {
   Box,
   Flex,
   Link,
-  Select,
-  Label,
   colors,
   theme
 })

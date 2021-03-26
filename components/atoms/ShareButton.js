@@ -1,10 +1,8 @@
 import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
-
-import FaTwitter from 'react-icons/lib/fa/twitter'
-import FaFacebook from 'react-icons/lib/fa/facebook'
-
+import {FaTwitter, FaFacebook} from 'react-icons/fa'
 import { Link } from 'rebass/styled-components'
+
 import Button from '../Button'
 import Text from './Text'
 

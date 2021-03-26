@@ -8,7 +8,7 @@ import { Modal } from '../components'
 describe('Modal', () => {
   test('renders', () => {
     const { container } = renderWithTheme(
-      <Modal />
+      <Modal show={false}>Some Content</Modal>
     )
     expect(container.firstChild).toMatchSnapshot()
   })
