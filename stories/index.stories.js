@@ -22,9 +22,9 @@ import {
   Hero,
   HeroLead,
   RadioButton,
-  RadioGroup
+  RadioGroup,
+  Checkbox
 } from '../components'
-
 import { BarChart, PieChart, Modal } from '../components'
 import * as icons from '../components/icons'
 
@@ -136,6 +136,11 @@ storiesOf('Components/Atoms/Radios', module)
       <RadioButton name='name' label='ooni' value='three' />
       <RadioButton name='name' label='O.O.N.I' value='four' />
     </RadioGroup>
+  ))
+
+storiesOf('Components/Atoms/Checkbox', module)
+  .add('Checkbox', () => (
+    <Label><Checkbox /> Checkbox </Label>
   ))
 
 storiesOf('Components/Molecules/Card', module)

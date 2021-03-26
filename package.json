@@ -16,7 +16,7 @@
     "react-icon-base": "^2.1.2",
     "react-icons": "^4.2.0",
     "rebass": "^4.0.7",
-    "styled-components": "^4.4.1",
+    "styled-components": "5.1.1",
     "styled-system": "^5.1.5",
     "victory": "^0.22.1"
   },

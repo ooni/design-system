@@ -43,7 +43,6 @@ import {
   ButtonTransparent,
   Carousel,
   CarouselSlide,
-  Checkbox,
   Circle,
   Close,
   Code,
@@ -67,12 +66,10 @@ import {
   PanelHeader,
   Pre,
   Progress,
-  Radio,
   Relative,
   Row,
   Samp,
   ScrollCarousel,
-  Slider,
   Small,
   Star,
   Sticky,
@@ -80,11 +77,10 @@ import {
   Switch,
   TabItem,
   Tabs,
-  Textarea,
   Toolbar,
   Tooltip,
   Truncate
-} from 'rebass'
+} from 'rebass/styled-components'
 
 export { default as BarChart } from './charts/BarChart'
 export { default as PieChart } from './charts/PieChart'
@@ -120,7 +116,6 @@ const components = {
   ButtonTransparent,
   Carousel,
   CarouselSlide,
-  Checkbox,
   Circle,
   Close,
   Code,
@@ -145,20 +140,16 @@ const components = {
   PanelHeader,
   Pre,
   Progress,
-  Radio,
   Relative,
   Row,
   Samp,
   ScrollCarousel,
-  Slider,
   Small,
   Star,
   Sticky,
   Subhead,
-  Switch,
   TabItem,
   Tabs,
-  Textarea,
   Toolbar,
   Tooltip,
   Truncate
