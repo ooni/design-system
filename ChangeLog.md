@@ -1,5 +1,9 @@
 # ChangeLog
 
+## ooni-components 0.4.4 [2021-03-29]
+Fixes:
+* Fixed how props are passed down from Modal to Box with content (#112)
+
 ## ooni-components 0.4.3 [2021-03-26]
 * No-op version bump to trigger CI
 
