@@ -20,7 +20,7 @@ const ModalCloseButton = ({ position, ...props}) => (
   />
 )
 
-export const Modal = ({show, closeButton, onHideClick, ...props}) => {
+export const Modal = ({show, closeButton, onHideClick, children, ...props}) => {
   return (
     <Box sx={{
       position: 'relative',
@@ -36,10 +36,11 @@ export const Modal = ({show, closeButton, onHideClick, ...props}) => {
         overflow: 'auto',
         zIndex: 1050,
         bg: 'white',
-        borderRadius: 'radius'
+        borderRadius: 'radius',
+        ...props
       }}>
         {closeButton && <ModalCloseButton onClick={onHideClick} icon={<MdClose/>} position={closeButton} />}
-        {props.children}
+        {children}
       </Box>
       {show && (
         <Box
