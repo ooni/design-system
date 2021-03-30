@@ -1,5 +1,10 @@
 # ChangeLog
 
+## ooni-components 0.4.5 [2021-03-30]
+Fixes:
+* Fix bug in CI script that populated `dist/` incorrectly before publishing to npm
+* Security fixes in dependency versions suggested by Github security advisories (#113)
+
 ## ooni-components 0.4.4 [2021-03-29]
 Fixes:
 * Fixed how props are passed down from Modal to Box with content (#112)

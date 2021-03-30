@@ -67,6 +67,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: dist
+          path: dist
 
       - name: Publish
         if: ${{ github.ref == 'refs/heads/master' && steps.check.outputs.changed == 'true' }}
