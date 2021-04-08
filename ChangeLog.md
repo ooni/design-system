@@ -1,5 +1,9 @@
 # ChangeLog
 
+## ooni-components 0.4.6 [2021-04-08]
+Fixes:
+* Remove default outline around buttons
+
 ## ooni-components 0.4.5 [2021-03-30]
 Fixes:
 * Fix bug in CI script that populated `dist/` incorrectly before publishing to npm
