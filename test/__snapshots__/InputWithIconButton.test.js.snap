@@ -96,6 +96,7 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #adb5bd;
   background-color: transparent;
   border-radius: none;
@@ -264,6 +265,7 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #adb5bd;
   background-color: transparent;
   border-radius: none;
@@ -433,6 +435,7 @@ exports[`InputWithIconButton renders 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #adb5bd;
   background-color: transparent;
   border-radius: none;

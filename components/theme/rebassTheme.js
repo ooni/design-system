@@ -144,7 +144,7 @@ export const rebassTheme = {
       // Gets rid of tap active state
       '-webkit-tap-highlight-color': 'transparent',
       transition: '.2s ease-out',
-
+      outline: 0,
       color: 'white',
       bg: 'primary',
       borderRadius: '20px',

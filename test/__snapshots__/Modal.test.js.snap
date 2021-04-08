@@ -99,6 +99,7 @@ exports[`Modal renders with close button 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #adb5bd;
   background-color: transparent;
   border-radius: none;

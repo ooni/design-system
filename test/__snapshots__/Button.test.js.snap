@@ -35,6 +35,7 @@ exports[`Button render with border prop (and hollow) 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #0588cb;
   background-color: transparent;
   border-radius: 20px;
@@ -94,6 +95,7 @@ exports[`Button render with fontSize prop 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
@@ -150,6 +152,7 @@ exports[`Button render with hollow prop 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #0588cb;
   background-color: transparent;
   border-radius: 20px;
@@ -209,6 +212,7 @@ exports[`Button render with inverted prop 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #0588cb;
   background-color: #f8f9fa;
   border-radius: 20px;
@@ -265,6 +269,7 @@ exports[`Button render with margin prop 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
@@ -322,6 +327,7 @@ exports[`Button render with width prop 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
@@ -380,6 +386,7 @@ exports[`Button renders 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #f8f9fa;
   background-color: #0588cb;
   border-radius: 20px;
