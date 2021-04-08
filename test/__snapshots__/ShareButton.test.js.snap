@@ -49,6 +49,7 @@ exports[`FacebookShareButton renders 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #f8f9fa;
   background-color: #3b5998;
   border-radius: 20px;
@@ -162,6 +163,7 @@ exports[`TwitterShareButton renders 1`] = `
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: .2s ease-out;
   transition: .2s ease-out;
+  outline: 0;
   color: #f8f9fa;
   background-color: #1da1f2;
   border-radius: 20px;
