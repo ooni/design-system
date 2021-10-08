@@ -8,6 +8,7 @@ import imAnimData from '../components/animations/RunningInstantMessaging.json'
 import middleboxesAnimData from '../components/animations/RunningMiddleBoxes.json'
 import performanceAnimData from '../components/animations/RunningPerformance.json'
 import circumventionAnimData from '../components/animations/RunningCircumvention.json'
+import experimentalAnimData from '../components/animations/RunningExperimental.json'
 
 const LottieTemplate = ({ animData }) => (
   <Lottie
@@ -39,4 +40,7 @@ storiesOf('Components/Animations', module)
   )
   .add('Circumvention Test Group', () =>
     <LottieTemplate animData={circumventionAnimData} />
+  )
+  .add('Experimental Test Group', () =>
+    <LottieTemplate animData={experimentalAnimData} />
   )
