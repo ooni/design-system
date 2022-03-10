@@ -136,7 +136,7 @@ export const rebassTheme = {
   buttons: {
     primary: {
       display: 'inline-block',
-      px: 4,
+      px: 3,
       textTransform: 'capitalize',
       textAlign: 'center',
       letterSpacing: '0.5px',
