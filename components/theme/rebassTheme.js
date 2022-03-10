@@ -151,6 +151,9 @@ export const rebassTheme = {
       ':hover:enabled': {
         'bg': 'blue4'
       },
+      ':active:enabled': {
+        bg: 'blue6'
+      },
       ':enabled': {
         cursor: 'pointer'
       },
@@ -161,7 +164,10 @@ export const rebassTheme = {
       bg: 'white',
       ':hover:enabled': {
         'bg': 'gray1'
-      }
+      },
+      ':active:enabled': {
+        bg: 'gray2'
+      },
     },
     hollow: {
       variant: 'buttons.primary',
@@ -172,7 +178,11 @@ export const rebassTheme = {
       borderColor: 'primary',
       ':hover:enabled': {
         borderColor: 'blue4'
-      }
+      },
+      ':active:enabled': {
+        borderColor: 'blue6'
+      },
+
     },
     secondary: {
       variant: 'buttons.primary',
