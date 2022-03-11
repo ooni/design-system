@@ -1,7 +1,7 @@
 /* global describe, test, expect */
 import React from 'react'
 import { renderWithTheme } from './index'
-import { Select } from '../components'
+import { Select } from '../'
 
 describe('Select', () => {
   test('renders', () => {

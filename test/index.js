@@ -5,7 +5,7 @@ import { render } from '@testing-library/react'
 
 import {
   theme
-} from '../components'
+} from '../'
 
 export const renderWithTheme = (el, customTheme) => {
   const ProviderWrapper = ({ children }) => (

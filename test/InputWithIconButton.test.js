@@ -3,7 +3,7 @@ import React from 'react'
 import { fireEvent } from '@testing-library/react'
 
 import { renderWithTheme } from './index'
-import { InputWithIconButton } from '../components'
+import { InputWithIconButton } from '../'
 
 describe('InputWithIconButton', () => {
   test('renders', () => {

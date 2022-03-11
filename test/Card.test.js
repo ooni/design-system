@@ -3,7 +3,7 @@ import React from 'react'
 import { fireEvent } from '@testing-library/react'
 
 import { renderWithTheme } from './index'
-import { Card } from '../components'
+import { Card } from '../'
 
 describe('Card', () => {
   test('renders', () => {

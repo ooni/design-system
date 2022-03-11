@@ -1,7 +1,7 @@
 /* global describe, test, expect */
 import React from 'react'
 import { renderWithTheme } from './index'
-import { Container } from '../components'
+import { Container } from '../'
 
 describe('Container', () => {
   test('renders', () => {

@@ -1,7 +1,7 @@
 /* global describe, test, expect */
 import React from 'react'
 import { renderWithTheme } from './index'
-import { PieChart } from '../components'
+import { PieChart } from '../'
 
 describe.skip('PieChart', () => {
   test('renders', () => {

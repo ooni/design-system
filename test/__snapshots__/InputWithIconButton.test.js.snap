@@ -1,7 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InputWithIconButton onAction is called on click 1`] = `
-.c1 {
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-align-items: top;
+  -webkit-box-align: top;
+  -ms-flex-align: top;
+  align-items: top;
+}
+
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -9,7 +19,7 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
   margin-top: 8px;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -47,22 +57,22 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
   font-size: 16px;
 }
 
-.c2:hover {
+.c3:hover {
   border-bottom-color: #f1f3f5;
 }
 
-.c2:focus {
+.c3:focus {
   border-bottom-color: #0588cb;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   width: 10%;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -110,30 +120,23 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
   font-size: 16px;
 }
 
-.c4:hover:enabled {
+.c5:hover:enabled {
   border-color: #37a6ed;
 }
 
-.c4:enabled {
+.c5:enabled {
   cursor: pointer;
 }
 
-.c4:hover {
+.c5:hover {
   color: #ced4da;
 }
 
-.c4:active {
+.c5:active {
   color: #868e96;
 }
 
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-align-items: top;
-  -webkit-box-align: top;
-  -ms-flex-align: top;
-  align-items: top;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -141,15 +144,15 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
 }
 
 <div
-  class="c0"
+  class="c0 c1"
 >
   <div
-    class="c1"
+    class="c2"
     width="0.9"
   >
     <div>
       <input
-        class="c2"
+        class="c3"
         data-testid="test-input"
         font-size="1"
         rows="3"
@@ -158,11 +161,11 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
     </div>
   </div>
   <div
-    class="c3"
+    class="c4"
     width="0.1"
   >
     <button
-      class="c4"
+      class="c5"
       font-size="1"
     />
   </div>
@@ -170,7 +173,17 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
 `;
 
 exports[`InputWithIconButton render with onAction prop 1`] = `
-.c1 {
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-align-items: top;
+  -webkit-box-align: top;
+  -ms-flex-align: top;
+  align-items: top;
+}
+
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -178,7 +191,7 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   margin-top: 8px;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -216,22 +229,22 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   font-size: 16px;
 }
 
-.c2:hover {
+.c3:hover {
   border-bottom-color: #f1f3f5;
 }
 
-.c2:focus {
+.c3:focus {
   border-bottom-color: #0588cb;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   width: 10%;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -279,30 +292,23 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   font-size: 16px;
 }
 
-.c4:hover:enabled {
+.c5:hover:enabled {
   border-color: #37a6ed;
 }
 
-.c4:enabled {
+.c5:enabled {
   cursor: pointer;
 }
 
-.c4:hover {
+.c5:hover {
   color: #ced4da;
 }
 
-.c4:active {
+.c5:active {
   color: #868e96;
 }
 
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-align-items: top;
-  -webkit-box-align: top;
-  -ms-flex-align: top;
-  align-items: top;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -310,15 +316,15 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
 }
 
 <div
-  class="c0"
+  class="c0 c1"
 >
   <div
-    class="c1"
+    class="c2"
     width="0.9"
   >
     <div>
       <input
-        class="c2"
+        class="c3"
         font-size="1"
         rows="3"
         type="text"
@@ -326,11 +332,11 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
     </div>
   </div>
   <div
-    class="c3"
+    class="c4"
     width="0.1"
   >
     <button
-      class="c4"
+      class="c5"
       font-size="1"
     >
       <div />
@@ -340,7 +346,17 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
 `;
 
 exports[`InputWithIconButton renders 1`] = `
-.c1 {
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-align-items: top;
+  -webkit-box-align: top;
+  -ms-flex-align: top;
+  align-items: top;
+}
+
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -348,7 +364,7 @@ exports[`InputWithIconButton renders 1`] = `
   margin-top: 8px;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -386,22 +402,22 @@ exports[`InputWithIconButton renders 1`] = `
   font-size: 16px;
 }
 
-.c2:hover {
+.c3:hover {
   border-bottom-color: #f1f3f5;
 }
 
-.c2:focus {
+.c3:focus {
   border-bottom-color: #0588cb;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
   width: 10%;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -449,30 +465,23 @@ exports[`InputWithIconButton renders 1`] = `
   font-size: 16px;
 }
 
-.c4:hover:enabled {
+.c5:hover:enabled {
   border-color: #37a6ed;
 }
 
-.c4:enabled {
+.c5:enabled {
   cursor: pointer;
 }
 
-.c4:hover {
+.c5:hover {
   color: #ced4da;
 }
 
-.c4:active {
+.c5:active {
   color: #868e96;
 }
 
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-align-items: top;
-  -webkit-box-align: top;
-  -ms-flex-align: top;
-  align-items: top;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,15 +489,15 @@ exports[`InputWithIconButton renders 1`] = `
 }
 
 <div
-  class="c0"
+  class="c0 c1"
 >
   <div
-    class="c1"
+    class="c2"
     width="0.9"
   >
     <div>
       <input
-        class="c2"
+        class="c3"
         font-size="1"
         rows="3"
         type="text"
@@ -496,11 +505,11 @@ exports[`InputWithIconButton renders 1`] = `
     </div>
   </div>
   <div
-    class="c3"
+    class="c4"
     width="0.1"
   >
     <button
-      class="c4"
+      class="c5"
       font-size="1"
     >
       <div />

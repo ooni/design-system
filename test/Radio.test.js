@@ -1,7 +1,7 @@
 /* global describe, test, expect */
 import React from 'react'
 import { renderWithTheme } from './index'
-import { RadioButton, RadioGroup } from '../components'
+import { RadioButton, RadioGroup } from '../'
 
 describe('RadioButton', () => {
   test('renders', () => {

@@ -1,7 +1,7 @@
 /* global describe, test, expect */
 import React from 'react'
 import { renderWithTheme } from './index'
-import { TwitterShareButton, FacebookShareButton } from '../components'
+import { TwitterShareButton, FacebookShareButton } from '../'
 
 describe('TwitterShareButton', () => {
   test('renders', () => {

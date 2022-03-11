@@ -3,7 +3,7 @@ import React from 'react'
 import { fireEvent } from '@testing-library/react'
 
 import { renderWithTheme } from './index'
-import { Modal } from '../components'
+import { Modal } from '../'
 
 describe('Modal', () => {
   test('renders', () => {

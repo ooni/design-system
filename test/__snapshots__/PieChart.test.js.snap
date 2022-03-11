@@ -257,6 +257,7 @@ exports[`PieChart renders 1`] = `
     <svg
       viewBox="0 0 698.19 196.824"
       width="100"
+      xml:space="preserve"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

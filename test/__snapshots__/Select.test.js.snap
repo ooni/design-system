@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Select renders 1`] = `
-.c1 {
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -32,7 +38,7 @@ exports[`Select renders 1`] = `
   width: unset;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -45,10 +51,7 @@ exports[`Select renders 1`] = `
   height: 24px;
 }
 
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,13 +59,13 @@ exports[`Select renders 1`] = `
 }
 
 <div
-  class="c0"
+  class="c0 c1"
 >
   <select
-    class="c1"
+    class="c2"
   />
   <svg
-    class="c2"
+    class="c3"
     fill="currentcolor"
     height="24"
     viewBox="0 0 24 24"
@@ -77,7 +80,13 @@ exports[`Select renders 1`] = `
 `;
 
 exports[`Select renders with children 1`] = `
-.c1 {
+.c0 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c2 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -108,7 +117,7 @@ exports[`Select renders with children 1`] = `
   width: unset;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -121,10 +130,7 @@ exports[`Select renders with children 1`] = `
   height: 24px;
 }
 
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -132,10 +138,10 @@ exports[`Select renders with children 1`] = `
 }
 
 <div
-  class="c0"
+  class="c0 c1"
 >
   <select
-    class="c1"
+    class="c2"
   >
     <option
       value="1"
@@ -149,7 +155,7 @@ exports[`Select renders with children 1`] = `
     </option>
   </select>
   <svg
-    class="c2"
+    class="c3"
     fill="currentcolor"
     height="24"
     viewBox="0 0 24 24"

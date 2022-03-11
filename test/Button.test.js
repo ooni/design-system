@@ -1,7 +1,7 @@
 /* global describe, test, expect */
 import React from 'react'
 import { renderWithTheme } from './index'
-import { Button } from '../components'
+import { Button } from '../'
 
 describe('Button', () => {
   test('renders', () => {

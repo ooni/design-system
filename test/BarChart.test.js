@@ -1,7 +1,7 @@
 /* global describe, test, expect */
 import React from 'react'
 import { renderWithTheme } from './index'
-import { BarChart } from '../components'
+import { BarChart } from '../'
 
 describe.skip('BarChart', () => {
   test('renders', () => {

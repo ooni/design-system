@@ -1,7 +1,7 @@
 /* global describe, test, expect */
 import React from 'react'
 import { renderWithTheme } from './index'
-import { Heading } from '../components'
+import { Heading } from '../'
 
 describe('Heading', () => {
   test('renders', () => {

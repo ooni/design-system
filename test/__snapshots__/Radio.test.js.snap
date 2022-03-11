@@ -5,9 +5,20 @@ exports[`RadioButton renders 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c2 {
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -19,7 +30,7 @@ exports[`RadioButton renders 1`] = `
   overflow: hidden;
 }
 
-.c4 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -28,49 +39,41 @@ exports[`RadioButton renders 1`] = `
   color: gray;
 }
 
-input:checked ~ .c4 {
+input:checked ~ .c0 {
   color: #0588cb;
 }
 
-input:focus ~ .c4 {
+input:focus ~ .c0 {
   background-color: #0588cb20;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: none;
-  width: 24px;
-  height: 24px;
-}
-
-input:checked ~ .c3 {
-  display: block;
 }
 
 .c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+
+input:checked ~ .c0 {
+  display: block;
+}
+
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   display: block;
   width: 24px;
   height: 24px;
 }
 
-input:checked ~ .c5 {
+input:checked ~ .c0 {
   display: none;
 }
 
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -78,18 +81,18 @@ input:checked ~ .c5 {
 }
 
 <label
-  class="c0"
+  class="c0 c1 c2"
 >
   <div
-    class="c1"
+    class="c0 c3"
   >
     <input
-      class="c2"
+      class="c0 c4"
       type="radio"
     />
     <svg
       aria-hidden="true"
-      class="c3 sc-AxjAm c4"
+      class="c0 c5 c0 c6"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -102,7 +105,7 @@ input:checked ~ .c5 {
     </svg>
     <svg
       aria-hidden="true"
-      class="c5 sc-AxjAm c4"
+      class="c0 c7 c0 c6"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -122,9 +125,20 @@ exports[`RadioButton renders with prop checked 1`] = `
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c2 {
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -136,7 +150,7 @@ exports[`RadioButton renders with prop checked 1`] = `
   overflow: hidden;
 }
 
-.c4 {
+.c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -145,49 +159,41 @@ exports[`RadioButton renders with prop checked 1`] = `
   color: gray;
 }
 
-input:checked ~ .c4 {
+input:checked ~ .c0 {
   color: #0588cb;
 }
 
-input:focus ~ .c4 {
+input:focus ~ .c0 {
   background-color: #0588cb20;
-}
-
-.c3 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: none;
-  width: 24px;
-  height: 24px;
-}
-
-input:checked ~ .c3 {
-  display: block;
 }
 
 .c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+
+input:checked ~ .c0 {
+  display: block;
+}
+
+.c7 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   display: block;
   width: 24px;
   height: 24px;
 }
 
-input:checked ~ .c5 {
+input:checked ~ .c0 {
   display: none;
 }
 
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -195,19 +201,19 @@ input:checked ~ .c5 {
 }
 
 <label
-  class="c0"
+  class="c0 c1 c2"
 >
   <div
-    class="c1"
+    class="c0 c3"
   >
     <input
       checked=""
-      class="c2"
+      class="c0 c4"
       type="radio"
     />
     <svg
       aria-hidden="true"
-      class="c3 sc-AxjAm c4"
+      class="c0 c5 c0 c6"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -220,7 +226,7 @@ input:checked ~ .c5 {
     </svg>
     <svg
       aria-hidden="true"
-      class="c5 sc-AxjAm c4"
+      class="c0 c7 c0 c6"
       fill="currentcolor"
       height="24"
       viewBox="0 0 24 24"
@@ -236,13 +242,33 @@ input:checked ~ .c5 {
 `;
 
 exports[`RadioGroup renders 1`] = `
-.c2 {
+.c1 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
 }
 
-.c3 {
+.c5 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -254,7 +280,7 @@ exports[`RadioGroup renders 1`] = `
   overflow: hidden;
 }
 
-.c5 {
+.c7 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
@@ -263,62 +289,41 @@ exports[`RadioGroup renders 1`] = `
   color: gray;
 }
 
-input:checked ~ .c5 {
+input:checked ~ .c0 {
   color: #0588cb;
 }
 
-input:focus ~ .c5 {
+input:focus ~ .c0 {
   background-color: #0588cb20;
-}
-
-.c4 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  display: none;
-  width: 24px;
-  height: 24px;
-}
-
-input:checked ~ .c4 {
-  display: block;
 }
 
 .c6 {
   box-sizing: border-box;
   margin: 0;
   min-width: 0;
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+
+input:checked ~ .c0 {
+  display: block;
+}
+
+.c8 {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
   display: block;
   width: 24px;
   height: 24px;
 }
 
-input:checked ~ .c6 {
+input:checked ~ .c0 {
   display: none;
 }
 
-.c0 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c1 {
-  box-sizing: border-box;
-  margin: 0;
-  min-width: 0;
-  width: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -326,22 +331,22 @@ input:checked ~ .c6 {
 }
 
 <div
-  class="c0"
+  class="c0 c1 c2"
 >
   <label
-    class="c1"
+    class="c0 c3 c2"
   >
     <div
-      class="c2"
+      class="c0 c4"
     >
       <input
         checked=""
-        class="c3"
+        class="c0 c5"
         type="radio"
       />
       <svg
         aria-hidden="true"
-        class="c4 sc-AxjAm c5"
+        class="c0 c6 c0 c7"
         fill="currentcolor"
         height="24"
         viewBox="0 0 24 24"
@@ -354,7 +359,7 @@ input:checked ~ .c6 {
       </svg>
       <svg
         aria-hidden="true"
-        class="c6 sc-AxjAm c5"
+        class="c0 c8 c0 c7"
         fill="currentcolor"
         height="24"
         viewBox="0 0 24 24"
