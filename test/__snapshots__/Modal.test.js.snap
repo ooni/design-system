@@ -87,8 +87,8 @@ exports[`Modal renders with close button 1`] = `
   border: 0;
   border-radius: 4px;
   display: inline-block;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   text-transform: capitalize;
   text-align: center;
   -webkit-letter-spacing: 0.5px;
@@ -113,6 +113,10 @@ exports[`Modal renders with close button 1`] = `
 
 .c2:hover:enabled {
   border-color: #37a6ed;
+}
+
+.c2:active:enabled {
+  border-color: #0f77b8;
 }
 
 .c2:enabled {

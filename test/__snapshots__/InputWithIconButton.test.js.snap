@@ -84,8 +84,8 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
   border: 0;
   border-radius: 4px;
   display: inline-block;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   text-transform: capitalize;
   text-align: center;
   -webkit-letter-spacing: 0.5px;
@@ -112,6 +112,10 @@ exports[`InputWithIconButton onAction is called on click 1`] = `
 
 .c4:hover:enabled {
   border-color: #37a6ed;
+}
+
+.c4:active:enabled {
+  border-color: #0f77b8;
 }
 
 .c4:enabled {
@@ -253,8 +257,8 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
   border: 0;
   border-radius: 4px;
   display: inline-block;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   text-transform: capitalize;
   text-align: center;
   -webkit-letter-spacing: 0.5px;
@@ -281,6 +285,10 @@ exports[`InputWithIconButton render with onAction prop 1`] = `
 
 .c4:hover:enabled {
   border-color: #37a6ed;
+}
+
+.c4:active:enabled {
+  border-color: #0f77b8;
 }
 
 .c4:enabled {
@@ -423,8 +431,8 @@ exports[`InputWithIconButton renders 1`] = `
   border: 0;
   border-radius: 4px;
   display: inline-block;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
   text-transform: capitalize;
   text-align: center;
   -webkit-letter-spacing: 0.5px;
@@ -451,6 +459,10 @@ exports[`InputWithIconButton renders 1`] = `
 
 .c4:hover:enabled {
   border-color: #37a6ed;
+}
+
+.c4:active:enabled {
+  border-color: #0f77b8;
 }
 
 .c4:enabled {
