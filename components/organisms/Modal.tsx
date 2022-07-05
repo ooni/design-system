@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react'
-import { Box } from 'rebass/styled-components'
+import { Box, BoxProps } from 'rebass/styled-components'
 import { MdClose } from 'react-icons/md'
 import IconButton from '../atoms/IconButton'
 
@@ -36,15 +36,11 @@ interface IModal {
   onHideClick: () => void
 }
 
-export const Modal: FC<IModal> = ({
-  show,
-  closeButton,
-  onHideClick,
-  children,
-  ...props
-}) => {
+export const Modal: FC<IModal & BoxProps> = props => {
+  const { show, closeButton, onHideClick, children, ...rest } = props
   return (
     <Box
+      {...rest}
       sx={{
         position: 'relative',
         display: show ? 'inherit' : 'none',
