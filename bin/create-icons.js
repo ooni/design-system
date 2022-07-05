@@ -26,7 +26,7 @@ var cleanAtrributes = function($el, $) {
     }
   }
 
-  if($el.children().length === 0) {
+  if ($el.children().length === 0) {
     return false
   }
 
@@ -43,19 +43,19 @@ glob(rootDir + '/components/svgs/icons/*.svg', function(err, icons) {
   icons.forEach(function(iconPath) {
     var name = path.basename(iconPath, '.svg')
     var svg = fs.readFileSync(iconPath, 'utf-8')
-    const $ = cheerio.load(svg,{
-      xmlMode: true
+    const $ = cheerio.load(svg, {
+      xmlMode: true,
     })
     var $svg = $('svg')
     cleanAtrributes($svg, $)
     cleanClipPath($svg, $)
     var iconSvg = $svg.html()
     var viewBox = $svg.attr('viewBox')
-    var dstPath = path.join(rootDir, 'components', 'icons', `${name}.js`)
+    var dstPath = path.join(rootDir, 'components', 'icons', `${name}.tsx`)
     components[name] = dstPath
     var component = `import React from 'react'
 import Icon from 'react-icon-base'
-const ${name} = props => (
+const ${name} = (props: any) => (
   <Icon viewBox="${viewBox}" {...props}>
     <g>${iconSvg}</g>
   </Icon>
@@ -67,12 +67,15 @@ export default ${name}
     console.log(path.relative('.', dstPath))
   })
 
-  const iconsModule = Object.keys(components).map(name => {
-    const compPath = components[name]
-    const loc = `./${path.basename(compPath).replace('.js', '')}`
-    return `export { default as ${name} } from '${loc}'`
-  }).join('\n') + '\n'
-  const dstPath = path.join(rootDir, 'components', 'icons', 'index.js')
+  const iconsModule =
+    Object.keys(components)
+      .map(name => {
+        const compPath = components[name]
+        const loc = `./${path.basename(compPath).replace('.tsx', '')}`
+        return `export { default as ${name} } from '${loc}'`
+      })
+      .join('\n') + '\n'
+  const dstPath = path.join(rootDir, 'components', 'icons', 'index.ts')
   fs.writeFileSync(dstPath, iconsModule, 'utf-8')
   console.log(path.relative('.', dstPath))
 })

@@ -2,36 +2,37 @@
   "name": "ooni-components",
   "version": "0.4.7",
   "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/ooni/design-system.git",
   "author": "Arturo Filastò <arturo@filasto.net>",
   "license": "BSD-3-Clause",
   "dependencies": {
     "@rebass/forms": "^4.0.6",
-    "@rebass/preset": "^4.0.5",
-    "emotion-theming": "^10.0.27",
-    "palx": "^1.0.2",
-    "prop-types": "^15.5.10",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
     "react-icon-base": "^2.1.2",
-    "react-icons": "^4.2.0",
     "rebass": "^4.0.7",
-    "styled-components": "5.1.1",
-    "styled-system": "^5.1.5",
-    "victory": "^0.22.1"
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/runtime": "^7.3.4",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@rollup/plugin-url": "^7.0.0",
     "@storybook/addon-actions": "^5.2.6",
     "@storybook/addon-links": "^5.2.6",
     "@storybook/addon-storysource": "^5.2.6",
     "@storybook/addons": "^5.2.6",
     "@storybook/react": "^5.2.6",
+    "@svgr/rollup": "^6.2.1",
     "@testing-library/react": "^9.4.0",
+    "@types/react": "^18.0.14",
+    "@types/react-icon-base": "^2.1.4",
+    "@types/rebass": "^4.0.10",
+    "@types/rebass__forms": "^4.0.6",
+    "@types/styled-components": "^5.1.25",
+    "@types/styled-system": "^5.1.15",
+    "@types/styled-system__css": "^5.0.16",
     "babel-loader": "^8.0.5",
     "babel-plugin-inline-react-svg": "^0.4.0",
     "babel-plugin-styled-components": "^1.10.6",
@@ -40,14 +41,26 @@
     "eslint-plugin-react": "^7.7.0",
     "jest": "^24.9.0",
     "jest-styled-components": "^7.0.3",
-    "react-lottie": "^1.2.3"
-  },
-  "optionalDependencies": {
-    "fsevents": "1.2.9"
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-lottie": "^1.2.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.75.7",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-visualizer": "^5.6.0",
+    "styled-components": "^5.1.1",
+    "typescript": "^4.7.4",
+    "victory": "^36.5.3"
   },
   "resolutions": {
     "rebass": "4.0.7",
-    "styled-components": "4.4.1",
+    "styled-components": "5.1.1",
     "styled-system": "5.1.5",
     "acorn": "^6.4.1",
     "minimist": "^1.2.2",
@@ -62,12 +75,20 @@
     "node-notifier": "^8.0.1",
     "highlight.js": "^10.4.1"
   },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.1.1",
+    "rebass": "^4.0.7",
+    "@rebass/forms": "^4.0.6"
+  },
   "scripts": {
     "build:clean": "rm -rf dist/*",
     "build:js": "babel components -d dist",
     "build:copy": "cp -R components/fonts dist/fonts",
-    "build": "npm run build:clean && npm run build:js && npm run build:copy",
-    "create-icons": "node bin/create-icons",
+    "build": "rimraf dist && rollup -c",
+    "create-icons-dir": "rimraf components/icons && npx mkdirp components/icons",
+    "create-icons": "npm run create-icons-dir && node bin/create-icons",
     "tag": "git tag -s -a v$(jq -r .version package.json)  -m \"ooni-components $(jq -r .version package.json)\"",
     "test": "jest",
     "lint": "eslint --ignore-path .gitignore --ignore-pattern '/components/icons/*' .",
@@ -76,9 +97,7 @@
     "build-storybook": "build-storybook"
   },
   "files": [
-    "dist/",
-    "components/animations/",
-    "components/svgs/"
+    "dist"
   ],
   "jest": {
     "roots": [

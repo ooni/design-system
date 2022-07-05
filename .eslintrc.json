@@ -1,23 +1,19 @@
 {
-  "settings": {
-    "react": {
-      "version": "16.4"
-    }
-  },
   "env": {
     "browser": true,
     "es6": true
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
   ],
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
       "jsx": true
     },
-    "ecmaVersion": "2017",
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": [
@@ -28,10 +24,6 @@
       "error",
       2
     ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
     "quotes": [
       "error",
       "single"
@@ -40,6 +32,7 @@
       "error",
       "never"
     ],
-    "react/prop-types": ["warn"]
+    "react/prop-types": ["warn"],
+    "no-undef": "off"
   }
 }
