@@ -32,11 +32,10 @@ interface IInput {
   error: ReactNode
   fontSize: number
   rows: number
-  onChange: () => void
 }
 
 const Input: FC<IInput & InputProps & TextareaProps> = props => {
-  const { type, error, fontSize, rows, onChange, ...rest } = props
+  const { type, error, fontSize, rows, ...rest } = props
 
   let StyledElement:
     | ComponentType<TextareaProps>
@@ -59,7 +58,6 @@ Input.defaultProps = {
   error: null,
   fontSize: 1,
   rows: 3,
-  onChange: () => {},
 }
 
 export default Input
