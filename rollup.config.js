@@ -50,7 +50,10 @@ function rollupPlugins() {
     peerDepsExternal(),
     resolve(),
     commonjs(),
-    typescript({ tsconfig: './tsconfig.json' }),
+    typescript({
+      tsconfig: './tsconfig.json',
+      exclude: ['**/__test__/*', '**/__mocks__/*', '**/stories/*'],
+    }),
     copy({
       targets: [
         {
