@@ -14,7 +14,7 @@ const packageJson = require('./package.json')
 
 export default [
   {
-    input: './components/index.ts',
+    input: './src/index.ts',
     output: [
       {
         file: packageJson.module,
@@ -25,7 +25,7 @@ export default [
     plugins: rollupPlugins(),
   },
   {
-    input: './components/icons/index.ts',
+    input: './src/components/icons/index.ts',
     output: [
       {
         file: 'dist/icons/index.js',
@@ -36,7 +36,7 @@ export default [
     plugins: rollupPlugins(),
   },
   {
-    input: 'dist/esm/types/index.d.ts',
+    input: 'dist/esm/src/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
   },
@@ -54,15 +54,15 @@ function rollupPlugins() {
     copy({
       targets: [
         {
-          src: './components/fonts',
+          src: './src/fonts',
           dest: './dist',
         },
         {
-          src: './components/animations',
+          src: './src/animations',
           dest: './dist',
         },
         {
-          src: './components/svgs',
+          src: './src/svgs',
           dest: './dist',
         },
       ],

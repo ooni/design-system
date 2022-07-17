@@ -6,18 +6,19 @@
     "jsx": "react",
     "module": "ESNext",
     "declaration": true,
-    "declarationDir": "types",
+    "declarationDir": "src/types",
     "sourceMap": true,
     "outDir": "dist",
     "moduleResolution": "node",
     "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "./components",
+    "baseUrl": "src",
+    "allowJs": true
   },
   "include": [
-    "./components",
-    "./types/svg.d.ts"
+    "src",
+    "src/types/svg.d.ts"
   ],
   "exclude": [
     "dist",
