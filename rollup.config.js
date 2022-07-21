@@ -37,7 +37,7 @@ export default [
   },
   {
     input: 'dist/esm/src/types/index.d.ts',
-    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
+    output: [{ file: './index.d.ts', format: 'esm' }],
     plugins: [dts()],
   },
 ]
@@ -58,14 +58,6 @@ function rollupPlugins() {
       targets: [
         {
           src: './src/fonts',
-          dest: './dist',
-        },
-        {
-          src: './src/animations',
-          dest: './dist',
-        },
-        {
-          src: './src/svgs',
           dest: './dist',
         },
       ],
