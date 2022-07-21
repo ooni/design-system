@@ -1,0 +1,5 @@
+src/components/icons/*
+src/animations/*
+src/bin/create-icons.js
+jest.config.js
+rollup.config.js
