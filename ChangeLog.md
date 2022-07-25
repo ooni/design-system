@@ -14,6 +14,12 @@ Changes:
 - New unit testing with @testing-library/react
 - Storybook in a more structured way
 
+Breaking changes:
+
+- Import statement of `svgs` and `animations` have been changed. \
+  The working ones are `"ooni-components/svgs/logos/abc.svg"` and `"ooni-components/animations/abc.json"`
+- Uninstall `rebass` and `@rebass/forms` from the deps as it's coming from design-system and might break things due to version conflicts.
+
 Dependency changes:
 
 - Storybook upgraded from `v5.x.x` to `v6.x.x`
