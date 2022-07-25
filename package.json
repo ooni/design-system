@@ -106,8 +106,6 @@
   },
   "scripts": {
     "build:clean": "rimraf dist && rimraf index.d.ts",
-    "build:js": "babel components -d dist",
-    "build:copy": "cp -R components/fonts dist/fonts",
     "build": "npm run build:clean && rollup -c",
     "create-icons-dir": "rimraf src/components/icons && npx mkdirp src/components/icons",
     "create-icons": "npm run create-icons-dir && node src/bin/create-icons",
