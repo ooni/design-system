@@ -1,5 +1,19 @@
 # ChangeLog
 
+## ooni-components 0.5.0-alpha.2 [2022-07-26]
+
+Changes:
+
+* `icons` have been migrated to a private module
+
+Breaking changes:
+
+* Import statement of `icons` have been changed. The working one is `"ooni-components/icons"`.
+
+## ooni-components 0.5.0-alpha.1 [2022-07-25]
+
+* Identical to `v0.5.0-alpha.0`
+
 ## ooni-components 0.5.0-alpha.0 [2022-07-25]
 
 Adds:
