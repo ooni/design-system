@@ -105,7 +105,7 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "build:clean": "rimraf dist && rimraf index.d.ts",
+    "build:clean": "rimraf dist && rimraf index.d.ts && rimraf icons/index.d.ts",
     "build": "npm run build:clean && rollup -c",
     "create-icons-dir": "rimraf src/components/icons && npx mkdirp src/components/icons",
     "create-icons": "npm run create-icons-dir && node src/bin/create-icons",
@@ -123,6 +123,7 @@
     "dist",
     "animations",
     "svgs",
-    "index.d.ts"
+    "index.d.ts",
+    "icons"
   ]
 }
