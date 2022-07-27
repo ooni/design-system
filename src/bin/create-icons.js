@@ -6,7 +6,8 @@ const fs = require('fs')
 const cheerio = require('cheerio')
 const glob = require('glob')
 const path = require('path')
-const rootDir = path.join(__dirname, '..')
+const inputRootDir = path.join(__dirname, '../..')
+const outputRootDir = path.join(__dirname, '..')
 const attrs = ['xlink:href', 'clip-path', 'fill-opacity', 'fill']
 
 let components = {}
@@ -39,7 +40,8 @@ var cleanClipPath = function ($el, $) {
   $('clipPath', $el).remove()
 }
 
-glob(rootDir + '/svgs/icons/*.svg', function (err, icons) {
+glob(inputRootDir + '/svgs/icons/*.svg', function (err, icons) {
+
   icons.forEach(function (iconPath) {
     var name = path.basename(iconPath, '.svg')
     var svg = fs.readFileSync(iconPath, 'utf-8')
@@ -51,7 +53,7 @@ glob(rootDir + '/svgs/icons/*.svg', function (err, icons) {
     cleanClipPath($svg, $)
     var iconSvg = $svg.html()
     var viewBox = $svg.attr('viewBox')
-    var dstPath = path.join(rootDir, 'components', 'icons', `${name}.tsx`)
+    var dstPath = path.join(outputRootDir, 'components', 'icons', `${name}.tsx`)
     components[name] = dstPath
     var component = `import React from 'react'
 import Icon from 'react-icon-base'
@@ -75,7 +77,7 @@ export default ${name}
         return `export { default as ${name} } from '${loc}'`
       })
       .join('\n') + '\n'
-  const dstPath = path.join(rootDir, 'components', 'icons', 'index.ts')
+  const dstPath = path.join(outputRootDir, 'components', 'icons', 'index.ts')
   fs.writeFileSync(dstPath, iconsModule, 'utf-8')
   console.log(path.relative('.', dstPath))
 })

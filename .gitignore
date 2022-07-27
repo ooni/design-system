@@ -8,3 +8,4 @@ yarn-error.log
 *.tgz
 stats.html
 index.d.ts
+icons/index.d.ts
