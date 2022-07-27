@@ -1,6 +1,6 @@
 # ChangeLog
 
-## ooni-components 0.5.0-alpha.2 [2022-07-26]
+## ooni-components 0.5.0-alpha.2 [2022-07-27]
 
 Changes:
 
