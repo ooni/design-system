@@ -116,7 +116,7 @@ export const Default = () => {
         const Icon = icons[i]
         return (
           <Box key={i} width={1 / 5} pb={3}>
-            <Icon size={50} />
+            <Icon width={24} />
             <Text>{icons[i]}</Text>
           </Box>
         )

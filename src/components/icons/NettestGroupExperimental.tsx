@@ -1,13 +1,6 @@
-import React from 'react'
-import Icon from 'react-icon-base'
-const NettestGroupExperimental = (props: any) => (
-  <Icon viewBox="0 0 30 30" {...props}>
-    <g>
-<title>Experimental</title>
-<g>
-	<path d="M7,2V4H8V18A4,4 0 0,0 12,22A4,4 0 0,0 16,18V4H17V2H7M11,16C10.4,16 10,15.6 10,15C10,14.4 10.4,14 11,14C11.6,14 12,14.4 12,15C12,15.6 11.6,16 11,16M13,12C12.4,12 12,11.6 12,11C12,10.4 12.4,10 13,10C13.6,10 14,10.4 14,11C14,11.6 13.6,12 13,12M14,7H10V4H14V7Z"/>
-</g>
-</g>
-  </Icon>
-)
-export default NettestGroupExperimental
+import * as React from "react";
+import { SVGProps } from "react";
+
+const SvgComponent = (props: SVGProps<SVGSVGElement>) => <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30" xmlSpace="preserve" {...props}><title>{"Experimental"}</title><g><path d="M7,2V4H8V18A4,4 0 0,0 12,22A4,4 0 0,0 16,18V4H17V2H7M11,16C10.4,16 10,15.6 10,15C10,14.4 10.4,14 11,14C11.6,14 12,14.4 12,15C12,15.6 11.6,16 11,16M13,12C12.4,12 12,11.6 12,11C12,10.4 12.4,10 13,10C13.6,10 14,10.4 14,11C14,11.6 13.6,12 13,12M14,7H10V4H14V7Z" /></g></svg>;
+
+export default SvgComponent;

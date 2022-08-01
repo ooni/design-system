@@ -40,7 +40,7 @@ var cleanClipPath = function ($el, $) {
   $('clipPath', $el).remove()
 }
 
-glob(inputRootDir + '/svgs/icons/*.svg', function (err, icons) {
+glob(inputRootDir + '/svgs/temp-icons/*.svg', function (err, icons) {
 
   icons.forEach(function (iconPath) {
     var name = path.basename(iconPath, '.svg')
