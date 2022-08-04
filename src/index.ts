@@ -16,14 +16,9 @@ export { default as Hero } from './components/Hero'
 export { default as HeroLead } from './components/HeroLead'
 export { default as Modal } from './components/Modal'
 export { default as Button } from './components/Button'
+export { default as Textarea } from './components/Textarea'
 
-export {
-  Label,
-  Select,
-  Textarea,
-  Radio,
-  Checkbox,
-} from '@rebass/forms/styled-components'
+export { Label, Select, Radio, Checkbox } from '@rebass/forms/styled-components'
 
 export { Flex, Box, Link, Image } from 'rebass/styled-components'
 

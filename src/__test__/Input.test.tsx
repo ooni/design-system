@@ -12,33 +12,6 @@ describe('Input', () => {
     expect(inputElement).toBeInTheDocument()
   })
 
-  test('renders Input with prop type', () => {
-    renderWithWrapper({
-      component: <Input type="number" data-testid="test-input" />,
-    })
-
-    const inputElement = screen.getByTestId('test-input')
-    expect(inputElement).toHaveAttribute('type', 'number')
-  })
-
-  test('renders Textarea with default props', () => {
-    renderWithWrapper({
-      component: <Input type="textarea" data-testid="test-input" />,
-    })
-
-    const inputElement = screen.getByTestId('test-input')
-    expect(inputElement).toHaveAttribute('rows', '3')
-  })
-
-  test('renders Textarea with rows props', () => {
-    renderWithWrapper({
-      component: <Input type="textarea" rows={4} data-testid="test-input" />,
-    })
-
-    const inputElement = screen.getByTestId('test-input')
-    expect(inputElement).toHaveAttribute('rows', '4')
-  })
-
   test('should be able to type in Input', async () => {
     renderWithWrapper({ component: <Input /> })
 

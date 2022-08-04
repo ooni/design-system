@@ -1,13 +1,13 @@
 import React, { FC, ReactNode } from 'react'
 import { Flex, Box } from 'rebass/styled-components'
-import { Input, InputProps } from '@rebass/forms/styled-components'
+import { InputProps } from '@rebass/forms/styled-components'
 import IconButton from './IconButton'
+import Input from './Input'
 
 interface IInputWithIconButton extends InputProps {
   onAction?: () => void
   icon?: ReactNode
-  type?: string
-  error?: ReactNode
+  error?: string
   fontSize?: number
 }
 
@@ -29,8 +29,7 @@ export const InputWithIconButton: FC<IInputWithIconButton> = (props) => {
 }
 
 InputWithIconButton.defaultProps = {
-  type: 'text',
-  error: null,
+  error: undefined,
   fontSize: 1,
   onAction: undefined,
   icon: undefined,
