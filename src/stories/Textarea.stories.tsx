@@ -1,27 +1,27 @@
 import React from 'react'
 import { addDecorator, Meta, Story } from '@storybook/react'
-import Input, { IInput } from '../components/Input'
+import Textarea, { ITextarea } from '../components/Textarea'
 import ThemeDecorator from './ThemeDecorator'
 
 const meta: Meta = {
-  title: 'Input',
-  component: Input,
+  title: 'Textarea',
+  component: Textarea,
 }
 
 addDecorator(ThemeDecorator)
 
 export default meta
 
-const Template: Story<IInput> = (args) => (
-  <Input {...args} placeholder="Please enter text" />
+const Template: Story<ITextarea> = (args) => (
+  <Textarea {...args} placeholder="Please enter text" />
 )
 
 export const Default = Template.bind({})
 
-export const ErrorInput = Template.bind({})
+export const ErrorTextarea = Template.bind({})
 
 Default.args = {}
 
-ErrorInput.args = {
+ErrorTextarea.args = {
   error: 'cannot be empty',
 }
