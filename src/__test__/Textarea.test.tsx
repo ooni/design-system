@@ -12,15 +12,6 @@ describe('Textarea', () => {
     expect(textareaElement).toBeInTheDocument()
   })
 
-  test('renders Textarea with default props', () => {
-    renderWithWrapper({
-      component: <Textarea data-testid="test-textarea" />,
-    })
-
-    const textareaElement = screen.getByTestId('test-textarea')
-    expect(textareaElement).toHaveAttribute('rows', '3')
-  })
-
   test('renders Textarea with rows props', () => {
     renderWithWrapper({
       component: <Textarea rows={4} data-testid="test-textarea" />,
