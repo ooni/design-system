@@ -1,5 +1,16 @@
 # ChangeLog
 
+## ooni-components 0.5.0-alpha.3 [2022-08-12]
+
+Changes:
+
+* New component added - `Textarea`
+
+Breaking changes:
+
+* `Input` component has been separated out into `Input` and `Textarea` components. The `type="textarea"` and `rows` props won't work anymore.
+* Replace `<Input type="textarea" />` with `<Textarea />`
+
 ## ooni-components 0.5.0-alpha.2 [2022-07-27]
 
 Changes:
