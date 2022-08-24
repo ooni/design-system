@@ -1,5 +1,11 @@
 # ChangeLog
 
+## ooni-components 0.5.0-alpha.4 [2022-08-24]
+
+Changes:
+
+* Resolved `Modal` component CSS bugs
+
 ## ooni-components 0.5.0-alpha.3 [2022-08-12]
 
 Changes:

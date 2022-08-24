@@ -42,7 +42,7 @@ export interface IModal extends BoxProps {
 }
 
 export const Modal: FC<IModal> = (props) => {
-  const { show, closeButton, onHideClick, children, ...rest } = props
+  const { show, closeButton, onHideClick, children, sx, ...rest } = props
 
   return (
     <Box
@@ -63,8 +63,7 @@ export const Modal: FC<IModal> = (props) => {
           overflow: 'auto',
           zIndex: 1050,
           bg: 'white',
-          borderRadius: 'radius',
-          ...rest,
+          ...sx,
         }}
       >
         {closeButton ? (
