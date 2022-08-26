@@ -46,13 +46,13 @@ export const Modal: FC<IModal> = (props) => {
 
   return (
     <Box
-      {...rest}
       sx={{
         position: 'relative',
         display: show ? 'inherit' : 'none',
       }}
     >
       <Box
+        {...rest}
         sx={{
           position: 'fixed',
           top: '50%',
@@ -69,7 +69,7 @@ export const Modal: FC<IModal> = (props) => {
         {closeButton ? (
           <ModalCloseButton
             onClick={onHideClick}
-            icon={<MdClose />}
+            icon={<MdClose size={20} />}
             position={closeButton}
           />
         ) : null}

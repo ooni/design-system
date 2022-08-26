@@ -1,5 +1,14 @@
 # ChangeLog
 
+## ooni-components 0.5.0-alpha.5 [2022-08-26]
+
+Changes:
+
+* Props adjustment for `Modal` component.
+* `borderRadius={20}` won't work for `Modal` component. Correct way to add border radius is through `sx`. \
+  Example - `sx={{ borderRadius: 20 }}`
+* Increased the `Modal` close icon size
+
 ## ooni-components 0.5.0-alpha.4 [2022-08-24]
 
 Changes:
