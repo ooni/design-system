@@ -18,7 +18,13 @@ export default meta
 
 export const Default = () => {
   return (
-    <Modal show closeButton="right" onHideClick={() => {}}>
+    <Modal
+      show
+      closeButton="right"
+      onHideClick={() => {}}
+      bg="red"
+      sx={{ borderRadius: 20 }}
+    >
       <Container>
         <Heading h={1}>Modal Content</Heading>
       </Container>
