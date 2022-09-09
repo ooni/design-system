@@ -1,5 +1,11 @@
 # ChangeLog
 
+## ooni-components 0.5.0-alpha.6 [2022-09-09]
+
+Changes:
+
+* Visual changes in Twitter share button.
+
 ## ooni-components 0.5.0-alpha.5 [2022-08-26]
 
 Changes:

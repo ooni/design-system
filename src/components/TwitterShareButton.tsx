@@ -42,8 +42,14 @@ const TwitterShareButton: FC<ITwitterShareButton> = (props) => {
 
   return (
     <Link href={twitterLinkGenerated}>
-      <Button {...rest} variant="twitterShare">
-        <FaTwitter />
+      <Button
+        {...rest}
+        variant="twitterShare"
+        display="flex"
+        alignItems="center"
+      >
+        <FaTwitter size={14} />
+
         <Text as="span" pl={2}>
           Tweet
         </Text>
