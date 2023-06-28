@@ -12,29 +12,21 @@
     "plugin:prettier/recommended",
     "plugin:react/jsx-runtime"
   ],
-  "plugins": [
-    "@typescript-eslint", "react", "prettier"
-  ],
+  "plugins": ["@typescript-eslint", "react", "prettier"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
       "jsx": true
     },
-    "ecmaVersion": 2018,
+    "ecmaVersion": "latest",
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
   "ignorePatterns": ["*.svg", "*.ttf", "*.woff", "*.eot", "*.md"],
   "rules": {
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "never"
-    ],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
     "prettier/prettier": [
       "error",
       {
@@ -43,21 +35,28 @@
         "arrowParens": "always"
       }
     ],
-    "react/prop-types": ["warn"],
+    "react/prop-types": ["off"],
     "no-undef": "off",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "no-console": "warn",
     "import/no-unresolved": 0,
-    "react/jsx-filename-extension": [1, {
-      "extensions": [
-        ".ts",
-        ".tsx"
-      ]
-    }],
-    "import/extensions": ["error", "never", {"svg": "always", "ts": "always", "tsx": "always", "json": "always"}],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".ts", ".tsx"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "never",
+      { "svg": "always", "ts": "always", "tsx": "always", "json": "always" }
+    ],
     "no-use-before-define": ["error", { "variables": false }],
-    "@typescript-eslint/no-use-before-define": ["error", { "variables": false }],
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      { "variables": false }
+    ],
     "no-empty-function": "warn",
     "@typescript-eslint/no-empty-function": ["warn"],
     "dot-notation": "warn",
@@ -65,6 +64,9 @@
     "import/no-extraneous-dependencies": "off",
     "react/no-array-index-key": "off",
     "react/function-component-definition": "off",
-    "react/default-props-match-prop-types": "off"
+    "react/default-props-match-prop-types": "off",
+    "react/require-default-props": [0],
+    "no-underscore-dangle": "off",
+    "no-shadow": "off"
   }
 }

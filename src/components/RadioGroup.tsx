@@ -1,6 +1,5 @@
 import React, {
   useState,
-  useCallback,
   ChangeEvent,
   ReactNode,
   FC,
@@ -8,7 +7,8 @@ import React, {
   cloneElement,
   ReactElement,
 } from 'react'
-import { Flex, FlexProps } from 'rebass/styled-components'
+import { FlexProps } from 'types'
+import Flex from './Flex'
 
 export interface IRadioGroup extends FlexProps {
   children?: ReactNode
@@ -17,7 +17,7 @@ export interface IRadioGroup extends FlexProps {
   direction?: 'row' | 'column'
 }
 
-const RadioGroup: FC<IRadioGroup> = (props) => {
+const RadioGroup = (props: IRadioGroup) => {
   const { children, name, value, direction, onChange, ...rest } = props
 
   const [currentValue, setCurrentValue] = useState(value)
@@ -47,5 +47,33 @@ const RadioGroup: FC<IRadioGroup> = (props) => {
 RadioGroup.defaultProps = {
   direction: 'column',
 }
+
+// export const RadioGroup = ({
+//   children,
+//   name,
+//   value,
+//   onChange,
+//   direction = 'column',
+//   ...props
+// }) => {
+
+//   const iterateOverChildren = (children) => {
+//     return React.Children.map(children, (child) => {
+//       if (!React.isValidElement(child)) return
+
+//       return React.cloneElement(child, {
+//         ...child.props,
+//         checked: child.props.value === value,
+//         onChange: (e) => { onChange(e.target.value) },
+//         children: iterateOverChildren(child.props.children)})
+//     })
+//   }
+
+//   return (
+//     <Flex flexDirection={direction} {...props}>
+//       {iterateOverChildren(children)}
+//     </Flex>
+//   )
+// }
 
 export default RadioGroup

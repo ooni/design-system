@@ -41,7 +41,6 @@ var cleanClipPath = function ($el, $) {
 }
 
 glob(inputRootDir + '/svgs/icons/*.svg', function (err, icons) {
-
   icons.forEach(function (iconPath) {
     var name = path.basename(iconPath, '.svg')
     var svg = fs.readFileSync(iconPath, 'utf-8')
@@ -56,11 +55,11 @@ glob(inputRootDir + '/svgs/icons/*.svg', function (err, icons) {
     var dstPath = path.join(outputRootDir, 'components', 'icons', `${name}.tsx`)
     components[name] = dstPath
     var component = `import React from 'react'
-import Icon from 'react-icon-base'
-const ${name} = (props: any) => (
-  <Icon viewBox="${viewBox}" {...props}>
+import { IconBase, IconType } from 'react-icons'
+const ${name}: IconType = (props) => (
+  <IconBase viewBox="${viewBox}" {...props}>
     <g>${iconSvg}</g>
-  </Icon>
+  </IconBase>
 )
 export default ${name}
 `

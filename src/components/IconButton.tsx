@@ -1,13 +1,11 @@
-import React, { ChangeEvent, FC, ReactNode } from 'react'
-import { ButtonProps, Button } from 'rebass/styled-components'
+import React, { ReactNode } from 'react'
+import Button, { IButton } from './Button'
 
-export interface IIconButton extends ButtonProps {
-  icon?: ReactNode
+export interface IIconButton extends IButton {
+  icon: ReactNode
 }
 
-const IconButton: FC<IIconButton> = (props) => {
-  const { icon, ...rest } = props
-
+const IconButton = ({ icon, ...rest }: IIconButton) => {
   return (
     <Button variant="iconButton" {...rest}>
       {icon}

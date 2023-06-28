@@ -6,7 +6,7 @@
     "jsx": "react",
     "module": "ESNext",
     "declaration": true,
-    "declarationDir": "src/types/icons",
+    "declarationDir": "types",
     "sourceMap": true,
     "outDir": "dist",
     "moduleResolution": "node",
@@ -15,12 +15,6 @@
     "forceConsistentCasingInFileNames": true,
     "allowJs": true
   },
-  "include": [
-    "../src/components/icons",
-    "../src/types/svg.d.ts"
-  ],
-  "exclude": [
-    "../dist",
-    "../node_modules",
-  ],
+  "include": ["../src/components/icons", "../src/types/svg.d.ts"],
+  "exclude": ["../dist", "../node_modules"]
 }
