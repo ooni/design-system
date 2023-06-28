@@ -1,15 +1,15 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { FaFacebook } from 'react-icons/fa'
-import { Button, ButtonProps, Link } from 'rebass/styled-components'
+import { ButtonProps } from 'types'
+import Button from './Button'
+import Link from './Link'
 import Text from './Text'
 
 export interface IFacebookShareButton extends ButtonProps {
   url?: string
 }
 
-const FacebookShareButton: FC<IFacebookShareButton> = (props) => {
-  const { url = '', ...rest } = props
-
+const FacebookShareButton = ({ url = '', ...rest }: IFacebookShareButton) => {
   let href = 'https://www.facebook.com/sharer/sharer.php?'
   href += `&u=${encodeURIComponent(url)}`
 
@@ -23,10 +23,6 @@ const FacebookShareButton: FC<IFacebookShareButton> = (props) => {
       </Button>
     </Link>
   )
-}
-
-FacebookShareButton.defaultProps = {
-  url: '',
 }
 
 export default FacebookShareButton

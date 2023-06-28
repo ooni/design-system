@@ -1,7 +1,7 @@
 import React, { JSXElementConstructor, ReactElement } from 'react'
 import { render } from '@testing-library/react'
 import { ThemeProvider } from 'styled-components'
-import theme from '../theme/rebassTheme'
+import theme from '../theme/theme'
 
 interface IRenderWithWrapper {
   component: ReactElement<any, string | JSXElementConstructor<any>>

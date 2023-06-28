@@ -1,8 +1,7 @@
-import React, { FC } from 'react'
-import { Box, BoxProps } from 'rebass/styled-components'
+import React from 'react'
+import { BoxProps } from 'types'
+import Box from './Box'
 
-const Container: FC<BoxProps> = (props) => (
-  <Box {...props} variant="container" />
-)
+const Container = (props: BoxProps) => <Box {...props} variant="container" />
 
 export default Container

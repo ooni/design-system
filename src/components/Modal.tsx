@@ -1,21 +1,18 @@
-import React, { FC, ReactNode } from 'react'
-import { Box, BoxProps } from 'rebass/styled-components'
+import React, { ReactNode } from 'react'
 import { MdClose } from 'react-icons/md'
+import { BoxProps } from 'types'
 import IconButton from './IconButton'
+import Box from './Box'
 
 interface IModalCloseButton {
-  position?: string
+  position?: 'left' | 'right'
   icon: ReactNode
   onClick?: () => void
 }
 
-const ModalCloseButton: FC<IModalCloseButton> = ({
-  position,
-  icon,
-  onClick,
-}) => (
+const ModalCloseButton = ({ position, icon, onClick }: IModalCloseButton) => (
   <IconButton
-    css={{
+    sx={{
       position: 'absolute',
       top: 0,
       height: '28px',
@@ -29,21 +26,20 @@ const ModalCloseButton: FC<IModalCloseButton> = ({
   />
 )
 
-ModalCloseButton.defaultProps = {
-  position: undefined,
-  onClick: undefined,
-}
-
 export interface IModal extends BoxProps {
   show?: boolean
-  closeButton?: string
-  children?: JSX.Element | JSX.Element[] | ReactNode
+  closeButton?: 'left' | 'right'
   onHideClick?: () => void
 }
 
-export const Modal: FC<IModal> = (props) => {
-  const { show, closeButton, onHideClick, children, sx, ...rest } = props
-
+export const Modal = ({
+  show = false,
+  closeButton = 'right',
+  onHideClick,
+  children,
+  sx,
+  ...rest
+}: IModal) => {
   return (
     <Box
       sx={{
@@ -66,13 +62,11 @@ export const Modal: FC<IModal> = (props) => {
           ...sx,
         }}
       >
-        {closeButton ? (
-          <ModalCloseButton
-            onClick={onHideClick}
-            icon={<MdClose size={20} />}
-            position={closeButton}
-          />
-        ) : null}
+        <ModalCloseButton
+          onClick={onHideClick}
+          icon={<MdClose size={20} />}
+          position={closeButton}
+        />
         {children}
       </Box>
       {show && (
