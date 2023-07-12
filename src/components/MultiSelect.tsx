@@ -53,6 +53,18 @@ const MultiSelect = forwardRef(
             borderRadius: '10px',
             backgroundColor: theme.colors.gray3,
           }),
+          multiValueRemove: () => ({
+            svg: { display: 'none' },
+            '&:before': {
+              content: '"✕"',
+              fontSize: '80%',
+              padding: '0 6px 0 4px',
+            },
+            '&:hover': {
+              cursor: 'pointer',
+              color: theme.colors.red7,
+            },
+          }),
         }}
       />
     </Box>

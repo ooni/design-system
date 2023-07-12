@@ -40,8 +40,10 @@ const Input = forwardRef(({ error, name, label, ...rest }: IInput, ref) => {
             lineHeight: 1,
             gap: '4px',
             input: { fontFamily: 'inherit' },
-            button: { fontSize: '80%' },
-            '&:focus-within': { boxShadow: 'none' },
+            '&:focus-within': {
+              boxShadow: 'none',
+              borderColor: theme.colors.blue5,
+            },
           },
         }}
       >
