@@ -1,7 +1,7 @@
 {
   "name": "ooni-components",
   "type": "module",
-  "version": "0.5.0-alpha.6",
+  "version": "1.0.0-alpha.1",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
@@ -90,8 +90,8 @@
   },
   "peerDependencies": {
     "react": ">= 17",
-    "styled-components": ">= 5",
-    "react-icons": ">= 4"
+    "react-icons": ">= 4",
+    "styled-components": ">= 5"
   },
   "scripts": {
     "build:clean": "rimraf dist && rimraf index.d.ts && rimraf icons/index.d.ts",
@@ -104,7 +104,7 @@
     "lint": "eslint --ignore-path .gitignore --ignore-pattern '/components/icons/*' .",
     "release": "yarn run build && yarn publish --new-version $npm_package_version",
     "release:win": "yarn run build && yarn publish --new-version %npm_package_version%",
-    "release:alpha": "yarn publish tag --alpha",
+    "release:alpha": "yarn publish --tag alpha",
     "eslint": "esw src/**",
     "eslint-watch": "esw -w --changed src/**",
     "eslint-watch-quiet": "esw -w --quiet --changed src/**",
