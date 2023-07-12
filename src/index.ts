@@ -1,5 +1,5 @@
 import colors from './theme/colors'
-import theme from './theme/theme'
+import theme from './theme'
 
 export { default as Box } from './components/Box'
 export { default as Flex } from './components/Flex'
@@ -24,5 +24,7 @@ export { default as Image } from './components/Image'
 export { default as Select } from './components/Select'
 export { default as Checkbox } from './components/Checkbox'
 export { default as Label } from './components/Label'
+export { default as TagsInput } from './components/TagsInput'
+export { default as MultiSelect } from './components/MultiSelect'
 
 export { colors, theme }

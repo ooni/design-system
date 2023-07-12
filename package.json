@@ -12,6 +12,8 @@
   "dependencies": {
     "@styled-system/css": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",
+    "react-select": "^5.7.3",
+    "react-tag-input-component": "^2.0.2",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
