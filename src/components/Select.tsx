@@ -38,6 +38,9 @@ const Select = forwardRef(({ label, name, ...rest }: ISelect, ref) => (
         backgroundPosition: 'calc(100% - 20px), calc(100% - 15px)',
         backgroundSize: '5px 5px, 5px 5px',
         backgroundRepeat: 'no-repeat',
+        'html[dir="rtl"] &, body[dir="rtl"] &': {
+          backgroundPosition: '15px, 20px',
+        },
       }}
     />
   </Box>
