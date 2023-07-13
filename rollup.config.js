@@ -85,7 +85,7 @@ const mainBundle = {
       ],
     }),
     resolve(),
-    terser(),
+    terser({ compress: { evaluate: false } }),
     filesize(),
     visualizer(),
   ],
