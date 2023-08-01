@@ -1,6 +1,6 @@
 import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
-import Button, { IButton } from '../src/components/Button'
+import Button from '../src/components/Button'
 
 const meta = {
   title: 'Components/Button',
@@ -30,9 +30,11 @@ export const Link: Story = {
   },
 }
 
-export const IconButton: Story = {
+export const LoadingButton: Story = {
   args: {
-    variant: 'iconButton',
-    children: 'Unstyled Button',
+    children: 'Loading Button',
+    loading: true,
+    spinner: <>spinner</>,
+    disabled: true,
   },
 }

@@ -167,14 +167,17 @@ const theme = {
     'primary-disabled': {
       variant: 'buttons.primary',
       opacity: 0.5,
+      cursor: 'not-allowed',
     },
     'hollow-disabled': {
       variant: 'buttons.hollow',
       opacity: 0.5,
+      pointerEvents: 'none',
     },
     'inverted-disabled': {
       variant: 'buttons.inverted',
       opacity: 0.5,
+      pointerEvents: 'none',
     },
     iconButton: {
       variant: 'buttons.hollow',
