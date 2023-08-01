@@ -27,7 +27,7 @@ const Box = styled('div').withConfig({ shouldForwardProp })<BoxProps>(
   variant,
   sx,
   (props) => props.css,
-  compose(space, layout, typography, color, flexbox)
+  compose(space, layout, typography, color, flexbox),
 )
 
 export default Box

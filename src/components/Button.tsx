@@ -14,10 +14,22 @@ export interface IButton extends ButtonProps {
   disabled?: boolean
   inverted?: boolean
   hollow?: boolean
+  loading?: boolean
+  spinner?: React.ReactNode
   variant?: Variant
   btnSize?: Size
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
+
+// export type IButton = ButtonProps & {
+//   disabled?: boolean
+//   inverted?: boolean
+//   hollow?: boolean
+//   spinner?: React.ReactNode
+//   variant?: Variant
+//   btnSize?: Size
+//   onClick?: React.MouseEventHandler<HTMLButtonElement>
+// } & ({ loading: true; spinner: React.ReactNode } | { loading?: false })
 
 const Button = forwardRef(
   (
@@ -27,6 +39,9 @@ const Button = forwardRef(
       disabled = false,
       variant,
       btnSize = 'medium',
+      loading = false,
+      spinner,
+      children,
       ...rest
     }: IButton,
     ref
@@ -96,7 +111,12 @@ const Button = forwardRef(
           padding: 0,
           '&:enabled': { cursor: 'pointer' },
         }}
-      />
+      >
+        <Box sx={loading ? { visibility: 'hidden', height: '0' } : undefined}>
+          {children}
+        </Box>
+        {loading && spinner}
+      </Box>
     )
   }
 )
