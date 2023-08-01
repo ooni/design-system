@@ -1,7 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
-import dts from 'rollup-plugin-dts'
+import { dts } from 'rollup-plugin-dts'
 import json from '@rollup/plugin-json'
 import terser from '@rollup/plugin-terser'
 import { visualizer } from 'rollup-plugin-visualizer'
@@ -11,44 +11,7 @@ import copy from 'rollup-plugin-copy'
 import svgr from '@svgr/rollup'
 import url from '@rollup/plugin-url'
 import packageJson from './package.json' assert { type: 'json' }
-
-function rollupPlugins() {
-  return [
-    url(),
-    svgr(),
-    // json(),
-    peerDepsExternal(),
-    resolve(),
-    commonjs(),
-    typescript({
-      tsconfig: './tsconfig.json',
-      exclude: ['**/__test__/*', '**/__mocks__/*', '**/stories/*'],
-    }),
-    // copy({
-    //   targets: [
-    //     {
-    //       src: './src/fonts',
-    //       dest: './dist',
-    //     },
-    //   ],
-    // }),
-    // terser(),
-    // filesize(),
-    // visualizer(),
-  ]
-}
-
-// const mainBundle = {
-//   input: './src/index.ts',
-//   output: [
-//     {
-//       file: packageJson.module,
-//       format: 'esm',
-//       sourcemap: true,
-//     },
-//   ],
-//   plugins: rollupPlugins(),
-// }
+import del from 'rollup-plugin-delete'
 
 const extensions = ['.ts', '.tsx']
 const mainBundle = {
@@ -62,6 +25,9 @@ const mainBundle = {
     },
   ],
   plugins: [
+    del({
+      targets: 'dist/*',
+    }),
     peerDepsExternal(),
     url(),
     svgr(),
@@ -86,7 +52,7 @@ const mainBundle = {
     }),
     resolve(),
     terser({ compress: { evaluate: false } }),
-    filesize(),
+    // filesize(),
     visualizer(),
   ],
 }
@@ -112,26 +78,38 @@ const iconBundle = {
       exclude: ['**/__test__/*', '**/__mocks__/*', '**/stories/*'],
     }),
     terser(),
-    filesize(),
+    // filesize(),
     visualizer(),
   ],
 }
 
 const declarationGenerator = {
   input: 'dist/esm/types/index.d.ts',
-  output: [{ file: './index.d.ts', format: 'esm' }],
-  plugins: [dts()],
+  output: [{ file: 'dist/esm/index.d.ts', format: 'esm' }],
+  plugins: [
+    dts(),
+    del({
+      targets: './dist/esm/types',
+      hook: 'buildEnd',
+    }),
+  ],
 }
 
 const iconDeclarationGenerator = {
   input: 'dist/esm/icons/types/index.d.ts',
-  output: [{ file: 'icons/index.d.ts', format: 'esm' }],
-  plugins: [dts()],
+  output: [{ file: 'dist/esm/ooni-components-icons.d.ts', format: 'esm' }],
+  plugins: [
+    dts(),
+    del({
+      targets: './dist/esm/icons',
+      hook: 'buildEnd',
+    }),
+  ],
 }
 
 export default [
   mainBundle,
-  iconBundle,
   declarationGenerator,
+  iconBundle,
   iconDeclarationGenerator,
 ]
