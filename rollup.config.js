@@ -52,7 +52,7 @@ const mainBundle = {
     }),
     resolve(),
     terser({ compress: { evaluate: false } }),
-    // filesize(),
+    filesize(),
     visualizer(),
   ],
 }
@@ -78,7 +78,7 @@ const iconBundle = {
       exclude: ['**/__test__/*', '**/__mocks__/*', '**/stories/*'],
     }),
     terser(),
-    // filesize(),
+    filesize(),
     visualizer(),
   ],
 }

@@ -13,7 +13,7 @@ export default meta
 export const Default = () => {
   return (
     <Container bg="blue4">
-      <LogoOONIRun />
+      <LogoOONIRun height="70px" />
     </Container>
   )
 }
