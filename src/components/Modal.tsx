@@ -23,6 +23,7 @@ const ModalCloseButton = ({ position, icon, onClick }: IModalCloseButton) => (
     }}
     icon={icon}
     onClick={onClick}
+    type="button"
   />
 )
 
