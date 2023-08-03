@@ -21,16 +21,6 @@ export interface IButton extends ButtonProps {
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-// export type IButton = ButtonProps & {
-//   disabled?: boolean
-//   inverted?: boolean
-//   hollow?: boolean
-//   spinner?: React.ReactNode
-//   variant?: Variant
-//   btnSize?: Size
-//   onClick?: React.MouseEventHandler<HTMLButtonElement>
-// } & ({ loading: true; spinner: React.ReactNode } | { loading?: false })
-
 const Button = forwardRef(
   (
     {
@@ -44,7 +34,7 @@ const Button = forwardRef(
       children,
       ...rest
     }: IButton,
-    ref
+    ref,
   ) => {
     let size = btnSize
     let componentVariant = 'primary'
@@ -111,6 +101,7 @@ const Button = forwardRef(
           padding: 0,
           '&:enabled': { cursor: 'pointer' },
         }}
+        disabled
       >
         <Box sx={loading ? { visibility: 'hidden', height: '0' } : undefined}>
           {children}
@@ -118,7 +109,7 @@ const Button = forwardRef(
         {loading && spinner}
       </Box>
     )
-  }
+  },
 )
 
 export default Button
