@@ -25,6 +25,7 @@ export { default as Select } from './components/Select'
 export { default as Checkbox } from './components/Checkbox'
 export { default as Label } from './components/Label'
 export { default as TagsInput } from './components/TagsInput'
+export { default as TagInput } from './components/TagInput'
 export { default as MultiSelect } from './components/MultiSelect'
 
 export { colors, theme }

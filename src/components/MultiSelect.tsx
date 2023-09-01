@@ -68,7 +68,7 @@ const MultiSelect = forwardRef(
         }}
       />
     </Box>
-  )
+  ),
 )
 
 export default MultiSelect
