@@ -5,6 +5,7 @@ import theme from '../theme'
 import { getMarginProps, omitMarginProps } from '../utils'
 import Box from './Box'
 import Text from './Text'
+import ErrorMessage from './ErrorMessage'
 
 interface Option {
   readonly label: string
@@ -15,6 +16,7 @@ export interface ISelect extends SelectProps {
   label?: string
   placeholder?: string
   onChange: (obj: Option[]) => void
+  error: string
 }
 
 const createOption = (label: string) => ({
@@ -23,7 +25,10 @@ const createOption = (label: string) => ({
 })
 
 const TagInput = forwardRef(
-  ({ label, name, value: initialValue, onChange, ...rest }: ISelect, ref) => {
+  (
+    { label, name, value: initialValue, onChange, error, ...rest }: ISelect,
+    ref,
+  ) => {
     const [inputValue, setInputValue] = React.useState('')
     const [value, setValue] = React.useState<Option[]>(initialValue)
 
@@ -110,6 +115,7 @@ const TagInput = forwardRef(
             }),
           }}
         />
+        {error && <ErrorMessage>{error}</ErrorMessage>}
       </Box>
     )
   },
