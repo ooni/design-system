@@ -101,7 +101,7 @@ const Button = forwardRef(
           padding: 0,
           '&:enabled': { cursor: 'pointer' },
         }}
-        disabled
+        disabled={disabled}
       >
         <Box sx={loading ? { visibility: 'hidden', height: '0' } : undefined}>
           {children}
