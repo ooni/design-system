@@ -1,4 +1,4 @@
-import React, { forwardRef, KeyboardEventHandler } from 'react'
+import React, { forwardRef, KeyboardEventHandler, useEffect } from 'react'
 import CreatableSelect from 'react-select/creatable'
 import { SelectProps } from 'types'
 import theme from '../theme'
@@ -25,7 +25,7 @@ const createOption = (label: string) => ({
 const TagInput = forwardRef(
   ({ label, name, value: initialValue, onChange, ...rest }: ISelect, ref) => {
     const [inputValue, setInputValue] = React.useState('')
-    const [value, setValue] = React.useState<readonly Option[]>(initialValue)
+    const [value, setValue] = React.useState<Option[]>(initialValue)
 
     const handleKeyDown: KeyboardEventHandler = (event) => {
       if (!inputValue) return
@@ -38,6 +38,8 @@ const TagInput = forwardRef(
           event.preventDefault()
       }
     }
+
+    useEffect(() => onChange(value), [value, onChange])
 
     return (
       <Box {...getMarginProps(rest)}>
@@ -60,7 +62,6 @@ const TagInput = forwardRef(
           onKeyDown={handleKeyDown}
           onChange={(newValue) => {
             setValue(newValue)
-            onChange(newValue)
           }}
           onInputChange={(newValue) => setInputValue(newValue)}
           inputValue={inputValue}
