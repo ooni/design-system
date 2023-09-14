@@ -62,8 +62,6 @@ const TagInput = forwardRef(
         <CreatableSelect
           ref={ref}
           isMulti
-          components={{ DropdownIndicator: null }}
-          menuIsOpen={false}
           onKeyDown={handleKeyDown}
           onChange={(newValue) => {
             setValue(newValue)
