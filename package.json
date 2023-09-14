@@ -1,7 +1,7 @@
 {
   "name": "ooni-components",
   "type": "module",
-  "version": "1.0.0-alpha.11",
+  "version": "1.0.0-alpha.12",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
