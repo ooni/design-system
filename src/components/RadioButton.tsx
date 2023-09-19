@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react'
 import { RadioProps } from 'types'
 import Box from './Box'
 import Label from './Label'
+import { getMarginProps, omitMarginProps } from '../utils'
 
 export interface IRadioButton extends RadioProps {
   label?: string
@@ -20,13 +21,14 @@ const RadioButton = forwardRef(
           color: 'gray4',
           alignItems: 'center',
         }}
+        {...getMarginProps(rest)}
       >
         <Box
           ref={ref}
           as="input"
           type="radio"
           id={id}
-          {...rest}
+          {...omitMarginProps(rest)}
           __css={{
             appearance: 'none',
             font: 'inherit',
@@ -61,7 +63,7 @@ const RadioButton = forwardRef(
         {label}
       </Label>
     )
-  }
+  },
 )
 
 export default RadioButton
