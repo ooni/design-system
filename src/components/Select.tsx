@@ -21,6 +21,7 @@ const Select = forwardRef(({ label, name, ...rest }: ISelect, ref) => (
       tx="forms"
       variant="select"
       id={name}
+      name={name}
       {...omitMarginProps(rest)}
       __css={{
         boxSizing: 'border-box',
