@@ -4,7 +4,7 @@
   "version": "1.0.0-alpha.12",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/esm/index.d.ts",
   "repository": "https://github.com/ooni/design-system.git",
   "homepage": "http://ooni.github.io/design-system",
   "author": "Arturo Filastò <arturo@filasto.net>",
