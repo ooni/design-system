@@ -14,8 +14,23 @@ import { BoxProps } from 'types'
 
 const sx = (props: any) => css(props.sx)(props.theme)
 const base = (props: any) => css(props.__css)(props.theme)
-const variant = ({ theme, variant, tx = 'variants' }: any) =>
-  css(get(theme, `${tx}.${variant}`, get(theme, variant)))(theme)
+const variant = ({ theme, variant, tx = 'variants' }: any) => {
+  let styles = {}
+  if (Array.isArray(variant)) {
+    variant.forEach((v) => {
+      styles = {
+        ...styles,
+        ...css(get(theme, `${tx}.${v}`, get(theme, v)))(theme),
+      }
+    })
+  } else {
+    styles = {
+      ...styles,
+      ...css(get(theme, `${tx}.${variant}`, get(theme, variant)))(theme),
+    }
+  }
+  return styles
+}
 
 const Box = styled('div').withConfig({ shouldForwardProp })<BoxProps>(
   {

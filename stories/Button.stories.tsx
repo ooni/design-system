@@ -38,3 +38,19 @@ export const LoadingButton: Story = {
     disabled: true,
   },
 }
+
+export const ColorVariant: Story = {
+  args: {
+    color: 'dark',
+    // hollow: true,
+    children: 'Button',
+    size: 'small',
+  },
+}
+
+export const Inverted: Story = {
+  args: {
+    inverted: true,
+    children: 'Button',
+  },
+}

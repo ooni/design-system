@@ -128,15 +128,35 @@ const theme = {
       '-webkit-tap-highlight-color': 'transparent',
       transition: '.2s ease-out',
       outline: 0,
+      borderRadius: '32px',
+    },
+    default: {
       color: 'white',
       bg: 'primary',
-      borderRadius: '32px',
+      borderColor: 'primary',
       '&:hover:enabled': {
         bg: 'blue9',
+        borderColor: 'blue9',
+      },
+    },
+    dark: {
+      bg: 'gray7',
+      color: 'white',
+      '&:hover:enabled': {
+        bg: 'black',
+      },
+    },
+    'dark-hollow': {
+      borderColor: 'gray7',
+      color: 'gray7',
+      '&:hover:enabled': {
+        color: 'black',
+        borderColor: 'black',
       },
     },
     link: {
       variant: 'variants.link',
+      bg: 'none',
     },
     unstyled: {},
     inverted: {
@@ -148,36 +168,19 @@ const theme = {
       },
     },
     hollow: {
-      variant: 'buttons.primary',
-      color: 'primary',
       bg: 'transparent',
       borderWidth: '2px',
       borderStyle: 'solid',
-      borderColor: 'primary',
-      '&:hover:enabled': {
-        color: 'blue9',
-        borderColor: 'blue9',
-      },
     },
     secondary: {
       variant: 'buttons.primary',
       color: 'background',
       bg: 'secondary',
     },
-    'primary-disabled': {
-      variant: 'buttons.primary',
+    disabled: {
       opacity: 0.5,
+      pointerEvents: 'none',
       cursor: 'not-allowed',
-    },
-    'hollow-disabled': {
-      variant: 'buttons.hollow',
-      opacity: 0.5,
-      pointerEvents: 'none',
-    },
-    'inverted-disabled': {
-      variant: 'buttons.inverted',
-      opacity: 0.5,
-      pointerEvents: 'none',
     },
     iconButton: {
       variant: 'buttons.hollow',
@@ -209,6 +212,27 @@ const theme = {
     facebookShare: {
       variant: 'buttons.share',
       bg: 'facebookBlue',
+    },
+    small: {
+      fontSize: 14,
+      height: 32,
+      px: 3,
+    },
+    medium: {
+      fontSize: 1,
+      height: 40,
+      px: 24,
+    },
+    large: {
+      fontSize: 2,
+      height: 48,
+      px: 4,
+    },
+    xLarge: {
+      fontSize: 2,
+      height: 60,
+      borderRadius: 48,
+      px: 5,
     },
   },
   forms: {
