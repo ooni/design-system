@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react'
 import { ButtonProps } from 'types'
 import Box from './Box'
+import Flex from './Flex'
 
 type Size = 'small' | 'medium' | 'large' | 'xLarge' | null
 type Color = 'default' | 'dark'
@@ -27,6 +28,8 @@ export interface IButton extends ButtonProps {
   variant?: Variant
   color?: Color
   size?: Size
+  startIcon?: React.ReactNode
+  endIcon?: React.ReactNode
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
@@ -43,6 +46,8 @@ const Button = forwardRef(
       loading = false,
       spinner,
       children,
+      startIcon,
+      endIcon,
       ...rest
     }: IButton,
     ref,
@@ -84,9 +89,22 @@ const Button = forwardRef(
         }}
         disabled={disabled}
       >
-        <Box sx={loading ? { visibility: 'hidden', height: '0' } : undefined}>
+        <Flex
+          sx={loading ? { visibility: 'hidden', height: '0' } : undefined}
+          alignItems="center"
+        >
+          {startIcon && (
+            <Flex className="icon" as="span" mr={1}>
+              {startIcon}
+            </Flex>
+          )}
           {children}
-        </Box>
+          {endIcon && (
+            <Flex className="icon" as="span" ml={1}>
+              {endIcon}
+            </Flex>
+          )}
+        </Flex>
         {loading && spinner}
       </Box>
     )
