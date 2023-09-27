@@ -133,10 +133,8 @@ const theme = {
     default: {
       color: 'white',
       bg: 'primary',
-      borderColor: 'primary',
       '&:hover:enabled': {
         bg: 'blue9',
-        borderColor: 'blue9',
       },
     },
     dark: {
@@ -163,7 +161,7 @@ const theme = {
       variant: 'buttons.primary',
       color: 'primary',
       bg: 'white',
-      ':hover:enabled': {
+      '&:hover:enabled': {
         bg: 'gray1',
       },
     },
@@ -217,22 +215,34 @@ const theme = {
       fontSize: 14,
       height: 32,
       px: 3,
+      '.icon': {
+        fontSize: 20,
+      },
     },
     medium: {
       fontSize: 1,
       height: 40,
       px: 24,
+      '.icon': {
+        fontSize: 22,
+      },
     },
     large: {
       fontSize: 2,
       height: 48,
       px: 4,
+      '.icon': {
+        fontSize: 26,
+      },
     },
     xLarge: {
       fontSize: 2,
       height: 60,
       borderRadius: 48,
       px: 5,
+      '.icon': {
+        fontSize: 26,
+      },
     },
   },
   forms: {

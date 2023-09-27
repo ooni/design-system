@@ -1,5 +1,7 @@
 import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
+import { MdShare } from 'react-icons/md'
+import { BsTwitter } from 'react-icons/bs'
 import Button from '../src/components/Button'
 
 const meta = {
@@ -45,6 +47,7 @@ export const ColorVariant: Story = {
     // hollow: true,
     children: 'Button',
     size: 'small',
+    endIcon: <BsTwitter />,
   },
 }
 
@@ -52,5 +55,6 @@ export const Inverted: Story = {
   args: {
     inverted: true,
     children: 'Button',
+    // disabled: true,
   },
 }
