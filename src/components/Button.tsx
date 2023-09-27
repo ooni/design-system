@@ -3,13 +3,21 @@ import { ButtonProps } from 'types'
 import Box from './Box'
 
 type Size = 'small' | 'medium' | 'large' | 'xLarge' | null
+type Color = 'default' | 'dark'
 type BaseVariants = 'primary' | 'hollow' | 'inverted'
-type AdditionalVariats =
+type AdditionalVariants =
   | 'iconButton'
   | 'link'
   | 'facebookShare'
   | 'twitterShare'
-type Variant = BaseVariants | AdditionalVariats | `${BaseVariants}-disabled`
+type Variant =
+  | BaseVariants
+  | AdditionalVariants
+  | Size
+  | 'disabled'
+  | `${BaseVariants}-disabled`
+  | Color
+  | `${Color}-hollow`
 export interface IButton extends ButtonProps {
   disabled?: boolean
   inverted?: boolean
@@ -17,7 +25,8 @@ export interface IButton extends ButtonProps {
   loading?: boolean
   spinner?: React.ReactNode
   variant?: Variant
-  btnSize?: Size
+  color?: Color
+  size?: Size
   onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
@@ -27,8 +36,10 @@ const Button = forwardRef(
       hollow = false,
       inverted = false,
       disabled = false,
-      variant,
-      btnSize = 'medium',
+      variant = 'primary',
+      size = 'medium',
+      color = 'default',
+      type = 'button',
       loading = false,
       spinner,
       children,
@@ -36,58 +47,28 @@ const Button = forwardRef(
     }: IButton,
     ref,
   ) => {
-    let size = btnSize
-    let componentVariant = 'primary'
-    if (variant === 'link' || variant === 'iconButton') size = null
+    let btnSize = size
+    let componentVariant = [variant]
 
-    if (hollow) componentVariant = 'hollow'
-    if (inverted) componentVariant = 'inverted'
-    if (disabled) componentVariant += '-disabled'
+    componentVariant.push(size)
+    if (disabled) componentVariant.push('disabled')
+    if (color) componentVariant.push(`${color}${hollow ? '-hollow' : ''}`)
+    if (hollow) componentVariant.push('hollow')
+    if (inverted) componentVariant.push('inverted')
 
-    if (variant !== undefined) {
-      componentVariant = variant
-    }
-
-    const sizeCss = (s: Size) => {
-      switch (s) {
-        case 'small':
-          return {
-            fontSize: 14,
-            height: 32,
-            px: 3,
-          }
-        case 'medium':
-          return {
-            fontSize: 1,
-            height: 40,
-            px: 24,
-          }
-        case 'large':
-          return {
-            fontSize: 2,
-            height: 48,
-            px: 4,
-          }
-        case 'xLarge':
-          return {
-            fontSize: 2,
-            height: 60,
-            borderRadius: 48,
-            px: 5,
-          }
-        default:
-          return {}
-      }
+    if (variant === 'link' || variant === 'iconButton') {
+      btnSize = null
+      componentVariant = [variant]
     }
 
     return (
       <Box
         ref={ref}
+        type={type}
         as="button"
         tx="buttons"
         variant={componentVariant}
         {...rest}
-        sx={{ ...sizeCss(size), ...rest?.sx }}
         __css={{
           appearance: 'none',
           display: 'inline-block',
