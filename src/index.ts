@@ -1,6 +1,5 @@
-import colors from './theme/colors'
-import theme from './theme'
-
+export { default as colors } from './theme/colors'
+export { default as theme } from './theme'
 export { default as Box } from './components/Box'
 export { default as Flex } from './components/Flex'
 export { default as Container } from './components/Container'
@@ -27,5 +26,3 @@ export { default as Label } from './components/Label'
 export { default as TagsInput } from './components/TagsInput'
 export { default as TagInput } from './components/TagInput'
 export { default as MultiSelect } from './components/MultiSelect'
-
-export { colors, theme }
