@@ -18,11 +18,18 @@ const mainBundle = {
   input: './src/index.ts',
   output: [
     {
+      file: packageJson.main,
+      exports: 'named',
+      interop: 'auto',
+      format: 'cjs',
+      sourcemap: true,
+    },
+    {
       file: packageJson.module,
       format: 'esm',
-      sourcemap: true,
       interop: 'auto',
-    },
+      sourcemap: true,
+    }
   ],
   plugins: [
     del({
@@ -61,7 +68,7 @@ const iconBundle = {
   input: './src/components/icons/index.ts',
   output: [
     {
-      file: 'dist/esm/ooni-components-icons.js',
+      file: 'dist/ooni-components-icons.js',
       format: 'esm',
       sourcemap: true,
     },
@@ -84,24 +91,24 @@ const iconBundle = {
 }
 
 const declarationGenerator = {
-  input: 'dist/esm/types/index.d.ts',
-  output: [{ file: 'dist/esm/index.d.ts', format: 'esm' }],
+  input: 'dist/types/index.d.ts',
+  output: [{ file: 'dist/index.d.ts', format: 'esm' }],
   plugins: [
     dts(),
     del({
-      targets: './dist/esm/types',
+      targets: './dist/types',
       hook: 'buildEnd',
     }),
   ],
 }
 
 const iconDeclarationGenerator = {
-  input: 'dist/esm/icons/types/index.d.ts',
-  output: [{ file: 'dist/esm/ooni-components-icons.d.ts', format: 'esm' }],
+  input: 'dist/icons/types/index.d.ts',
+  output: [{ file: 'dist/ooni-components-icons.d.ts', format: 'esm' }],
   plugins: [
     dts(),
     del({
-      targets: './dist/esm/icons',
+      targets: './dist/icons',
       hook: 'buildEnd',
     }),
   ],
