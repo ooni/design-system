@@ -68,10 +68,18 @@ const iconBundle = {
   input: './src/components/icons/index.ts',
   output: [
     {
-      file: 'dist/ooni-components-icons.js',
-      format: 'esm',
+      file: 'dist/ooni-components-icons.cjs.js',
+      exports: 'named',
+      interop: 'auto',
+      format: 'cjs',
       sourcemap: true,
     },
+    {
+      file: 'dist/ooni-components-icons.esm.js',
+      format: 'esm',
+      interop: 'auto',
+      sourcemap: true,
+    }
   ],
   plugins: [
     peerDepsExternal(),

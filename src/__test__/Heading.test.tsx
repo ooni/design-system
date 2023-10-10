@@ -1,5 +1,6 @@
 import React from 'react'
 import { screen } from '@testing-library/react'
+import 'jest-styled-components'
 import renderWithWrapper from './index'
 import { Heading } from '..'
 
@@ -36,9 +37,9 @@ describe('Heading', () => {
     renderWithWrapper({ component: <Heading h={2}>OONI Run!</Heading> })
 
     const headingElement = screen.getByRole('heading')
-    expect(headingElement).toHaveStyle('font-size: 36px')
-    expect(headingElement).toHaveStyle('font-weight: 300')
-    expect(headingElement).toHaveStyle('letter-spacing: -1px')
+    expect(headingElement).toHaveStyleRule('font-size', '36px')
+    expect(headingElement).toHaveStyleRule('font-weight', '300')
+    expect(headingElement).toHaveStyleRule('letter-spacing', '-1px')
   })
 
   test('render Heading with rebass style props', () => {
@@ -51,6 +52,6 @@ describe('Heading', () => {
     })
 
     const headingElement = screen.getByRole('heading')
-    expect(headingElement).toHaveStyle('color: red')
+    expect(headingElement).toHaveStyleRule('color', 'red')
   })
 })

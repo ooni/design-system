@@ -1,5 +1,6 @@
 import React from 'react'
 import { screen } from '@testing-library/react'
+import 'jest-styled-components'
 import renderWithWrapper from './index'
 import { Hero, HeroLead } from '..'
 
@@ -25,9 +26,9 @@ describe('Hero and HeroLead', () => {
     renderWithWrapper({ component: <Hero data-testid="test-hero" /> })
 
     const heroElement = screen.getByTestId('test-hero')
-    expect(heroElement).toHaveStyle('width: 100%')
-    expect(heroElement).toHaveStyle('text-align: center')
-    expect(heroElement).toHaveStyle('color: rgb(248, 249, 250)')
-    expect(heroElement).toHaveStyle('font-size: 28px')
+    expect(heroElement).toHaveStyleRule('width', '100%')
+    expect(heroElement).toHaveStyleRule('text-align', 'center')
+    expect(heroElement).toHaveStyleRule('color', '#f8f9fa')
+    expect(heroElement).toHaveStyleRule('font-size', '28px')
   })
 })

@@ -1,11 +1,10 @@
 import React from 'react'
 import { FaFacebook } from 'react-icons/fa'
-import { ButtonProps } from 'types'
-import Button from './Button'
+import Button, { IButton } from './Button'
 import Link from './Link'
 import Text from './Text'
 
-export interface IFacebookShareButton extends ButtonProps {
+export interface IFacebookShareButton extends IButton {
   url?: string
 }
 
