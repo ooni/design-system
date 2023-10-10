@@ -44,7 +44,6 @@ export const LoadingButton: Story = {
 export const ColorVariant: Story = {
   args: {
     color: 'dark',
-    // hollow: true,
     children: 'Button',
     size: 'small',
     endIcon: <BsTwitter />,
@@ -55,6 +54,12 @@ export const Inverted: Story = {
   args: {
     inverted: true,
     children: 'Button',
-    // disabled: true,
+  },
+}
+
+export const Hollow: Story = {
+  args: {
+    hollow: true,
+    children: 'Button',
   },
 }

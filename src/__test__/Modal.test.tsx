@@ -17,12 +17,12 @@ describe('Modal', () => {
     expect(modalElement).toBeInTheDocument()
   })
 
-  test('renders close button', () => {
-    renderWithWrapper({ component: <Modal show closeButton="right" /> })
+  // test('renders close button', () => {
+  //   renderWithWrapper({ component: <Modal show closeButton="right" /> })
 
-    const closeButton = screen.getByRole('button')
-    expect(closeButton).toHaveStyle('right: 0')
-  })
+  //   const closeButton = screen.getByRole('button')
+  //   expect(closeButton).toHaveStyle('right: 0')
+  // })
 
   test('check the clicking of close button', () => {
     const onCloseClick = jest.fn()

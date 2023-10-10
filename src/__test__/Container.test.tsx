@@ -1,5 +1,6 @@
 import React from 'react'
 import { screen } from '@testing-library/react'
+import 'jest-styled-components'
 import renderWithWrapper from './index'
 import { Container } from '..'
 
@@ -15,11 +16,11 @@ describe('Container', () => {
     renderWithWrapper({ component: <Container data-testid="test-div" /> })
 
     const containerElement = screen.getByTestId('test-div')
-    expect(containerElement).toHaveStyle('padding-left: 16px')
-    expect(containerElement).toHaveStyle('padding-right: 16px')
-    expect(containerElement).toHaveStyle('margin-left: auto')
-    expect(containerElement).toHaveStyle('margin-left: auto')
-    expect(containerElement).toHaveStyle('max-width: 768px')
+    expect(containerElement).toHaveStyleRule('padding-left', '16px')
+    expect(containerElement).toHaveStyleRule('padding-right', '16px')
+    expect(containerElement).toHaveStyleRule('margin-left', 'auto')
+    expect(containerElement).toHaveStyleRule('margin-left', 'auto')
+    expect(containerElement).toHaveStyleRule('max-width', '768px')
   })
 
   test('render Container with rebass props', () => {
@@ -28,6 +29,6 @@ describe('Container', () => {
     })
 
     const containerElement = screen.getByTestId('test-div')
-    expect(containerElement).toHaveStyle('max-width: 500px')
+    expect(containerElement).toHaveStyleRule('max-width', '500px')
   })
 })

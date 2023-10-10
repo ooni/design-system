@@ -4,12 +4,12 @@ import { ThemeProvider } from 'styled-components'
 import theme from '../theme'
 
 interface IRenderWithWrapper {
-  component: ReactElement<any, string | JSXElementConstructor<any>>
-  options?: any
+  component: ReactElement
+  options?: object
 }
 
 interface IWrapper {
-  children: ReactElement<any>
+  children: ReactElement
 }
 
 function renderWithWrapper({ component, options }: IRenderWithWrapper) {

@@ -1,6 +1,7 @@
 import React, { forwardRef, KeyboardEventHandler, useEffect } from 'react'
 import CreatableSelect from 'react-select/creatable'
 import { SelectProps } from 'types'
+import { MultiValue } from 'react-select'
 import theme from '../theme'
 import { getMarginProps, omitMarginProps } from '../utils'
 import Box from './Box'
@@ -12,10 +13,11 @@ interface Option {
   readonly value: string
 }
 
-export interface ISelect extends SelectProps {
+export interface ISelect extends Omit<SelectProps, 'value' | 'onChange'> {
   label?: string
   placeholder?: string
-  onChange: (obj: Option[]) => void
+  value: MultiValue<Option>
+  onChange: (obj: MultiValue<Option>) => void
   error: string
 }
 
@@ -30,7 +32,7 @@ const TagInput = forwardRef(
     ref,
   ) => {
     const [inputValue, setInputValue] = React.useState('')
-    const [value, setValue] = React.useState<Option[]>(initialValue)
+    const [value, setValue] = React.useState<MultiValue<Option>>(initialValue)
 
     const handleKeyDown: KeyboardEventHandler = (event) => {
       if (!inputValue) return

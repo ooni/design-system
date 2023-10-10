@@ -1,11 +1,10 @@
 import React, { useMemo } from 'react'
 import { FaTwitter } from 'react-icons/fa'
-import { ButtonProps } from 'types'
 import Link from './Link'
-import Button from './Button'
+import Button, { IButton } from './Button'
 import Text from './Text'
 
-export interface ITwitterShareButton extends ButtonProps {
+export interface ITwitterShareButton extends IButton {
   message?: string
   url?: string
   hashtags?: string
