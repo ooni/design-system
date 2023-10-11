@@ -62,8 +62,8 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: storybook-files
-          path: dist
+          name: storybook-static
+          path: storybook-static
 
   deploy-storybook:
     name: Deploy Storybook
@@ -76,8 +76,8 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
-          name: storybook-files
-          path: dist
+          name: storybook-static
+          path: storybook-static
       - name: Set branch environment variables
         id: branch-target
         if: github.event_name != 'pull_request'
