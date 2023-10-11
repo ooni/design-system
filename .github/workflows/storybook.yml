@@ -58,7 +58,7 @@ jobs:
           yarn install
       - name: Build Storybook
         run: |
-          yarn run build:storybook
+          yarn run storybook:build
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
