@@ -1,16 +1,16 @@
 import React, { forwardRef } from 'react'
-import { InputProps } from 'types'
+import { InputProps as IP } from 'types'
 import { getMarginProps, omitMarginProps } from '../utils'
 import ErrorMessage from './ErrorMessage'
 import Box from './Box'
 import Text from './Text'
 
-export interface IInput extends InputProps {
+export interface InputProps extends IP {
   error?: string | undefined
   label?: string
 }
 
-const Input = forwardRef(({ error, name, label, ...rest }: IInput, ref) => {
+const Input = forwardRef(({ error, name, label, ...rest }: InputProps, ref) => {
   return (
     <Box {...getMarginProps(rest)}>
       {label && (

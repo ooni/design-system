@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { CheckboxProps, LabelProps } from 'types'
+import { CheckboxProps as CP, LabelProps } from 'types'
 // import { props as systemProps } from '@styled-system/should-forward-prop'
 import Box from './Box'
 import Label from './Label'
@@ -18,7 +18,7 @@ import Label from './Label'
 
 // const getSystemProps = getProps((k) => PRE.test(k))
 
-export interface ICheckbox extends LabelProps {
+export interface CheckboxProps extends CP {
   // error?: string | undefined
   name: string
   label: string
@@ -26,8 +26,15 @@ export interface ICheckbox extends LabelProps {
 
 const Checkbox = forwardRef(
   (
-    { className, sx, name, label, variant = 'checkbox', ...props }: ICheckbox,
-    ref
+    {
+      className,
+      sx,
+      name,
+      label,
+      variant = 'checkbox',
+      ...props
+    }: CheckboxProps,
+    ref,
   ) => (
     <Label
       htmlFor={name}
@@ -37,7 +44,7 @@ const Checkbox = forwardRef(
         gridTemplateColumns: '1em auto',
         alignItems: 'center',
       }}
-      {...props}
+      // {...props}
     >
       <Box
         as="input"
@@ -74,7 +81,7 @@ const Checkbox = forwardRef(
       />
       {label}
     </Label>
-  )
+  ),
 )
 
 export default Checkbox

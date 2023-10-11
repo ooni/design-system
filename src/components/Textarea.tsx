@@ -1,18 +1,18 @@
 import React, { ReactElement, forwardRef } from 'react'
-import { TextareaProps } from 'types'
+import { TextareaProps as TP } from 'types'
 import { getMarginProps, omitMarginProps } from '../utils'
 import ErrorMessage from './ErrorMessage'
 import Box from './Box'
 import Text from './Text'
 
-export interface ITextarea extends TextareaProps {
+export interface TextareaProps extends TP {
   error?: string
   fontSize?: number
   label?: string | ReactElement
 }
 
 const Textarea = forwardRef(
-  ({ error, label, name, ...rest }: ITextarea, ref) => {
+  ({ error, label, name, ...rest }: TextareaProps, ref) => {
     return (
       <Box {...getMarginProps(rest)}>
         {label && (
@@ -48,7 +48,7 @@ const Textarea = forwardRef(
         {error && <ErrorMessage>{error}</ErrorMessage>}
       </Box>
     )
-  }
+  },
 )
 
 export default Textarea

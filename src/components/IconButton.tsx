@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react'
-import Button, { IButton } from './Button'
+import Button, { ButtonProps } from './Button'
 
-export interface IIconButton extends IButton {
+export interface IconButtonProps extends ButtonProps {
   icon: ReactNode
 }
 
-const IconButton = ({ icon, ...rest }: IIconButton) => {
+const IconButton = ({ icon, ...rest }: IconButtonProps) => {
   return (
     <Button variant="iconButton" {...rest}>
       {icon}

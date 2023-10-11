@@ -5,7 +5,7 @@ import Flex from './Flex'
 import IconButton from './IconButton'
 import Input from './Input'
 
-interface IInputWithIconButton extends InputProps {
+interface InputWithIconButtonProps extends InputProps {
   onAction?: () => void
   icon?: ReactNode
 }
@@ -14,7 +14,7 @@ export const InputWithIconButton = ({
   onAction,
   icon,
   ...rest
-}: IInputWithIconButton) => {
+}: InputWithIconButtonProps) => {
   return (
     <Flex alignItems="top">
       <Box width={icon ? 9 / 10 : 1}>

@@ -2,7 +2,7 @@ import React, { ChangeEvent, ReactNode, Children, cloneElement } from 'react'
 import { FlexProps } from 'types'
 import Flex from './Flex'
 
-export interface IRadioGroup extends FlexProps {
+export interface RadioGroupProps extends FlexProps {
   children?: ReactNode
   name?: string
   value?: string
@@ -16,7 +16,7 @@ const RadioGroup = ({
   onChange,
   direction = 'column',
   ...props
-}: IRadioGroup) => {
+}: RadioGroupProps) => {
   const iterateOverChildren = (children: ReactNode) => {
     return Children.map(children, (child: ReactNode): ReactNode => {
       if (!React.isValidElement(child)) return null

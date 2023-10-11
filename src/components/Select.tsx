@@ -1,14 +1,14 @@
 import React, { forwardRef } from 'react'
-import { SelectProps } from 'types'
+import { SelectProps as SP } from 'types'
 import { getMarginProps, omitMarginProps } from '../utils'
 import Box from './Box'
 import Text from './Text'
 
-export interface ISelect extends SelectProps {
+export interface SelectProps extends SP {
   label?: string
 }
 
-const Select = forwardRef(({ label, name, ...rest }: ISelect, ref) => (
+const Select = forwardRef(({ label, name, ...rest }: SelectProps, ref) => (
   <Box {...getMarginProps(rest)}>
     {label && (
       <Text fontWeight={600} mb={1} display="block" as="label" htmlFor={name}>

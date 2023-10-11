@@ -4,12 +4,12 @@ import Box from './Box'
 import Label from './Label'
 import { getMarginProps, omitMarginProps } from '../utils'
 
-export interface IRadioButton extends RadioProps {
+export interface RadioButtonProps extends RadioProps {
   label?: string
 }
 
 const RadioButton = forwardRef(
-  ({ label, name, id, ...rest }: IRadioButton, ref) => {
+  ({ label, name, id, ...rest }: RadioButtonProps, ref) => {
     return (
       <Label
         htmlFor={id}
