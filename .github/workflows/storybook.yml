@@ -3,7 +3,7 @@ name: Storybook
 on:
   push:
     branches:
-      - develop
+      - dev
       - master
     # Only run if relevant files changed.
     paths:
@@ -17,7 +17,7 @@ on:
       - 'package-lock.json'
   pull_request:
     branches:
-      - develop
+      - dev
       - master
     # Only run if relevant files changed.
     paths:
