@@ -1,37 +1,32 @@
 {
-  "settings": {
-    "react": {
-      "version": "16.4"
-    }
-  },
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:react/jsx-runtime"
   ],
+  "plugins": [
+    "@typescript-eslint", "react", "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
       "jsx": true
     },
-    "ecmaVersion": "2017",
-    "sourceType": "module"
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
-  "plugins": [
-    "react"
-  ],
+  "ignorePatterns": ["*.svg", "*.ttf", "*.woff", "*.eot", "*.md"],
   "rules": {
-    "indent": [
-      "error",
-      2
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
     "quotes": [
       "error",
       "single"
@@ -40,6 +35,36 @@
       "error",
       "never"
     ],
-    "react/prop-types": ["warn"]
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "endOfLine": "auto",
+        "arrowParens": "always"
+      }
+    ],
+    "react/prop-types": ["warn"],
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-console": "warn",
+    "import/no-unresolved": 0,
+    "react/jsx-filename-extension": [1, {
+      "extensions": [
+        ".ts",
+        ".tsx"
+      ]
+    }],
+    "import/extensions": ["error", "never", {"svg": "always", "ts": "always", "tsx": "always", "json": "always"}],
+    "no-use-before-define": ["error", { "variables": false }],
+    "@typescript-eslint/no-use-before-define": ["error", { "variables": false }],
+    "no-empty-function": "warn",
+    "@typescript-eslint/no-empty-function": ["warn"],
+    "dot-notation": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/no-array-index-key": "off",
+    "react/function-component-definition": "off",
+    "react/default-props-match-prop-types": "off"
   }
 }

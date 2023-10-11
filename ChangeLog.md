@@ -1,5 +1,77 @@
 # ChangeLog
 
+## ooni-components 0.5.0-alpha.6 [2022-09-09]
+
+Changes:
+
+* Visual changes in Twitter share button.
+
+## ooni-components 0.5.0-alpha.5 [2022-08-26]
+
+Changes:
+
+* Props adjustment for `Modal` component.
+* `borderRadius={20}` won't work for `Modal` component. Correct way to add border radius is through `sx`. \
+  Example - `sx={{ borderRadius: 20 }}`
+* Increased the `Modal` close icon size
+
+## ooni-components 0.5.0-alpha.4 [2022-08-24]
+
+Changes:
+
+* Resolved `Modal` component CSS bugs
+
+## ooni-components 0.5.0-alpha.3 [2022-08-12]
+
+Changes:
+
+* New component added - `Textarea`
+
+Breaking changes:
+
+* `Input` component has been separated out into `Input` and `Textarea` components. The `type="textarea"` and `rows` props won't work anymore.
+* Replace `<Input type="textarea" />` with `<Textarea />`
+
+## ooni-components 0.5.0-alpha.2 [2022-07-27]
+
+Changes:
+
+* `icons` have been migrated to a private module
+
+Breaking changes:
+
+* Import statement of `icons` have been changed. The working one is `"ooni-components/icons"`.
+
+## ooni-components 0.5.0-alpha.1 [2022-07-25]
+
+* Identical to `v0.5.0-alpha.0`
+
+## ooni-components 0.5.0-alpha.0 [2022-07-25]
+
+Adds:
+
+* Rollup bundler to the applicaton
+* Typescript support - `v4.7.4`
+* Styleguide and Eslint support
+
+Changes:
+
+* All components have been migrated to Typescript
+* New unit testing with @testing-library/react
+* Storybook in a more structured way
+
+Breaking changes:
+
+* Import statement of `svgs` and `animations` have been changed. \
+  The working ones are `"ooni-components/svgs/logos/abc.svg"` and `"ooni-components/animations/abc.json"`
+* Uninstall `rebass` and `@rebass/forms` from the deps as it's coming from design-system and might break things due to version conflicts.
+
+Dependency changes:
+
+* Storybook upgraded from `v5.x.x` to `v6.x.x`
+* `@rebass/preset`, `emotion-theming`, `palx`, `prop-types`, `react`, `react-dom`, `react-icons`, `styled-components`, `styled-system`, `victory` have been removed from the **dependencies**
+* `@rebass/forms`, `react`, `react-dom`, `rebass`, `styled-components` have been added as **peer-dependencies**
+
 ## ooni-components 0.4.6 [2021-04-08]
 Fixes:
 * Remove default outline around buttons
