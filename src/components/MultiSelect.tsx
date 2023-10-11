@@ -6,13 +6,13 @@ import { getMarginProps, omitMarginProps } from '../utils'
 import Box from './Box'
 import Text from './Text'
 
-export interface ISelect extends SelectProps {
+export interface MultiSelectProps extends SelectProps {
   label?: string
   options: { label: string; value: string | number }[]
 }
 
 const MultiSelect = forwardRef(
-  ({ label, name, options, ...rest }: ISelect, ref) => (
+  ({ label, name, options, ...rest }: MultiSelectProps, ref) => (
     <Box {...getMarginProps(rest)}>
       {label && (
         <Text fontWeight={600} mb={1} display="block" as="label" htmlFor={name}>

@@ -1,6 +1,6 @@
 import React, { forwardRef, KeyboardEventHandler, useEffect } from 'react'
 import CreatableSelect from 'react-select/creatable'
-import { SelectProps } from 'types'
+import { SelectProps as SP } from 'types'
 import { MultiValue } from 'react-select'
 import theme from '../theme'
 import { getMarginProps, omitMarginProps } from '../utils'
@@ -13,7 +13,7 @@ interface Option {
   readonly value: string
 }
 
-export interface ISelect extends Omit<SelectProps, 'value' | 'onChange'> {
+export interface SelectProps extends Omit<SP, 'value' | 'onChange'> {
   label?: string
   placeholder?: string
   value: MultiValue<Option>
@@ -28,7 +28,7 @@ const createOption = (label: string) => ({
 
 const TagInput = forwardRef(
   (
-    { label, name, value: initialValue, onChange, error, ...rest }: ISelect,
+    { label, name, value: initialValue, onChange, error, ...rest }: SelectProps,
     ref,
   ) => {
     const [inputValue, setInputValue] = React.useState('')

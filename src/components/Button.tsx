@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { ButtonProps } from 'types'
+import { ButtonProps as BP } from 'types'
 import Box from './Box'
 import Flex from './Flex'
 
@@ -19,7 +19,7 @@ type Variant =
   | `${BaseVariants}-disabled`
   | Color
   | `${Color}-hollow`
-export interface IButton extends ButtonProps {
+export interface ButtonProps extends BP {
   disabled?: boolean
   inverted?: boolean
   hollow?: boolean
@@ -49,11 +49,11 @@ const Button = forwardRef(
       startIcon,
       endIcon,
       ...rest
-    }: IButton,
+    }: ButtonProps,
     ref,
   ) => {
     let btnSize = size
-    let componentVariant = [variant]
+    let componentVariant = ['base', variant]
 
     componentVariant.push(size)
     if (disabled) componentVariant.push('disabled')
@@ -92,6 +92,7 @@ const Button = forwardRef(
         <Flex
           sx={loading ? { visibility: 'hidden', height: '0' } : undefined}
           alignItems="center"
+          justifyContent="center"
         >
           {startIcon && (
             <Flex className="icon" as="span" mr={1}>

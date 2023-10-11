@@ -16,12 +16,6 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <ThemeProvider theme={theme}>
-        {/* <link
-          rel="preload"
-          href="../fonts/FiraSans-Regular.woff"
-          as="font"
-          type="font/woff2"
-        /> */}
         <Story />
       </ThemeProvider>
     ),

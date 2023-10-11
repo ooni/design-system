@@ -118,7 +118,8 @@ const theme = {
     },
   },
   buttons: {
-    primary: {
+    base: {
+      fontFamily: 'inherit',
       display: 'inline-block',
       textTransform: 'capitalize',
       textAlign: 'center',
@@ -169,6 +170,14 @@ const theme = {
       bg: 'transparent',
       borderWidth: '2px',
       borderStyle: 'solid',
+    },
+    'default-hollow': {
+      borderColor: 'primary',
+      color: 'primary',
+      '&:hover:enabled': {
+        color: 'blue9',
+        borderColor: 'blue9',
+      },
     },
     secondary: {
       variant: 'buttons.primary',

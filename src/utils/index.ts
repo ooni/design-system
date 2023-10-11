@@ -1,5 +1,4 @@
-// import { props as systemProps } from '@styled-system/should-forward-prop'
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BoxKnownProps } from 'types'
 
 // const dsProps = [...systemProps, 'sx', 'variant']

@@ -4,13 +4,17 @@ import { BoxProps } from 'types'
 import IconButton from './IconButton'
 import Box from './Box'
 
-interface IModalCloseButton {
+interface ModalCloseButtonProps {
   position?: 'left' | 'right'
   icon: ReactNode
   onClick?: () => void
 }
 
-const ModalCloseButton = ({ position, icon, onClick }: IModalCloseButton) => (
+const ModalCloseButton = ({
+  position,
+  icon,
+  onClick,
+}: ModalCloseButtonProps) => (
   <IconButton
     sx={{
       position: 'absolute',
@@ -27,7 +31,7 @@ const ModalCloseButton = ({ position, icon, onClick }: IModalCloseButton) => (
   />
 )
 
-export interface IModal extends BoxProps {
+export interface ModalProps extends BoxProps {
   show?: boolean
   closeButton?: 'left' | 'right'
   onHideClick?: () => void
@@ -40,7 +44,7 @@ export const Modal = ({
   children,
   sx,
   ...rest
-}: IModal) => {
+}: ModalProps) => {
   return (
     <Box
       sx={{

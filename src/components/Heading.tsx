@@ -2,11 +2,11 @@ import React from 'react'
 import { TextProps } from 'types'
 import Text from './Text'
 
-export interface IHeading extends TextProps {
+export interface HeadingProps extends TextProps {
   h?: number
 }
 
-const Heading = ({ h = 1, ...rest }: IHeading) => {
+const Heading = ({ h = 1, ...rest }: HeadingProps) => {
   const getHeadingElement = () => {
     switch (h) {
       case 1:
