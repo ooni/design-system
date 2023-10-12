@@ -3,7 +3,6 @@ name: Storybook
 on:
   push:
     branches:
-      - dev
       - master
     # Only run if relevant files changed.
     paths:
@@ -82,17 +81,14 @@ jobs:
         id: branch-target
         if: github.event_name != 'pull_request'
         run: echo "dir=${GITHUB_REF##*/}" >> $GITHUB_OUTPUT
-      - name: Set PR environment variables
+      - name: Deploy PR
         id: pr-target
         if: github.event_name == 'pull_request'
-        env:
-          PULL_REQUEST_NUMBER: ${{ github.event.number }}
-        run: echo "dir=pr/${PULL_REQUEST_NUMBER}" >> $GITHUB_OUTPUT
-      - name: Commit updates
         run: |
-          mkdir -p /${TARGET_DIR}
-          rm -rf /${TARGET_DIR}
-          mv dist /${TARGET_DIR}
+          echo "dir=pr/${PULL_REQUEST_NUMBER}" >> $GITHUB_OUTPUT
+          mkdir -p ${TARGET_DIR}
+          rm -rf ${TARGET_DIR}
+          mv storybook-static ${TARGET_DIR}
           git add .
           git status
           git diff --staged --quiet && echo 'No changes to commit; exiting!' && exit 0
@@ -100,7 +96,19 @@ jobs:
           git commit -m "Deploy storybook for ${TARGET_DIR}."
           git push origin gh-pages
         env:
+          PULL_REQUEST_NUMBER: ${{ github.event.number }}
           TARGET_DIR: ${{ steps.pr-target.outputs.dir }}
+      # - name: Deploy master
+      #   if: github.event_name == 'push'
+      #   run: |
+      #     find -mindepth 1 -delete
+      #     mv storybook-static .
+      #     git add .
+      #     git status
+      #     git diff --staged --quiet && echo 'No changes to commit; exiting!' && exit 0
+      #     git pull --no-edit --quiet
+      #     git commit -m "Deploy storybook for ${TARGET_DIR}."
+      #     git push origin gh-pages
 
   remove-storybook:
     name: Remove Storybook
