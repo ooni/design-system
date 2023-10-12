@@ -81,11 +81,15 @@ jobs:
         id: branch-target
         if: github.event_name != 'pull_request'
         run: echo "dir=${GITHUB_REF##*/}" >> $GITHUB_OUTPUT
-      - name: Deploy PR
+      - name: Set PR environment variables
         id: pr-target
         if: github.event_name == 'pull_request'
+        env:
+          PULL_REQUEST_NUMBER: ${{ github.event.number }}
+        run: echo "dir=pr/${PULL_REQUEST_NUMBER}" >> $GITHUB_OUTPUT
+      - name: Deploy PR
+        if: github.event_name == 'pull_request'
         run: |
-          echo "dir=pr/${PULL_REQUEST_NUMBER}" >> $GITHUB_OUTPUT
           mkdir -p ${TARGET_DIR}
           rm -rf ${TARGET_DIR}
           mv storybook-static ${TARGET_DIR}
@@ -96,7 +100,6 @@ jobs:
           git commit -m "Deploy storybook for ${TARGET_DIR}."
           git push origin gh-pages
         env:
-          PULL_REQUEST_NUMBER: ${{ github.event.number }}
           TARGET_DIR: ${{ steps.pr-target.outputs.dir }}
       # - name: Deploy master
       #   if: github.event_name == 'push'
