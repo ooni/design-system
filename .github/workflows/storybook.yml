@@ -90,8 +90,8 @@ jobs:
       - name: Deploy PR
         if: github.event_name == 'pull_request'
         run: |
-          git config --global user.name "${GITHUB_ACTOR}"
-          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "majakomel"
+          git config --global user.email "majakomel@users.noreply.github.com"
           mkdir -p ${TARGET_DIR}
           rm -rf ${TARGET_DIR}
           mv storybook-static ${TARGET_DIR}
