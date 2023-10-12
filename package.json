@@ -1,6 +1,6 @@
 {
   "name": "ooni-components",
-  "version": "1.0.0-alpha.20",
+  "version": "1.0.0-alpha.21",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -103,7 +103,7 @@
     "lint": "eslint --ignore-path .gitignore --ignore-pattern '/components/icons/*' .",
     "release": "yarn run build && yarn publish --new-version $npm_package_version",
     "release:win": "yarn run build && yarn publish --new-version %npm_package_version%",
-    "release:alpha": "yarn publish --tag alpha",
+    "release:alpha": "yarn run build && yarn publish --tag alpha --new-version $npm_package_version",
     "eslint": "esw src/**",
     "eslint-watch": "esw -w --changed src/**",
     "eslint-watch-quiet": "esw -w --quiet --changed src/**",

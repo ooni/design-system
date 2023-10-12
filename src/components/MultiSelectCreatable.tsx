@@ -13,12 +13,13 @@ interface Option {
   readonly value: string
 }
 
-export interface SelectProps extends Omit<SP, 'value' | 'onChange'> {
+export interface MultiSelectCreatableProps
+  extends Omit<SP, 'value' | 'onChange'> {
   label?: string
   placeholder?: string
   value: MultiValue<Option>
   onChange: (obj: MultiValue<Option>) => void
-  error: string
+  error?: string
 }
 
 const createOption = (label: string) => ({
@@ -26,9 +27,16 @@ const createOption = (label: string) => ({
   value: label,
 })
 
-const TagInput = forwardRef(
+const MultiSelectCreatable = forwardRef(
   (
-    { label, name, value: initialValue, onChange, error, ...rest }: SelectProps,
+    {
+      label,
+      name,
+      value: initialValue,
+      onChange,
+      error,
+      ...rest
+    }: MultiSelectCreatableProps,
     ref,
   ) => {
     const [inputValue, setInputValue] = React.useState('')
@@ -121,4 +129,4 @@ const TagInput = forwardRef(
   },
 )
 
-export default TagInput
+export default MultiSelectCreatable
