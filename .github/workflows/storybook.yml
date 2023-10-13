@@ -46,7 +46,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-storybook:
+  build:
     name: Build Storybook
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -70,10 +70,10 @@ jobs:
           name: storybook-static
           path: storybook-static
 
-  deploy-storybook:
+  deploy:
     name: Deploy Storybook
     runs-on: ubuntu-latest
-    needs: build-storybook
+    needs: build
     steps:
       - uses: actions/checkout@v3
         with:
@@ -96,8 +96,8 @@ jobs:
       - name: Deploy PR
         if: github.event_name == 'pull_request'
         run: |
-          git config --global user.name "majakomel"
-          git config --global user.email "majakomel@users.noreply.github.com"
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           mkdir -p ${TARGET_DIR}
           rm -rf ${TARGET_DIR}
           mv storybook-static ${TARGET_DIR}
@@ -112,7 +112,7 @@ jobs:
       # - name: Deploy master
       #   if: github.event_name == 'push'
       #   run: |
-      #     find -mindepth 1 -delete
+      #     find . -maxdepth 1 -type f -delete
       #     mv storybook-static .
       #     git add .
       #     git status
@@ -121,7 +121,18 @@ jobs:
       #     git commit -m "Deploy storybook for ${TARGET_DIR}."
       #     git push origin gh-pages
 
-  remove-storybook:
+  comment:
+    name: Comment with preview link
+    uses: peter-evans/create-or-update-comment@v3
+    needs: build
+    if: ( github.event_name == 'pull_request' && github.event.action == 'open' && contains( github.head_ref, 'dependabot/' ) == false ) && github.event.pull_request.head.repo.fork == false
+    with:
+      issue-number: ${{ github.event.pull_request.number }}
+      body: |
+        Preview:
+        https://ooni.github.io/design-system/pr/${{ github.event.number }}
+
+  remove:
     name: Remove Storybook
     runs-on: ubuntu-latest
     timeout-minutes: 20
