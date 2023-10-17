@@ -1,6 +1,9 @@
-import React, { FC } from 'react'
-import { Text as RebassText, TextProps } from 'rebass/styled-components'
+import React, { forwardRef } from 'react'
+import { TextProps } from 'types'
+import Box from './Box'
 
-const Text: FC<TextProps> = (props) => <RebassText {...props} />
+export const Text = forwardRef((props: TextProps, ref) => (
+  <Box ref={ref} tx="text" {...props} />
+))
 
 export default Text

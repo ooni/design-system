@@ -1,29 +1,44 @@
-import React, { FC } from 'react'
-import {
-  Input as RebassInput,
-  InputProps,
-} from '@rebass/forms/styled-components'
+import React, { forwardRef } from 'react'
+import { InputProps as IP } from 'types'
+import { getMarginProps, omitMarginProps } from '../utils'
 import ErrorMessage from './ErrorMessage'
+import Box from './Box'
+import Text from './Text'
 
-export interface IInput extends InputProps {
-  error?: string
-  fontSize?: number
+export interface InputProps extends IP {
+  error?: string | undefined
+  label?: string
 }
 
-const Input: FC<IInput> = (props) => {
-  const { error, fontSize, ...rest } = props
-
+const Input = forwardRef(({ error, name, label, ...rest }: InputProps, ref) => {
   return (
-    <div>
-      <RebassInput {...rest} variant={error ? 'error' : 'forms.input'} />
+    <Box {...getMarginProps(rest)}>
+      {label && (
+        <Text fontWeight={600} mb={1} display="block" as="label" htmlFor={name}>
+          {label}
+        </Text>
+      )}
+      <Box
+        ref={ref}
+        as="input"
+        type="text"
+        tx="forms"
+        id={name}
+        variant={error ? 'errorInput' : 'forms.input'}
+        {...omitMarginProps(rest)}
+        __css={{
+          display: 'block',
+          width: '100%',
+          appearance: 'none',
+          fontSize: 'inherit',
+          lineHeight: 'inherit',
+          color: 'inherit',
+          bg: 'transparent',
+        }}
+      />
       {error && <ErrorMessage>{error}</ErrorMessage>}
-    </div>
+    </Box>
   )
-}
-
-Input.defaultProps = {
-  error: undefined,
-  fontSize: 1,
-}
+})
 
 export default Input

@@ -1,29 +1,54 @@
-import React, { FC } from 'react'
-import {
-  Textarea as RebassTextarea,
-  TextareaProps,
-} from '@rebass/forms/styled-components'
+import React, { ReactElement, forwardRef } from 'react'
+import { TextareaProps as TP } from 'types'
+import { getMarginProps, omitMarginProps } from '../utils'
 import ErrorMessage from './ErrorMessage'
+import Box from './Box'
+import Text from './Text'
 
-export interface ITextarea extends TextareaProps {
+export interface TextareaProps extends TP {
   error?: string
   fontSize?: number
+  label?: string | ReactElement
 }
 
-const Textarea: FC<ITextarea> = (props) => {
-  const { error, fontSize, ...rest } = props
-
-  return (
-    <div>
-      <RebassTextarea {...rest} variant={error ? 'error' : 'forms.input'} />
-      {error && <ErrorMessage>{error}</ErrorMessage>}
-    </div>
-  )
-}
-
-Textarea.defaultProps = {
-  error: undefined,
-  fontSize: 1,
-}
+const Textarea = forwardRef(
+  ({ error, label, name, ...rest }: TextareaProps, ref) => {
+    return (
+      <Box {...getMarginProps(rest)}>
+        {label && (
+          <Text
+            fontWeight="bold"
+            mb={1}
+            display="block"
+            as="label"
+            htmlFor={name}
+          >
+            {label}
+          </Text>
+        )}
+        <Box
+          ref={ref}
+          as="textarea"
+          tx="forms"
+          variant={error ? 'errorTextarea' : 'textarea'}
+          {...omitMarginProps(rest)}
+          __css={{
+            display: 'block',
+            width: '100%',
+            p: 2,
+            appearance: 'none',
+            fontSize: 'inherit',
+            lineHeight: 'inherit',
+            border: '1px solid',
+            borderRadius: 'default',
+            color: 'inherit',
+            bg: 'transparent',
+          }}
+        />
+        {error && <ErrorMessage>{error}</ErrorMessage>}
+      </Box>
+    )
+  },
+)
 
 export default Textarea

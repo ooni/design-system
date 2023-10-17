@@ -1,5 +1,6 @@
 import React from 'react'
 import { screen } from '@testing-library/react'
+import 'jest-styled-components'
 import renderWithWrapper from './index'
 import { Link } from '..'
 
@@ -23,7 +24,7 @@ describe('Link', () => {
     })
 
     const linkElement = screen.getByTestId('link-test')
-    expect(linkElement).toHaveStyle('color: red')
+    expect(linkElement).toHaveStyleRule('color', 'red')
     expect(linkElement).toHaveTextContent(/OONI Explorer/i)
   })
 

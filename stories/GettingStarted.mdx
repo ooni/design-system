@@ -1,0 +1,37 @@
+# Getting Started
+
+## Developers
+
+The OONI design system is based on selection of carefully tuned [React.js](https://facebook.github.io/react/) components.
+
+If you want to start using the components inside of your design all you need to
+do is run:
+
+```
+npm install --save ooni-components
+```
+
+To use the ooni theme you will need to wrap the root of your application with
+the `<Provider />` by applying the OONI theme like this:
+
+```jsx
+import {
+  Provider,
+  Heading,
+  theme
+} from 'ooni-components'
+
+const App = props => (
+  <Provider theme={theme}>
+    <Heading>Hello world!</Heading>
+  </Provider>
+)
+```
+
+## Technological stack
+
+These are some of the awesome libraries we use:
+
+* [Styled Components](https://www.styled-components.com/)
+
+* [Styled System](http://jxnblk.com/styled-system/)

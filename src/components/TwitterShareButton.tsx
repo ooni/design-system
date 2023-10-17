@@ -1,9 +1,10 @@
-import React, { FC, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import { FaTwitter } from 'react-icons/fa'
-import { Link, Button, ButtonProps } from 'rebass/styled-components'
+import Link from './Link'
+import Button, { ButtonProps } from './Button'
 import Text from './Text'
 
-export interface ITwitterShareButton extends ButtonProps {
+export interface TwitterShareButtonProps extends ButtonProps {
   message?: string
   url?: string
   hashtags?: string
@@ -11,7 +12,7 @@ export interface ITwitterShareButton extends ButtonProps {
   inReplyTo?: string
 }
 
-const TwitterShareButton: FC<ITwitterShareButton> = (props) => {
+const TwitterShareButton = (props: TwitterShareButtonProps) => {
   const {
     message = '',
     url = '',
@@ -56,14 +57,6 @@ const TwitterShareButton: FC<ITwitterShareButton> = (props) => {
       </Button>
     </Link>
   )
-}
-
-TwitterShareButton.defaultProps = {
-  message: '',
-  url: '',
-  hashtags: '',
-  via: '',
-  inReplyTo: '',
 }
 
 export default TwitterShareButton

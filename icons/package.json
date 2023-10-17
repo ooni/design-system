@@ -1,6 +1,6 @@
 {
   "name": "ooni-components/icons",
   "private": true,
-  "module": "../dist/esm/ooni-components-icons.js",
-  "jsnext:main": "../dist/esm/ooni-components-icons.js"
+  "module": "../dist/ooni-components-icons.esm.js",
+  "main": "../dist/ooni-components-icons.cjs.js"
 }

@@ -1,19 +1,9 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import { ReactComponent as RunHorizontalMonochromeInverted } from '../../svgs/logos/Run-HorizontalMonochromeInverted.svg'
+import React from 'react'
+import OONIRunLogo from '../../svgs/logos/Run-HorizontalMonochromeInverted.svg'
+import Image from './Image'
 
-const StyledSubBrand = styled.div`
-  padding: 20px;
-`
-
-const LogoOONIRun: FC = () => {
-  return (
-    <StyledSubBrand>
-      <RunHorizontalMonochromeInverted
-        style={{ height: '70px', display: 'inline' }}
-      />
-    </StyledSubBrand>
-  )
-}
+const LogoOONIRun = ({ ...props }) => (
+  <Image src={OONIRunLogo} css={{ display: 'inline' }} {...props} />
+)
 
 export default LogoOONIRun

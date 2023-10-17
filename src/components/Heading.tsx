@@ -1,14 +1,12 @@
-import React, { FC } from 'react'
-import { TextProps } from 'rebass/styled-components'
+import React from 'react'
+import { TextProps } from 'types'
 import Text from './Text'
 
-export interface IHeading extends TextProps {
+export interface HeadingProps extends TextProps {
   h?: number
 }
 
-const Heading: FC<IHeading> = (props) => {
-  const { h, ...rest } = props
-
+const Heading = ({ h = 1, ...rest }: HeadingProps) => {
   const getHeadingElement = () => {
     switch (h) {
       case 1:
@@ -29,10 +27,6 @@ const Heading: FC<IHeading> = (props) => {
   return (
     <Text as={getHeadingElement()} {...rest} variant={getHeadingElement()} />
   )
-}
-
-Heading.defaultProps = {
-  h: 1,
 }
 
 export default Heading
