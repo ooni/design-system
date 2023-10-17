@@ -40,14 +40,9 @@ const mainBundle = {
     svgr(),
     json(),
     commonjs(),
-    // babel({
-    //   extensions,
-    //   babelHelpers: 'bundled',
-    //   exclude: 'node_modules/**',
-    // }),
     typescript({
       tsconfig: './tsconfig.json',
-      exclude: ['**/__test__/*', '**/__mocks__/*', '**/stories/*'],
+      exclude: ['node_modules', 'dist', '**/__test__/*', '**/__mocks__/*', '**/stories/*'],
     }),
     copy({
       targets: [
@@ -99,7 +94,7 @@ const iconBundle = {
 }
 
 const declarationGenerator = {
-  input: 'dist/types/index.d.ts',
+  input: 'dist/types/src/index.d.ts',
   output: [{ file: 'dist/index.d.ts', format: 'esm' }],
   plugins: [
     dts(),
