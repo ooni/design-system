@@ -48,9 +48,17 @@ const MultiSelectCreatable = forwardRef(
       switch (event.key) {
         case 'Enter':
         case 'Tab':
+        case ',':
           setValue((prev) => [...prev, createOption(inputValue)])
           setInputValue('')
           event.preventDefault()
+      }
+    }
+
+    const handleBlur = () => {
+      if (inputValue) {
+        setValue((prev) => [...prev, createOption(inputValue)])
+        setInputValue('')
       }
     }
 
@@ -76,6 +84,7 @@ const MultiSelectCreatable = forwardRef(
           onChange={(newValue) => {
             setValue(newValue)
           }}
+          onBlur={handleBlur}
           onInputChange={(newValue) => setInputValue(newValue)}
           inputValue={inputValue}
           value={value}

@@ -193,12 +193,12 @@ const theme = {
       variant: 'buttons.hollow',
       border: 'none',
       borderRadius: 'none',
-      color: 'gray5',
+      color: 'black',
       '&:hover': {
-        color: 'gray4',
+        color: 'gray6',
       },
       '&:active': {
-        color: 'gray6',
+        color: 'gray8',
       },
     },
     share: {

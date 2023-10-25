@@ -1,34 +1,32 @@
 import React, { ReactNode } from 'react'
 import { MdClose } from 'react-icons/md'
 import { BoxProps } from 'types'
-import IconButton from './IconButton'
 import Box from './Box'
+import IconButton from './IconButton'
+import Flex from './Flex'
 
 interface ModalCloseButtonProps {
-  position?: 'left' | 'right'
   icon: ReactNode
   onClick?: () => void
 }
 
-const ModalCloseButton = ({
-  position,
-  icon,
-  onClick,
-}: ModalCloseButtonProps) => (
-  <IconButton
-    sx={{
-      position: 'absolute',
-      top: 0,
-      height: '28px',
-      padding: 0,
-      margin: 0,
-      left: position === 'left' ? 0 : 'initial',
-      right: position === 'right' ? 0 : 'initial',
-    }}
-    icon={icon}
-    onClick={onClick}
-    type="button"
-  />
+const ModalCloseButton = ({ icon, onClick }: ModalCloseButtonProps) => (
+  <Flex justifyContent="end">
+    <IconButton
+      sx={{
+        position: 'absolute',
+        top: 0,
+        height: '28px',
+        padding: 0,
+        marginRight: 2,
+        marginLeft: 2,
+        marginTop: 1,
+      }}
+      icon={icon}
+      onClick={onClick}
+      type="button"
+    />
+  </Flex>
 )
 
 export interface ModalProps extends BoxProps {
@@ -64,14 +62,11 @@ export const Modal = ({
           overflow: 'auto',
           zIndex: 1050,
           bg: 'white',
+          borderRadius: '4px',
           ...sx,
         }}
       >
-        <ModalCloseButton
-          onClick={onHideClick}
-          icon={<MdClose size={20} />}
-          position={closeButton}
-        />
+        <ModalCloseButton onClick={onHideClick} icon={<MdClose size={20} />} />
         {children}
       </Box>
       {show && (
