@@ -18,7 +18,7 @@ describe('Modal', () => {
   })
 
   // test('renders close button', () => {
-  //   renderWithWrapper({ component: <Modal show closeButton="right" /> })
+  //   renderWithWrapper({ component: <Modal show /> })
 
   //   const closeButton = screen.getByRole('button')
   //   expect(closeButton).toHaveStyle('right: 0')
@@ -28,7 +28,7 @@ describe('Modal', () => {
     const onCloseClick = jest.fn()
     renderWithWrapper({
       component: (
-        <Modal show closeButton="right" onHideClick={onCloseClick}>
+        <Modal show onHideClick={onCloseClick}>
           <div data-testid="modal-content">Test</div>
         </Modal>
       ),
