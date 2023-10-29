@@ -31,13 +31,11 @@ const ModalCloseButton = ({ icon, onClick }: ModalCloseButtonProps) => (
 
 export interface ModalProps extends BoxProps {
   show?: boolean
-  closeButton?: 'left' | 'right'
   onHideClick?: () => void
 }
 
 export const Modal = ({
   show = false,
-  closeButton = 'right',
   onHideClick,
   children,
   sx,

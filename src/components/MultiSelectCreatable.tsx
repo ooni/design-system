@@ -1,4 +1,9 @@
-import React, { forwardRef, KeyboardEventHandler, useEffect } from 'react'
+import React, {
+  FocusEvent,
+  forwardRef,
+  KeyboardEventHandler,
+  useEffect,
+} from 'react'
 import CreatableSelect from 'react-select/creatable'
 import { SelectProps as SP } from 'types'
 import { MultiValue } from 'react-select'
@@ -14,11 +19,12 @@ interface Option {
 }
 
 export interface MultiSelectCreatableProps
-  extends Omit<SP, 'value' | 'onChange'> {
+  extends Omit<SP, 'value' | 'onChange' | 'onBlur'> {
   label?: string
   placeholder?: string
   value: MultiValue<Option>
   onChange: (obj: MultiValue<Option>) => void
+  onBlur?: (e: FocusEvent<HTMLInputElement, Element>) => void
   error?: string
 }
 
@@ -34,6 +40,7 @@ const MultiSelectCreatable = forwardRef(
       name,
       value: initialValue,
       onChange,
+      onBlur,
       error,
       ...rest
     }: MultiSelectCreatableProps,
@@ -55,10 +62,11 @@ const MultiSelectCreatable = forwardRef(
       }
     }
 
-    const handleBlur = () => {
+    const handleBlur = (e: FocusEvent<HTMLInputElement, Element>) => {
       if (inputValue) {
         setValue((prev) => [...prev, createOption(inputValue)])
         setInputValue('')
+        if (onBlur) onBlur(e)
       }
     }
 
@@ -79,6 +87,7 @@ const MultiSelectCreatable = forwardRef(
         )}
         <CreatableSelect
           ref={ref}
+          {...omitMarginProps(rest)}
           isMulti
           onKeyDown={handleKeyDown}
           onChange={(newValue) => {
@@ -88,7 +97,6 @@ const MultiSelectCreatable = forwardRef(
           onInputChange={(newValue) => setInputValue(newValue)}
           inputValue={inputValue}
           value={value}
-          {...omitMarginProps(rest)}
           styles={{
             control: (baseStyles, state) => ({
               ...baseStyles,
