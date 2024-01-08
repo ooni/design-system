@@ -1,27 +1,14 @@
 import React, { forwardRef } from 'react'
-import { CheckboxProps as CP, LabelProps } from 'types'
-// import { props as systemProps } from '@styled-system/should-forward-prop'
+import { CheckboxProps as CP } from 'types'
+import { getMarginProps, omitMarginProps } from '../utils'
 import Box from './Box'
-import Label from './Label'
-
-// const rebassProps = [...systemProps, 'sx', 'variant']
-
-// const PRE = new RegExp(`^(${rebassProps.join('|')})$`)
-
-// const getProps = (test) => (props) => {
-//   const next = {}
-//   for (const key in props) {
-//     if (test(key || '')) next[key] = props[key]
-//   }
-//   return next
-// }
-
-// const getSystemProps = getProps((k) => PRE.test(k))
+import Flex from './Flex'
 
 export interface CheckboxProps extends CP {
-  // error?: string | undefined
+  error?: string | undefined
   name: string
   label: string
+  reverse?: boolean
 }
 
 const Checkbox = forwardRef(
@@ -32,27 +19,31 @@ const Checkbox = forwardRef(
       name,
       label,
       variant = 'checkbox',
+      reverse = false,
+      error,
       ...props
     }: CheckboxProps,
     ref,
   ) => (
-    <Label
-      htmlFor={name}
-      css={{
-        gap: '0.5em',
-        display: 'grid',
-        gridTemplateColumns: '1em auto',
-        alignItems: 'center',
+    <Flex
+      sx={{
+        ...(reverse && {
+          flexDirection: 'row-reverse',
+          justifyContent: 'flex-end',
+        }),
+        gap: 2,
       }}
-      // {...props}
+      {...getMarginProps(props)}
     >
       <Box
         as="input"
         ref={ref}
         type="checkbox"
         id={name}
-        {...props}
+        {...omitMarginProps(props)}
         __css={{
+          flexShrink: 0,
+          flexGrow: 0,
           color: 'blue5',
           appearance: 'none',
           margin: 0,
@@ -79,47 +70,17 @@ const Checkbox = forwardRef(
           },
         }}
       />
-      {label}
-    </Label>
+      <Box
+        as="label"
+        htmlFor={name}
+        css={{
+          overflowWrap: 'anywhere',
+        }}
+      >
+        {label}
+      </Box>
+    </Flex>
   ),
 )
 
 export default Checkbox
-
-// <Box>
-//   <Box
-//     ref={ref}
-//     as="input"
-//     type="checkbox"
-//     {...props}
-//     sx={{
-//       position: 'absolute',
-//       opacity: 0,
-//       zIndex: -1,
-//       width: 1,
-//       height: 1,
-//       overflow: 'hidden',
-//     }}
-//   />
-//   <Box
-//     as={CheckboxIcon}
-//     aria-hidden="true"
-//     tx="forms"
-//     variant={variant}
-//     className={className}
-//     sx={sx}
-//     {...getSystemProps(props)}
-//     __css={{
-//       mr: 2,
-//       borderRadius: 4,
-//       color: 'gray',
-//       'input:checked ~ &': {
-//         color: 'primary',
-//       },
-//       'input:focus ~ &': {
-//         color: 'primary',
-//         bg: 'highlight',
-//       },
-//     }}
-//   />
-// </Box>
