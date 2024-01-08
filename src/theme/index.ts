@@ -129,7 +129,7 @@ const theme = {
       '-webkit-tap-highlight-color': 'transparent',
       transition: '.2s ease-out',
       outline: 0,
-      borderRadius: '32px',
+      borderRadius: '60px',
     },
     default: {
       color: 'white',
@@ -222,33 +222,40 @@ const theme = {
     },
     small: {
       fontSize: 14,
-      height: 32,
+      lineHeight: "20px",
+      // height: 32,
       px: 3,
+      py: "6px",
       '.icon': {
         fontSize: 20,
       },
     },
     medium: {
       fontSize: 1,
-      height: 40,
+      lineHeight: "22px",
+      // height: 40,
       px: 24,
+      py: 9,
       '.icon': {
         fontSize: 22,
       },
     },
     large: {
       fontSize: 2,
-      height: 48,
+      lineHeight: "26px",
+      // height: 48,
       px: 4,
+      py: 11,
       '.icon': {
         fontSize: 26,
       },
     },
     xLarge: {
       fontSize: 2,
-      height: 60,
-      borderRadius: 48,
+      lineHeight: "26px",
+      // height: 60,
       px: 5,
+      py: 17,
       '.icon': {
         fontSize: 26,
       },
