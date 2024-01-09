@@ -1,7 +1,7 @@
-import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
-import { MdShare } from 'react-icons/md'
+import React from 'react'
 import { BsTwitter } from 'react-icons/bs'
+import Box from '../src/components/Box'
 import Button from '../src/components/Button'
 
 const meta = {
@@ -62,4 +62,12 @@ export const Hollow: Story = {
     hollow: true,
     children: 'Button',
   },
+}
+
+export const LongButton = () => {
+  return (
+    <Box width="300px">
+      <Button>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Button>
+    </Box>
+  )
 }

@@ -78,7 +78,6 @@ const Button = forwardRef(
           appearance: 'none',
           display: 'inline-block',
           textAlign: 'center',
-          lineHeight: 'inherit',
           textDecoration: 'none',
           fontWeight: 'body',
           fontSize: 'inherit',
