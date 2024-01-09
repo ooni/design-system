@@ -130,19 +130,31 @@ const theme = {
       transition: '.2s ease-out',
       outline: 0,
       borderRadius: '60px',
+      borderWidth: '2px',
+      borderStyle: 'solid',
+      '&:focus': {
+        transition: 'none',
+        outline: '2px solid',
+        outlineColor: 'primary',
+        outlineOffset: '1px',
+      }
     },
     default: {
       color: 'white',
       bg: 'primary',
+      borderColor: 'primary',
       '&:hover:enabled': {
         bg: 'blue9',
+        borderColor: 'blue9',
       },
     },
     dark: {
       bg: 'gray7',
+      borderColor: 'gray7',
       color: 'white',
       '&:hover:enabled': {
         bg: 'black',
+        borderColor: 'black',
       },
     },
     'dark-hollow': {
@@ -156,20 +168,23 @@ const theme = {
     link: {
       variant: 'variants.link',
       bg: 'none',
+      border: 'none',
     },
     unstyled: {},
     inverted: {
       variant: 'buttons.primary',
       color: 'primary',
       bg: 'white',
+      borderColor: 'white',
       '&:hover:enabled': {
         bg: 'gray1',
+        borderColor: 'gray1',
       },
     },
     hollow: {
       bg: 'transparent',
-      borderWidth: '2px',
-      borderStyle: 'solid',
+      // borderWidth: '2px',
+      // borderStyle: 'solid',
     },
     'default-hollow': {
       borderColor: 'primary',
@@ -182,6 +197,7 @@ const theme = {
     secondary: {
       variant: 'buttons.primary',
       color: 'background',
+      borderColor: 'background',
       bg: 'secondary',
     },
     disabled: {
@@ -225,7 +241,7 @@ const theme = {
       lineHeight: "20px",
       // height: 32,
       px: 3,
-      py: "6px",
+      py: "4px",
       '.icon': {
         fontSize: 20,
       },
@@ -235,7 +251,7 @@ const theme = {
       lineHeight: "22px",
       // height: 40,
       px: 24,
-      py: 9,
+      py: 7,
       '.icon': {
         fontSize: 22,
       },
@@ -245,7 +261,7 @@ const theme = {
       lineHeight: "26px",
       // height: 48,
       px: 4,
-      py: 11,
+      py: 9,
       '.icon': {
         fontSize: 26,
       },
@@ -255,7 +271,7 @@ const theme = {
       lineHeight: "26px",
       // height: 60,
       px: 5,
-      py: 17,
+      py: 15,
       '.icon': {
         fontSize: 26,
       },
