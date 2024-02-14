@@ -1,5 +1,5 @@
-import React, { JSXElementConstructor, ReactElement } from 'react'
 import { render } from '@testing-library/react'
+import React, { ReactElement } from 'react'
 import { ThemeProvider } from 'styled-components'
 import theme from '../theme'
 
@@ -9,7 +9,7 @@ interface IRenderWithWrapper {
 }
 
 interface IWrapper {
-  children: ReactElement
+  children: React.ReactNode
 }
 
 function renderWithWrapper({ component, options }: IRenderWithWrapper) {

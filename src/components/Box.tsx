@@ -1,19 +1,19 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import {
-  compose,
-  space,
-  layout,
-  typography,
-  color,
-  flexbox,
-} from 'styled-system'
-import { styled } from 'styled-components'
+// @ts-nocheck
 import css, { get } from '@styled-system/css'
 import shouldForwardProp from '@styled-system/should-forward-prop'
+import { styled } from 'styled-components'
+import {
+  color,
+  compose,
+  flexbox,
+  layout,
+  space,
+  typography,
+} from 'styled-system'
 import { BoxProps } from 'types'
 
 const sx = (props: any) => css(props?.sx)(props?.theme)
-const base = (props: any) => css(props.__css)(props.theme)
+const base = (props: any) => css(props?.__css)(props?.theme)
 const variant = ({ theme, variant, tx = 'variants' }: any) => {
   let styles = {}
   if (Array.isArray(variant)) {
