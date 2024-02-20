@@ -1,0 +1,5 @@
+import{F as p}from"./FacebookShareButton-BtM7WCdS.js";import"./jsx-runtime-2xDJh5tt.js";import"./index-CBqU2yxZ.js";import"./_commonjsHelpers-BosuxZz1.js";import"./index-B-rNFlrj.js";import"./iconBase-BoWdmG68.js";import"./Button-B0jNirWl.js";import"./Box-DhaIz1PF.js";import"./styled-components.browser.esm-CR6IM2JB.js";import"./Flex-BpqBfZhV.js";import"./Link--npN_Dr9.js";import"./Text-BhBHMpTl.js";const w={title:"Components/FacebookShareButton",component:p,tags:["autodocs"],argTypes:{onClick:{action:"clicked"}}},o={args:{url:"https://www.facebook.com/ooni.org/posts/pfbid0bLKGz5jJ3APvHjT4w4Lnwh4nv1mXTd5TDqoASrebfVgPtySJsS1tKKWVingpcZR6l"}};var t,r,e;o.parameters={...o.parameters,docs:{...(t=o.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  args: {
+    url: 'https://www.facebook.com/ooni.org/posts/pfbid0bLKGz5jJ3APvHjT4w4Lnwh4nv1mXTd5TDqoASrebfVgPtySJsS1tKKWVingpcZR6l'
+  }
+}`,...(e=(r=o.parameters)==null?void 0:r.docs)==null?void 0:e.source}}};const S=["Default"];export{o as Default,S as __namedExportsOrder,w as default};

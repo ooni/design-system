@@ -1,0 +1,1 @@
+import{j as o}from"./jsx-runtime-2xDJh5tt.js";import{T as s}from"./Text-BhBHMpTl.js";const e=({children:r})=>o(s,{mt:"2px",variant:"error",children:r});try{e.displayName="ErrorMessage",e.__docgenInfo={description:"",displayName:"ErrorMessage",props:{}}}catch{}export{e as E};
