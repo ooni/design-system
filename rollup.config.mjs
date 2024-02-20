@@ -29,7 +29,7 @@ const mainBundle = {
       format: 'esm',
       interop: 'auto',
       sourcemap: true,
-    }
+    },
   ],
   plugins: [
     del({
@@ -42,7 +42,13 @@ const mainBundle = {
     commonjs(),
     typescript({
       tsconfig: './tsconfig.json',
-      exclude: ['node_modules', 'dist', '**/__test__/*', '**/__mocks__/*', '**/stories/*'],
+      exclude: [
+        'node_modules',
+        'dist',
+        '**/__test__/*',
+        '**/__mocks__/*',
+        '**/stories/*',
+      ],
     }),
     copy({
       targets: [
@@ -74,7 +80,7 @@ const iconBundle = {
       format: 'esm',
       interop: 'auto',
       sourcemap: true,
-    }
+    },
   ],
   plugins: [
     peerDepsExternal(),

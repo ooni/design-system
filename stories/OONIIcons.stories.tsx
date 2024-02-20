@@ -17,7 +17,7 @@ export const Default = {
   render: () => (
     <Flex flexWrap="wrap">
       {Object.keys(OONIIcons).map((k) => {
-        const Icon = OONIIcons[k as IconType] 
+        const Icon = OONIIcons[k as IconType]
         return (
           <Box key={k} width={1 / 5} pb={3}>
             <Icon size={50} />
