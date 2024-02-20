@@ -1,6 +1,6 @@
-import React from 'react'
-import { Meta, StoryObj } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { Meta } from '@storybook/react'
+import React from 'react'
 
 import Box from '../src/components/Box'
 import Select from '../src/components/Select'

@@ -1,9 +1,9 @@
-import React from 'react'
 import { Meta } from '@storybook/react'
+import React from 'react'
+import Heading from '../src/components/Heading'
 import Hero from '../src/components/Hero'
 import HeroLead from '../src/components/HeroLead'
 import LogoOONIRun from '../src/components/LogoOONIRun'
-import Heading from '../src/components/Heading'
 import Text from '../src/components/Text'
 
 const meta: Meta = {

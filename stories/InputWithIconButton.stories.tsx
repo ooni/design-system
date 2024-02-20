@@ -1,9 +1,9 @@
-import React from 'react'
-import { Meta, StoryObj } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { Meta, StoryObj } from '@storybook/react'
+import React from 'react'
 import { MdDelete } from 'react-icons/md'
-import InputWithIconButton from '../src/components/InputWithIconButton'
 import Container from '../src/components/Container'
+import InputWithIconButton from '../src/components/InputWithIconButton'
 
 const meta: Meta = {
   title: 'Components/InputWithIconButton',
