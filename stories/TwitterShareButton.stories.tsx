@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import TwitterShareButton from '../components/TwitterShareButton'
+import TwitterShareButton from '../src/components/TwitterShareButton'
 
 const meta = {
   title: 'Components/TwitterShareButton',

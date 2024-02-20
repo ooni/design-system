@@ -1,9 +1,9 @@
 import { Meta } from '@storybook/react'
 import React from 'react'
-import Box from '../components/Box'
-import Flex from '../components/Flex'
-import Text from '../components/Text'
-import * as OONIIcons from '../components/icons'
+import Box from '../src/components/Box'
+import Flex from '../src/components/Flex'
+import Text from '../src/components/Text'
+import * as OONIIcons from '../src/components/icons'
 
 type IconType = keyof typeof OONIIcons
 

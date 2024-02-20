@@ -1,7 +1,7 @@
 import { Meta } from '@storybook/react'
 import React from 'react'
-import Container from '../components/Container'
-import LogoOONIRun from '../components/LogoOONIRun'
+import Container from '../src/components/Container'
+import LogoOONIRun from '../src/components/LogoOONIRun'
 
 const meta: Meta = {
   title: 'LogoOONIRun',

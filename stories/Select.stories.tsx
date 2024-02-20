@@ -2,8 +2,8 @@ import { action } from '@storybook/addon-actions'
 import { Meta } from '@storybook/react'
 import React from 'react'
 
-import Box from '../components/Box'
-import Select from '../components/Select'
+import Box from '../src/components/Box'
+import Select from '../src/components/Select'
 
 const meta: Meta = {
   title: 'Components/Select',

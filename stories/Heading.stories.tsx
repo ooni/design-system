@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react'
 import React from 'react'
-import Heading from '../components/Heading'
-import colors from '../theme/colors'
+import Heading from '../src/components/Heading'
+import colors from '../src/theme/colors'
 
 const meta: Meta = {
   title: 'Components/Heading',

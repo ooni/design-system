@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react'
 import React from 'react'
 import { BsTwitter } from 'react-icons/bs'
-import Box from '../components/Box'
-import Button from '../components/Button'
+import Box from '../src/components/Box'
+import Button from '../src/components/Button'
 
 const meta = {
   title: 'Components/Button',

@@ -1,25 +1,27 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import Text from '../components/Text'
+import { Meta, StoryObj } from '@storybook/react'
+import Container from '../src/components/Container'
 
 const meta = {
-  title: 'Components/Text',
-  component: Text,
+  title: 'Components/Container',
+  component: Container,
   tags: ['autodocs'],
   argTypes: {
-    fontSize: { control: 'number' },
-    fontWeight: { control: 'string' },
-    color: { control: 'string' },
+    bg: { control: 'string' },
+    p: { control: 'number' },
+    width: { control: 'number' },
+    height: { control: 'number' },
   },
-} satisfies Meta<typeof Text>
+} satisfies Meta<typeof Container>
 
 export default meta
-type Story = StoryObj<typeof meta>
 
+type Story = StoryObj<typeof Container>
 export const Default: Story = {
   args: {
-    fontSize: 5,
-    fontWeight: 'bold',
-    color: 'primary',
+    bg: 'blue3',
+    width: 400,
+    height: 400,
+    p: 4,
     children:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu sapien urna. Donec aliquet dictum porta. Sed accumsan dui eu faucibus eleifend. Nunc commodo nibh turpis, quis aliquam erat iaculis et. Cras et interdum eros, sed euismod dolor. In ac nulla mollis, scelerisque ante et, faucibus urna. Etiam sit amet neque aliquet, molestie orci ac, porta sem. Curabitur iaculis porta massa, sed bibendum lectus suscipit sed. Nullam nisi eros, cursus non mi vitae, facilisis tempus dui.',
   },

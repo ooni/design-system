@@ -1,17 +1,17 @@
-import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
-import typescript from '@rollup/plugin-typescript'
-import { dts } from 'rollup-plugin-dts'
 import json from '@rollup/plugin-json'
+import resolve from '@rollup/plugin-node-resolve'
 import terser from '@rollup/plugin-terser'
-import { visualizer } from 'rollup-plugin-visualizer'
+import typescript from '@rollup/plugin-typescript'
+import url from '@rollup/plugin-url'
+import svgr from '@svgr/rollup'
+import copy from 'rollup-plugin-copy'
+import del from 'rollup-plugin-delete'
+import { dts } from 'rollup-plugin-dts'
 import filesize from 'rollup-plugin-filesize'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
-import copy from 'rollup-plugin-copy'
-import svgr from '@svgr/rollup'
-import url from '@rollup/plugin-url'
+import { visualizer } from 'rollup-plugin-visualizer'
 import packageJson from './package.json' assert { type: 'json' }
-import del from 'rollup-plugin-delete'
 
 const extensions = ['.ts', '.tsx']
 const mainBundle = {

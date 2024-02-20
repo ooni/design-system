@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import React from 'react'
-import Input from '../components/Input'
+import Input from '../src/components/Input'
 
 const meta = {
   title: 'Components/Input',
