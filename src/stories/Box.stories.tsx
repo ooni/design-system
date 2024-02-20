@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import React from 'react'
-import Box from '../src/components/Box'
+import Box from '../components/Box'
 
 const meta = {
   title: 'Components/Box',

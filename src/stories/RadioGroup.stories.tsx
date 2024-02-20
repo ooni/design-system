@@ -1,8 +1,8 @@
-import React from 'react'
-import { Meta, StoryObj } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import RadioGroup from '../src/components/RadioGroup'
-import RadioButton from '../src/components/RadioButton'
+import { Meta, StoryObj } from '@storybook/react'
+import React from 'react'
+import RadioButton from '../components/RadioButton'
+import RadioGroup from '../components/RadioGroup'
 
 const meta: Meta = {
   title: 'Components/RadioGroup',

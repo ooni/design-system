@@ -1,7 +1,7 @@
-import React from 'react'
-import { FaAmazon, FaAndroid, FaApple } from 'react-icons/fa'
 import { Meta, StoryObj } from '@storybook/react'
-import IconButton from '../src/components/IconButton'
+import React from 'react'
+import { FaAndroid } from 'react-icons/fa'
+import IconButton from '../components/IconButton'
 
 const meta = {
   title: 'Components/IconButton',

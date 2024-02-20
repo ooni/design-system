@@ -1,9 +1,9 @@
-import React from 'react'
-import { Meta, StoryObj } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { Meta } from '@storybook/react'
+import React from 'react'
 
-import Box from '../src/components/Box'
-import MultiSelect from '../src/components/MultiSelect'
+import Box from '../components/Box'
+import MultiSelect from '../components/MultiSelect'
 
 const meta: Meta = {
   title: 'Components/MultiSelect',

@@ -1,9 +1,8 @@
-import React from 'react'
 import { Meta } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
+import React from 'react'
 
-import Box from '../src/components/Box'
-import MultiSelectCreatable from '../src/components/MultiSelectCreatable'
+import Box from '../components/Box'
+import MultiSelectCreatable from '../components/MultiSelectCreatable'
 
 const meta: Meta = {
   title: 'Components/MultiSelectCreatable',

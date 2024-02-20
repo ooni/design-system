@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text } from '../../src'
+import { Box, Text } from '../../index'
 
 type ColorPaletteProps = {
   color: string

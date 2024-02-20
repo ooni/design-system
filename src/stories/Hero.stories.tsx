@@ -1,10 +1,10 @@
-import React from 'react'
 import { Meta } from '@storybook/react'
-import Hero from '../src/components/Hero'
-import HeroLead from '../src/components/HeroLead'
-import LogoOONIRun from '../src/components/LogoOONIRun'
-import Heading from '../src/components/Heading'
-import Text from '../src/components/Text'
+import React from 'react'
+import Heading from '../components/Heading'
+import Hero from '../components/Hero'
+import HeroLead from '../components/HeroLead'
+import LogoOONIRun from '../components/LogoOONIRun'
+import Text from '../components/Text'
 
 const meta: Meta = {
   title: 'Components/Hero',

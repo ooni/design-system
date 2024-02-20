@@ -18,6 +18,6 @@
     "baseUrl": "src",
     "allowJs": true
   },
-  "include": ["src", "src/types/svg.d.ts", "stories"],
+  "include": ["src", "src/types/svg.d.ts", "src/stories"],
   "exclude": ["dist", "node_modules", "src/components/icons"]
 }

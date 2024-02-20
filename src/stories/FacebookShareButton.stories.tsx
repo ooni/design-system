@@ -1,6 +1,5 @@
-import React from 'react'
 import { Meta, StoryObj } from '@storybook/react'
-import FacebookShareButton from '../src/components/FacebookShareButton'
+import FacebookShareButton from '../components/FacebookShareButton'
 
 const meta = {
   title: 'Components/FacebookShareButton',

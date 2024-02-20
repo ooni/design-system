@@ -1,11 +1,11 @@
-import React, { useCallback, useState } from 'react'
-import { Meta, StoryObj } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import Box from '../src/components/Box'
-import Flex from '../src/components/Flex'
-import Modal from '../src/components/Modal'
-import Container from '../src/components/Container'
-import Button from '../src/components/Button'
+import { Meta, StoryObj } from '@storybook/react'
+import React, { useCallback, useState } from 'react'
+import Box from '../components/Box'
+import Button from '../components/Button'
+import Container from '../components/Container'
+import Flex from '../components/Flex'
+import Modal from '../components/Modal'
 
 const meta: Meta = {
   title: 'Components/Modal',
