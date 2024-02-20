@@ -111,7 +111,7 @@ describe('Icons', () => {
             </Flex>
           )
         })}
-      </div>
+      </div>,
     )
 
     for (let i = 0; i < Object.keys(icons).length; i += 1) {

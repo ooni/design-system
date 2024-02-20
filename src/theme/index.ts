@@ -137,7 +137,7 @@ const theme = {
         outline: '2px solid',
         outlineColor: 'primary',
         outlineOffset: '1px',
-      }
+      },
     },
     default: {
       color: 'white',
@@ -238,17 +238,17 @@ const theme = {
     },
     small: {
       fontSize: 14,
-      lineHeight: "20px",
+      lineHeight: '20px',
       // height: 32,
       px: 3,
-      py: "4px",
+      py: '4px',
       '.icon': {
         fontSize: 20,
       },
     },
     medium: {
       fontSize: 1,
-      lineHeight: "22px",
+      lineHeight: '22px',
       // height: 40,
       px: 24,
       py: 7,
@@ -258,7 +258,7 @@ const theme = {
     },
     large: {
       fontSize: 2,
-      lineHeight: "26px",
+      lineHeight: '26px',
       // height: 48,
       px: 4,
       py: 9,
@@ -268,7 +268,7 @@ const theme = {
     },
     xLarge: {
       fontSize: 2,
-      lineHeight: "26px",
+      lineHeight: '26px',
       // height: 60,
       px: 5,
       py: 15,

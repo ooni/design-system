@@ -25,9 +25,21 @@ export const Default: Story = {
 export const Example = () => {
   return (
     <Box width="200px">
-      <Checkbox mb={2} name="checkbox1" label="Checkbox1 checkbox1 checkbox1 checkbox1 checkbox1" />
-      <Checkbox mb={4} name="checkbox2" label="Checkbox2 checkbox2 checkbox2 checkbox2 checkbox2" />
-      <Checkbox name="checkbox3" label="Checkbox3 checkbox3 checkbox3 checkbox3 checkbox3" reverse />
+      <Checkbox
+        mb={2}
+        name="checkbox1"
+        label="Checkbox1 checkbox1 checkbox1 checkbox1 checkbox1"
+      />
+      <Checkbox
+        mb={4}
+        name="checkbox2"
+        label="Checkbox2 checkbox2 checkbox2 checkbox2 checkbox2"
+      />
+      <Checkbox
+        name="checkbox3"
+        label="Checkbox3 checkbox3 checkbox3 checkbox3 checkbox3"
+        reverse
+      />
     </Box>
   )
 }

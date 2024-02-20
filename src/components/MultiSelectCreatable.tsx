@@ -4,14 +4,14 @@ import React, {
   KeyboardEventHandler,
   useEffect,
 } from 'react'
+import { MultiValue } from 'react-select'
 import CreatableSelect from 'react-select/creatable'
 import { SelectProps as SP } from 'types'
-import { MultiValue } from 'react-select'
 import theme from '../theme'
 import { getMarginProps, omitMarginProps } from '../utils'
 import Box from './Box'
-import Text from './Text'
 import ErrorMessage from './ErrorMessage'
+import Text from './Text'
 
 interface Option {
   readonly label: string
@@ -51,7 +51,6 @@ const MultiSelectCreatable = forwardRef(
 
     const handleKeyDown: KeyboardEventHandler = (event) => {
       if (!inputValue) return
-      // eslint-disable-next-line default-case
       switch (event.key) {
         case 'Enter':
         case 'Tab':
