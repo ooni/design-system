@@ -1,16 +1,11 @@
 import React, { ReactNode } from 'react'
-import Text from './Text'
 
 interface ErrorMessageProps {
   children: ReactNode
 }
 
 const ErrorMessage = ({ children }: ErrorMessageProps) => {
-  return (
-    <Text mt="2px" variant="error">
-      {children}
-    </Text>
-  )
+  return <p className="mt-1 text-sm text-red-700">{children}</p>
 }
 
 export default ErrorMessage

@@ -1,11 +1,10 @@
 import type { Preview } from '@storybook/react'
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
+import '../src/tailwind.css'
 import theme from '../src/theme'
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -13,13 +12,7 @@ const preview: Preview = {
       },
     },
   },
-  decorators: [
-    (Story) => (
-      <ThemeProvider theme={theme}>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
+  decorators: [(Story) => <Story />],
 }
 
 export default preview

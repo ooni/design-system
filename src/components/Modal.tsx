@@ -1,9 +1,6 @@
 import React, { ReactNode } from 'react'
 import { MdClose } from 'react-icons/md'
-import { BoxProps } from 'types'
-import Box from './Box'
-import IconButton from './IconButton'
-import Flex from './Flex'
+import { twMerge } from 'tailwind-merge'
 
 interface ModalCloseButtonProps {
   icon: ReactNode
@@ -11,79 +8,57 @@ interface ModalCloseButtonProps {
 }
 
 const ModalCloseButton = ({ icon, onClick }: ModalCloseButtonProps) => (
-  <Flex justifyContent="end">
-    <IconButton
-      sx={{
-        position: 'absolute',
-        top: 0,
-        height: '28px',
-        padding: 0,
-        marginRight: 2,
-        marginLeft: 2,
-        marginTop: 1,
-      }}
-      icon={icon}
-      onClick={onClick}
-      type="button"
-    />
-  </Flex>
+  <div className="flex justify-end">
+    <button className="appearance-none m-3" type="button" onClick={onClick}>
+      {icon}
+    </button>
+  </div>
 )
 
-export interface ModalProps extends BoxProps {
+export interface ModalProps {
   show?: boolean
   onHideClick?: () => void
+  children: ReactNode
+  className?: string
 }
 
 export const Modal = ({
   show = false,
   onHideClick,
   children,
-  sx,
+  className,
   ...rest
 }: ModalProps) => {
   return (
-    <Box
-      sx={{
-        position: 'relative',
-        display: show ? 'inherit' : 'none',
-      }}
-    >
-      <Box
+    <div className={`relative ${!show && 'hidden'}`}>
+      <div
+        className={twMerge(
+          'fixed top-[50%] left-[50%] transform-[translate(-50%,-50%)] max-w-[100vw] max-h-[100vh] overflow-auto z-[1050] bg-white rounded',
+          className,
+        )}
         {...rest}
-        sx={{
-          position: 'fixed',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          maxWidth: '100vw',
-          maxHeight: '100vh',
-          overflow: 'auto',
-          zIndex: 1050,
-          bg: 'white',
-          borderRadius: '4px',
-          ...sx,
-        }}
       >
         <ModalCloseButton onClick={onHideClick} icon={<MdClose size={20} />} />
         {children}
-      </Box>
+      </div>
       {show && (
-        <Box
+        <div
           onClick={onHideClick}
-          sx={{
-            position: 'fixed',
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0,
-            zIndex: 1040,
-            bg: 'black',
-            transition: 'opacity 5s linear',
-            opacity: 0.5,
-          }}
+          className="
+            fixed
+            top-0
+            bottom-0
+            left-0
+            right-0
+            z-[1040]
+            bg-black
+            opacity-50
+            transition-opacity
+          "
+          {...rest}
         />
       )}
-    </Box>
+    </div>
   )
 }
 

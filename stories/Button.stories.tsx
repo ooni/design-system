@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 import React from 'react'
 import { BsTwitter } from 'react-icons/bs'
-import Box from '../src/components/Box'
 import Button from '../src/components/Button'
 
 const meta = {
@@ -12,7 +11,6 @@ const meta = {
     onClick: { action: 'clicked' },
     hollow: { control: 'boolean' },
     disabled: { control: 'boolean' },
-    inverted: { control: 'boolean' },
   },
 } satisfies Meta<typeof Button>
 
@@ -25,35 +23,34 @@ export const Primary: Story = {
   },
 }
 
-export const Link: Story = {
+export const DisabledButton: Story = {
   args: {
-    variant: 'link',
-    children: 'Link Button',
-  },
-}
-
-export const LoadingButton: Story = {
-  args: {
-    children: 'Loading Button',
-    loading: true,
-    spinner: <>spinner</>,
+    children: 'Disabled Button',
     disabled: true,
   },
 }
 
-export const ColorVariant: Story = {
+export const Dark: Story = {
   args: {
-    color: 'dark',
+    variant: 'dark',
     children: 'Button',
-    size: 'small',
-    endIcon: <BsTwitter />,
+    size: 's',
   },
 }
 
-export const Inverted: Story = {
+export const DarkHollow: Story = {
   args: {
-    inverted: true,
+    variant: 'dark',
+    hollow: true,
     children: 'Button',
+    size: 'l',
+  },
+}
+
+export const WithIcon: Story = {
+  args: {
+    children: 'Button',
+    endIcon: <BsTwitter />,
   },
 }
 
@@ -66,8 +63,8 @@ export const Hollow: Story = {
 
 export const LongButton = () => {
   return (
-    <Box width="300px">
+    <div className="w-[300px]">
       <Button>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Button>
-    </Box>
+    </div>
   )
 }

@@ -1,10 +1,8 @@
 import React, { useMemo } from 'react'
 import { FaTwitter } from 'react-icons/fa'
-import Link from './Link'
-import Button, { ButtonProps } from './Button'
-import Text from './Text'
+import Button from './Button'
 
-export interface TwitterShareButtonProps extends ButtonProps {
+export interface TwitterShareButtonProps {
   message?: string
   url?: string
   hashtags?: string
@@ -42,20 +40,13 @@ const TwitterShareButton = (props: TwitterShareButtonProps) => {
   }, [message, url, hashtags, via, inReplyTo])
 
   return (
-    <Link href={twitterLinkGenerated}>
-      <Button
-        {...rest}
-        variant="twitterShare"
-        display="flex"
-        alignItems="center"
-      >
+    <a href={twitterLinkGenerated}>
+      <Button {...rest}>
         <FaTwitter size={14} />
 
-        <Text as="span" pl={2}>
-          Tweet
-        </Text>
+        <span className="pl-2">Tweet</span>
       </Button>
-    </Link>
+    </a>
   )
 }
 

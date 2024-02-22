@@ -1,10 +1,7 @@
 import React from 'react'
 import { FaFacebook } from 'react-icons/fa'
-import Button, { ButtonProps } from './Button'
-import Link from './Link'
-import Text from './Text'
-
-export interface FacebookShareButton extends ButtonProps {
+import Button from './Button'
+export interface FacebookShareButton {
   url?: string
 }
 
@@ -13,14 +10,12 @@ const FacebookShareButton = ({ url = '', ...rest }: FacebookShareButton) => {
   href += `&u=${encodeURIComponent(url)}`
 
   return (
-    <Link href={href}>
-      <Button {...rest} variant="facebookShare">
+    <a href={href}>
+      <Button {...rest}>
         <FaFacebook />
-        <Text as="span" pl={2}>
-          Share
-        </Text>
+        <span className="pl-1">Share</span>
       </Button>
-    </Link>
+    </a>
   )
 }
 

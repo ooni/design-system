@@ -1,54 +1,48 @@
-import React, { ReactElement, forwardRef } from 'react'
-import { TextareaProps as TP } from 'types'
-import { getMarginProps, omitMarginProps } from '../utils'
-import Box from './Box'
+import React, { forwardRef } from 'react'
 import ErrorMessage from './ErrorMessage'
-import Text from './Text'
 
-export interface TextareaProps extends TP {
+export interface TextareaProps {
   error?: string
   fontSize?: number
-  label?: string | ReactElement
+  label?: string
+  name: string
 }
 
-const Textarea = forwardRef(
-  ({ error, label, name, ...rest }: TextareaProps, ref) => {
+const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
+  ({ error, label, name, ...props }, ref) => {
     return (
-      <Box {...getMarginProps(rest)}>
+      <div>
         {label && (
-          <Text
-            fontWeight="bold"
-            mb={1}
-            display="block"
-            as="label"
-            htmlFor={name}
-          >
+          <label className="font-semibold mb-1 block" htmlFor={name}>
             {label}
-          </Text>
+          </label>
         )}
-        <Box
+        <textarea
           ref={ref}
-          as="textarea"
-          tx="forms"
           name={name}
           id={name}
-          variant={error ? 'errorTextarea' : 'textarea'}
-          {...omitMarginProps(rest)}
-          __css={{
-            display: 'block',
-            width: '100%',
-            p: 2,
-            appearance: 'none',
-            fontSize: 'inherit',
-            lineHeight: 'inherit',
-            border: '1px solid',
-            borderRadius: 'default',
-            color: 'inherit',
-            bg: 'transparent',
-          }}
+          className={`
+            appearance-none
+            outline-none
+            m-0
+            p-2
+            block 
+            w-full
+          bg-white
+            align-middle 
+            box-border
+            rounded
+            border
+            ${
+              error
+                ? 'border-red-700 hover:border-red-700 focus:border-red-700'
+                : 'border-gray-600 hover:border-gray-800 focus:border-blue-500'
+            }
+          `}
+          {...props}
         />
         {error && <ErrorMessage>{error}</ErrorMessage>}
-      </Box>
+      </div>
     )
   },
 )

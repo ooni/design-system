@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
 import React from 'react'
-import Box from '../src/components/Box'
 import Checkbox from '../src/components/Checkbox'
 
 const meta = {
@@ -24,22 +23,19 @@ export const Default: Story = {
 
 export const Example = () => {
   return (
-    <Box width="200px">
+    <div className="w-[200px]">
       <Checkbox
-        mb={2}
         name="checkbox1"
         label="Checkbox1 checkbox1 checkbox1 checkbox1 checkbox1"
       />
       <Checkbox
-        mb={4}
         name="checkbox2"
         label="Checkbox2 checkbox2 checkbox2 checkbox2 checkbox2"
       />
       <Checkbox
         name="checkbox3"
         label="Checkbox3 checkbox3 checkbox3 checkbox3 checkbox3"
-        reverse
       />
-    </Box>
+    </div>
   )
 }

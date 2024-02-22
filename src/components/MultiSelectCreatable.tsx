@@ -1,25 +1,15 @@
-import React, {
-  FocusEvent,
-  forwardRef,
-  KeyboardEventHandler,
-  useEffect,
-} from 'react'
+import React, { FocusEvent, KeyboardEventHandler, useEffect } from 'react'
 import { MultiValue } from 'react-select'
 import CreatableSelect from 'react-select/creatable'
-import { SelectProps as SP } from 'types'
-import theme from '../theme'
-import { getMarginProps, omitMarginProps } from '../utils'
-import Box from './Box'
 import ErrorMessage from './ErrorMessage'
-import Text from './Text'
 
 interface Option {
   readonly label: string
   readonly value: string
 }
 
-export interface MultiSelectCreatableProps
-  extends Omit<SP, 'value' | 'onChange' | 'onBlur'> {
+export interface MultiSelectCreatableProps {
+  name: string
   label?: string
   placeholder?: string
   value: MultiValue<Option>
@@ -33,118 +23,101 @@ const createOption = (label: string) => ({
   value: label,
 })
 
-const MultiSelectCreatable = forwardRef(
-  (
-    {
-      label,
-      name,
-      value: initialValue,
-      onChange,
-      onBlur,
-      error,
-      ...rest
-    }: MultiSelectCreatableProps,
-    ref,
-  ) => {
-    const [inputValue, setInputValue] = React.useState('')
-    const [value, setValue] = React.useState<MultiValue<Option>>(initialValue)
+const MultiSelectCreatable = ({
+  label,
+  name,
+  value: initialValue,
+  onChange,
+  onBlur,
+  error,
+  ...props
+}: MultiSelectCreatableProps) => {
+  const [inputValue, setInputValue] = React.useState('')
+  const [value, setValue] = React.useState<MultiValue<Option>>(initialValue)
 
-    const handleKeyDown: KeyboardEventHandler = (event) => {
-      if (!inputValue) return
-      switch (event.key) {
-        case 'Enter':
-        case 'Tab':
-        case ',':
-          setValue((prev) => [...prev, createOption(inputValue)])
-          setInputValue('')
-          event.preventDefault()
-      }
-    }
-
-    const handleBlur = (e: FocusEvent<HTMLInputElement, Element>) => {
-      if (inputValue) {
+  const handleKeyDown: KeyboardEventHandler = (event) => {
+    if (!inputValue) return
+    switch (event.key) {
+      case 'Enter':
+      case 'Tab':
+      case ',':
         setValue((prev) => [...prev, createOption(inputValue)])
         setInputValue('')
-        if (onBlur) onBlur(e)
-      }
+        event.preventDefault()
     }
+  }
 
-    useEffect(() => {
-      onChange(value)
-    }, [value, onChange])
+  const handleBlur = (e: FocusEvent<HTMLInputElement, Element>) => {
+    if (inputValue) {
+      setValue((prev) => [...prev, createOption(inputValue)])
+      setInputValue('')
+      if (onBlur) onBlur(e)
+    }
+  }
 
-    return (
-      <Box {...getMarginProps(rest)}>
-        {label && (
-          <Text
-            fontWeight={600}
-            mb={1}
-            display="block"
-            as="label"
-            htmlFor={name}
-          >
-            {label}
-          </Text>
-        )}
-        <CreatableSelect
-          ref={ref}
-          {...omitMarginProps(rest)}
-          isMulti
-          onKeyDown={handleKeyDown}
-          onChange={(newValue) => {
-            setValue(newValue)
-          }}
-          onBlur={handleBlur}
-          onInputChange={(newValue) => setInputValue(newValue)}
-          inputValue={inputValue}
-          value={value}
-          styles={{
-            control: (baseStyles, state) => ({
-              ...baseStyles,
-              '&:hover': {
-                borderColor: state.isFocused
-                  ? theme.colors.blue5
-                  : theme.colors.gray8,
-              },
-              borderColor: state.isFocused
-                ? theme.colors.blue5
-                : theme.colors.gray6,
-              borderRadius: '32px',
-              minHeight: '36.5px',
-              borderWidth: '1px',
-              boxShadow: 'none',
-              paddingLeft: '5px',
-            }),
-            indicatorSeparator: () => ({
-              display: 'none',
-            }),
-            dropdownIndicator: (baseStyles) => ({
-              ...baseStyles,
-              padding: '7px',
-            }),
-            multiValue: (baseStyles) => ({
-              ...baseStyles,
-              borderRadius: '10px',
-              backgroundColor: theme.colors.gray3,
-            }),
-            multiValueRemove: () => ({
-              svg: { display: 'none' },
-              '&:before': {
-                content: '"✕"',
-                fontSize: '80%',
-                padding: '0 6px 0 4px',
-              },
-              '&:hover': {
-                cursor: 'pointer',
-                color: theme.colors.red7,
-              },
-            }),
-          }}
-        />
-        {error && <ErrorMessage>{error}</ErrorMessage>}
-      </Box>
-    )
-  },
-)
+  useEffect(() => {
+    onChange(value)
+  }, [value, onChange])
+
+  return (
+    <div>
+      {label && (
+        <label className="font-semibold mb-1 block" htmlFor={name}>
+          {label}
+        </label>
+      )}
+      <CreatableSelect
+        isMulti
+        onKeyDown={handleKeyDown}
+        onChange={(newValue) => {
+          setValue(newValue)
+        }}
+        onBlur={handleBlur}
+        onInputChange={(newValue) => setInputValue(newValue)}
+        inputValue={inputValue}
+        value={value}
+        classNames={{
+          control: (state) =>
+            state.isFocused
+              ? 'border-blue-500 hover:border-blue-500'
+              : 'border-gray-600 hover:border-gray-800',
+          multiValue: () => 'bg-gray-300',
+          multiValueRemove: () => 'hover:cursor-pointer text-red-700',
+        }}
+        styles={{
+          control: (baseStyles) => ({
+            ...baseStyles,
+            borderRadius: '32px',
+            minHeight: '36.5px',
+            borderWidth: '1px',
+            boxShadow: 'none',
+            paddingLeft: '5px',
+          }),
+          indicatorSeparator: () => ({
+            display: 'none',
+          }),
+          dropdownIndicator: (baseStyles) => ({
+            ...baseStyles,
+            padding: '7px',
+          }),
+          multiValue: (baseStyles) => ({
+            ...baseStyles,
+            borderRadius: '20px',
+          }),
+          multiValueRemove: () => ({
+            svg: { display: 'none' },
+            '&:before': {
+              content: '"✕"',
+              fontSize: '80%',
+              padding: '0 6px 0 4px',
+            },
+          }),
+        }}
+        {...props}
+      />
+      {error && <ErrorMessage>{error}</ErrorMessage>}
+    </div>
+  )
+}
 
 export default MultiSelectCreatable

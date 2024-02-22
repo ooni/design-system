@@ -1,15 +1,14 @@
 import React, { forwardRef } from 'react'
-import { LabelProps } from 'types'
-import Text from './Flex'
 
-const Label = forwardRef((props: LabelProps, ref) => (
-  <Text
+interface LabelProps {
+  children?: React.ReactNode
+}
+
+const Label = forwardRef<HTMLLabelElement, LabelProps>((props, ref) => (
+  <label
     ref={ref}
-    as="label"
-    tx="forms"
-    variant="label"
     {...props}
-    __css={{
+    style={{
       width: '100%',
     }}
   />

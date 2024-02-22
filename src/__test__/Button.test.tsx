@@ -1,8 +1,8 @@
-import React from 'react'
 import { screen } from '@testing-library/react'
 import 'jest-styled-components'
-import renderWithWrapper from './index'
+import React from 'react'
 import { Button } from '..'
+import renderWithWrapper from './index'
 
 describe('Button', () => {
   test('renders Button', () => {
@@ -26,14 +26,5 @@ describe('Button', () => {
     const buttonElement = screen.getByRole('button')
     // expect(buttonElement).toHaveStyleRule('color', '#0588cb')
     expect(buttonElement).toHaveStyleRule('background-color', 'transparent')
-  })
-
-  test('renders Button with rebass props', () => {
-    renderWithWrapper({ component: <Button width={1} m={2} fontSize={2} /> })
-
-    const buttonElement = screen.getByRole('button')
-    expect(buttonElement).toHaveStyleRule('width', '100%')
-    expect(buttonElement).toHaveStyleRule('margin', '8px')
-    expect(buttonElement).toHaveStyleRule('font-size', '22px')
   })
 })

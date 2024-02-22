@@ -1,12 +1,13 @@
-import React, { ChangeEvent, ReactNode, Children, cloneElement } from 'react'
-import { FlexProps } from 'types'
-import Flex from './Flex'
+import React, { ChangeEvent, Children, ReactNode, cloneElement } from 'react'
+import { twMerge } from 'tailwind-merge'
 
-export interface RadioGroupProps extends FlexProps {
+export interface RadioGroupProps {
   children?: ReactNode
   name?: string
   value?: string
-  direction?: 'row' | 'column'
+  flexDirection?: 'row' | 'column'
+  className?: string
+  onChange: (arg: string) => void
 }
 
 const RadioGroup = ({
@@ -14,7 +15,8 @@ const RadioGroup = ({
   name,
   value,
   onChange,
-  direction = 'column',
+  className,
+  flexDirection = 'column',
   ...props
 }: RadioGroupProps) => {
   const iterateOverChildren = (children: ReactNode) => {
@@ -25,16 +27,20 @@ const RadioGroup = ({
         ...child.props,
         checked: child.props.value === value,
         onChange: (e: ChangeEvent<HTMLFormElement>) =>
-          onChange && onChange(e.target.value),
+          onChange?.(e.target.value),
         children: iterateOverChildren(child.props.children),
       })
     })
   }
 
   return (
-    <Flex flexDirection={direction} {...props}>
+    <div
+      className={twMerge('flex', className)}
+      style={{ flexDirection }}
+      {...props}
+    >
       {iterateOverChildren(children)}
-    </Flex>
+    </div>
   )
 }
 

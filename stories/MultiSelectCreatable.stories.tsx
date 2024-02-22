@@ -1,7 +1,6 @@
 import { Meta } from '@storybook/react'
 import React from 'react'
 
-import Box from '../src/components/Box'
 import MultiSelectCreatable from '../src/components/MultiSelectCreatable'
 
 const meta: Meta = {
@@ -13,15 +12,13 @@ export default meta
 
 export const Default = () => {
   return (
-    <Box>
+    <div>
       <MultiSelectCreatable
-        id="tags"
         name="tags"
         label="Tags"
-        my={3}
         value={[{ label: 'orange', value: 'orange' }]}
         onChange={(val) => console.log(val)}
       />
-    </Box>
+    </div>
   )
 }
