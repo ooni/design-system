@@ -69,7 +69,9 @@ const MultiSelectCreatable = forwardRef(
       }
     }
 
-    useEffect(() => onChange(value), [value, onChange])
+    useEffect(() => {
+      onChange(value)
+    }, [value, onChange])
 
     return (
       <Box {...getMarginProps(rest)}>
