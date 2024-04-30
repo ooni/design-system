@@ -11,7 +11,7 @@
   "dependencies": {
     "@styled-system/css": "^5.1.5",
     "@styled-system/should-forward-prop": "^5.1.5",
-    "react-select": "^5.8.0",
+    "react-select": "^5.7.7",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
