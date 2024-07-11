@@ -20,6 +20,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           type="text"
           id={name}
+          name={name}
           className={`
             appearance-none
             m-0

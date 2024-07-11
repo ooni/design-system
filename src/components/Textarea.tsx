@@ -3,7 +3,6 @@ import ErrorMessage from './ErrorMessage'
 
 export interface TextareaProps {
   error?: string
-  fontSize?: number
   label?: string
   name: string
 }

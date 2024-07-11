@@ -53,7 +53,7 @@ const mainBundle = {
     copy({
       targets: [
         {
-          src: './src/fonts',
+          src: './src/tailwind.css',
           dest: './dist',
         },
       ],

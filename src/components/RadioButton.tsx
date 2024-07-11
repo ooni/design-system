@@ -16,6 +16,7 @@ const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
           ref={ref}
           type="radio"
           id={name}
+          name={name}
           className="
             appearance-none
             text-blue-500

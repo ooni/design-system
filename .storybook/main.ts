@@ -6,7 +6,7 @@ const config: StorybookConfig = {
     '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
 
-  staticDirs: ['../src/fonts/'],
+  // staticDirs: ['../src/fonts/'],
 
   addons: [
     '@storybook/addon-links',

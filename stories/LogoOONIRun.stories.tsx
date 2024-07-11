@@ -10,5 +10,5 @@ const meta: Meta = {
 export default meta
 
 export const Default = () => {
-  return <LogoOONIRun height="70px" />
+  return <div className='bg-black'><LogoOONIRun height="70px" /></div>
 }

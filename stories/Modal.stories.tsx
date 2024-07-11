@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions'
 import { Meta, StoryObj } from '@storybook/react'
 import React, { useCallback, useState } from 'react'
-import Button from '../src/components/Button'
+// import Button from '../src/components/Button'
 import Modal from '../src/components/Modal'
 
 const meta: Meta = {
@@ -25,7 +25,7 @@ export const Default = () => {
   return (
     <>
       <div className="flex items-center">
-        <Button onClick={() => setShow(true)}>Show Modal</Button>
+        <button className='btn btn-primary' onClick={() => setShow(true)}>Show Modal</button>
       </div>
       <Modal show={show} onHideClick={onClose}>
         <div className="p-4">Modal Content</div>
