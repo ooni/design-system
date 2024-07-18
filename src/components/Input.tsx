@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react'
 import { InputProps as IP } from 'types'
 import { getMarginProps, omitMarginProps } from '../utils'
-import ErrorMessage from './ErrorMessage'
 import Box from './Box'
+import ErrorMessage from './ErrorMessage'
 import Text from './Text'
 
 export interface InputProps extends IP {
@@ -24,6 +24,7 @@ const Input = forwardRef(({ error, name, label, ...rest }: InputProps, ref) => {
         type="text"
         tx="forms"
         id={name}
+        name={name}
         variant={error ? 'errorInput' : 'forms.input'}
         {...omitMarginProps(rest)}
         __css={{

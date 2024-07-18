@@ -1,8 +1,8 @@
 import React, { ReactElement, forwardRef } from 'react'
 import { TextareaProps as TP } from 'types'
 import { getMarginProps, omitMarginProps } from '../utils'
-import ErrorMessage from './ErrorMessage'
 import Box from './Box'
+import ErrorMessage from './ErrorMessage'
 import Text from './Text'
 
 export interface TextareaProps extends TP {
@@ -30,6 +30,8 @@ const Textarea = forwardRef(
           ref={ref}
           as="textarea"
           tx="forms"
+          name={name}
+          id={name}
           variant={error ? 'errorTextarea' : 'textarea'}
           {...omitMarginProps(rest)}
           __css={{
