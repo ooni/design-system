@@ -121,7 +121,6 @@ const theme = {
     base: {
       fontFamily: 'inherit',
       display: 'inline-block',
-      textTransform: 'capitalize',
       textAlign: 'center',
       letterSpacing: '0.5px',
       verticalAlign: 'middle',
