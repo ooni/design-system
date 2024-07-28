@@ -16,6 +16,7 @@ export interface MultiSelectCreatableProps {
   onChange: (obj: MultiValue<Option>) => void
   onBlur?: (e: FocusEvent<HTMLInputElement, Element>) => void
   error?: string
+  className?: string
 }
 
 const createOption = (label: string) => ({
@@ -30,6 +31,7 @@ const MultiSelectCreatable = ({
   onChange,
   onBlur,
   error,
+  className,
   ...props
 }: MultiSelectCreatableProps) => {
   const [inputValue, setInputValue] = React.useState('')
@@ -60,7 +62,7 @@ const MultiSelectCreatable = ({
   }, [value, onChange])
 
   return (
-    <div>
+    <div className={className}>
       {label && (
         <label className="font-semibold mb-1 block" htmlFor={name}>
           {label}

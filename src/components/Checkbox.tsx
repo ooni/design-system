@@ -1,15 +1,17 @@
 import React, { forwardRef } from 'react'
+import { twMerge } from 'tailwind-merge'
 export interface CheckboxProps {
   error?: string
   name: string
   label: string
   disabled?: boolean
+  className?: string
 }
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ name, label, error, disabled = false, ...props }, ref) => (
+  ({ name, label, error, disabled = false, className, ...props }, ref) => (
     <>
-      <div className={`relative flex items-start ${disabled && 'opacity-50'}`}>
+      <div className={twMerge(`relative flex items-start ${disabled && 'opacity-50'}`, className)}>
         <div className="flex items-center h-5">
           <input
             ref={ref}

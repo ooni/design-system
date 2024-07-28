@@ -48,6 +48,30 @@
     @apply text-blue-500 hover:text-blue-800;
   }
 
+  h1 {
+    @apply text-5xl font-light leading-normal
+  }
+
+  h2 {
+    @apply text-4xl font-light leading-normal
+  }
+
+  h3 {
+    @apply text-2xl font-semibold leading-normal
+  }
+
+  h4 {
+    @apply text-xl font-semibold leading-normal
+  }
+
+  h5 {
+    @apply text-base font-semibold leading-normal
+  }
+
+  h6 {
+    @apply text-xs font-semibold leading-normal
+  }
+
   * {
     text-rendering: geometricPrecision;
     box-sizing: border-box;
