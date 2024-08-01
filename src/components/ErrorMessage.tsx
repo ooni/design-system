@@ -1,11 +1,15 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
+import { twMerge } from 'tailwind-merge'
 
-interface ErrorMessageProps {
-  children: ReactNode
-}
-
-const ErrorMessage = ({ children }: ErrorMessageProps) => {
-  return <p className="mt-1 text-sm text-red-700">{children}</p>
+const ErrorMessage = ({
+  children,
+  className,
+}: React.HTMLAttributes<HTMLElement>) => {
+  return (
+    <p className={twMerge('mt-1 text-sm text-red-700', className)}>
+      {children}
+    </p>
+  )
 }
 
 export default ErrorMessage

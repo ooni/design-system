@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 
-export interface IconButtonProps {
+export interface IconButtonProps
+  extends React.HtmlHTMLAttributes<HTMLButtonElement> {
   icon: ReactNode
 }
 

@@ -1,18 +1,20 @@
 import React, { forwardRef } from 'react'
 import ErrorMessage from './ErrorMessage'
 
-export interface TextareaProps {
+type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
   error?: string
   label?: string
-  name: string
 }
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ error, label, name, ...props }, ref) => {
+  ({ error, label, name, className, ...props }, ref) => {
     return (
-      <div>
+      <div className={className}>
         {label && (
-          <label className="font-semibold mb-1 block" htmlFor={name}>
+          <label
+            className="font-semibold mb-1 block leading-none"
+            htmlFor={name}
+          >
             {label}
           </label>
         )}
@@ -27,7 +29,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
             p-2
             block 
             w-full
-          bg-white
+            bg-white
             align-middle 
             box-border
             rounded

@@ -1,16 +1,16 @@
 import React, { forwardRef } from 'react'
 import ErrorMessage from './ErrorMessage'
 
-export interface SelectProps extends React.HTMLProps<HTMLSelectElement> {
-  label?: string
+type SelectProps = React.InputHTMLAttributes<HTMLSelectElement> & {
   error?: string
+  label?: string
 }
 
 const Select = forwardRef<HTMLSelectElement, SelectProps>(
   ({ label, name, className, error, ...props }, ref) => (
     <div className={className}>
       {label && (
-        <label className="font-semibold mb-1 block" htmlFor={name}>
+        <label className="font-semibold mb-1 block leading-none" htmlFor={name}>
           {label}
         </label>
       )}

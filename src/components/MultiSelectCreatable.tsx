@@ -1,6 +1,7 @@
 import React, { FocusEvent, KeyboardEventHandler, useEffect } from 'react'
 import { MultiValue } from 'react-select'
 import CreatableSelect from 'react-select/creatable'
+import { twMerge } from 'tailwind-merge'
 import ErrorMessage from './ErrorMessage'
 
 interface Option {
@@ -64,7 +65,7 @@ const MultiSelectCreatable = ({
   return (
     <div className={className}>
       {label && (
-        <label className="font-semibold mb-1 block" htmlFor={name}>
+        <label className="font-semibold mb-1 block leading-none" htmlFor={name}>
           {label}
         </label>
       )}
@@ -80,20 +81,25 @@ const MultiSelectCreatable = ({
         value={value}
         classNames={{
           control: (state) =>
-            state.isFocused
-              ? 'border-blue-500 hover:border-blue-500'
-              : 'border-gray-600 hover:border-gray-800',
+            twMerge(
+              'flex flex-wrap cursor-default items-center relative border',
+              state.isFocused
+                ? 'border-blue-500 hover:border-blue-500'
+                : 'border-gray-600 hover:border-gray-800',
+            ),
           multiValue: () => 'bg-gray-300',
-          multiValueRemove: () => 'hover:cursor-pointer text-red-700',
+          multiValueRemove: () =>
+            'hover:cursor-pointer hover:text-red-700 self-center',
         }}
         styles={{
-          control: (baseStyles) => ({
-            ...baseStyles,
+          control: () => ({
+            outline: '0',
+            transition: 'all 100ms',
+            borderStyle: 'solid',
+            boxSizing: 'border-box',
             borderRadius: '32px',
             minHeight: '36.5px',
-            borderWidth: '1px',
             boxShadow: 'none',
-            paddingLeft: '5px',
           }),
           indicatorSeparator: () => ({
             display: 'none',
@@ -111,7 +117,7 @@ const MultiSelectCreatable = ({
             '&:before': {
               content: '"✕"',
               fontSize: '80%',
-              padding: '0 6px 0 4px',
+              padding: '0 8px 0 4px',
             },
           }),
         }}

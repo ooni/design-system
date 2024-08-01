@@ -1,6 +1,5 @@
 export { default as Checkbox } from './components/Checkbox'
 export { default as Input } from './components/Input'
-export { default as Label } from './components/Label'
 export { default as LogoOONIRun } from './components/LogoOONIRun'
 export { default as Modal } from './components/Modal'
 export { default as MultiSelect } from './components/MultiSelect'
@@ -11,4 +10,3 @@ export { default as Select } from './components/Select'
 export { default as Textarea } from './components/Textarea'
 export { default as theme } from './theme'
 export { default as colors } from './theme/colors'
-

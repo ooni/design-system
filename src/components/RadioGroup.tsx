@@ -1,13 +1,8 @@
 import React, { ChangeEvent, Children, ReactNode, cloneElement } from 'react'
 import { twMerge } from 'tailwind-merge'
 
-export interface RadioGroupProps {
-  children?: ReactNode
-  name?: string
-  value?: string
+type RadioGroupProps = React.InputHTMLAttributes<HTMLInputElement> & {
   flexDirection?: 'row' | 'column'
-  className?: string
-  onChange: (arg: string) => void
 }
 
 const RadioGroup = ({

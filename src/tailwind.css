@@ -43,33 +43,39 @@
   @apply px-16 py-3.5 text-2xl;
 }
 
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto w-full px-4;
+  }
+}
+
 @layer base {
   a {
     @apply text-blue-500 hover:text-blue-800;
   }
 
   h1 {
-    @apply text-5xl font-light leading-normal
+    @apply text-4xl/normal md:text-5xl/normal font-light;
   }
 
   h2 {
-    @apply text-4xl font-light leading-normal
+    @apply text-3xl/normal md:text-4xl/normal font-light;
   }
 
   h3 {
-    @apply text-2xl font-semibold leading-normal
+    @apply text-xl/normal md:text-2xl/normal font-semibold;
   }
 
   h4 {
-    @apply text-xl font-semibold leading-normal
+    @apply text-lg/normal md:text-xl/normal font-semibold;
   }
 
   h5 {
-    @apply text-base font-semibold leading-normal
+    @apply text-base/normal font-semibold;
   }
 
   h6 {
-    @apply text-xs font-semibold leading-normal
+    @apply text-xs/normal font-semibold;
   }
 
   * {

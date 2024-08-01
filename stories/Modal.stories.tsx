@@ -25,7 +25,9 @@ export const Default = () => {
   return (
     <>
       <div className="flex items-center">
-        <button className='btn btn-primary' onClick={() => setShow(true)}>Show Modal</button>
+        <button className="btn btn-primary" onClick={() => setShow(true)}>
+          Show Modal
+        </button>
       </div>
       <Modal show={show} onHideClick={onClose}>
         <div className="p-4">Modal Content</div>

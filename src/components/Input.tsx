@@ -1,18 +1,20 @@
 import React, { forwardRef } from 'react'
 import ErrorMessage from './ErrorMessage'
 
-export interface InputProps {
+type InputProps = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> & {
   error?: string
   label?: string
-  name: string
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ error, name, label, ...props }, ref) => {
+  ({ error, name, label, className, ...props }, ref) => {
     return (
-      <div>
+      <div className={className}>
         {label && (
-          <label className="font-semibold mb-1 block" htmlFor={name}>
+          <label
+            className="font-semibold mb-1 block leading-none"
+            htmlFor={name}
+          >
             {label}
           </label>
         )}

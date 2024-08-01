@@ -1,8 +1,10 @@
 import React, { forwardRef } from 'react'
 
-export interface RadioButtonProps extends React.HTMLProps<HTMLInputElement> {
-  label?: string
-  name: string
+type RadioButtonProps = Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  'type'
+> & {
+  label: string
 }
 
 const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
