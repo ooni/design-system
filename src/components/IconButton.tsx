@@ -1,16 +1,12 @@
 import React, { ReactNode } from 'react'
-import Button, { ButtonProps } from './Button'
 
-export interface IconButtonProps extends ButtonProps {
+export interface IconButtonProps
+  extends React.HtmlHTMLAttributes<HTMLButtonElement> {
   icon: ReactNode
 }
 
 const IconButton = ({ icon, ...rest }: IconButtonProps) => {
-  return (
-    <Button variant="iconButton" {...rest}>
-      {icon}
-    </Button>
-  )
+  return <button {...rest}>{icon}</button>
 }
 
 export default IconButton

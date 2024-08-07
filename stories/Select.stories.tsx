@@ -2,7 +2,6 @@ import { action } from '@storybook/addon-actions'
 import { Meta } from '@storybook/react'
 import React from 'react'
 
-import Box from '../src/components/Box'
 import Select from '../src/components/Select'
 
 const meta: Meta = {
@@ -29,19 +28,18 @@ export const Default = () => {
   ]
 
   return (
-    <Box>
+    <div>
       <Select
         id="country"
         name="country"
         label="Country"
         defaultValue="Australia"
         onChange={action('selected')}
-        mt={3}
       >
         {Object.entries(countries).map(([key, country]) => (
           <option key={key}>{country.name}</option>
         ))}
       </Select>
-    </Box>
+    </div>
   )
 }

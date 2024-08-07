@@ -2,7 +2,6 @@ import { action } from '@storybook/addon-actions'
 import { Meta } from '@storybook/react'
 import React from 'react'
 
-import Box from '../src/components/Box'
 import MultiSelect from '../src/components/MultiSelect'
 
 const meta: Meta = {
@@ -29,15 +28,13 @@ export const Default = () => {
   ]
 
   return (
-    <Box>
+    <div>
       <MultiSelect
-        id="countries"
         name="country"
         label="Country"
         options={countries}
-        onChange={action('selected')}
-        my={3}
+        // onChange={() => action('selected')}
       />
-    </Box>
+    </div>
   )
 }

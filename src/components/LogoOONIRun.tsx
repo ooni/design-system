@@ -1,9 +1,13 @@
 import React from 'react'
 import OONIRunLogo from '../../svgs/logos/Run-HorizontalMonochromeInverted.svg'
-import Image from './Image'
 
 const LogoOONIRun = ({ ...props }) => (
-  <Image src={OONIRunLogo} css={{ display: 'inline' }} {...props} />
+  // biome-ignore lint/a11y/useAltText: <explanation>
+  <img
+    src={OONIRunLogo}
+    style={{ display: 'inline', maxWidth: '100%', height: 'auto' }}
+    {...props}
+  />
 )
 
 export default LogoOONIRun

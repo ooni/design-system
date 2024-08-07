@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn {
+  @apply flex items-center px-6 py-2 text-base justify-center rounded-full font-medium border-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-white focus:ring-offset-1 disabled:opacity-60 disabled:pointer-events-none;
+}
+
+.btn.btn-primary {
+  @apply bg-blue-500 text-white;
+}
+
+.btn.btn-primary-hollow {
+  @apply bg-transparent text-blue-500 border-blue-500 hover:text-blue-900 hover:border-blue-900;
+}
+
+.btn.btn-dark {
+  @apply bg-black text-white;
+}
+
+.btn.btn-dark-hollow {
+  @apply bg-transparent text-black hover:text-black hover:text-white hover:bg-gray-100 hover:border-black;
+}
+
+.btn.btn-white {
+  @apply bg-white text-black;
+}
+
+.btn.btn-white-hollow {
+  @apply bg-transparent text-white hover:text-white hover:text-blue-500 hover:bg-gray-100 hover:border-white;
+}
+
+.btn.btn-sm {
+  @apply px-4 py-1 text-sm;
+}
+
+.btn.btn-lg {
+  @apply px-8 py-2 text-2xl;
+}
+
+.btn.btn-xl {
+  @apply px-16 py-3.5 text-2xl;
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto w-full px-4;
+  }
+}
+
+@layer base {
+  a {
+    @apply text-blue-500 hover:text-blue-800;
+  }
+
+  h1 {
+    @apply text-4xl/normal md:text-5xl/normal font-light;
+  }
+
+  h2 {
+    @apply text-3xl/normal md:text-4xl/normal font-light;
+  }
+
+  h3 {
+    @apply text-xl/normal md:text-2xl/normal font-semibold;
+  }
+
+  h4 {
+    @apply text-lg/normal md:text-xl/normal font-semibold;
+  }
+
+  h5 {
+    @apply text-base/normal font-semibold;
+  }
+
+  h6 {
+    @apply text-xs/normal font-semibold;
+  }
+
+  * {
+    text-rendering: geometricPrecision;
+    box-sizing: border-box;
+  }
+}

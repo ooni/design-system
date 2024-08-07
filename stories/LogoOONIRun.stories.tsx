@@ -1,6 +1,5 @@
 import { Meta } from '@storybook/react'
 import React from 'react'
-import Container from '../src/components/Container'
 import LogoOONIRun from '../src/components/LogoOONIRun'
 
 const meta: Meta = {
@@ -12,8 +11,8 @@ export default meta
 
 export const Default = () => {
   return (
-    <Container bg="blue4">
+    <div className="bg-black">
       <LogoOONIRun height="70px" />
-    </Container>
+    </div>
   )
 }

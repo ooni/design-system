@@ -1,5 +1,4 @@
 import React from 'react'
-import { Box, Text } from '../../src/index'
 
 type ColorPaletteProps = {
   color: string
@@ -7,11 +6,11 @@ type ColorPaletteProps = {
 }
 export const ColorPalette = ({ color, name }: ColorPaletteProps) => (
   <div>
-    <Box px={1} py={3}>
-      <Box px={3} py={3} bg={color} />
-      <Text fontWeight="bold">{name}</Text>
-      <Text>{color}</Text>
-    </Box>
+    <div className="px-1 py-4">
+      <div className="p-4" style={{ backgroundColor: color }} />
+      <p className="font-bold">{name}</p>
+      <p>{color}</p>
+    </div>
   </div>
 )
 export default ColorPalette

@@ -16,7 +16,12 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: (args) => (
-    <Textarea {...args} label="Label" placeholder="Please enter text" />
+    <Textarea
+      {...args}
+      name="textarea"
+      label="Label"
+      placeholder="Please enter text"
+    />
   ),
 }
 

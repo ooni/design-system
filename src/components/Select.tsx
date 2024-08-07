@@ -1,50 +1,52 @@
 import React, { forwardRef } from 'react'
-import { SelectProps as SP } from 'types'
-import { getMarginProps, omitMarginProps } from '../utils'
-import Box from './Box'
-import Text from './Text'
+import ErrorMessage from './ErrorMessage'
 
-export interface SelectProps extends SP {
+type SelectProps = React.InputHTMLAttributes<HTMLSelectElement> & {
+  error?: string
   label?: string
 }
 
-const Select = forwardRef(({ label, name, ...rest }: SelectProps, ref) => (
-  <Box {...getMarginProps(rest)}>
-    {label && (
-      <Text fontWeight={600} mb={1} display="block" as="label" htmlFor={name}>
-        {label}
-      </Text>
-    )}
-    <Box
-      ref={ref}
-      as="select"
-      tx="forms"
-      variant="select"
-      id={name}
-      name={name}
-      {...omitMarginProps(rest)}
-      __css={{
-        boxSizing: 'border-box',
-        margin: 0,
-        display: 'inline-block',
-        font: 'inherit',
-        width: '100%',
-        appearance: 'none',
-        fontSize: 'inherit',
-        lineHeight: 'inherit',
-        color: 'inherit',
-        bg: 'transparent',
-        backgroundImage:
-          'linear-gradient(45deg, transparent 50%, black 50%), linear-gradient(135deg, black 50%, transparent 50%)',
-        backgroundPosition: 'calc(100% - 20px), calc(100% - 15px)',
-        backgroundSize: '5px 5px, 5px 5px',
-        backgroundRepeat: 'no-repeat',
-        'html[dir="rtl"] &, body[dir="rtl"] &': {
-          backgroundPosition: '15px, 20px',
-        },
-      }}
-    />
-  </Box>
-))
+const Select = forwardRef<HTMLSelectElement, SelectProps>(
+  ({ label, name, className, error, ...props }, ref) => (
+    <div className={className}>
+      {label && (
+        <label className="font-semibold mb-1 block leading-none" htmlFor={name}>
+          {label}
+        </label>
+      )}
+      <select
+        ref={ref}
+        id={name}
+        name={name}
+        className={`
+          appearance-none
+          outline-none
+          box-border 
+          w-full 
+          m-0
+          py-2
+          pl-4
+          pr-7
+        bg-white
+          border
+          rounded-full
+          cursor-pointer
+          block
+          bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiMwMDAwMDAiIHdpZHRoPSI4MDBweCIgaGVpZ2h0PSI4MDBweCIgdmlld0JveD0iMCAwIDEwIDEwIj48Zz48cG9seWdvbiBwb2ludHM9IjggMyA1IDcgMiAzIDggMyIvPjwvZz48L3N2Zz4=')]
+          bg-no-repeat
+          bg-right
+          bg-[length:40px_20px]
+          ${
+            error
+              ? 'border-red-700 hover:border-red-700 focus:border-red-700'
+              : 'border-gray-600 hover:border-gray-800 focus:border-blue-500'
+          }
+        `}
+        {...props}
+      />
+      {error && <ErrorMessage>{error}</ErrorMessage>}
+    </div>
+  ),
+)
 
 export default Select

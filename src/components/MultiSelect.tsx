@@ -1,74 +1,79 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import Select from 'react-select'
-import { SelectProps } from 'types'
-import theme from '../theme'
-import { getMarginProps, omitMarginProps } from '../utils'
-import Box from './Box'
-import Text from './Text'
+import { twMerge } from 'tailwind-merge'
+import ErrorMessage from './ErrorMessage'
 
-export interface MultiSelectProps extends SelectProps {
+export interface MultiSelectProps {
   label?: string
   options: { label: string; value: string | number }[]
+  name: string
+  className?: string
+  error?: string
 }
 
-const MultiSelect = forwardRef(
-  ({ label, name, options, ...rest }: MultiSelectProps, ref) => (
-    <Box {...getMarginProps(rest)}>
-      {label && (
-        <Text fontWeight={600} mb={1} display="block" as="label" htmlFor={name}>
-          {label}
-        </Text>
-      )}
-      <Select
-        ref={ref}
-        options={options}
-        isMulti
-        {...omitMarginProps(rest)}
-        styles={{
-          control: (baseStyles, state) => ({
-            ...baseStyles,
-            '&:hover': {
-              borderColor: state.isFocused
-                ? theme.colors.blue5
-                : theme.colors.gray8,
-            },
-            borderColor: state.isFocused
-              ? theme.colors.blue5
-              : theme.colors.gray6,
-            borderRadius: '32px',
-            minHeight: '36.5px',
-            borderWidth: '1px',
-            boxShadow: 'none',
-            paddingLeft: '5px',
-          }),
-          indicatorSeparator: () => ({
-            display: 'none',
-          }),
-          dropdownIndicator: (baseStyles) => ({
-            ...baseStyles,
-            padding: '7px',
-          }),
-          multiValue: (baseStyles) => ({
-            ...baseStyles,
-            borderRadius: '10px',
-            backgroundColor: theme.colors.gray3,
-          }),
-          multiValueRemove: () => ({
-            svg: { display: 'none' },
-            '&:before': {
-              content: '"✕"',
-              fontSize: '80%',
-              padding: '0 6px 0 4px',
-            },
-            '&:hover': {
-              cursor: 'pointer',
-              color: theme.colors.red7,
-            },
-          }),
-        }}
-      />
-    </Box>
-  ),
+const MultiSelect = ({
+  label,
+  name,
+  options,
+  className,
+  error,
+  ...props
+}: MultiSelectProps) => (
+  <div className={className}>
+    {label && (
+      <label className="font-semibold mb-1 block leading-none" htmlFor={name}>
+        {label}
+      </label>
+    )}
+    <Select
+      options={options}
+      isMulti
+      styles={{
+        control: () => ({
+          outline: '0',
+          transition: 'all 100ms',
+          borderStyle: 'solid',
+          boxSizing: 'border-box',
+          borderRadius: '32px',
+          minHeight: '36.5px',
+          boxShadow: 'none',
+        }),
+        indicatorSeparator: () => ({
+          display: 'none',
+        }),
+        dropdownIndicator: (baseStyles) => ({
+          ...baseStyles,
+          padding: '7px',
+        }),
+        multiValue: (baseStyles) => ({
+          ...baseStyles,
+          borderRadius: '20px',
+        }),
+        multiValueRemove: () => ({
+          svg: { display: 'none' },
+          '&:before': {
+            content: '"✕"',
+            fontSize: '80%',
+            padding: '0 8px 0 4px',
+          },
+        }),
+      }}
+      classNames={{
+        control: (state) =>
+          twMerge(
+            'flex flex-wrap cursor-default items-center relative border',
+            state.isFocused
+              ? 'border-blue-500 hover:border-blue-500'
+              : 'border-gray-600 hover:border-gray-800',
+          ),
+        multiValue: () => 'bg-gray-300',
+        multiValueRemove: () =>
+          'hover:cursor-pointer hover:text-red-700 self-center',
+      }}
+      {...props}
+    />
+    {error && <ErrorMessage>{error}</ErrorMessage>}
+  </div>
 )
 
 export default MultiSelect

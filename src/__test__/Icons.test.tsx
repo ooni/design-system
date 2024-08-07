@@ -1,6 +1,6 @@
-import React from 'react'
 import { render, screen } from '@testing-library/react'
-import Flex from '../components/Flex'
+import React from 'react'
+
 import {
   CategoryCodeALDR,
   CategoryCodeANON,
@@ -106,9 +106,10 @@ describe('Icons', () => {
         {Object.keys(icons).map((k, i) => {
           const Icon = icons[i]
           return (
-            <Flex key={i} width={1 / 5} pb={3} data-testid={`icon-${i}`}>
+            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+            <div className="flex w-1/5 pb-4" key={i} data-testid={`icon-${i}`}>
               <Icon size={50} />
-            </Flex>
+            </div>
           )
         })}
       </div>,
