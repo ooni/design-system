@@ -4,11 +4,11 @@
 
 
 .btn {
-  @apply flex items-center px-6 py-2 text-base justify-center rounded-full font-medium border-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-white focus:ring-offset-1 disabled:opacity-60 disabled:pointer-events-none;
+  @apply flex items-center px-6 py-2 text-base justify-center rounded-full font-medium border-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-white focus-visible:ring-offset-1 disabled:opacity-60 disabled:pointer-events-none;
 }
 
 .btn.btn-primary {
-  @apply bg-blue-500 text-white;
+  @apply bg-blue-500 border-blue-500 text-white hover:border-blue-900 hover:bg-blue-900;
 }
 
 .btn.btn-primary-hollow {
@@ -16,19 +16,19 @@
 }
 
 .btn.btn-dark {
-  @apply bg-black text-white;
+  @apply bg-gray-700 border-gray-700 text-white hover:bg-black hover:border-black;
 }
 
 .btn.btn-dark-hollow {
-  @apply bg-transparent text-black hover:text-black hover:text-white hover:bg-gray-100 hover:border-black;
+  @apply bg-transparent text-gray-700 border-gray-700 hover:text-black hover:border-black;
 }
 
 .btn.btn-white {
-  @apply bg-white text-black;
+  @apply bg-white border-white text-black hover:text-blue-500;
 }
 
 .btn.btn-white-hollow {
-  @apply bg-transparent text-white hover:text-white hover:text-blue-500 hover:bg-gray-100 hover:border-white;
+  @apply bg-transparent text-white border-white hover:text-blue-500;
 }
 
 .btn.btn-sm {
@@ -54,6 +54,14 @@
     @apply text-blue-500 hover:text-blue-800;
   }
 
+  ul {
+    @apply ps-10 list-disc;
+  }
+
+  p {
+    @apply my-4;
+  }
+
   h1 {
     @apply text-4xl/normal md:text-5xl/normal font-light;
   }
@@ -76,10 +84,5 @@
 
   h6 {
     @apply text-xs/normal font-semibold;
-  }
-
-  * {
-    text-rendering: geometricPrecision;
-    box-sizing: border-box;
   }
 }
