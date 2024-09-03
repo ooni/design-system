@@ -1,6 +1,6 @@
 {
   "name": "ooni-components",
-  "version": "0.7.0-alpha.10",
+  "version": "0.7.0-alpha.11",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -92,12 +92,5 @@
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
   },
-  "files": [
-    "dist",
-    "animations",
-    "svgs",
-    "index.d.ts",
-    "icons",
-    "tailwind"
-  ]
+  "files": ["dist", "animations", "svgs", "index.d.ts", "icons", "tailwind"]
 }
