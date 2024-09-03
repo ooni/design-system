@@ -36,10 +36,11 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
           bg-no-repeat
           bg-right
           bg-[length:40px_20px]
-          ${
-            error
-              ? 'border-red-700 hover:border-red-700 focus:border-red-700'
-              : 'border-gray-600 hover:border-gray-800 focus:border-blue-500'
+          disabled:bg-gray-300
+          disabled:hover:border-gray-600
+          ${error
+            ? 'border-red-700 hover:border-red-900 focus:border-red-700'
+            : 'border-gray-600 hover:border-gray-800 focus:border-blue-500'
           }
         `}
         {...props}

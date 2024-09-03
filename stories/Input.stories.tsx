@@ -28,6 +28,10 @@ export const ErrorInput: Story = {
 }
 
 ErrorInput.args = {
-  label: 'Error Label',
+  label: 'Error Input',
   error: 'cannot be empty',
+}
+
+export const DisabledInput: Story = {
+  render: (args) => <Input {...args} label="Disabled Input" disabled placeholder="Please enter text" />,
 }
