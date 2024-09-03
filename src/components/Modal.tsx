@@ -33,7 +33,7 @@ export const Modal = ({
     <div className={`relative ${!show && 'hidden'}`}>
       <div
         className={twMerge(
-          'fixed -top-1/2 -left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[100vw] max-h-[100vh] overflow-auto z-[1050] bg-white rounded',
+          'fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-[100vw] max-h-[100vh] overflow-auto z-[1050] bg-white rounded',
           className,
         )}
         {...rest}
@@ -50,7 +50,7 @@ export const Modal = ({
             bottom-0
             left-0
             right-0
-            z-[1040]
+            z-[9999999]
             bg-black
             opacity-50
             transition-opacity
