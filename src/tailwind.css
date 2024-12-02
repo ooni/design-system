@@ -4,7 +4,7 @@
 
 
 .btn {
-  @apply flex items-center px-6 py-2 text-base justify-center rounded-full font-medium border-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-white focus-visible:ring-offset-1 disabled:opacity-60 disabled:pointer-events-none;
+  @apply flex items-center px-6 py-2 text-base justify-center rounded-full font-medium border-2 tracking-wide focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-white focus-visible:ring-offset-1 disabled:opacity-60 disabled:pointer-events-none;
 }
 
 .btn.btn-primary {
@@ -56,6 +56,10 @@
 
   ul {
     @apply ps-10 list-disc;
+  }
+
+  ol {
+    @apply ps-10 list-decimal;
   }
 
   p {
