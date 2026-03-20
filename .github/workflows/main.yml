@@ -77,4 +77,6 @@ jobs:
 
       - name: Publish to npm
         if: github.ref == 'refs/heads/master' && steps.check.outputs.exists == 'false'
-        run: npm publish --ignore-scripts --access public
+        run: |
+          TAG=$(node -p "const v = require('./package.json').version; const m = v.match(/-([a-zA-Z]+)/); m ? m[1] : 'latest'")
+          npm publish --ignore-scripts --access public --tag "$TAG"
