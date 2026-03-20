@@ -24,7 +24,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           id={name}
           className={`
             appearance-none
-            outline-none
+            outline-hidden
             m-0
             p-2
             block 

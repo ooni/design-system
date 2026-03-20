@@ -18,13 +18,13 @@ const RadioGroup = ({
     return Children.map(children, (child: ReactNode): ReactNode => {
       if (!React.isValidElement(child)) return null
 
+      const childProps = child.props as Record<string, unknown>
       return cloneElement(child, {
-        ...child.props,
-        checked: child.props.value === value,
-        onChange: (e: ChangeEvent<HTMLFormElement>) =>
-          onChange?.(e.target.value),
-        children: iterateOverChildren(child.props.children),
-      })
+        ...childProps,
+        checked: childProps.value === value,
+        onChange: (e: ChangeEvent<HTMLInputElement>) => onChange?.(e),
+        children: iterateOverChildren((childProps.children as ReactNode) ?? undefined),
+      } as Record<string, unknown>)
     })
   }
 

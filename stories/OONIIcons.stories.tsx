@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react'
+import { Meta } from '@storybook/react-vite'
 import React from 'react'
 import * as OONIIcons from '../src/components/icons'
 

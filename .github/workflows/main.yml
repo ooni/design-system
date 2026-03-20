@@ -5,9 +5,6 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -20,25 +17,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
+          cache: 'yarn'
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Setup cache
-        uses: actions/cache@v3
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Install dependencies if no cache wasn't found
+      - name: Install dependencies
         run: yarn --frozen-lockfile
 
       - name: Build
@@ -48,7 +33,7 @@ jobs:
         run: yarn test
 
       - name: Upload artifacts for publishing
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist
           path: dist/
@@ -66,13 +51,13 @@ jobs:
         uses: EndBug/version-check@v2
 
       - name: Download dist artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
 
       - name: Publish
-        if: ${{ github.ref == 'refs/heads/master' && steps.check.outputs.changed == 'true' }}
+        if: github.ref == 'refs/heads/master' && steps.check.outputs.changed == 'true'
         run: |
           npm config set //registry.npmjs.org/:_authToken ${NPM_AUTH_TOKEN}
           npm publish --ignore-scripts

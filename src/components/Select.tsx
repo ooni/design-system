@@ -20,7 +20,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
         name={name}
         className={`
           appearance-none
-          outline-none
+          outline-hidden
           box-border 
           w-full 
           m-0
@@ -35,7 +35,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
           bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiMwMDAwMDAiIHdpZHRoPSI4MDBweCIgaGVpZ2h0PSI4MDBweCIgdmlld0JveD0iMCAwIDEwIDEwIj48Zz48cG9seWdvbiBwb2ludHM9IjggMyA1IDcgMiAzIDggMyIvPjwvZz48L3N2Zz4=')]
           bg-no-repeat
           bg-right
-          bg-[length:40px_20px]
+          bg-size-[40px_20px]
           disabled:bg-gray-300
           disabled:hover:border-gray-600
           ${error
