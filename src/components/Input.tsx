@@ -35,7 +35,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             box-border 
             rounded-full 
             border
-            outline-none
+            outline-hidden
             disabled:bg-gray-300
             disabled:hover:border-gray-600
             ${error

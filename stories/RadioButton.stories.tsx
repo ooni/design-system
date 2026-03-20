@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react-vite'
 import RadioButton from '../src/components/RadioButton'
 
 const meta: Meta = {

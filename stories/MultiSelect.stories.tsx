@@ -1,5 +1,5 @@
-import { action } from '@storybook/addon-actions'
-import { Meta } from '@storybook/react'
+import { action } from 'storybook/actions'
+import { Meta } from '@storybook/react-vite'
 import React from 'react'
 
 import MultiSelect from '../src/components/MultiSelect'

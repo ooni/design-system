@@ -11,7 +11,7 @@ import { dts } from 'rollup-plugin-dts'
 import filesize from 'rollup-plugin-filesize'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import { visualizer } from 'rollup-plugin-visualizer'
-import packageJson from './package.json' assert { type: 'json' }
+import packageJson from './package.json' with { type: 'json' }
 
 const extensions = ['.ts', '.tsx']
 const mainBundle = {

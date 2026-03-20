@@ -40,7 +40,7 @@ const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
               before:scale-0
               before:transition-transform
               checked:before:scale-100
-              focus:outline
+              focus:outline-solid
               focus:outline-1
               focus:outline-current
               focus:outline-offset-1
