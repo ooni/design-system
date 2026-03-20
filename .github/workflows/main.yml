@@ -43,7 +43,7 @@ jobs:
           path: dist/
 
   publish:
-    name: Publish to NPM registry if version changed
+    name: Publish to NPM registry if version doesn't exist
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -56,16 +56,25 @@ jobs:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Check if version has been updated
-        id: check
-        uses: EndBug/version-check@v2
-
       - name: Download dist artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: dist
           path: dist
 
+      - name: Check if version exists on npm
+        id: check
+        run: |
+          PACKAGE=$(node -p "require('./package.json').name")
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "$PACKAGE@$VERSION" 2>/dev/null; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Version $PACKAGE@$VERSION already exists on npm, skipping publish"
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "Version $PACKAGE@$VERSION not found on npm, will publish"
+          fi
+
       - name: Publish to npm
-        if: github.ref == 'refs/heads/master' && steps.check.outputs.changed == 'true'
+        if: github.ref == 'refs/heads/master' && steps.check.outputs.exists == 'false'
         run: npm publish --ignore-scripts --access public
