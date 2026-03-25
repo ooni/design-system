@@ -1,5 +1,3 @@
-@import 'tailwindcss';
-
 /* Tailwind v4 ignores node_modules by default - explicitly scan our dist so component
    utility classes (Select, Input, etc.) get compiled when consumed by apps */
 @source "./**/*.js";
